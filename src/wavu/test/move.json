@@ -1,0 +1,18 @@
+{
+  'title': {
+    'id': 'Azucena-b+1,1',
+    'name': '',
+    'input': ',1',
+    'parent': 'Azucena-b+1',
+    'target': ',h',
+    'damage': ',16',
+    'startup': ',i23',
+    'recv': 'r22 LIB',
+    'tot': '45',
+    'crush': '',
+    'block': '+3',
+    'hit': '+8',
+    'ch': '',
+    'notes': 'Combo from 1st hit'
+  }
+}

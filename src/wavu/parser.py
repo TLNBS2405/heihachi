@@ -1,8 +1,7 @@
-from typing import List, Type
+from typing import List
 
 from mediawiki import MediaWiki
-from bs4 import BeautifulSoup
-import requests, re
+import requests
 
 from src.character import Move, Character
 from src.resources import const
@@ -10,42 +9,62 @@ from src.resources import const
 wavuwiki = MediaWiki(url=const.WAVU_API_URL)
 session = requests.Session()
 
-def get_character_html_movelist(character_name: str) -> List[Move]:
+
+def get_character_movelist(character_name: str) -> List[Move]:
     params = {
-        "action": "parse",
-        "page": character_name + "_movelist",
+        "action": "cargoquery",
+        "tables": "Move",
+        "fields": "id,name,input,parent,target,damage,startup, recv, tot, crush, block,hit,ch,notes",
+        "join_on": "",
+        "group_by": "",
+        "where": "id LIKE '" + character_name + "%'",
+        "having": "",
+        "order_by": "id",
+        "offset": "0",
+        "limit": "500",
         "format": "json"
     }
 
     response = session.get(const.WAVU_API_URL, params=params)
-    html_output= response.json()["parse"]["text"]["*"]
-
-    soup = BeautifulSoup(html_output, 'html.parser')
-    divs = soup.find_all("div",{"id": re.compile(r'^' + character_name +'.*$')})
-
-    move_list = []
-    for div in divs:
-        move = convert_html_move(str(div))
-        move_list.append(move)
+    move_list_json = response.json()["cargoquery"]
+    move_list = convert_json_movelist(move_list_json)
     return move_list
 
-def convert_html_move(div: str) -> Move:
-    soup = BeautifulSoup(div,'html.parser')
 
-    id = soup.find("div", {"class": "movedata hover-bg-grey-03"})['id']
-    name =  soup.find("div", {"class": "movedata-name"}).get_text()
-    input = soup.find("span", {"class": "movedata-inputLead"}).get_text() + soup.find("span", {"class": "movedata-input"}).get_text()
-    target = soup.find("span", {"class": "movedata-target"}).get_text()
-    damage = soup.find("span", {"class": "movedata-damage"}).get_text()
+def get_move(move_id: str, move_list: List[Move]) -> Move:
+    result = [move for move in move_list if move.id == move_id]
+    return result[0]
 
-    on_block = soup.find("div", {"class": "movedata-block"}).get_text()
-    on_hit = soup.find("div", {"class": "movedata-hit"}).get_text()
-    on_ch = soup.find("div", {"class": "movedata-ch"}).get_text()
-    startup = soup.find("div", {"class": "movedata-startup"}).get_text()
-    recovery = soup.find("div", {"class": "movedata-recv"}).get_text()
 
-    notes = soup.find("div", {"class": "movedata-notes"}).get_text()
+def get_json_move_input(move_id: str, move_list_json: list) -> str:
+    complete_input = ""
+    if move_id:
+        for move in move_list_json:
+            if move["title"]["id"] == move_id:
+                if move["title"]["parent"]:
+                    complete_input += get_json_move_input(move["title"]["parent"], move_list_json)
+                return complete_input + move["title"]["input"]
+    else:
+        return ""
 
-    move = Move(id,name,input,target,damage,on_block,on_hit,on_ch,startup,recovery,notes,"")
-    return move
 
+def convert_json_movelist(move_list_json: list) -> List[Move]:
+    move_list = []
+    for move in move_list_json:
+        id = move["title"]["id"]
+        name = move["title"]["name"]
+        input = get_json_move_input(move["title"]["parent"], move_list_json) + move["title"]["input"]
+        target = move["title"]["target"]
+        damage = move["title"]["damage"]
+
+        on_block = move["title"]["block"]
+        on_hit = move["title"]["hit"]
+        on_ch = move["title"]["ch"]
+        startup = move["title"]["startup"]
+        recovery = move["title"]["recv"]
+
+        notes = move["title"]["notes"]
+
+        move = Move(id, name, input, target, damage, on_block, on_hit, on_ch, startup, recovery, notes, "")
+        move_list.append(move)
+    return move_list
