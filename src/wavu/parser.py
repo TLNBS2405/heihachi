@@ -36,14 +36,14 @@ def get_move(move_id: str, move_list: List[Move]) -> Move:
     return result[0]
 
 
-def get_json_move_input(move_id: str, move_list_json: list) -> str:
+def get_all_parent_values_of(field: str, move_id: str, move_list_json: list) -> str:
     complete_input = ""
     if move_id:
         for move in move_list_json:
             if move["title"]["id"] == move_id:
                 if move["title"]["parent"]:
-                    complete_input += get_json_move_input(move["title"]["parent"], move_list_json)
-                return complete_input + move["title"]["input"]
+                    complete_input += get_all_parent_values_of(field, move["title"]["parent"], move_list_json)
+                return complete_input + move["title"][field]
     else:
         return ""
 
@@ -53,9 +53,9 @@ def convert_json_movelist(move_list_json: list) -> List[Move]:
     for move in move_list_json:
         id = move["title"]["id"]
         name = move["title"]["name"]
-        input = get_json_move_input(move["title"]["parent"], move_list_json) + move["title"]["input"]
+        input = get_all_parent_values_of("input", move["title"]["parent"], move_list_json) + move["title"]["input"]
         target = move["title"]["target"]
-        damage = move["title"]["damage"]
+        damage = get_all_parent_values_of("damage", move["title"]["parent"], move_list_json) + move["title"]["damage"]
 
         on_block = move["title"]["block"]
         on_hit = move["title"]["hit"]
