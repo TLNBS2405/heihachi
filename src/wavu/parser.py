@@ -3,7 +3,7 @@ from typing import List
 from mediawiki import MediaWiki
 import requests
 
-from src.character import Move, Character
+from src.module.character import Move
 from src.resources import const
 
 wavuwiki = MediaWiki(url=const.WAVU_API_URL)
