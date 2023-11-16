@@ -12,7 +12,7 @@ def import_character(character_meta: dict) -> character.Character:
     portrait = character_meta["portrait"]
 
     move_list = parser.get_character_movelist(name)
-    move_list_path = os.path.abspath(os.path.join(base_path,".." ,"json", name+".json"))
+    move_list_path = os.path.abspath(os.path.join(base_path,".." ,"json_movelist", name+".json"))
 
     cha = character.Character(name,wavu_page,portrait,move_list,move_list_path)
     return cha

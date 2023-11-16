@@ -8,7 +8,6 @@ class MyTestCase(unittest.TestCase):
             azu_meta = json.load(azu)
             azucena = character_importer.import_character(azu_meta)
             self.assertEqual(azucena.name,"Azucena")
-            azucena.export_movelist_as_json()
 
 
 

@@ -54,7 +54,7 @@ def convert_json_movelist(move_list_json: list) -> List[Move]:
         id = move["title"]["id"]
         name = move["title"]["name"]
         input = get_all_parent_values_of("input", move["title"]["parent"], move_list_json) + move["title"]["input"]
-        target = move["title"]["target"]
+        target = get_all_parent_values_of("target", move["title"]["parent"], move_list_json) + move["title"]["target"]
         damage = get_all_parent_values_of("damage", move["title"]["parent"], move_list_json) + move["title"]["damage"]
 
         on_block = move["title"]["block"]
