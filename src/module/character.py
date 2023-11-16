@@ -1,5 +1,4 @@
 from typing import List
-from src.resources import const
 import os, json
 from json import JSONEncoder
 
@@ -20,9 +19,6 @@ class Move:
         self.notes = notes
         self.gif = gif
 
-    def toJSON(self):
-        return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
-
 class MoveEncoder(JSONEncoder):
     def default(self, o):
         return o.__dict__
@@ -38,7 +34,7 @@ class Character:
     def export_movelist_as_json(self):
         self.create_move_list_file()
         with open(self.move_list_path, "w") as outfile:
-            json.dump(self.move_list, outfile, sort_keys=True, indent=4, ensure_ascii=True, cls=MoveEncoder)
+            json.dump(self.move_list, outfile, sort_keys=True, indent=4, cls=MoveEncoder)
 
     def create_move_list_file(self):
         if not os.path.exists(self.move_list_path):

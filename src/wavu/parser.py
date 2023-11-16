@@ -1,3 +1,4 @@
+import json
 from typing import List
 
 from mediawiki import MediaWiki
@@ -26,7 +27,8 @@ def get_character_movelist(character_name: str) -> List[Move]:
     }
 
     response = session.get(const.WAVU_API_URL, params=params)
-    move_list_json = response.json()["cargoquery"]
+    content = json.loads(response.content)
+    move_list_json = content["cargoquery"]
     move_list = convert_json_movelist(move_list_json)
     return move_list
 

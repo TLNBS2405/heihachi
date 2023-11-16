@@ -6,8 +6,8 @@ def initiate_characters(character_list_path: str):
     with open(character_list_path) as file:
         characters = json.load(file)
 
-        for entry in characters:
-            character = character_importer.import_character(entry)
+        for character_meta in characters:
+            character = character_importer.import_character(character_meta)
             character.export_movelist_as_json()
 
 
