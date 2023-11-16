@@ -1,12 +1,16 @@
+import html
 import json, re, requests
 from typing import List
+
 from mediawiki import MediaWiki
 from src.module.character import Move
 from src.resources import const
+from bs4 import BeautifulSoup
 
 wavuwiki = MediaWiki(url=const.WAVU_API_URL)
 session = requests.Session()
-CLEANR = re.compile('<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});')
+CLEANR = re.compile('s/<[^>]+>//g ')
+
 
 
 
@@ -64,9 +68,8 @@ def convert_json_movelist(move_list_json: list) -> List[Move]:
         startup = move["title"]["startup"]
         recovery = move["title"]["recv"]
 
-        notes = move["title"]["notes"]
-        notes = re.sub(CLEANR, '', notes)
-
+        notes = html.unescape(move["title"]["notes"])
+        notes = BeautifulSoup(notes).get_text()
         move = Move(id, name, input, target, damage, on_block, on_hit, on_ch, startup, recovery, notes, "")
         move_list.append(move)
     return move_list

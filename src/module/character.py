@@ -19,9 +19,11 @@ class Move:
         self.notes = notes
         self.gif = gif
 
+
 class MoveEncoder(JSONEncoder):
     def default(self, o):
         return o.__dict__
+
 
 class Character:
     def __init__(self, name: str, wavu_page: str, portrait: str, move_list: List[Move], move_list_path: str):
@@ -33,8 +35,8 @@ class Character:
 
     def export_movelist_as_json(self):
         self.__create_move_list_file()
-        with open(self.move_list_path, "w") as outfile:
-            json.dump(self.move_list, outfile, sort_keys=True, indent=4, cls=MoveEncoder)
+        with open(self.move_list_path, "w", encoding='utf8') as outfile:
+            json.dump(self.move_list, outfile, sort_keys=True, indent=4, cls=MoveEncoder, ensure_ascii=False)
 
     def __create_move_list_file(self):
         if not os.path.exists(self.move_list_path):
