@@ -1,5 +1,5 @@
 import unittest, json
-from src.wavu import parser
+from src.wavu import wavu_reader
 
 class MyTestCase(unittest.TestCase):
 

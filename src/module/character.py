@@ -32,11 +32,11 @@ class Character:
         self.move_list_path = move_list_path
 
     def export_movelist_as_json(self):
-        self.create_move_list_file()
+        self.__create_move_list_file()
         with open(self.move_list_path, "w") as outfile:
             json.dump(self.move_list, outfile, sort_keys=True, indent=4, cls=MoveEncoder)
 
-    def create_move_list_file(self):
+    def __create_move_list_file(self):
         if not os.path.exists(self.move_list_path):
             with open(self.move_list_path, "w"): pass
 
