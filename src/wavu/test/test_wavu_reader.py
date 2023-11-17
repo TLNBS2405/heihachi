@@ -1,9 +1,9 @@
-import unittest, json
+import unittest
 from src.wavu import wavu_reader
 
 class MyTestCase(unittest.TestCase):
 
-    def test_convert_html_move_to_json(self):
+    def test_get_character_movelist(self):
         character_movelist = wavu_reader.get_character_movelist("Azucena")
         self.assertEqual(character_movelist[44].input,"BT.3")
 
@@ -26,5 +26,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(move4.damage,"10,10,16,23")
         self.assertEqual(move5.input,"df+1,4,1~2")
 
+    def test_normalize_input(self):
+        content = "[[Bryan combos#Staples|+31a (+21)]]"
+        result = wavu_reader.normalize_hit_ch_input(content)
+        self.assertEqual(result,"+31a (+21)")
 
+        content = "[[Azucena combos#Mini-combos|+27a]]"
+        result = wavu_reader.normalize_hit_ch_input(content)
+        self.assertEqual(result,"+27a")
 
