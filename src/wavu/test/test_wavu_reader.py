@@ -20,18 +20,15 @@ class MyTestCase(unittest.TestCase):
         move3 = wavu_reader.get_move("Azucena-LIB.1,2",character_movelist)
         move4 = wavu_reader.get_move("Azucena-b+4,3,4,3",character_movelist)
         move5 = wavu_reader.get_move("Azucena-df+1,4,1~2",character_movelist)
+        move6 = wavu_reader.get_move("Azucena-ws4,1,3",character_movelist)
         self.assertEqual(move.input,"df+1,4,1")
         self.assertEqual(move2.input,"f+4,4~3")
         self.assertEqual(move3.damage,"14,20")
         self.assertEqual(move4.damage,"10,10,16,23")
         self.assertEqual(move5.input,"df+1,4,1~2")
+        self.assertEqual(move6.on_ch,"+27a")
 
-    def test_normalize_input(self):
-        content = "[[Bryan combos#Staples|+31a (+21)]]"
-        result = wavu_reader.normalize_hit_ch_input(content)
-        self.assertEqual(result,"+31a (+21)")
-
-        content = "[[Azucena combos#Mini-combos|+27a]]"
-        result = wavu_reader.normalize_hit_ch_input(content)
-        self.assertEqual(result,"+27a")
+        character_movelist = wavu_reader.get_character_movelist("Bryan")
+        move7 = wavu_reader.get_move("Bryan-4,3,f+4",character_movelist)
+        self.assertEqual(move7.on_ch,"+31a (+21)")
 
