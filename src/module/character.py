@@ -26,9 +26,8 @@ class MoveEncoder(JSONEncoder):
 
 
 class Character:
-    def __init__(self, name: str, wavu_page: str, portrait: str, move_list: List[Move], move_list_path: str):
+    def __init__(self, name: str, portrait: str, move_list: List[Move], move_list_path: str):
         self.name = name
-        self.wavu_page = wavu_page,
         self.portrait = portrait,
         self.move_list = move_list
         self.move_list_path = move_list_path

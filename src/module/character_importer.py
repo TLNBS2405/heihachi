@@ -8,11 +8,10 @@ base_path = os.path.dirname(__file__)
 
 def import_character(character_meta: dict) -> character.Character:
     name = character_meta["name"]
-    wavu_page = character_meta["wavu_page"]
     portrait = character_meta["portrait"]
 
     move_list = wavu_reader.get_character_movelist(name)
     move_list_path = os.path.abspath(os.path.join(base_path,".." ,"json_movelist", name+".json"))
 
-    cha = character.Character(name,wavu_page,portrait,move_list,move_list_path)
+    cha = character.Character(name,portrait,move_list,move_list_path)
     return cha
