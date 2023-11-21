@@ -16,6 +16,11 @@ class MyTestCase(unittest.TestCase):
         azu_move_list = json_movelist_reader.get_movelist_from_json("azucena")
         move = json_movelist_reader.get_move("d/f+1",azu_move_list)
         self.assertEqual(move["id"],"Azucena-df+1")
+        move = json_movelist_reader.get_move("df141",azu_move_list)
+        self.assertEqual(move["id"],"Azucena-df+1,4,1")
+        move = json_movelist_reader.get_move("fc df3",azu_move_list)
+        self.assertEqual(move["id"],"Azucena-FC.df+3")
+
         move = json_movelist_reader.get_move("LIB 2",azu_move_list)
         self.assertEqual(move["id"],"Azucena-LIB.2")
         move = json_movelist_reader.get_move("LIB.2",azu_move_list)
