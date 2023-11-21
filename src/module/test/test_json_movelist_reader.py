@@ -21,6 +21,9 @@ class MyTestCase(unittest.TestCase):
         move = json_movelist_reader.get_move("fc df3",azu_move_list)
         self.assertEqual(move["id"],"Azucena-FC.df+3")
 
+        move = json_movelist_reader.get_move("ff3+4",azu_move_list)
+        self.assertEqual(move["id"],"Azucena-f,F+3+4")
+
         move = json_movelist_reader.get_move("LIB 2",azu_move_list)
         self.assertEqual(move["id"],"Azucena-LIB.2")
         move = json_movelist_reader.get_move("LIB.2",azu_move_list)
