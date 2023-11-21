@@ -1,4 +1,4 @@
 beautifulsoup4==4.11.1
-discord.py==0.16.12
+discord.py==2.3.2
 pymediawiki==0.7.3
 Requests==2.31.0
