@@ -43,12 +43,12 @@ def _simplify_input(input: str) -> str:
         input = input.lower().replace('wr', 'fff')
     return input
 
-def get_move(input :str, character_movelist :dict):
 
+def get_move(input: str, character_movelist: dict):
     result = [entry for entry in character_movelist if _simplify_input(entry["input"]) == _simplify_input(input)]
 
     if result:
-        result[0]['input'] = result[0]['input'].replace("\\","")
+        result[0]['input'] = result[0]['input'].replace("\\", "")
         return result[0]
     else:
         return {}
