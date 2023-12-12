@@ -1,7 +1,7 @@
 from typing import List
 import os, json
 from json import JSONEncoder
-
+import re
 
 class Move:
     def __init__(self, id: str, name: str, input: str, target: str, damage: str, on_block: str, on_hit: str, on_ch: str,
@@ -34,7 +34,7 @@ class Character:
 
     def export_movelist_as_json(self):
         self.__create_move_list_file()
-        with open(self.move_list_path, "w", encoding='utf8') as outfile:
+        with open(self.move_list_path, "w", encoding='utf-8') as outfile:
             json.dump(self.move_list, outfile, sort_keys=True, indent=4, cls=MoveEncoder, ensure_ascii=False)
 
     def __create_move_list_file(self):
@@ -45,3 +45,5 @@ class Character:
 class ClassEncoder(JSONEncoder):
     def default(self, o):
         return o.__dict__
+
+

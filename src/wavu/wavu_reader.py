@@ -54,21 +54,23 @@ def _get_all_parent_values_of(field: str, move_id: str, move_list_json: list) ->
     else:
         return ""
 
+def _remove_non_ascii(data):
+    return re.sub(r'[^\x00-\x7F]+', '', data)
 
 def _convert_json_movelist(move_list_json: list) -> List[Move]:
     move_list = []
     for move in move_list_json:
-        id = move["title"]["id"]
-        name = move["title"]["name"]
-        input = _get_all_parent_values_of("input", move["title"]["parent"], move_list_json) + move["title"]["input"]
-        target = _get_all_parent_values_of("target", move["title"]["parent"], move_list_json) + move["title"]["target"]
-        damage = _get_all_parent_values_of("damage", move["title"]["parent"], move_list_json) + move["title"]["damage"]
+        id = _remove_non_ascii(move["title"]["id"])
+        name = _remove_non_ascii(move["title"]["name"])
+        input = _remove_non_ascii(_get_all_parent_values_of("input", move["title"]["parent"], move_list_json) + move["title"]["input"])
+        target = _remove_non_ascii(_get_all_parent_values_of("target", move["title"]["parent"], move_list_json) + move["title"]["target"])
+        damage = _remove_non_ascii(_get_all_parent_values_of("damage", move["title"]["parent"], move_list_json) + move["title"]["damage"])
 
-        on_block = move["title"]["block"]
-        on_hit = _normalize_hit_ch_input(move["title"]["hit"])
-        on_ch = _normalize_hit_ch_input(move["title"]["ch"])
-        startup = move["title"]["startup"]
-        recovery = move["title"]["recv"]
+        on_block = _remove_non_ascii(move["title"]["block"])
+        on_hit = _remove_non_ascii(_normalize_hit_ch_input(move["title"]["hit"]))
+        on_ch = _remove_non_ascii(_normalize_hit_ch_input(move["title"]["ch"]))
+        startup = _remove_non_ascii(move["title"]["startup"])
+        recovery = _remove_non_ascii(move["title"]["recv"])
 
         notes = html.unescape(move["title"]["notes"])
         notes = BeautifulSoup(notes, features="lxml").get_text()
