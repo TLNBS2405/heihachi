@@ -5,7 +5,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_get_character_movelist(self):
         character_movelist = wavu_reader.get_character_movelist("Azucena")
-        self.assertEqual(character_movelist[44].input,"BT.3")
+        self.assertEqual(character_movelist[0].input,"1")
 
 
     def test_get_move(self):
