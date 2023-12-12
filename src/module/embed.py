@@ -12,7 +12,8 @@ def move_embed(character :character, move :dict):
     embed = discord.Embed(title=character.name,
                           colour=0x00EAFF,
                           description='**Move: ' + move['input'] + '**')
-    embed.set_thumbnail(url=character.portrait)
+
+    embed.set_thumbnail(url=character.portrait[0])
     embed.set_footer(text=move['name'])
 
     embed.add_field(name='Target', value=move['target'])
