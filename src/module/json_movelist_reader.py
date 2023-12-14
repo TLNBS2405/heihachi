@@ -4,7 +4,7 @@ import os, json
 base_path = os.path.dirname(__file__)
 
 
-def get_movelist_from_json(character_name: str) -> dict:
+def get_movelist(character_name: str) -> dict:
     os.path.abspath(os.path.join(base_path, "..", "json_movelist", character_name + ".json"))
     filepath = os.path.abspath(os.path.join(base_path, "..", "json_movelist", character_name + ".json"))
     with open(filepath) as move_file:

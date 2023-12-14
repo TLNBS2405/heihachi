@@ -5,13 +5,13 @@ class MyTestCase(unittest.TestCase):
 
     def test_get_movelist_from_json(self):
 
-        result = json_movelist_reader.get_movelist_from_json("azucena")
+        result = json_movelist_reader.get_movelist("azucena")
         self.assertEqual(result[0]["id"],"Azucena-1")
 
 
     def test_get_move(self):
 
-        azu_move_list = json_movelist_reader.get_movelist_from_json("azucena")
+        azu_move_list = json_movelist_reader.get_movelist("azucena")
         move = json_movelist_reader.get_move("d/f+1",azu_move_list)
 
         self.assertEqual(move["id"],"Azucena-df+1")

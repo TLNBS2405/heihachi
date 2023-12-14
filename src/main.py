@@ -1,7 +1,7 @@
 import json, datetime, logging, os, discord, sched, time
 from typing import List
 
-from src.module import character_importer
+from src.module import wavu_importer
 from src.module import configurator
 from src.module import json_movelist_reader
 from src.module import embed
@@ -49,40 +49,41 @@ async def self(interaction: discord.Interaction, character_name: str, move: str)
     character_name = util.correct_character_name(character_name.lower())
     character = util.get_character_by_name(character_name, character_list)
 
-    move_list = json_movelist_reader.get_movelist_from_json(character_name)
+    move_list = json_movelist_reader.get_movelist(character_name)
 
     character_move = json_movelist_reader.get_move(move, move_list)
     move_embed = embed.move_embed(character, character_move)
     await interaction.response.send_message(embed=move_embed, ephemeral=False)
 
-def create_all_character_json(character_list_path: str) -> List[character.Character]:
+def create_json_movelists(character_list_path: str) -> List[character.Character]:
     with open(character_list_path) as file:
-        characters = json.load(file)
+        all_characters = json.load(file)
         character_list = []
 
-        for character_meta in characters:
-            character = character_importer.import_character(character_meta)
+        for character_meta in all_characters:
+            character = wavu_importer.import_character(character_meta)
             character.export_movelist_as_json()
             character_list.append(character)
 
     return character_list
 
 
-def schedule_create_all_characters(character_list_path: str, scheduler):
+def schedule_create_json_movelists(character_list_path: str, scheduler):
     try:
-        create_all_character_json(character_list_path)
-        scheduler.enter(3600,1,create_all_character_json, (character_list_path,scheduler,))
+        create_json_movelists(character_list_path)
+        scheduler.enter(3600, 1, create_json_movelists, (character_list_path, scheduler,))
 
     except Exception as e:
         raise Exception("Error when importing character from wavu" + str(e))
 
 
 try:
-    ## Repeat creating character json once an hour
-    character_list = create_all_character_json(character_list_path)
+    character_list = create_json_movelists(character_list_path)
     print("Character jsons are successfully created")
     scheduler = sched.scheduler(time.time, time.sleep)
-    scheduler.enter(3600,1,schedule_create_all_characters, (character_list_path,scheduler,))
+
+    ## Repeat importing move list of all character from wavu.wiki once an hour
+    scheduler.enter(3600, 1, schedule_create_json_movelists, (character_list_path, scheduler,))
     Thread(target=scheduler.run).start()
 
     client.run(discord_token)
