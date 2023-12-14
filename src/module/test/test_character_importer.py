@@ -1,5 +1,5 @@
 import unittest, json, os
-from src.module import wavu_importer
+from src.wavu import wavu_importer
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 

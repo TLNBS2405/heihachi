@@ -1,7 +1,7 @@
 import json, datetime, logging, os, discord, sched, time
 from typing import List
 
-from src.module import wavu_importer
+from src.wavu import wavu_importer
 from src.module import configurator
 from src.module import json_movelist_reader
 from src.module import embed
