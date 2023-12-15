@@ -1,10 +1,17 @@
 [
   {
+    "name": "asuka",
+    "portrait": "https://i.imgur.com/x7Thf0B.png",
+    "wavu_page": "https://wavu.wiki/t/Asuka_movelist_(Tekken_8)"
+  },
+  {
     "name": "azucena",
-    "portrait": "https://i.imgur.com/yeyRqH2.jpg"
+    "portrait": "https://i.imgur.com/yeyRqH2.jpg",
+    "wavu_page": "https://wavu.wiki/t/Azucena_movelist"
   },
   {
     "name": "bryan",
-    "portrait": "https://i.imgur.com/PV9xTeM.jpg"
+    "portrait": "https://i.imgur.com/PV9xTeM.jpg",
+    "wavu_page": "https://wavu.wiki/t/Bryan_movelist_(Tekken_8)"
   }
 ]
