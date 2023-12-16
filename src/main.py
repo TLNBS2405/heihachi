@@ -17,9 +17,10 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.WARNING)
 
 base_path = os.path.dirname(__file__)
-config = configurator.Configurator(os.path.abspath(os.path.join(base_path, "resources", "config.json")))
-CHARACTER_LIST_PATH = "./resources/character_list.json"
-discord_token = config.read_config()['DISCORD_TOKEN']
+CONFIG_PATH = configurator.Configurator(os.path.abspath(os.path.join(base_path, "resources", "config.json")))
+CHARACTER_LIST_PATH = os.path.abspath(os.path.join(base_path, "resources", "character_list.json"))
+
+discord_token = CONFIG_PATH.read_config()['DISCORD_TOKEN']
 
 character_list = []
 
