@@ -17,7 +17,7 @@ logger.setLevel(logging.WARNING)
 
 base_path = os.path.dirname(__file__)
 config = configurator.Configurator(os.path.abspath(os.path.join(base_path, "resources", "config.json")))
-character_list_path = "resources/character_list.json"
+CHARACTER_LIST_PATH = "./resources/character_list.json"
 discord_token = config.read_config()['DISCORD_TOKEN']
 
 character_list = []
@@ -78,12 +78,12 @@ def schedule_create_json_movelists(character_list_path: str, scheduler):
 
 
 try:
-    character_list = create_json_movelists(character_list_path)
+    character_list = create_json_movelists(CHARACTER_LIST_PATH)
     print("Character jsons are successfully created")
     scheduler = sched.scheduler(time.time, time.sleep)
 
     ## Repeat importing move list of all character from wavu.wiki once an hour
-    scheduler.enter(3600, 1, schedule_create_json_movelists, (character_list_path, scheduler,))
+    scheduler.enter(3600, 1, schedule_create_json_movelists, (CHARACTER_LIST_PATH, scheduler,))
     Thread(target=scheduler.run).start()
 
     client.run(discord_token)

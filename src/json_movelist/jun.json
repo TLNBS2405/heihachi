@@ -145,7 +145,7 @@
         "id": "Jun-1,2",
         "input": "1,2",
         "name": "Spear Step",
-        "notes": "\n* Combo from 1st hit\n* Jail from 1st attack",
+        "notes": "\n* Jail from 1st attack",
         "on_block": "-3",
         "on_ch": "",
         "on_hit": "+6",
@@ -397,7 +397,7 @@
         "id": "Jun-1+4",
         "input": "1+4",
         "name": "",
-        "notes": "\n* Combo from 1st hit\n* Jail from 1st attack\n* CH advantage listed is for the 2nd hit",
+        "notes": "\n* Jail from 1st attack\n* CH advantage listed is for the 2nd hit",
         "on_block": "-3",
         "on_ch": "+4",
         "on_hit": "-3",
@@ -929,12 +929,12 @@
         "id": "Jun-3",
         "input": "3",
         "name": "Shion",
-        "notes": "New Move",
-        "on_block": "",
+        "notes": "Balcony break",
+        "on_block": "-13~-12",
         "on_ch": "",
-        "on_hit": "KDN",
-        "recovery": "",
-        "startup": "14f",
+        "on_hit": "+18a (+1)",
+        "recovery": "r26",
+        "startup": ",i14~15",
         "target": "m"
     },
     {
@@ -943,12 +943,12 @@
         "id": "Jun-3",
         "input": "3",
         "name": "Shion",
-        "notes": "Balcony break",
-        "on_block": "-13~-12",
+        "notes": "New Move",
+        "on_block": "",
         "on_ch": "",
-        "on_hit": "+18a (+1)",
-        "recovery": "r26",
-        "startup": ",i14~15",
+        "on_hit": "KDN",
+        "recovery": "",
+        "startup": "14f",
         "target": "m"
     },
     {
@@ -1008,20 +1008,6 @@
         "target": "mm"
     },
     {
-        "damage": "17",
-        "gif": "",
-        "id": "Jun-4",
-        "input": "4",
-        "name": "Magic Four",
-        "notes": "",
-        "on_block": "-9",
-        "on_ch": "+32a",
-        "on_hit": "+7",
-        "recovery": "r28",
-        "startup": "i12",
-        "target": "h"
-    },
-    {
         "damage": "-",
         "gif": "",
         "id": "Jun-4",
@@ -1033,6 +1019,20 @@
         "on_hit": "",
         "recovery": "",
         "startup": "",
+        "target": "h"
+    },
+    {
+        "damage": "17",
+        "gif": "",
+        "id": "Jun-4",
+        "input": "4",
+        "name": "Magic Four",
+        "notes": "",
+        "on_block": "-9",
+        "on_ch": "+32a",
+        "on_hit": "+7",
+        "recovery": "r28",
+        "startup": "i12",
         "target": "h"
     },
     {
@@ -1540,20 +1540,6 @@
         "target": "m,M"
     },
     {
-        "damage": "20,22",
-        "gif": "",
-        "id": "Jun-b,3,2",
-        "input": "b,3,2",
-        "name": "Ryuusha Renken",
-        "notes": "\n* Chip damage when guarded\n* Deals self-damage (recoverable) when not in Heat\n* New Move\n",
-        "on_block": "",
-        "on_ch": "",
-        "on_hit": "KDN",
-        "recovery": "",
-        "startup": "",
-        "target": "m,m"
-    },
-    {
         "damage": "-",
         "gif": "",
         "id": "Jun-b,3,2",
@@ -1563,6 +1549,20 @@
         "on_block": "",
         "on_ch": "LNC",
         "on_hit": "LNC",
+        "recovery": "",
+        "startup": "",
+        "target": "m,m"
+    },
+    {
+        "damage": "20,22",
+        "gif": "",
+        "id": "Jun-b,3,2",
+        "input": "b,3,2",
+        "name": "Ryuusha Renken",
+        "notes": "\n* Chip damage when guarded\n* Deals self-damage (recoverable) when not in Heat\n* New Move\n",
+        "on_block": "",
+        "on_ch": "",
+        "on_hit": "KDN",
         "recovery": "",
         "startup": "",
         "target": "m,m"
@@ -2394,20 +2394,6 @@
         "target": "m"
     },
     {
-        "damage": "14",
-        "gif": "",
-        "id": "Jun-df,2",
-        "input": "df,2",
-        "name": "Mizuho",
-        "notes": "New Move",
-        "on_block": "",
-        "on_ch": "",
-        "on_hit": "LNC",
-        "recovery": "",
-        "startup": "16f",
-        "target": "m"
-    },
-    {
         "damage": "-",
         "gif": "",
         "id": "Jun-df,2",
@@ -2419,6 +2405,20 @@
         "on_hit": "",
         "recovery": "",
         "startup": "",
+        "target": "m"
+    },
+    {
+        "damage": "14",
+        "gif": "",
+        "id": "Jun-df,2",
+        "input": "df,2",
+        "name": "Mizuho",
+        "notes": "New Move",
+        "on_block": "",
+        "on_ch": "",
+        "on_hit": "LNC",
+        "recovery": "",
+        "startup": "16f",
         "target": "m"
     },
     {
@@ -2618,20 +2618,6 @@
         "target": "m"
     },
     {
-        "damage": "22",
-        "gif": "",
-        "id": "Jun-df,4",
-        "input": "df,4",
-        "name": "Katabami",
-        "notes": "\n* Command changed (→)\n* Tornade Move\n",
-        "on_block": "",
-        "on_ch": "",
-        "on_hit": "KDN",
-        "recovery": "",
-        "startup": "15f",
-        "target": "m"
-    },
-    {
         "damage": "-",
         "gif": "",
         "id": "Jun-df,4",
@@ -2643,6 +2629,20 @@
         "on_hit": "",
         "recovery": "",
         "startup": "",
+        "target": "m"
+    },
+    {
+        "damage": "22",
+        "gif": "",
+        "id": "Jun-df,4",
+        "input": "df,4",
+        "name": "Katabami",
+        "notes": "\n* Command changed (→)\n* Tornade Move\n",
+        "on_block": "",
+        "on_ch": "",
+        "on_hit": "KDN",
+        "recovery": "",
+        "startup": "15f",
         "target": "m"
     },
     {
@@ -2730,20 +2730,6 @@
         "target": "h"
     },
     {
-        "damage": "-",
-        "gif": "",
-        "id": "Jun-f,1+2",
-        "input": "f,1+2",
-        "name": "Izumo",
-        "notes": "",
-        "on_block": "",
-        "on_ch": "",
-        "on_hit": "",
-        "recovery": "",
-        "startup": "",
-        "target": "h"
-    },
-    {
         "damage": "0",
         "gif": "",
         "id": "Jun-f,1+2",
@@ -2755,6 +2741,20 @@
         "on_hit": "",
         "recovery": "",
         "startup": "12f",
+        "target": "h"
+    },
+    {
+        "damage": "-",
+        "gif": "",
+        "id": "Jun-f,1+2",
+        "input": "f,1+2",
+        "name": "Izumo",
+        "notes": "",
+        "on_block": "",
+        "on_ch": "",
+        "on_hit": "",
+        "recovery": "",
+        "startup": "",
         "target": "h"
     },
     {
@@ -3752,20 +3752,6 @@
         "target": "l"
     },
     {
-        "damage": "16,32",
-        "gif": "",
-        "id": "Jun-Genjitsu ,2",
-        "input": "Genjitsu ,2",
-        "name": "Kazama Style: Spirit",
-        "notes": "\n* Deals self-damage (recoverable) when not in Heat\n* absorb an attack to power up\n*  - Add chip damage when guarded\n* New Move\n",
-        "on_block": "",
-        "on_ch": "",
-        "on_hit": "Th",
-        "recovery": "",
-        "startup": "17f",
-        "target": "m,th"
-    },
-    {
         "damage": "-",
         "gif": "",
         "id": "Jun-Genjitsu ,2",
@@ -3778,6 +3764,20 @@
         "recovery": "",
         "startup": "",
         "target": "m"
+    },
+    {
+        "damage": "16,32",
+        "gif": "",
+        "id": "Jun-Genjitsu ,2",
+        "input": "Genjitsu ,2",
+        "name": "Kazama Style: Spirit",
+        "notes": "\n* Deals self-damage (recoverable) when not in Heat\n* absorb an attack to power up\n*  - Add chip damage when guarded\n* New Move\n",
+        "on_block": "",
+        "on_ch": "",
+        "on_hit": "Th",
+        "recovery": "",
+        "startup": "17f",
+        "target": "m,th"
     },
     {
         "damage": "14",
@@ -4190,20 +4190,6 @@
         "gif": "",
         "id": "Jun-Izumo ,3",
         "input": "Izumo ,3",
-        "name": "Dragon Wheel Kick",
-        "notes": "",
-        "on_block": "",
-        "on_ch": "",
-        "on_hit": "",
-        "recovery": "",
-        "startup": "",
-        "target": "m"
-    },
-    {
-        "damage": "10,16",
-        "gif": "",
-        "id": "Jun-Izumo ,3",
-        "input": "Izumo ,3",
         "name": "Zuiun Renkyaku (Heat Engage)",
         "notes": "New Move",
         "on_block": "",
@@ -4212,6 +4198,20 @@
         "recovery": "",
         "startup": "",
         "target": "m,m"
+    },
+    {
+        "damage": "10,16",
+        "gif": "",
+        "id": "Jun-Izumo ,3",
+        "input": "Izumo ,3",
+        "name": "Dragon Wheel Kick",
+        "notes": "",
+        "on_block": "",
+        "on_ch": "",
+        "on_hit": "",
+        "recovery": "",
+        "startup": "",
+        "target": "m"
     },
     {
         "damage": "10,16",
@@ -4554,20 +4554,6 @@
         "gif": "",
         "id": "Jun-SS ,4",
         "input": "SS ,4",
-        "name": "Kagura (Heat Engage)",
-        "notes": "New Move",
-        "on_block": "",
-        "on_ch": "",
-        "on_hit": "",
-        "recovery": "",
-        "startup": "18f",
-        "target": "m,sp"
-    },
-    {
-        "damage": "20",
-        "gif": "",
-        "id": "Jun-SS ,4",
-        "input": "SS ,4",
         "name": "Kagura",
         "notes": "",
         "on_block": "",
@@ -4576,6 +4562,20 @@
         "recovery": "",
         "startup": "18f",
         "target": "m"
+    },
+    {
+        "damage": "20",
+        "gif": "",
+        "id": "Jun-SS ,4",
+        "input": "SS ,4",
+        "name": "Kagura (Heat Engage)",
+        "notes": "New Move",
+        "on_block": "",
+        "on_ch": "",
+        "on_hit": "",
+        "recovery": "",
+        "startup": "18f",
+        "target": "m,sp"
     },
     {
         "damage": "20",
@@ -4900,20 +4900,6 @@
         "target": "m,m,M"
     },
     {
-        "damage": "10,8,20",
-        "gif": "",
-        "id": "Jun-uf,4,3",
-        "input": "uf,4,3",
-        "name": "Housenka - Misogi",
-        "notes": "\n* Deals self-damage (recoverable) when not in Heat\n* On hit shift to Miare\n* New Move\n",
-        "on_block": "",
-        "on_ch": "",
-        "on_hit": "KDN",
-        "recovery": "",
-        "startup": "",
-        "target": "m,mm"
-    },
-    {
         "damage": "-",
         "gif": "",
         "id": "Jun-uf,4,3",
@@ -4926,6 +4912,20 @@
         "recovery": "",
         "startup": "",
         "target": "m,m"
+    },
+    {
+        "damage": "10,8,20",
+        "gif": "",
+        "id": "Jun-uf,4,3",
+        "input": "uf,4,3",
+        "name": "Housenka - Misogi",
+        "notes": "\n* Deals self-damage (recoverable) when not in Heat\n* On hit shift to Miare\n* New Move\n",
+        "on_block": "",
+        "on_ch": "",
+        "on_hit": "KDN",
+        "recovery": "",
+        "startup": "",
+        "target": "m,mm"
     },
     {
         "damage": "-",
@@ -5404,20 +5404,6 @@
         "target": "m"
     },
     {
-        "damage": "-",
-        "gif": "",
-        "id": "Jun-WS ,4",
-        "input": "WS ,4",
-        "name": "Toe Smash",
-        "notes": "",
-        "on_block": "",
-        "on_ch": "",
-        "on_hit": "",
-        "recovery": "",
-        "startup": "",
-        "target": "m"
-    },
-    {
         "damage": "21",
         "gif": "",
         "id": "Jun-WS ,4",
@@ -5429,6 +5415,20 @@
         "on_hit": "KDN",
         "recovery": "",
         "startup": "11f",
+        "target": "m"
+    },
+    {
+        "damage": "-",
+        "gif": "",
+        "id": "Jun-WS ,4",
+        "input": "WS ,4",
+        "name": "Toe Smash",
+        "notes": "",
+        "on_block": "",
+        "on_ch": "",
+        "on_hit": "",
+        "recovery": "",
+        "startup": "",
         "target": "m"
     }
 ]
