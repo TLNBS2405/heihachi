@@ -11,7 +11,7 @@ from src.module import character
 
 from threading import Thread
 
-sys.path.insert(1, (os.path.dirname(os.path.dirname(__file__))))
+sys.path.insert(0, (os.path.dirname(os.path.dirname(__file__))))
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.WARNING)
