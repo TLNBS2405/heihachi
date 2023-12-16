@@ -1,4 +1,4 @@
-import json, datetime, logging, os, discord, sched, time
+import json, datetime, logging, os, discord, sched, time, sys
 from typing import List
 
 from src.wavu import wavu_importer
@@ -11,6 +11,7 @@ from src.module import character
 
 from threading import Thread
 
+sys.path.insert(1, (os.path.dirname(os.path.dirname(__file__))))
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.WARNING)
