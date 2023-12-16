@@ -4,7 +4,7 @@ A discord bot to receive Tekken 8 frame data primary from [wavu.wiki](https://wa
 ## Instruction
 
 Clone this to a linux server that has Python 3.10.0+ and install the dependencies with:
-```py
+```
 pip install -r requirements.txt
 ```
 
