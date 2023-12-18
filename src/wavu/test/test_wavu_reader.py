@@ -7,6 +7,20 @@ class MyTestCase(unittest.TestCase):
         character_movelist = wavu_reader.get_character_movelist("Azucena")
         self.assertEqual(character_movelist[0].input,"1")
 
+    def test_create_alias(self):
+
+        character_movelist = wavu_reader.get_character_movelist("asuka")
+        move = wavu_reader.get_move("Asuka-Destabilizer.1",character_movelist)
+        self.assertEqual(move.alias,["f+2+4,1"])
+
+        move = wavu_reader.get_move("Asuka-f+1+3",character_movelist)
+        self.assertEqual(move.alias,["f+2+4"])
+
+
+        character_movelist = wavu_reader.get_character_movelist("jun")
+        move = wavu_reader.get_move("Jun-1,2,u_d",character_movelist)
+        self.assertEqual(move.alias,["1,2,d"])
+        self.assertEqual(move.input,"1,2,u")
 
     def test_get_move(self):
         character_movelist = wavu_reader.get_character_movelist("Azucena")

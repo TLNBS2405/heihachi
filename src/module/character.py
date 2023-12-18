@@ -5,7 +5,7 @@ import re
 
 class Move:
     def __init__(self, id: str, name: str, input: str, target: str, damage: str, on_block: str, on_hit: str, on_ch: str,
-                 startup: str, recovery: str, notes: str, gif: str):
+                 startup: str, recovery: str, notes: str, gif: str, alias: List[str]):
         self.id = id
         self.name = name
         self.input = input
@@ -18,6 +18,8 @@ class Move:
         self.recovery = recovery
         self.notes = notes
         self.gif = gif
+        if alias:
+            self.alias = alias
 
 
 class MoveEncoder(JSONEncoder):

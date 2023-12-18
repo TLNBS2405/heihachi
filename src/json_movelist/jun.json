@@ -308,10 +308,13 @@
         "target": "h,h,sp"
     },
     {
+        "alias": [
+            "1,2,d"
+        ],
         "damage": "5,8",
         "gif": "",
         "id": "Jun-1,2,u_d",
-        "input": "1,2,u_d",
+        "input": "1,2,u",
         "name": "",
         "notes": "",
         "on_block": "+1",
@@ -3122,10 +3125,13 @@
         "target": "m,sp"
     },
     {
+        "alias": [
+            "f+3~d"
+        ],
         "damage": "13",
         "gif": "",
         "id": "Jun-f+3~u_d",
-        "input": "f+3~u_d",
+        "input": "f+3~u",
         "name": "",
         "notes": "",
         "on_block": "-2",

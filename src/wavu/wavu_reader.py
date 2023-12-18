@@ -49,7 +49,10 @@ def _get_all_parent_values_of(field: str, move_id: str, move_list_json: list) ->
         for move in move_list_json:
             if move["title"]["id"] == move_id:
                 if move["title"]["parent"]:
-                    complete_input += _get_all_parent_values_of(field, move["title"]["parent"], move_list_json)
+                    original_move = move["title"]["parent"]
+                    if "_" in original_move:
+                        original_move = original_move.split("_")[0]
+                    complete_input += _get_all_parent_values_of(field,original_move, move_list_json)
                 return complete_input + move["title"][field]
     else:
         return ""
@@ -57,12 +60,41 @@ def _get_all_parent_values_of(field: str, move_id: str, move_list_json: list) ->
 def _remove_non_ascii(data):
     return re.sub(r'[^\x00-\x7F]+', '', data)
 
+
+#last entry is always the input
+def _create_alias(input :str) -> List[str]:
+
+    parts = input.split("_")
+    input = parts[0]
+    aliases = parts[1:]
+    result = []
+    for entry in aliases:
+        num_characters = len(entry)
+        x = len(input)-num_characters
+        if x<0:
+            x=0
+        original_input= input[0:x]
+        alias = original_input + entry
+        if len(alias) > len(input):
+           input=input+entry[len(input):]
+
+        result.append(alias)
+    result.append(input)
+    return result
+
 def _convert_json_movelist(move_list_json: list) -> List[Move]:
     move_list = []
     for move in move_list_json:
+        alias = []
         id = _remove_non_ascii(move["title"]["id"])
         name = _remove_non_ascii(move["title"]["name"])
+
         input = _remove_non_ascii(_get_all_parent_values_of("input", move["title"]["parent"], move_list_json) + move["title"]["input"])
+        if "_" in input:
+            result = _create_alias(input)
+            input = result[-1]
+            alias = result[0:(len(result)-1)]
+
         target = _remove_non_ascii(_get_all_parent_values_of("target", move["title"]["parent"], move_list_json) + move["title"]["target"])
         damage = _remove_non_ascii(_get_all_parent_values_of("damage", move["title"]["parent"], move_list_json) + move["title"]["damage"])
 
@@ -74,7 +106,9 @@ def _convert_json_movelist(move_list_json: list) -> List[Move]:
 
         notes = html.unescape(move["title"]["notes"])
         notes = BeautifulSoup(notes, features="lxml").get_text()
-        move = Move(id, name, input, target, damage, on_block, on_hit, on_ch, startup, recovery, notes, "")
+
+
+        move = Move(id, name, input, target, damage, on_block, on_hit, on_ch, startup, recovery, notes, "", alias)
         move_list.append(move)
     return move_list
 

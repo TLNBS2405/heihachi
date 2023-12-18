@@ -1022,10 +1022,13 @@
         "target": "m"
     },
     {
+        "alias": [
+            "BT.2"
+        ],
         "damage": "15",
         "gif": "",
         "id": "Kazuya-BT.1_2",
-        "input": "BT.1_2",
+        "input": "BT.1",
         "name": "Spin Knuckle Jab",
         "notes": "",
         "on_block": "-8",
@@ -1050,10 +1053,13 @@
         "target": "h"
     },
     {
+        "alias": [
+            "BT.4"
+        ],
         "damage": "18",
         "gif": "",
         "id": "Kazuya-BT.3_4",
-        "input": "BT.3_4",
+        "input": "BT.3",
         "name": "Spin Kick",
         "notes": "",
         "on_block": "-8",
@@ -1078,10 +1084,13 @@
         "target": "h"
     },
     {
+        "alias": [
+            "BT.d+2"
+        ],
         "damage": "10",
         "gif": "",
         "id": "Kazuya-BT.d+1_d+2",
-        "input": "BT.d+1_d+2",
+        "input": "BT.d+1",
         "name": "Crouch Spin Knuckle",
         "notes": "",
         "on_block": "-2",
@@ -1106,10 +1115,13 @@
         "target": "sm"
     },
     {
+        "alias": [
+            "BT.d+4"
+        ],
         "damage": "12",
         "gif": "",
         "id": "Kazuya-BT.d+3_d+4",
-        "input": "BT.d+3_d+4",
+        "input": "BT.d+3",
         "name": "Crouch Spin Kick",
         "notes": "",
         "on_block": "-11",
@@ -1148,10 +1160,13 @@
         "target": "m"
     },
     {
+        "alias": [
+            "BT.uf+4"
+        ],
         "damage": "-",
         "gif": "",
         "id": "Kazuya-BT.uf+3_uf+4",
-        "input": "BT.uf+3_uf+4",
+        "input": "BT.uf+3",
         "name": "Reverse Jump Kick",
         "notes": "",
         "on_block": "",

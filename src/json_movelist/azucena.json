@@ -1344,10 +1344,13 @@
         "target": ""
     },
     {
+        "alias": [
+            "BT.b+4"
+        ],
         "damage": "",
         "gif": "",
         "id": "Azucena-BT.b+3_4",
-        "input": "BT.b+3_4",
+        "input": "BT.b+3",
         "name": "Shuffle Walk",
         "notes": "",
         "on_block": "",
@@ -1526,10 +1529,13 @@
         "target": "l"
     },
     {
+        "alias": [
+            "d+2+4"
+        ],
         "damage": "30",
         "gif": "",
         "id": "Azucena-d+1+3_d+2+4",
-        "input": "d+1+3_d+2+4",
+        "input": "d+1+3",
         "name": "Smell the Coffee",
         "notes": "\n* \nHeat Engager\n* Crouch throw\n* Unbreakable",
         "on_block": "",
@@ -3878,10 +3884,13 @@
         "target": ""
     },
     {
+        "alias": [
+            "LIB.d+2+4"
+        ],
         "damage": "30",
         "gif": "",
         "id": "Azucena-LIB.d+1+3_d+2+4",
-        "input": "LIB.d+1+3_d+2+4",
+        "input": "LIB.d+1+3",
         "name": "Smell the Coffee",
         "notes": "\n* \nHeat Engager\n* Crouch throw",
         "on_block": "",
@@ -3976,10 +3985,13 @@
         "target": "m"
     },
     {
+        "alias": [
+            "LIB.D"
+        ],
         "damage": "",
         "gif": "",
         "id": "Azucena-LIB.U_D",
-        "input": "LIB.U_D",
+        "input": "LIB.U",
         "name": "Milagros Show",
         "notes": "\n* Parries all high/low attacks\n* Regenerates heat with each step",
         "on_block": "",

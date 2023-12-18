@@ -952,10 +952,13 @@
         "target": "l(,th)"
     },
     {
+        "alias": [
+            "b+2+4"
+        ],
         "damage": "25",
         "gif": "",
         "id": "Asuka-b+1+3",
-        "input": "b+1+3_b+2+4",
+        "input": "b+1+3",
         "name": "Attack Reversal",
         "notes": "\n* Does 25 + 50% of reversed attack as damage\n* Opp. Position on hit: Reverse Pos Foot-sd. Face-up\n* Reverses limb-based h/m attacks",
         "on_block": "-6",
@@ -966,10 +969,13 @@
         "target": ""
     },
     {
+        "alias": [
+            "b+2+4*"
+        ],
         "damage": "25",
         "gif": "",
         "id": "Asuka-b+1+3*",
-        "input": "b+1+3*_b+2+4*",
+        "input": "b+1+3*",
         "name": "Attack Reversal (Hold)",
         "notes": "\n* Does 25 + 50% of reversed attack as damage\n* Opp. Position on hit: Reverse Pos Foot-sd. Face-up\n* Reverses limb-based h/m attacks",
         "on_block": "-6",
@@ -2226,10 +2232,13 @@
         "target": "l"
     },
     {
+        "alias": [
+            "f+2+4,1"
+        ],
         "damage": "020",
         "gif": "",
         "id": "Asuka-Destabilizer.1",
-        "input": "f+1+3_f+2+4,1",
+        "input": "f+1+3,1",
         "name": "Compulsory Reform",
         "notes": "\n* [[:Template:HE]]\n* Gain Naniwa Gusto on Heat Activation",
         "on_block": "",
@@ -2240,10 +2249,13 @@
         "target": "t(h)m"
     },
     {
+        "alias": [
+            "f+2+4Destabilizer.4"
+        ],
         "damage": "019",
         "gif": "",
         "id": "Asuka-Destabilizer.4",
-        "input": "f+1+3_f+2+4Destabilizer.4",
+        "input": "f+1+3Destabilizer.4",
         "name": "Inescapable Tirade",
         "notes": "",
         "on_block": "",
@@ -2618,10 +2630,13 @@
         "target": "h"
     },
     {
+        "alias": [
+            "f+2+4"
+        ],
         "damage": "0",
         "gif": "",
         "id": "Asuka-f+1+3",
-        "input": "f+1+3_f+2+4",
+        "input": "f+1+3",
         "name": "Destabilizer",
         "notes": "\n* Break: none\n* Opp. Position on break: \n* Opp. Position on hit: ",
         "on_block": "",
