@@ -25,8 +25,18 @@
     "wavu_page": "https://wavu.wiki/t/Jun_movelist"
   },
   {
+    "name": "kazuya",
+    "portrait": "https://i.imgur.com/pf6xWtq.jpg",
+    "wavu_page": "https://wavu.wiki/t/Jun_movelist"
+  },
+  {
     "name": "raven",
     "portrait": "https://i.imgur.com/PV9xTeM.jpg",
-    "wavu_page": "https://wavu.wiki/t/Raven_movelist"
+    "wavu_page": "https://wavu.wiki/t/Kazuya_movelist_(Tekken_8)"
+  },
+  {
+    "name": "yoshimitsu",
+    "portrait": "https://i.imgur.com/PV9xTeM.jpg",
+    "wavu_page": "https://wavu.wiki/t/Yoshimitsu_movelist_(Tekken_8)"
   }
 ]
