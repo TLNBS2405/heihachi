@@ -14,6 +14,24 @@ def _upper_first_letter(input :str) -> str:
     else:
         return input
 
+def move_list_embed(character, moves, move_type):
+    """Returns the embed message for a list of moves matching to a special move type"""
+    desc_string = ''
+    moves.sort()
+    for move in moves:
+        desc_string += move + '\n'
+
+    embed = discord.Embed(title=character.name + ' ' + move_type.lower() + ':',
+                          colour=0x00EAFF,
+                          description=desc_string)
+    return embed
+
+def error_embed(err):
+    embed = discord.Embed(title='Error',
+                          colour=0xFF4500,
+                          description=err)
+    return embed
+
 def move_embed(character :character, move :dict):
 
 

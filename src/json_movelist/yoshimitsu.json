@@ -1641,7 +1641,7 @@
         "damage": "15,20",
         "gif": "",
         "id": "Yoshimitsu-f,F+2&amp;${justFrame}58;2",
-        "input": "f,F+2,&amp;#58;2",
+        "input": "f,F+2&amp;#58;2",
         "name": "Yomi Kakenuke",
         "notes": "\n* Transition to attack throw on standing or airborne front hit only\n* Can transition to r? IND with d+3+4",
         "on_block": "",

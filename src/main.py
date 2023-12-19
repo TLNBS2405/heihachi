@@ -48,14 +48,25 @@ except Exception as e:
 
 @tree.command(name="fd", description="Frame data from a character move", guild=discord.Object("645011181739835397"))
 async def self(interaction: discord.Interaction, character_name: str, move: str):
+    original_character_name = character_name
     character_name = util.correct_character_name(character_name.lower())
-    character = util.get_character_by_name(character_name, character_list)
+    if character_name:
+        character = util.get_character_by_name(character_name, character_list)
+        move_list = json_movelist_reader.get_movelist(character_name)
 
-    move_list = json_movelist_reader.get_movelist(character_name)
+        move_type = util.get_move_type(move)
+        if move_type:
+            moves = json_movelist_reader.get_by_move_type(move_type,move_list)
+            moves_embed = embed.move_list_embed(character,moves,move_type)
+            await interaction.response.send_message(embed=moves_embed, ephemeral=False)
+        else:
+            character_move = json_movelist_reader.get_move(move, move_list)
+            move_embed = embed.move_embed(character, character_move)
+            await interaction.response.send_message(embed=move_embed, ephemeral=False)
+    else:
+        error_embed = embed.error_embed(f'Character {original_character_name} does not exist.')
+        await interaction.response.send_message(embed=error_embed, ephemeral=False)
 
-    character_move = json_movelist_reader.get_move(move, move_list)
-    move_embed = embed.move_embed(character, character_move)
-    await interaction.response.send_message(embed=move_embed, ephemeral=False)
 
 def create_json_movelists(character_list_path: str) -> List[character.Character]:
     with open(character_list_path) as file:

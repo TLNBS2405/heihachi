@@ -37,3 +37,22 @@ def get_move(input: str, character_movelist: dict):
         return result[0]
     else:
         return {}
+
+def _correct_move_type(move_type :str) -> str:
+    for k in const.MOVE_TYPES.keys():
+        if move_type in const.MOVE_TYPES[k]:
+            return k
+
+def get_by_move_type(move_type: str, move_list: dict) -> list:
+    """Gets a list of moves that match move_type from local_json
+    returns a list of move Commands if finds match(es), else empty list"""
+    move_type = _correct_move_type(move_type.lower()).lower()
+    moves = list(filter(lambda x: (move_type in x["notes"].lower()), move_list))
+
+    if moves:
+        result = []
+        for move in moves:
+            result.append(move['input'])
+        return list(set(result))
+    else:
+        return []

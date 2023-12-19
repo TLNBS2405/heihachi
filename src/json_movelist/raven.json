@@ -75,12 +75,12 @@
         "id": "Raven-1+2",
         "input": "1+2",
         "name": "Crusader",
-        "notes": "Heat Engager",
+        "notes": "\n* Absorbs Punch(H/M) during 1 to 3F\n* After absorbs succeeds, connect to Death from Above (During Haze )\n* Damage changed from 23 to 20\n",
         "on_block": "-9",
-        "on_ch": "",
-        "on_hit": "+15a",
-        "recovery": "r33",
-        "startup": "i14",
+        "on_ch": "KDN",
+        "on_hit": "KDN+15",
+        "recovery": "",
+        "startup": "14f",
         "target": "m"
     },
     {
@@ -89,12 +89,12 @@
         "id": "Raven-1+2",
         "input": "1+2",
         "name": "Crusader",
-        "notes": "\n* Absorbs Punch(H/M) during 1 to 3F\n* After absorbs succeeds, connect to Death from Above (During Haze )\n* Damage changed from 23 to 20\n",
+        "notes": "Heat Engager",
         "on_block": "-9",
-        "on_ch": "KDN",
-        "on_hit": "KDN+15",
-        "recovery": "",
-        "startup": "14f",
+        "on_ch": "",
+        "on_hit": "+15a",
+        "recovery": "r33",
+        "startup": "i14",
         "target": "m"
     },
     {
@@ -126,20 +126,6 @@
         "target": "h,h"
     },
     {
-        "damage": "",
-        "gif": "",
-        "id": "Raven-1+2+3+4",
-        "input": "1+2+3+4",
-        "name": "Summon Force",
-        "notes": "\n* CH state for 5 seconds\n* Can't block for 5 seconds",
-        "on_block": "",
-        "on_ch": "",
-        "on_hit": "",
-        "recovery": "r55",
-        "startup": "",
-        "target": ""
-    },
-    {
         "damage": "-",
         "gif": "",
         "id": "Raven-1+2+3+4",
@@ -152,6 +138,20 @@
         "recovery": "55",
         "startup": "",
         "target": "sp"
+    },
+    {
+        "damage": "",
+        "gif": "",
+        "id": "Raven-1+2+3+4",
+        "input": "1+2+3+4",
+        "name": "Summon Force",
+        "notes": "\n* CH state for 5 seconds\n* Can't block for 5 seconds",
+        "on_block": "",
+        "on_ch": "",
+        "on_hit": "",
+        "recovery": "r55",
+        "startup": "",
+        "target": ""
     },
     {
         "damage": "5,12",
@@ -168,7 +168,7 @@
         "target": "h,h"
     },
     {
-        "damage": ",60",
+        "damage": "-,60",
         "gif": "",
         "id": "Raven-1+2+3+4,b,f,1+2",
         "input": "1+2+3+4,b,f,1+2",
@@ -179,7 +179,7 @@
         "on_hit": "+21a (+11)",
         "recovery": "r51",
         "startup": ",i59~61",
-        "target": ",m!"
+        "target": "sp,m!"
     },
     {
         "damage": "5,12",
@@ -285,12 +285,12 @@
         "id": "Raven-2,3",
         "input": "2,3",
         "name": "PDK Combo",
-        "notes": "Combo from 1st hit",
+        "notes": "\n* Combo from 1st CH\n* Returns to crouching\n* Name changed from Right Straight to Left Low Kick\n* On block from -12F to -13F\n* On hit from -1F to -2F\n",
         "on_block": "-13",
-        "on_ch": "",
+        "on_ch": "-1",
         "on_hit": "-2",
-        "recovery": "r32",
-        "startup": ",i22",
+        "recovery": "",
+        "startup": "",
         "target": "h,l"
     },
     {
@@ -299,12 +299,12 @@
         "id": "Raven-2,3",
         "input": "2,3",
         "name": "PDK Combo",
-        "notes": "\n* Combo from 1st CH\n* Returns to crouching\n* Name changed from Right Straight to Left Low Kick\n* On block from -12F to -13F\n* On hit from -1F to -2F\n",
+        "notes": "Combo from 1st hit",
         "on_block": "-13",
-        "on_ch": "-1",
+        "on_ch": "",
         "on_hit": "-2",
-        "recovery": "",
-        "startup": "",
+        "recovery": "r32",
+        "startup": ",i22",
         "target": "h,l"
     },
     {
@@ -453,12 +453,12 @@
         "id": "Raven-3,3,4",
         "input": "3,3,4",
         "name": "Valkyrie Lance Combo",
-        "notes": "\n* Combo from 2nd CH\n* Can be delayed\n* Combo can be delayed 4F from CH\n",
+        "notes": "\n* \nBalcony break\n* Combo from 2nd CH",
         "on_block": "-9",
-        "on_ch": "KDN",
-        "on_hit": "KDN",
-        "recovery": "",
-        "startup": "(1)",
+        "on_ch": "+66a (+50)",
+        "on_hit": "+39a (-19)",
+        "recovery": "r33",
+        "startup": ",i26~27",
         "target": "m,h,h"
     },
     {
@@ -467,12 +467,12 @@
         "id": "Raven-3,3,4",
         "input": "3,3,4",
         "name": "Valkyrie Lance Combo",
-        "notes": "\n* \nBalcony break\n* Combo from 2nd CH",
+        "notes": "\n* Combo from 2nd CH\n* Can be delayed\n* Combo can be delayed 4F from CH\n",
         "on_block": "-9",
-        "on_ch": "+66a (+50)",
-        "on_hit": "+39a (-19)",
-        "recovery": "r33",
-        "startup": ",i26~27",
+        "on_ch": "KDN",
+        "on_hit": "KDN",
+        "recovery": "",
+        "startup": "(1)",
         "target": "m,h,h"
     },
     {
@@ -578,8 +578,8 @@
         "gif": "",
         "id": "Raven-3+4,or,d,3+4,orFC,3+4",
         "input": "3+4,or,d,3+4,orFC,3+4",
-        "name": "Soulzone",
-        "notes": "New Move",
+        "name": "Haze",
+        "notes": "Cost 20F",
         "on_block": "",
         "on_ch": "",
         "on_hit": "",
@@ -592,28 +592,14 @@
         "gif": "",
         "id": "Raven-3+4,or,d,3+4,orFC,3+4",
         "input": "3+4,or,d,3+4,orFC,3+4",
-        "name": "Haze",
-        "notes": "Cost 20F",
+        "name": "Soulzone",
+        "notes": "New Move",
         "on_block": "",
         "on_ch": "",
         "on_hit": "",
         "recovery": "",
         "startup": "",
         "target": "sp"
-    },
-    {
-        "damage": "16",
-        "gif": "",
-        "id": "Raven-4",
-        "input": "4",
-        "name": "High Kick",
-        "notes": "\n* Damage changed from 17 to 16\n* On block from -8F to -7F\n",
-        "on_block": "-7",
-        "on_ch": "LNC",
-        "on_hit": "+3",
-        "recovery": "27",
-        "startup": "12f(1)",
-        "target": "h"
     },
     {
         "damage": "16",
@@ -627,6 +613,20 @@
         "on_hit": "+3~+4",
         "recovery": "r26",
         "startup": "i12~13",
+        "target": "h"
+    },
+    {
+        "damage": "16",
+        "gif": "",
+        "id": "Raven-4",
+        "input": "4",
+        "name": "High Kick",
+        "notes": "\n* Damage changed from 17 to 16\n* On block from -8F to -7F\n",
+        "on_block": "-7",
+        "on_ch": "LNC",
+        "on_hit": "+3",
+        "recovery": "27",
+        "startup": "12f(1)",
         "target": "h"
     },
     {
@@ -784,20 +784,6 @@
         "target": "h"
     },
     {
-        "damage": "21(6)",
-        "gif": "",
-        "id": "Raven-b,1",
-        "input": "b,1",
-        "name": "Elbow Strike to SZ",
-        "notes": "\n* Forces an opponent to crouching on NH\n* Chip damage when guarded\n* Shift to Soulzone on hit or block\n* New Move\n",
-        "on_block": "+7",
-        "on_ch": "",
-        "on_hit": "+10C",
-        "recovery": "",
-        "startup": "16f(1)",
-        "target": "h,sp"
-    },
-    {
         "damage": "25",
         "gif": "",
         "id": "Raven-b,1",
@@ -810,6 +796,20 @@
         "recovery": "29",
         "startup": "16f",
         "target": "h"
+    },
+    {
+        "damage": "21(6)",
+        "gif": "",
+        "id": "Raven-b,1",
+        "input": "b,1",
+        "name": "Elbow Strike to SZ",
+        "notes": "\n* Forces an opponent to crouching on NH\n* Chip damage when guarded\n* Shift to Soulzone on hit or block\n* New Move\n",
+        "on_block": "+7",
+        "on_ch": "",
+        "on_hit": "+10C",
+        "recovery": "",
+        "startup": "16f(1)",
+        "target": "h,sp"
     },
     {
         "damage": "25",
@@ -1918,20 +1918,6 @@
         "target": "m"
     },
     {
-        "damage": "-",
-        "gif": "",
-        "id": "Raven-BT,4",
-        "input": "BT,4",
-        "name": "Chronos Lathe",
-        "notes": "New Move",
-        "on_block": "-5",
-        "on_ch": "",
-        "on_hit": "",
-        "recovery": "",
-        "startup": "19f(1)",
-        "target": "m"
-    },
-    {
         "damage": "18",
         "gif": "",
         "id": "Raven-BT,4",
@@ -1944,6 +1930,20 @@
         "recovery": "",
         "startup": "10f",
         "target": "h"
+    },
+    {
+        "damage": "-",
+        "gif": "",
+        "id": "Raven-BT,4",
+        "input": "BT,4",
+        "name": "Chronos Lathe",
+        "notes": "New Move",
+        "on_block": "-5",
+        "on_ch": "",
+        "on_hit": "",
+        "recovery": "",
+        "startup": "19f(1)",
+        "target": "m"
     },
     {
         "damage": "-",
@@ -3892,20 +3892,6 @@
         "target": "L,sm"
     },
     {
-        "damage": "17",
-        "gif": "",
-        "id": "Raven-FC,df,3+4",
-        "input": "FC,df,3+4",
-        "name": "Quicksand Catastrophe (1)",
-        "notes": "",
-        "on_block": "-23",
-        "on_ch": "KDN",
-        "on_hit": "KDN",
-        "recovery": "",
-        "startup": "18f",
-        "target": "l"
-    },
-    {
         "damage": "17,24?",
         "gif": "",
         "id": "Raven-FC,df,3+4",
@@ -3918,6 +3904,20 @@
         "recovery": "",
         "startup": "18f(2)",
         "target": "l,sm,sp"
+    },
+    {
+        "damage": "17",
+        "gif": "",
+        "id": "Raven-FC,df,3+4",
+        "input": "FC,df,3+4",
+        "name": "Quicksand Catastrophe (1)",
+        "notes": "",
+        "on_block": "-23",
+        "on_ch": "KDN",
+        "on_hit": "KDN",
+        "recovery": "",
+        "startup": "18f",
+        "target": "l"
     },
     {
         "damage": "17,30",
@@ -4592,20 +4592,6 @@
         "target": "l"
     },
     {
-        "damage": "25",
-        "gif": "",
-        "id": "Raven-HF,4",
-        "input": "HF,4",
-        "name": "Blind Ghost to BT",
-        "notes": "",
-        "on_block": "-4",
-        "on_ch": "KDN",
-        "on_hit": "KDN",
-        "recovery": "",
-        "startup": "22f(5)",
-        "target": "m"
-    },
-    {
         "damage": "25,1*6",
         "gif": "",
         "id": "Raven-HF,4",
@@ -4618,6 +4604,20 @@
         "recovery": "",
         "startup": "17f",
         "target": "m,th"
+    },
+    {
+        "damage": "25",
+        "gif": "",
+        "id": "Raven-HF,4",
+        "input": "HF,4",
+        "name": "Blind Ghost to BT",
+        "notes": "",
+        "on_block": "-4",
+        "on_ch": "KDN",
+        "on_hit": "KDN",
+        "recovery": "",
+        "startup": "22f(5)",
+        "target": "m"
     },
     {
         "damage": "-",
@@ -5072,7 +5072,7 @@
         "gif": "",
         "id": "Raven-SZ,2",
         "input": "SZ,2",
-        "name": "Dual Thanatos",
+        "name": "Dual Thanatos (Heat Engager)",
         "notes": "New Move",
         "on_block": "-9",
         "on_ch": "",
@@ -5086,7 +5086,7 @@
         "gif": "",
         "id": "Raven-SZ,2",
         "input": "SZ,2",
-        "name": "Dual Thanatos (Heat Engager)",
+        "name": "Dual Thanatos",
         "notes": "New Move",
         "on_block": "-9",
         "on_ch": "",
@@ -5478,6 +5478,20 @@
         "gif": "",
         "id": "Raven-UB,b",
         "input": "UB,b",
+        "name": "Back Handspring to SZ",
+        "notes": "New Move",
+        "on_block": "",
+        "on_ch": "",
+        "on_hit": "",
+        "recovery": "",
+        "startup": "",
+        "target": "sp"
+    },
+    {
+        "damage": "-",
+        "gif": "",
+        "id": "Raven-UB,b",
+        "input": "UB,b",
         "name": "Back Handspring",
         "notes": "",
         "on_block": "",
@@ -5502,18 +5516,18 @@
         "target": ""
     },
     {
-        "damage": "-",
+        "damage": "20,20,20",
         "gif": "",
-        "id": "Raven-UB,b",
-        "input": "UB,b",
-        "name": "Back Handspring to SZ",
-        "notes": "New Move",
-        "on_block": "",
-        "on_ch": "",
-        "on_hit": "",
+        "id": "Raven-UB,b,3+4",
+        "input": "UB,b,3+4",
+        "name": "Pandra Spin",
+        "notes": "",
+        "on_block": "KDN",
+        "on_ch": "KDN",
+        "on_hit": "KDN",
         "recovery": "",
-        "startup": "",
-        "target": "sp"
+        "startup": "81f",
+        "target": "sp,ub(m)*3"
     },
     {
         "damage": "-,20,20,20",
@@ -5528,20 +5542,6 @@
         "recovery": "r66",
         "startup": ",i38~40 i46~49 i51~54",
         "target": "sp,M!,M!,M!"
-    },
-    {
-        "damage": "20,20,20",
-        "gif": "",
-        "id": "Raven-UB,b,3+4",
-        "input": "UB,b,3+4",
-        "name": "Pandra Spin",
-        "notes": "",
-        "on_block": "KDN",
-        "on_ch": "KDN",
-        "on_hit": "KDN",
-        "recovery": "",
-        "startup": "81f",
-        "target": "sp,ub(m)*3"
     },
     {
         "damage": "23(9)",
@@ -6056,7 +6056,7 @@
         "notes": "",
         "on_block": "-8~-7",
         "on_ch": "",
-        "on_hit": "+0a",
+        "on_hit": "+0s",
         "recovery": "r29",
         "startup": "i16~17",
         "target": "m"
@@ -6136,11 +6136,11 @@
         "gif": "",
         "id": "Raven-WS,3+4,or,d,df,f,3+4",
         "input": "WS,3+4,or,d,df,f,3+4",
-        "name": "Spinning Middle Kick",
-        "notes": "\n* Tail Spin removed\n* Damage changed from 23 to 20\n* On hit from +10SpF to +7KF\n* On block from -14F to -12F\n",
+        "name": "Spinning Middle Kick (Heat Engager)",
+        "notes": "New Move",
         "on_block": "-12",
-        "on_ch": "KDN",
-        "on_hit": "+7Sp",
+        "on_ch": "+17G",
+        "on_hit": "+17G",
         "recovery": "",
         "startup": "16f(2)",
         "target": "m"
@@ -6150,11 +6150,11 @@
         "gif": "",
         "id": "Raven-WS,3+4,or,d,df,f,3+4",
         "input": "WS,3+4,or,d,df,f,3+4",
-        "name": "Spinning Middle Kick (Heat Engager)",
-        "notes": "New Move",
+        "name": "Spinning Middle Kick",
+        "notes": "\n* Tail Spin removed\n* Damage changed from 23 to 20\n* On hit from +10SpF to +7KF\n* On block from -14F to -12F\n",
         "on_block": "-12",
-        "on_ch": "+17G",
-        "on_hit": "+17G",
+        "on_ch": "KDN",
+        "on_hit": "+7Sp",
         "recovery": "",
         "startup": "16f(2)",
         "target": "m"

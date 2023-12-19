@@ -3,6 +3,24 @@ from src.module import json_movelist_reader
 
 class MyTestCase(unittest.TestCase):
 
+    def test_get_by_move_type(self):
+
+        azu_move_list = json_movelist_reader.get_movelist("azucena")
+
+
+        result = json_movelist_reader.get_by_move_type("Homing",azu_move_list)
+        self.assertTrue(result[0])
+
+        result = json_movelist_reader.get_by_move_type("homing",azu_move_list)
+        self.assertTrue(result[0])
+
+        result = json_movelist_reader.get_by_move_type("he",azu_move_list)
+        self.assertTrue(result[0])
+
+        result = json_movelist_reader.get_by_move_type("screw",azu_move_list)
+        self.assertTrue(result[0])
+
+
     def test_get_movelist_from_json(self):
 
         result = json_movelist_reader.get_movelist("azucena")
