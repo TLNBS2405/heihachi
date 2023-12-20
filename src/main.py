@@ -61,8 +61,13 @@ async def self(interaction: discord.Interaction, character_name: str, move: str)
             await interaction.response.send_message(embed=moves_embed, ephemeral=False)
         else:
             character_move = json_movelist_reader.get_move(move, move_list)
-            move_embed = embed.move_embed(character, character_move)
-            await interaction.response.send_message(embed=move_embed, ephemeral=False)
+            if character_move:
+                move_embed = embed.move_embed(character, character_move)
+                await interaction.response.send_message(embed=move_embed, ephemeral=False)
+            else:
+                similar_moves = json_movelist_reader.get_similar_moves(character_move,move_list)
+                similar_moves_embed = embed.similar_moves_embed(similar_moves,character_name)
+                await interaction.response.send_message(embed=similar_moves_embed, ephemeral=False)
     else:
         error_embed = embed.error_embed(f'Character {original_character_name} does not exist.')
         await interaction.response.send_message(embed=error_embed, ephemeral=False)

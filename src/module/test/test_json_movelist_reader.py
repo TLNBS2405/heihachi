@@ -26,6 +26,12 @@ class MyTestCase(unittest.TestCase):
         result = json_movelist_reader.get_movelist("azucena")
         self.assertEqual(result[0]["id"],"Azucena-1")
 
+    def test_get_similar_moves(self):
+
+        move_list = json_movelist_reader.get_movelist("azucena")
+        similar_moves = json_movelist_reader.get_similar_moves("fff3+4",move_list)
+        self.assertTrue(similar_moves[0])
+
 
     def test_get_move(self):
 

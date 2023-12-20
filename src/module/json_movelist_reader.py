@@ -1,3 +1,7 @@
+
+from difflib import SequenceMatcher
+from heapq import nlargest as _nlargest
+
 from src.resources import const
 import os, json
 
@@ -45,7 +49,6 @@ def get_move(input: str, character_movelist: dict):
         result = list(filter(lambda x: (_is_command_in_alias(input, x)), character_movelist))
         if result:
             result[0]['input'] = result[0]['input'].replace("\\", "")
-            print(result[0])
             return result[0]
         return {}
 
@@ -67,3 +70,50 @@ def get_by_move_type(move_type: str, move_list: dict) -> list:
         return list(set(result))
     else:
         return []
+
+
+def _get_close_matches_indexes(word, possibilities, n=3, cutoff=0.6):
+    """Use SequenceMatcher to return a list of the indexes of the best
+    "good enough" matches. word is a sequence for which close matches
+    are desired (typically a string).
+    possibilities is a list of sequences against which to match word
+    (typically a list of strings).
+    Optional arg n (default 3) is the maximum number of close matches to
+    return.  n must be > 0.
+    Optional arg cutoff (default 0.6) is a float in [0, 1].  Possibilities
+    that don't score at least that similar to word are ignored.
+    """
+
+    if not n > 0:
+        raise ValueError("n must be > 0: %r" % (n,))
+    if not 0.0 <= cutoff <= 1.0:
+        raise ValueError("cutoff must be in [0.0, 1.0]: %r" % (cutoff,))
+    result = []
+    s = SequenceMatcher()
+    s.set_seq2(word)
+    for idx, x in enumerate(possibilities):
+        s.set_seq1(x)
+        if s.real_quick_ratio() >= cutoff and \
+                s.quick_ratio() >= cutoff and \
+                s.ratio() >= cutoff:
+            result.append((s.ratio(), idx))
+
+    # Move the best scorers to head of list
+    result = _nlargest(n, result)
+
+    # Strip scores for the best n matches
+    return [x for score, x in result]
+
+def get_similar_moves(move :str, move_list: dict) -> list[str]:
+
+    command_list = []
+    for move in move_list:
+        command_list.append(move["input"])
+
+    moves_indexes = _get_close_matches_indexes(_simplify_input(move["input"]), map(_simplify_input, command_list), 5, 0.7)
+
+    result = []
+    for index in moves_indexes:
+        result.append(move_list[index])
+
+    return result
