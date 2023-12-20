@@ -10,7 +10,7 @@ CHARACTER_ALIAS = {
     'claudio': ['cld', 'cla'],
     'devil_jin': ['dj', 'deviljin', 'dvj'],
     'dragunov': ['drag', 'sergei', 'dragu'],
-    'eliza': ['elz'],
+    'jun': [],
     'feng': ['fen'],
     'hwoarang': ['hwo'],
     'jack8': ['j8', 'jack-8', 'jack'],

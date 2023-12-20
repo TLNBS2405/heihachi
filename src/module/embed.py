@@ -6,6 +6,7 @@ import re
 
 MOVE_NOT_FOUND_TITLE = 'Move not found'
 SUCCESS_COLOR = discord.Colour.from_rgb(50,168,82)
+ERROR_COLOR = discord.Colour.from_rgb(220,20,60)
 
 def _upper_first_letter(input :str) -> str:
     if input:
@@ -22,13 +23,13 @@ def move_list_embed(character, moves, move_type):
         desc_string += move + '\n'
 
     embed = discord.Embed(title=character.name + ' ' + move_type.lower() + ':',
-                          colour=0x00EAFF,
+                          colour=SUCCESS_COLOR,
                           description=desc_string)
     return embed
 
 def error_embed(err):
     embed = discord.Embed(title='Error',
-                          colour=0xFF4500,
+                          colour=ERROR_COLOR,
                           description=err)
     return embed
 

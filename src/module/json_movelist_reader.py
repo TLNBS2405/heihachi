@@ -28,14 +28,25 @@ def _simplify_input(input: str) -> str:
         input = input.lower().replace('wr', 'fff')
     return input
 
+def _is_command_in_alias(command: str, item: dict) -> bool:
+    if 'alias' in item:
+        aliases = item['alias']
+        for alias in aliases:
+            if _simplify_input(command) == _simplify_input(alias):
+                return True
+    return False
 
 def get_move(input: str, character_movelist: dict):
     result = [entry for entry in character_movelist if _simplify_input(entry["input"]) == _simplify_input(input)]
-
     if result:
         result[0]['input'] = result[0]['input'].replace("\\", "")
         return result[0]
     else:
+        result = list(filter(lambda x: (_is_command_in_alias(input, x)), character_movelist))
+        if result:
+            result[0]['input'] = result[0]['input'].replace("\\", "")
+            print(result[0])
+            return result[0]
         return {}
 
 def _correct_move_type(move_type :str) -> str:
