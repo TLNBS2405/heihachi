@@ -22,7 +22,7 @@ def get_wavu_character_movelist(character_name: str) -> List[Move]:
     params = {
         "action": "cargoquery",
         "tables": "Move",
-        "fields": "id,name,input,parent,target,damage,startup, recv, tot, crush, block,hit,ch,notes",
+        "fields": "id,name,input,parent,target,damage,startup, recv, tot, crush, block,hit,ch,notes,_pageNamespace=ns",
         "join_on": "",
         "group_by": "",
         "where": "id LIKE '" + _upper_first_letter(character_name) + "%'",
@@ -88,33 +88,34 @@ def _create_alias(input: str) -> List[str]:
 def _convert_json_movelist(move_list_json: list) -> List[Move]:
     move_list = []
     for move in move_list_json:
-        alias = []
-        id = _remove_non_ascii(move["title"]["id"])
-        name = _remove_non_ascii(move["title"]["name"])
+        if move["title"]["ns"]=="0":
+            alias = []
+            id = _remove_non_ascii(move["title"]["id"])
+            name = _remove_non_ascii(move["title"]["name"])
 
-        input = _remove_non_ascii(
-            _get_all_parent_values_of("input", move["title"]["parent"], move_list_json) + move["title"]["input"])
-        if "_" in input:
-            result = _create_alias(input)
-            input = result[-1]
-            alias = result[0:(len(result) - 1)]
+            input = _remove_non_ascii(
+                _get_all_parent_values_of("input", move["title"]["parent"], move_list_json) + move["title"]["input"])
+            if "_" in input:
+                result = _create_alias(input)
+                input = result[-1]
+                alias = result[0:(len(result) - 1)]
 
-        target = _remove_non_ascii(
-            _get_all_parent_values_of("target", move["title"]["parent"], move_list_json) + move["title"]["target"])
-        damage = _remove_non_ascii(
-            _get_all_parent_values_of("damage", move["title"]["parent"], move_list_json) + move["title"]["damage"])
+            target = _remove_non_ascii(
+                _get_all_parent_values_of("target", move["title"]["parent"], move_list_json) + move["title"]["target"])
+            damage = _remove_non_ascii(
+                _get_all_parent_values_of("damage", move["title"]["parent"], move_list_json) + move["title"]["damage"])
 
-        on_block = _remove_non_ascii(move["title"]["block"])
-        on_hit = _remove_non_ascii(_normalize_hit_ch_input(move["title"]["hit"]))
-        on_ch = _remove_non_ascii(_normalize_hit_ch_input(move["title"]["ch"]))
-        startup = _remove_non_ascii(move["title"]["startup"])
-        recovery = _remove_non_ascii(move["title"]["recv"])
+            on_block = _remove_non_ascii(move["title"]["block"])
+            on_hit = _remove_non_ascii(_normalize_hit_ch_input(move["title"]["hit"]))
+            on_ch = _remove_non_ascii(_normalize_hit_ch_input(move["title"]["ch"]))
+            startup = _remove_non_ascii(move["title"]["startup"])
+            recovery = _remove_non_ascii(move["title"]["recv"])
 
-        notes = html.unescape(move["title"]["notes"])
-        notes = BeautifulSoup(notes, features="lxml").get_text()
+            notes = html.unescape(move["title"]["notes"])
+            notes = BeautifulSoup(notes, features="lxml").get_text()
 
-        move = Move(id, name, input, target, damage, on_block, on_hit, on_ch, startup, recovery, notes, "", alias)
-        move_list.append(move)
+            move = Move(id, name, input, target, damage, on_block, on_hit, on_ch, startup, recovery, notes, "", alias)
+            move_list.append(move)
     return move_list
 
 
