@@ -49,6 +49,7 @@ except Exception as e:
 @tree.command(name="fd", description="Frame data from a character move", guild=discord.Object("645011181739835397"))
 async def self(interaction: discord.Interaction, character_name: str, move: str):
     original_character_name = character_name
+    original_move = move
     character_name = util.correct_character_name(character_name.lower())
     if character_name:
         character = util.get_character_by_name(character_name, character_list)
@@ -65,7 +66,7 @@ async def self(interaction: discord.Interaction, character_name: str, move: str)
                 move_embed = embed.move_embed(character, character_move)
                 await interaction.response.send_message(embed=move_embed, ephemeral=False)
             else:
-                similar_moves = json_movelist_reader.get_similar_moves(character_move,move_list)
+                similar_moves = json_movelist_reader.get_similar_moves(original_move,move_list)
                 similar_moves_embed = embed.similar_moves_embed(similar_moves,character_name)
                 await interaction.response.send_message(embed=similar_moves_embed, ephemeral=False)
     else:

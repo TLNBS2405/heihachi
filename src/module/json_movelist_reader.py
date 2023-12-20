@@ -104,13 +104,13 @@ def _get_close_matches_indexes(word, possibilities, n=3, cutoff=0.6):
     # Strip scores for the best n matches
     return [x for score, x in result]
 
-def get_similar_moves(move :str, move_list: dict) -> list[str]:
+def get_similar_moves(input :str, move_list: dict) -> list[str]:
 
     command_list = []
-    for move in move_list:
-        command_list.append(move["input"])
+    for entry in move_list:
+        command_list.append(entry["input"])
 
-    moves_indexes = _get_close_matches_indexes(_simplify_input(move["input"]), map(_simplify_input, command_list), 5, 0.7)
+    moves_indexes = _get_close_matches_indexes(_simplify_input(input), map(_simplify_input, command_list), 5, 0.7)
 
     result = []
     for index in moves_indexes:
