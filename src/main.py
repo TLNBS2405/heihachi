@@ -8,7 +8,6 @@ from src.module import embed
 from src.module import util
 from src.module import character
 
-
 from threading import Thread
 
 sys.path.insert(0, (os.path.dirname(os.path.dirname(__file__))))
@@ -23,6 +22,7 @@ CHARACTER_LIST_PATH = os.path.abspath(os.path.join(base_path, "resources", "char
 discord_token = CONFIG_PATH.read_config()['DISCORD_TOKEN']
 
 character_list = []
+
 
 class heihachi(discord.Client):
     def __init__(self, *, intents: discord.Intents):
@@ -50,24 +50,24 @@ except Exception as e:
 async def self(interaction: discord.Interaction, character_name: str, move: str):
     original_character_name = character_name
     original_move = move
-    character_name = util.correct_character_name(character_name.lower())
+    character_name = util.correct_character_name(original_character_name.lower())
     if character_name:
         character = util.get_character_by_name(character_name, character_list)
         move_list = json_movelist_reader.get_movelist(character_name)
 
-        move_type = util.get_move_type(move)
+        move_type = util.get_move_type(original_move)
         if move_type:
-            moves = json_movelist_reader.get_by_move_type(move_type,move_list)
-            moves_embed = embed.move_list_embed(character,moves,move_type)
+            moves = json_movelist_reader.get_by_move_type(move_type, move_list)
+            moves_embed = embed.move_list_embed(character, moves, move_type)
             await interaction.response.send_message(embed=moves_embed, ephemeral=False)
         else:
-            character_move = json_movelist_reader.get_move(move, move_list)
+            character_move = json_movelist_reader.get_move(original_move, move_list)
             if character_move:
                 move_embed = embed.move_embed(character, character_move)
                 await interaction.response.send_message(embed=move_embed, ephemeral=False)
             else:
-                similar_moves = json_movelist_reader.get_similar_moves(original_move,move_list)
-                similar_moves_embed = embed.similar_moves_embed(similar_moves,character_name)
+                similar_moves = json_movelist_reader.get_similar_moves(original_move, move_list)
+                similar_moves_embed = embed.similar_moves_embed(similar_moves, character_name)
                 await interaction.response.send_message(embed=similar_moves_embed, ephemeral=False)
     else:
         error_embed = embed.error_embed(f'Character {original_character_name} does not exist.')
@@ -77,14 +77,14 @@ async def self(interaction: discord.Interaction, character_name: str, move: str)
 def create_json_movelists(character_list_path: str) -> List[character.Character]:
     with open(character_list_path) as file:
         all_characters = json.load(file)
-        character_list = []
+        cha_list = []
 
         for character_meta in all_characters:
-            character = wavu_importer.import_character(character_meta)
-            character.export_movelist_as_json()
-            character_list.append(character)
+            cha = wavu_importer.import_character(character_meta)
+            cha.export_movelist_as_json()
+            cha_list.append(cha)
 
-    return character_list
+    return cha_list
 
 
 def schedule_create_json_movelists(character_list_path: str, scheduler):

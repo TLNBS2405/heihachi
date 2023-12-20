@@ -5,19 +5,20 @@ from src.module import character
 import re
 
 MOVE_NOT_FOUND_TITLE = 'Move not found'
-SUCCESS_COLOR = discord.Colour.from_rgb(50,168,82)
-WARNING_COLOR = discord.Colour.from_rgb(253,218,13)
-ERROR_COLOR = discord.Colour.from_rgb(220,20,60)
+SUCCESS_COLOR = discord.Colour.from_rgb(50, 168, 82)
+WARNING_COLOR = discord.Colour.from_rgb(253, 218, 13)
+ERROR_COLOR = discord.Colour.from_rgb(220, 20, 60)
 
-def _upper_first_letter(input :str) -> str:
+
+def _upper_first_letter(input: str) -> str:
     if input:
         result_string = input[0].capitalize() + input[1:]
         return result_string
     else:
         return input
 
-def similar_moves_embed(similar_moves, character_name):
 
+def similar_moves_embed(similar_moves, character_name):
     command_list = []
     for i in range(len(similar_moves)):
         command_list.append(f'**{i + 1}**. {similar_moves[i]["input"]}')
@@ -26,6 +27,7 @@ def similar_moves_embed(similar_moves, character_name):
                           description='Similar moves from {}\n{}'
                           .format(character_name, '\n'.join(command_list)))
     return embed
+
 
 def move_list_embed(character, moves, move_type):
     """Returns the embed message for a list of moves matching to a special move type"""
@@ -39,15 +41,15 @@ def move_list_embed(character, moves, move_type):
                           description=desc_string)
     return embed
 
+
 def error_embed(err):
     embed = discord.Embed(title='Error',
                           colour=ERROR_COLOR,
                           description=err)
     return embed
 
-def move_embed(character :character, move :dict):
 
-
+def move_embed(character: character, move: dict):
     """Returns the embed message for character and move"""
     embed = discord.Embed(title='**' + move['input'] + '**',
                           colour=SUCCESS_COLOR,
@@ -56,8 +58,8 @@ def move_embed(character :character, move :dict):
                           )
 
     embed.set_thumbnail(url=character.portrait[0])
-    embed.set_footer(text="Wavu.wiki",icon_url="https://i.imgur.com/xfdEUee.png")
-    embed.set_author(name= _upper_first_letter(character.name), url=character.wavu_page)
+    embed.set_footer(text="Wavu.wiki", icon_url="https://i.imgur.com/xfdEUee.png")
+    embed.set_author(name=_upper_first_letter(character.name), url=character.wavu_page)
 
     embed.add_field(name='Target', value=move['target'])
     embed.add_field(name='Damage', value=move['damage'])
@@ -69,6 +71,5 @@ def move_embed(character :character, move :dict):
     embed.add_field(name="CH", value=move['on_ch'])
     if move['notes']:
         embed.add_field(name="Notes", value=move['notes'])
-
 
     return embed

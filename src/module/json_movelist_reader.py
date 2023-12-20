@@ -1,4 +1,3 @@
-
 from difflib import SequenceMatcher
 from heapq import nlargest as _nlargest
 
@@ -32,6 +31,7 @@ def _simplify_input(input: str) -> str:
         input = input.lower().replace('wr', 'fff')
     return input
 
+
 def _is_command_in_alias(command: str, item: dict) -> bool:
     if 'alias' in item:
         aliases = item['alias']
@@ -39,6 +39,7 @@ def _is_command_in_alias(command: str, item: dict) -> bool:
             if _simplify_input(command) == _simplify_input(alias):
                 return True
     return False
+
 
 def get_move(input: str, character_movelist: dict):
     result = [entry for entry in character_movelist if _simplify_input(entry["input"]) == _simplify_input(input)]
@@ -52,10 +53,12 @@ def get_move(input: str, character_movelist: dict):
             return result[0]
         return {}
 
-def _correct_move_type(move_type :str) -> str:
+
+def _correct_move_type(move_type: str) -> str:
     for k in const.MOVE_TYPES.keys():
         if move_type in const.MOVE_TYPES[k]:
             return k
+
 
 def get_by_move_type(move_type: str, move_list: dict) -> list:
     """Gets a list of moves that match move_type from local_json
@@ -104,8 +107,8 @@ def _get_close_matches_indexes(word, possibilities, n=3, cutoff=0.6):
     # Strip scores for the best n matches
     return [x for score, x in result]
 
-def get_similar_moves(input :str, move_list: dict) -> list[str]:
 
+def get_similar_moves(input: str, move_list: dict) -> list[str]:
     command_list = []
     for entry in move_list:
         command_list.append(entry["input"])
