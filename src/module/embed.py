@@ -1,8 +1,5 @@
 import discord
-from random import randint
 from src.module import character
-
-import re
 
 MOVE_NOT_FOUND_TITLE = 'Move not found'
 SUCCESS_COLOR = discord.Colour.from_rgb(50, 168, 82)
@@ -42,10 +39,16 @@ def move_list_embed(character, moves, move_type):
     return embed
 
 
-def error_embed(err):
+def error_embed(message):
     embed = discord.Embed(title='Error',
                           colour=ERROR_COLOR,
-                          description=err)
+                          description=message)
+    return embed
+
+def success_embed(message):
+    embed = discord.Embed(title='Success',
+                          colour=SUCCESS_COLOR,
+                          description=message)
     return embed
 
 

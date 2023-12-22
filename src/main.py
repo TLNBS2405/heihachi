@@ -7,6 +7,7 @@ from src.module import json_movelist_reader
 from src.module import embed
 from src.module import util
 from src.module import character
+from src.resources import const
 
 from threading import Thread
 
@@ -20,6 +21,7 @@ CONFIG_PATH = configurator.Configurator(os.path.abspath(os.path.join(base_path, 
 CHARACTER_LIST_PATH = os.path.abspath(os.path.join(base_path, "resources", "character_list.json"))
 
 discord_token = CONFIG_PATH.read_config()['DISCORD_TOKEN']
+feedback_channel_id = CONFIG_PATH.read_config()['FEEDBACK_CHANNEL_ID']
 
 character_list = []
 
@@ -74,6 +76,37 @@ async def self(interaction: discord.Interaction, character_name: str, move: str)
         await interaction.response.send_message(embed=error_embed, ephemeral=False)
 
 
+def is_author_blacklisted(user_id):
+    if user_id in const.ID_BLACKLIST:
+        return True
+    else:
+        return False
+
+
+def is_author_newly_created(interaction):
+    today = datetime.datetime.strptime(datetime.datetime.now().isoformat(), "%Y-%m-%dT%H:%M:%S.%f")
+    age = today - interaction.user.created_at.replace(tzinfo=None)
+    if age.days < 120:
+        return True
+    return False
+
+
+@tree.command(name="feedback", description="Send feedback incase of wrong data",
+              guild=discord.Object("645011181739835397"))
+async def self(interaction: discord.Interaction, message: str):
+    if not (is_author_blacklisted(interaction.user.id) or is_author_newly_created(interaction)):
+        try:
+            feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(str(interaction.user.name), interaction.user.id,
+                                                         interaction.guild, message)
+            channel = client.get_channel(feedback_channel_id)
+            await channel.send(feedback_message)
+            result = embed.success_embed("Feedback sent")
+        except Exception as e:
+            result = embed.error_embed("Feedback couldn't be sent caused by: " + e)
+
+        await interaction.response.send_message(embed=result, ephemeral=True)
+
+
 def create_json_movelists(character_list_path: str) -> List[character.Character]:
     with open(character_list_path) as file:
         all_characters = json.load(file)
@@ -101,7 +134,7 @@ try:
     print("Character jsons are successfully created")
     scheduler = sched.scheduler(time.time, time.sleep)
 
-    ## Repeat importing move list of all character from wavu.wiki once an hour
+    # Repeat importing move list of all character from wavu.wiki once an hour
     scheduler.enter(3600, 1, schedule_create_json_movelists, (CHARACTER_LIST_PATH, scheduler,))
     Thread(target=scheduler.run).start()
 
