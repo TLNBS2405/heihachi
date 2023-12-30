@@ -41,43 +41,57 @@ class heihachi(discord.Client):
 
 
 try:
-    client = heihachi(intents=discord.Intents.default())
-    tree = discord.app_commands.CommandTree(client)
+    hei = heihachi(intents=discord.Intents.default())
+    tree = discord.app_commands.CommandTree(hei)
 
 except Exception as e:
     time_now = datetime.datetime.now().strftime("%Y-%m-%d  %H:%M:%S")
     logger.error(f'{time_now} \n Error: {e}')
 
 
+def get_frame_data_embed(name: str, move: str) -> discord.Embed:
 
-@tree.command(name="fd", description="Frame data from a character move", guild=discord.Object("645011181739835397"))
-async def self(interaction: discord.Interaction, character_name: str, move: str):
-
-    original_character_name = character_name
-    original_move = move
-    character_name = util.correct_character_name(original_character_name.lower())
+    character_name = util.correct_character_name(name.lower())
     if character_name:
+
         character = util.get_character_by_name(character_name, character_list)
         move_list = json_movelist_reader.get_movelist(character_name)
-
-        move_type = util.get_move_type(original_move)
+        move_type = util.get_move_type(move)
         if move_type:
             moves = json_movelist_reader.get_by_move_type(move_type, move_list)
             moves_embed = embed.move_list_embed(character, moves, move_type)
-            await interaction.response.send_message(embed=moves_embed, ephemeral=False)
+            return moves_embed
         else:
-            character_move = json_movelist_reader.get_move(original_move, move_list)
+            character_move = json_movelist_reader.get_move(move, move_list)
             if character_move:
                 move_embed = embed.move_embed(character, character_move)
-                await interaction.response.send_message(embed=move_embed, ephemeral=False)
+                return move_embed
 
             else:
-                similar_moves = json_movelist_reader.get_similar_moves(original_move, move_list)
+                similar_moves = json_movelist_reader.get_similar_moves(move, move_list)
                 similar_moves_embed = embed.similar_moves_embed(similar_moves, character_name)
-                await interaction.response.send_message(embed=similar_moves_embed, ephemeral=False)
+                return similar_moves_embed
     else:
-        error_embed = embed.error_embed(f'Character {original_character_name} does not exist.')
-        await interaction.response.send_message(embed=error_embed, ephemeral=False)
+        error_embed = embed.error_embed(f'Character {name} does not exist.')
+        return error_embed
+@hei.event
+async def on_message(message):
+
+    if not is_author_blacklisted(message.author.id) and message.content and message.author.id != hei.user.id:
+        user_command = message.content.split(' ', 1)[1]
+        parameters = user_command.strip().split(' ',1)
+        character_name = parameters[0].lower()
+        character_move = parameters[1]
+
+        embed = get_frame_data_embed(character_name, character_move)
+        await message.channel.send(embed=embed)
+
+
+@tree.command(name="fd", description="Frame data from a character move", guild=discord.Object("645011181739835397"))
+async def self(interaction: discord.Interaction, character_name: str, move: str):
+    if not (is_author_blacklisted(interaction.user.id) or is_author_newly_created(interaction)):
+        embed = get_frame_data_embed(character_name, move)
+        await interaction.response.send_message(embed=embed, ephemeral=False)
 
 
 def is_author_blacklisted(user_id):
@@ -97,14 +111,13 @@ def is_author_newly_created(interaction):
 
 @tree.command(name="feedback", description="Send feedback incase of wrong data",
               guild=discord.Object("645011181739835397"))
-@discord.ui.button(label="Click me!", style=discord.ButtonStyle.primary, emoji="😎")
 async def self(interaction: discord.Interaction, message: str):
 
     if not (is_author_blacklisted(interaction.user.id) or is_author_newly_created(interaction)):
         try:
             feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(str(interaction.user.name), interaction.user.id,
                                                          interaction.guild, message)
-            channel = client.get_channel(feedback_channel_id)
+            channel = hei.get_channel(feedback_channel_id)
             await channel.send(content=feedback_message,view=button.DoneButton())
             result = embed.success_embed("Feedback sent")
         except Exception as e:
@@ -145,7 +158,7 @@ try:
     scheduler.enter(3600, 1, schedule_create_json_movelists, (CHARACTER_LIST_PATH, scheduler,))
     Thread(target=scheduler.run).start()
 
-    client.run(discord_token)
+    hei.run(discord_token)
 
 except Exception as e:
     time_now = datetime.datetime.now().strftime("%Y-%m-%d  %H:%M:%S")
