@@ -8,6 +8,7 @@ from src.module import embed
 from src.module import util
 from src.module import character
 from src.resources import const
+from src.module import button
 
 from threading import Thread
 
@@ -48,8 +49,10 @@ except Exception as e:
     logger.error(f'{time_now} \n Error: {e}')
 
 
+
 @tree.command(name="fd", description="Frame data from a character move", guild=discord.Object("645011181739835397"))
 async def self(interaction: discord.Interaction, character_name: str, move: str):
+
     original_character_name = character_name
     original_move = move
     character_name = util.correct_character_name(original_character_name.lower())
@@ -67,6 +70,7 @@ async def self(interaction: discord.Interaction, character_name: str, move: str)
             if character_move:
                 move_embed = embed.move_embed(character, character_move)
                 await interaction.response.send_message(embed=move_embed, ephemeral=False)
+
             else:
                 similar_moves = json_movelist_reader.get_similar_moves(original_move, move_list)
                 similar_moves_embed = embed.similar_moves_embed(similar_moves, character_name)
@@ -93,18 +97,21 @@ def is_author_newly_created(interaction):
 
 @tree.command(name="feedback", description="Send feedback incase of wrong data",
               guild=discord.Object("645011181739835397"))
+@discord.ui.button(label="Click me!", style=discord.ButtonStyle.primary, emoji="😎")
 async def self(interaction: discord.Interaction, message: str):
+
     if not (is_author_blacklisted(interaction.user.id) or is_author_newly_created(interaction)):
         try:
             feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(str(interaction.user.name), interaction.user.id,
                                                          interaction.guild, message)
             channel = client.get_channel(feedback_channel_id)
-            await channel.send(feedback_message)
+            await channel.send(content=feedback_message,view=button.DoneButton())
             result = embed.success_embed("Feedback sent")
         except Exception as e:
             result = embed.error_embed("Feedback couldn't be sent caused by: " + e)
 
         await interaction.response.send_message(embed=result, ephemeral=True)
+
 
 
 def create_json_movelists(character_list_path: str) -> List[character.Character]:
