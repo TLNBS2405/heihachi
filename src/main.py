@@ -83,15 +83,14 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
 
-@tree.command(name="fd", description="Frame data from a character move", guild=discord.Object("645011181739835397"))
+@tree.command(name="fd", description="Frame data from a character move")
 async def self(interaction: discord.Interaction, character_name: str, move: str):
     if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
         embed = create_frame_data_embed(character_name, move)
         await interaction.response.send_message(embed=embed, ephemeral=False)
 
 
-@tree.command(name="feedback", description="Send feedback incase of wrong data",
-              guild=discord.Object("645011181739835397"))
+@tree.command(name="feedback", description="Send feedback incase of wrong data")
 async def self(interaction: discord.Interaction, message: str):
     if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
         try:
