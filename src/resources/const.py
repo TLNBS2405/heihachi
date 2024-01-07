@@ -1,5 +1,3 @@
-import os
-
 WAVU_API_URL = "https://wavu.wiki/w/api.php"
 
 CHARACTER_ALIAS = {
@@ -37,12 +35,12 @@ CHARACTER_ALIAS = {
 
 MOVE_TYPES = {
     "Rage Art": ["ra", "rage_art", "rageart", "rage art"],
-    "Tornado": ["screw", "t!", "t", "screws", "tor"],
+    "Tornado": ["screw", "t!", "t", "screws", "tor", "tornado"],
     "Homing": ["homing", "homari"],
     "Power Crush": ["armor", "armori", "pc", "power", "power_crush", "powercrush", "power crush"],
     "Throw": ["throw", "grab", "throws", "grabs"],
-    "Heat Engager": ["he", "engager"],
-    "Heat Smash": ["hs", "smash"]
+    "Heat Engager": ["he", "engager", "heat engager"],
+    "Heat Smash": ["hs", "smash", "heat smash"]
 }
 
 SORT_ORDER = {"Rage Art": 0, "Heat Engager": 1, "Heat Smash": 2, "Tornado": 3, "Homing": 4, "Power Crush": 5,

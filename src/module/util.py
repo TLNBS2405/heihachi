@@ -26,7 +26,7 @@ def get_character_by_name(name :str, character_list :[]) -> character.Character:
 
 def get_move_type(original_move: str):
     for k in const.MOVE_TYPES.keys():
-        if original_move in const.MOVE_TYPES[k]:
+        if original_move.lower() in const.MOVE_TYPES[k]:
             return k
 
 def is_user_blacklisted(user_id):
