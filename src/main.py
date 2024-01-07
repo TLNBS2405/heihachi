@@ -31,7 +31,7 @@ class Heihachi(discord.Client):
     async def on_ready(self):
         await self.wait_until_ready()
         if not self.synced:
-            await tree.sync(guild=discord.Object(id=645011181739835397))
+            await tree.sync()
             self.synced = True
         print('Logged on as', self.user)
 
