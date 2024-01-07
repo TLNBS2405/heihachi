@@ -98,7 +98,7 @@ async def self(interaction: discord.Interaction, message: str):
                 str(interaction.user.name), interaction.user.id,
                 interaction.guild, message)
             channel = hei.get_channel(feedback_channel_id)
-            await channel.send(content=feedback_message, view=button.DoneButton())
+            await channel.send(content=feedback_message)
             result = embed.success_embed("Feedback sent")
         except Exception as e:
             result = embed.error_embed("Feedback couldn't be sent caused by: " + e)
