@@ -88,6 +88,11 @@ def _create_alias(input: str) -> List[str]:
     result.append(input)
     return result
 
+def _empty_value_if_none(value):
+    if not value:
+        return ""
+    else:
+        return value
 
 def _convert_json_movelist(move_list_json: list) -> List[Move]:
     move_list = []
@@ -127,11 +132,12 @@ def _convert_json_movelist(move_list_json: list) -> List[Move]:
 
 
 def _normalize_hit_ch_input(entry: str) -> str:
-    if entry and "|" in entry:
+    entry = _empty_value_if_none(entry)
+    if "|" in entry:
         pattern = r'\|([^|]+)\]\]'
         match = re.search(pattern, entry)
         if match:
             return match.group(1)
         return entry
     else:
-        return ""
+        return entry

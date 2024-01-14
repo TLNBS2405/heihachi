@@ -8,7 +8,7 @@
         "notes": "",
         "on_block": "+1",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+8",
         "recovery": "",
         "startup": "i10",
         "target": "h"
@@ -22,7 +22,7 @@
         "notes": "Homing",
         "on_block": "-7",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+6",
         "recovery": "",
         "startup": "i17~18",
         "target": "m"
@@ -35,8 +35,8 @@
         "name": "Left Right Combo",
         "notes": "Combo from 1st hit",
         "on_block": "-3",
-        "on_ch": "",
-        "on_hit": "",
+        "on_ch": "+9",
+        "on_hit": "+8",
         "recovery": "",
         "startup": ",i12",
         "target": "h,h"
@@ -50,7 +50,7 @@
         "notes": "\n* Combo from 1st hit\n* Transition to Sway with B +7 on hit",
         "on_block": "-1",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+6",
         "recovery": "",
         "startup": ",i23~24",
         "target": "m,h"
@@ -64,7 +64,7 @@
         "notes": "",
         "on_block": "-6",
         "on_ch": "+64a",
-        "on_hit": "",
+        "on_hit": "+6",
         "recovery": "",
         "startup": ",i19",
         "target": "h,h,m"
@@ -78,7 +78,7 @@
         "notes": "\n* Combo from 1st hit with delay",
         "on_block": "-14",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+51d (+20)",
         "recovery": "",
         "startup": ",i26~27",
         "target": "m,m"
@@ -92,7 +92,7 @@
         "notes": "Combo from 1st and 2nd CH",
         "on_block": "-12",
         "on_ch": "+14d",
-        "on_hit": "",
+        "on_hit": "+2",
         "recovery": "",
         "startup": ",i24",
         "target": "h,h,L"
@@ -120,7 +120,7 @@
         "notes": "\n* Heat Engager",
         "on_block": "-5",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+20a (+11)",
         "recovery": "",
         "startup": ",i20",
         "target": "h,h,h"
@@ -134,7 +134,7 @@
         "notes": "\n* Floor break\n* Throw break 1 or 2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-2d",
         "recovery": "",
         "startup": "i12~14",
         "target": "t"
@@ -162,7 +162,7 @@
         "notes": "Combo from 1st hit",
         "on_block": "-7",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+4",
         "recovery": "",
         "startup": ",i15",
         "target": "h,h"
@@ -176,7 +176,7 @@
         "notes": "\n* Cancel last hit into 1,4,2,1 with f+1\n* Cancel last hit into 1,4,2,4 with f+4\n* Alternate input b+2",
         "on_block": "-7",
         "on_ch": "+53a",
-        "on_hit": "",
+        "on_hit": "+4",
         "recovery": "",
         "startup": ",i24",
         "target": "h,h,h"
@@ -204,7 +204,7 @@
         "notes": "\n* Balcony break\n* Alternate input:\n** b+2,1,2\n** qcf+4,1,2",
         "on_block": "-8",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+41d (-17)",
         "recovery": "",
         "startup": ",i24",
         "target": "h,h,h,h,h"
@@ -218,7 +218,7 @@
         "notes": "\n* Tornado\n* Alternate input:\n** b+2,1,4\n** qcf+4,1,4\n* Special? effect on airborne hit +38a (+31)",
         "on_block": "-5",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+40a (+14)",
         "recovery": "",
         "startup": ",i30-31",
         "target": "h,h,h,h,m"
@@ -246,7 +246,7 @@
         "notes": "",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1",
         "recovery": "",
         "startup": ",i21",
         "target": "h,h,m"
@@ -259,8 +259,8 @@
         "name": "Running Blind",
         "notes": "Combo from 3rd hit",
         "on_block": "-7",
-        "on_ch": "",
-        "on_hit": "",
+        "on_ch": "+14d",
+        "on_hit": "+7",
         "recovery": "",
         "startup": ",i23",
         "target": "h,h,m,h"
@@ -274,7 +274,7 @@
         "notes": "",
         "on_block": "+1",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+7",
         "recovery": "",
         "startup": "i10",
         "target": "h"
@@ -288,7 +288,7 @@
         "notes": "\n* Heat Burst",
         "on_block": "+1",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+2c",
         "recovery": "",
         "startup": "i16",
         "target": "m"
@@ -301,8 +301,8 @@
         "name": "PK Combination",
         "notes": "\n* Combo from 1st hit\n* CH frames also apply to combo from 1st CH",
         "on_block": "-10",
-        "on_ch": "",
-        "on_hit": "",
+        "on_ch": "+16a (+7)",
+        "on_hit": "+6",
         "recovery": "",
         "startup": ",i16",
         "target": "h,m"
@@ -316,7 +316,7 @@
         "notes": "\n* Floor break\n* Throw break 1 or 2\n* Side switch",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0d",
         "recovery": "",
         "startup": "i12~14",
         "target": "t"
@@ -330,7 +330,7 @@
         "notes": "",
         "on_block": "-4",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+7",
         "recovery": "",
         "startup": "i16",
         "target": "m"
@@ -344,7 +344,7 @@
         "notes": "Combo from 1st CH",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1",
         "recovery": "",
         "startup": ",i22",
         "target": "m,m"
@@ -358,7 +358,7 @@
         "notes": "Combo from 2nd hit",
         "on_block": "-9",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+2",
         "recovery": "",
         "startup": ",i20",
         "target": "m,m,m"
@@ -372,7 +372,7 @@
         "notes": "Balcony break",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+14a (+10)",
         "recovery": "",
         "startup": ",i20",
         "target": "m,m,m,m"
@@ -386,7 +386,7 @@
         "notes": "",
         "on_block": "-11",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0",
         "recovery": "",
         "startup": ",i22",
         "target": "m,m,m,L"
@@ -400,7 +400,7 @@
         "notes": "",
         "on_block": "-6",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+6",
         "recovery": "",
         "startup": ",i23",
         "target": "m,h"
@@ -428,7 +428,7 @@
         "notes": "Balcony break",
         "on_block": "-12",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+37d (-21)",
         "recovery": "",
         "startup": ",i28",
         "target": "m,h,h"
@@ -442,7 +442,7 @@
         "notes": "",
         "on_block": "-13",
         "on_ch": "+59a",
-        "on_hit": "",
+        "on_hit": "+8",
         "recovery": "",
         "startup": "i18",
         "target": "m"
@@ -456,7 +456,7 @@
         "notes": "\n* Combo from 1st hit\n* Consumes SE\n* Chip damage 8 (40%) on block",
         "on_block": "-1",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+35a (+9)",
         "recovery": "",
         "startup": "i14~15",
         "target": "m,m"
@@ -484,7 +484,7 @@
         "notes": "",
         "on_block": "-7",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+6",
         "recovery": "",
         "startup": "i12",
         "target": "h"
@@ -498,7 +498,7 @@
         "notes": "Combo from 1st hit",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+2",
         "recovery": "",
         "startup": ",i24~25",
         "target": "h,m"
@@ -512,7 +512,7 @@
         "notes": "\n* Balcony break\n* Hold to power up and deal more chip damage on block",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+2",
         "recovery": "",
         "startup": ",i24~25",
         "target": "h,m,m"
@@ -526,7 +526,7 @@
         "notes": "Combo from 2nd CH",
         "on_block": "-5",
         "on_ch": "+31a (+21)",
-        "on_hit": "",
+        "on_hit": "+6",
         "recovery": "",
         "startup": ",24~25",
         "target": "h,m,h"
@@ -540,7 +540,7 @@
         "notes": "Elbow",
         "on_block": "+4",
         "on_ch": "+78a (+58)",
-        "on_hit": "",
+        "on_hit": "+7c",
         "recovery": "",
         "startup": "i20~21",
         "target": "m"
@@ -568,7 +568,7 @@
         "notes": "",
         "on_block": "-9",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+7c",
         "recovery": "",
         "startup": "i28",
         "target": "m"
@@ -582,7 +582,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+7a",
         "recovery": "",
         "startup": "i53",
         "target": "m!"
@@ -666,7 +666,7 @@
         "notes": "Transition to SLS with F +17 on hit",
         "on_block": "-7",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+4",
         "recovery": "",
         "startup": "i19",
         "target": "m"
@@ -680,7 +680,7 @@
         "notes": "Combo from 1st CH with delay",
         "on_block": "-8",
         "on_ch": "+20d",
-        "on_hit": "",
+        "on_hit": "+4c",
         "recovery": "",
         "startup": ",i22",
         "target": "m,m"
@@ -694,7 +694,7 @@
         "notes": "",
         "on_block": "-4",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+7",
         "recovery": "",
         "startup": ",i16",
         "target": "m,h"
@@ -764,7 +764,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-1d",
         "recovery": "",
         "startup": "",
         "target": "t"
@@ -778,7 +778,7 @@
         "notes": "",
         "on_block": "-19",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-7",
         "recovery": "FUFT",
         "startup": "i21~33",
         "target": "M"
@@ -792,7 +792,7 @@
         "notes": "\n* Cancel with B",
         "on_block": "-13",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+14g",
         "recovery": "",
         "startup": "i29",
         "target": "l"
@@ -806,7 +806,7 @@
         "notes": "\n* Combo from 1st hit\n* Transition to SLS with F +10g on hit\n* Transition to Sway with B +8",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+3",
         "recovery": "",
         "startup": "i17",
         "target": "m,m"
@@ -834,7 +834,7 @@
         "notes": "",
         "on_block": "-13",
         "on_ch": "+25a",
-        "on_hit": "",
+        "on_hit": "+5",
         "recovery": "",
         "startup": "i27~28",
         "target": "m,m,l"
@@ -848,7 +848,7 @@
         "notes": "Elbow",
         "on_block": "-2",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+8c",
         "recovery": "",
         "startup": "i14~15",
         "target": "m"
@@ -862,7 +862,7 @@
         "notes": "\n* Balcony break",
         "on_block": "-10",
         "on_ch": "+32a (+18)",
-        "on_hit": "",
+        "on_hit": "+16a (-1)",
         "recovery": "",
         "startup": "i22",
         "target": "m,m"
@@ -876,7 +876,7 @@
         "notes": "",
         "on_block": "-11",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0",
         "recovery": "",
         "startup": "i16",
         "target": "l"
@@ -890,7 +890,7 @@
         "notes": "\n* Balcony break\n* Gain SE on hit with 1+2",
         "on_block": "-7",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+35a (+9)",
         "recovery": "",
         "startup": "i21",
         "target": "l,h"
@@ -904,7 +904,7 @@
         "notes": "",
         "on_block": "-12",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-1",
         "recovery": "",
         "startup": "i19",
         "target": "l"
@@ -918,7 +918,7 @@
         "notes": "\n* Balcony break\n* Tornado",
         "on_block": "-12",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+14a (-3)",
         "recovery": "",
         "startup": ",i19",
         "target": "l,m"
@@ -932,7 +932,7 @@
         "notes": "",
         "on_block": "-11",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0",
         "recovery": "",
         "startup": "i15",
         "target": "L"
@@ -946,7 +946,7 @@
         "notes": "\n* Heat Engager\n* Heat Dash +43a (+35)",
         "on_block": "-9",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+4",
         "recovery": "",
         "startup": "i15",
         "target": "m,h"
@@ -960,7 +960,7 @@
         "notes": "",
         "on_block": "-6",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+8",
         "recovery": "",
         "startup": "i15~17",
         "target": "m"
@@ -973,8 +973,8 @@
         "name": "Sweeper kick",
         "notes": "",
         "on_block": "-12",
-        "on_ch": "",
-        "on_hit": "",
+        "on_ch": "+4",
+        "on_hit": "-1",
         "recovery": "",
         "startup": "i16~17",
         "target": "L"
@@ -988,7 +988,7 @@
         "notes": "\n* Alternate input df+1\n* DF+1,1... extension available only with DF+1 input, not df+1",
         "on_block": "-5",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1",
         "recovery": "",
         "startup": "i15",
         "target": "m"
@@ -1002,7 +1002,7 @@
         "notes": "Combo from 1st hit",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-4",
         "recovery": "",
         "startup": ",i10",
         "target": "m,m"
@@ -1016,7 +1016,7 @@
         "notes": "Combo from 1st hit",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-4",
         "recovery": "",
         "startup": ",i10",
         "target": "m,m,m"
@@ -1030,7 +1030,7 @@
         "notes": "Combo from 1st hit",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-4",
         "recovery": "",
         "startup": ",i10",
         "target": "m,m,m,m"
@@ -1043,8 +1043,8 @@
         "name": "Double Body Blow",
         "notes": "\n* Combo from 1st hit\n* Alternate input:\n** DF+1,2\n** DF+1,1,2\n** DF+1,1,1,2\n** DF+1,1,1,1,2\n* Wall Break on CH",
         "on_block": "-15",
-        "on_ch": "",
-        "on_hit": "",
+        "on_ch": "+14a (+5)",
+        "on_hit": "+1",
         "recovery": "",
         "startup": ",i23",
         "target": "m,m"
@@ -1058,7 +1058,7 @@
         "notes": "Elbow",
         "on_block": "-6",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+5",
         "recovery": "",
         "startup": "i13",
         "target": "m"
@@ -1072,7 +1072,7 @@
         "notes": "\n* Combo from 1st hit\n* Transition to Sway with B +8 on hit",
         "on_block": "-4",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+5",
         "recovery": "",
         "startup": "i6",
         "target": "m,h"
@@ -1086,7 +1086,7 @@
         "notes": "",
         "on_block": "-13",
         "on_ch": "+59a",
-        "on_hit": "",
+        "on_hit": "+8",
         "recovery": "",
         "startup": ",i23",
         "target": "m,m"
@@ -1128,7 +1128,7 @@
         "notes": "\n* Balcony break\n* Elbow\n* Absorb an attack to power up and deal more chip damage on block",
         "on_block": "-6",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+44d (-14)",
         "recovery": "",
         "startup": "i20~21",
         "target": "h"
@@ -1142,7 +1142,7 @@
         "notes": "",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+",
         "recovery": "",
         "startup": "i15",
         "target": "m"
@@ -1156,7 +1156,7 @@
         "notes": "Combo from 1st hit",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1",
         "recovery": "",
         "startup": ",i10",
         "target": "m,m"
@@ -1170,7 +1170,7 @@
         "notes": "\n* Combo from 1st hit\n* Gain SE on hit with 1+2",
         "on_block": "-13",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+3a",
         "recovery": "",
         "startup": "i18~19",
         "target": "m,m,m"
@@ -1184,7 +1184,7 @@
         "notes": "\n* Elbow\n* Combo from 1st hit\n* Consumes SE\n* Chip damage 1 (20%) on block",
         "on_block": "-12",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+3c",
         "recovery": "",
         "startup": "i14~15",
         "target": "m,m,m"
@@ -1198,7 +1198,7 @@
         "notes": "\n* Knee\n* Combo from 1st hit\n* Chip damage 2 (28%) on block",
         "on_block": "-15",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+14a (+7)",
         "recovery": "",
         "startup": ",i22",
         "target": "m,m,m,m"
@@ -1212,7 +1212,7 @@
         "notes": "\n* Chip damage 8 (40%) on block",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0a (-1)",
         "recovery": "",
         "startup": ",i35~36",
         "target": "m,m,m,m,m"
@@ -1226,7 +1226,7 @@
         "notes": "Knee",
         "on_block": "+0",
         "on_ch": "+50a",
-        "on_hit": "",
+        "on_hit": "+4",
         "recovery": "",
         "startup": "i16~18",
         "target": "m"
@@ -1240,7 +1240,7 @@
         "notes": "",
         "on_block": "-9",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0",
         "recovery": "",
         "startup": "i18",
         "target": "m"
@@ -1268,7 +1268,7 @@
         "notes": "\n* Throw break 1+2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1d",
         "recovery": "",
         "startup": "i11",
         "target": "t"
@@ -1282,7 +1282,7 @@
         "notes": "",
         "on_block": "-9",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+4",
         "recovery": "",
         "startup": "i13",
         "target": "m"
@@ -1296,7 +1296,7 @@
         "notes": "\n* Balcony break\n* Combo from 1st hit with delay\n* Move can be delayed",
         "on_block": "-8",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+34a (+8)",
         "recovery": "",
         "startup": "i22~23",
         "target": "m,h"
@@ -1324,7 +1324,7 @@
         "notes": "\n* Heat Engager\n* Balcony break\n* Chip damage on block",
         "on_block": "-9",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+41d (-17)",
         "recovery": "",
         "startup": "i13",
         "target": "h"
@@ -1337,8 +1337,8 @@
         "name": "Slash Kick &gt; Snake Eyes",
         "notes": "\n* Balcony break\n* Gain SE on hit with 1+2\n* Chip damage 7 (28%) on block",
         "on_block": "-13",
-        "on_ch": "",
-        "on_hit": "",
+        "on_ch": "+39a (-8)",
+        "on_hit": "+28a (-8)",
         "recovery": "",
         "startup": "i24~25",
         "target": "m"
@@ -1352,7 +1352,7 @@
         "notes": "\n* Balcony break\n* Gain SE on hit with 1+2\n* Chip damage 9 (27%) on block\n* Wall Crush on block",
         "on_block": "+8",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+71a",
         "recovery": "",
         "startup": "i34~35",
         "target": "m"
@@ -1380,7 +1380,7 @@
         "notes": "Chip damage 9 (30%) on block",
         "on_block": "+6",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+13a (+3)",
         "recovery": "",
         "startup": "i22~25",
         "target": "m"
@@ -1408,7 +1408,7 @@
         "notes": "\n* Heat Smash\n* Floor break\n** 2nd and 3rd hit\n* Throw on hit\n* Wall crush on block",
         "on_block": "+9",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-1d",
         "recovery": "",
         "startup": "i16",
         "target": "m,m,t"
@@ -1422,7 +1422,7 @@
         "notes": "\n* Floor break\n* Throw break 1\n* Side switch",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1d",
         "recovery": "",
         "startup": "",
         "target": "t"
@@ -1478,7 +1478,7 @@
         "notes": "\n* Rage Art",
         "on_block": "-15",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0d",
         "recovery": "",
         "startup": "i20",
         "target": "m"
@@ -1492,7 +1492,7 @@
         "notes": "\n* Throw break 2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+6d",
         "recovery": "",
         "startup": "",
         "target": "t"
@@ -1506,7 +1506,7 @@
         "notes": "\n* Consumes SE\n* Chip damage 14 (38%) on block\n* Transition into Immortal Payback on opponent attack absorb",
         "on_block": "+5",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+33a (+7)",
         "recovery": "",
         "startup": "i13",
         "target": "h"
@@ -1534,7 +1534,7 @@
         "notes": "\n* Heat Engager\n* Balcony break\n* Chip damage 8 (28%) on block",
         "on_block": "-9",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+23a (+13)",
         "recovery": "",
         "startup": "i15~16",
         "target": "m"
@@ -1548,7 +1548,7 @@
         "notes": "",
         "on_block": "-6",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+2",
         "recovery": "",
         "startup": "i15~16",
         "target": "h"
@@ -1562,7 +1562,7 @@
         "notes": "Combo from 1st hit",
         "on_block": "-11",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+33a (+18)",
         "recovery": "",
         "startup": "i15~16",
         "target": "h,m"
@@ -1576,7 +1576,7 @@
         "notes": "\n* Balcony break\n* Combo from 1st hit",
         "on_block": "-7",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+14a",
         "recovery": "",
         "startup": "i25",
         "target": "h,m"
@@ -1590,7 +1590,7 @@
         "notes": "\n* Tornado\n* Combo from 1st hit\n* Gain SE on hit -12a",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+5a",
         "recovery": "",
         "startup": "i16~17",
         "target": "h,m"
@@ -1604,7 +1604,7 @@
         "notes": "",
         "on_block": "-5",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1",
         "recovery": "",
         "startup": "i18",
         "target": "m"
@@ -1660,7 +1660,7 @@
         "notes": "",
         "on_block": "-5",
         "on_ch": "+15",
-        "on_hit": "",
+        "on_hit": "+8",
         "recovery": "",
         "startup": "i17~18",
         "target": "h"
@@ -1674,7 +1674,7 @@
         "notes": "",
         "on_block": "-9",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1",
         "recovery": "",
         "startup": "i17~18",
         "target": "m"
@@ -1688,7 +1688,7 @@
         "notes": "\n* Heat Engager\n* Balcony break\n* Combo from 1st hit with delay\n* Move can be delayed",
         "on_block": "-5",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+43d (-15)",
         "recovery": "",
         "startup": "i21~22",
         "target": "m,h"
@@ -1716,7 +1716,7 @@
         "notes": "",
         "on_block": "+6",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-9",
         "recovery": "",
         "startup": "i15~16",
         "target": "m"
@@ -1730,7 +1730,7 @@
         "notes": "\n* Combo from 1st hit with delay\n* Chip damage on block",
         "on_block": "-9",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+15a",
         "recovery": "",
         "startup": ",i22~25",
         "target": "m,h"
@@ -1744,7 +1744,7 @@
         "notes": "",
         "on_block": "-13",
         "on_ch": "+25d",
-        "on_hit": "",
+        "on_hit": "+5",
         "recovery": "",
         "startup": "i19~20",
         "target": "l"
@@ -1772,7 +1772,7 @@
         "notes": "\n* Combo from 1st hit\n* Chip damage on block",
         "on_block": "-16",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-6",
         "recovery": "",
         "startup": "i15",
         "target": "m,m"
@@ -1912,7 +1912,7 @@
         "notes": "\n* Knee\n* Balcony break\n* Combo from 1st hit\n* Chip damage on block",
         "on_block": "-35",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-15a (-24)",
         "recovery": "",
         "startup": "",
         "target": "m,m,m,m,m,m,m,m,m,m,m,m"
@@ -1926,7 +1926,7 @@
         "notes": "\n* Floor break\n* Throw break 1+2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-5d",
         "recovery": "",
         "startup": "i12",
         "target": "t"
@@ -1940,7 +1940,7 @@
         "notes": "",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1",
         "recovery": "",
         "startup": "i13",
         "target": "m"
@@ -1954,7 +1954,7 @@
         "notes": "Combo from 1st hit",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1",
         "recovery": "",
         "startup": ",i10",
         "target": "m,m"
@@ -1968,7 +1968,7 @@
         "notes": "Combo from 1st hit",
         "on_block": "-10",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1",
         "recovery": "",
         "startup": "i10",
         "target": "m,m,m"
@@ -1996,7 +1996,7 @@
         "notes": "\n* 6 (4) damage on airborne opponent at 70% scaling - 9 damage?\n* Consumes SE\n* Chip damage 2 (22%) on block",
         "on_block": "-12",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+21a (+14)",
         "recovery": "",
         "startup": "i10",
         "target": "m,m,m,m"
@@ -2052,7 +2052,7 @@
         "notes": "\n* Tornado\n* Knee\n* Gain SE on hit",
         "on_block": "-7",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+8a",
         "recovery": "",
         "startup": "i16~17",
         "target": "m"
@@ -2122,7 +2122,7 @@
         "notes": "\n* Alternate input qcf+3",
         "on_block": "-10",
         "on_ch": "+33a (+27)",
-        "on_hit": "",
+        "on_hit": "+4",
         "recovery": "",
         "startup": "i12",
         "target": "m"
@@ -2135,8 +2135,8 @@
         "name": "Double High Knee Kick",
         "notes": "\n* Alternate input qcf+3,4\n* Move can be delayed",
         "on_block": "-10",
-        "on_ch": "",
-        "on_hit": "",
+        "on_ch": "+29g",
+        "on_hit": "+4",
         "recovery": "",
         "startup": ",i28",
         "target": "m,m"
@@ -2150,7 +2150,7 @@
         "notes": "",
         "on_block": "-6",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+5",
         "recovery": "",
         "startup": "i11~12",
         "target": "m"

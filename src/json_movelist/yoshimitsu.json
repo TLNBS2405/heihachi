@@ -8,7 +8,7 @@
         "notes": "Sometimes written as 1SS.1",
         "on_block": "+1",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+8",
         "recovery": "r17",
         "startup": "i10",
         "target": "h"
@@ -22,7 +22,7 @@
         "notes": "\n* Weapon\n* Combo from 1st hit\n* Deals chip damage on block\n* Power up during NSS or Heat (Recovers health on hit, consumes Heat)",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+4c",
         "recovery": "r",
         "startup": ",i23",
         "target": "h,m"
@@ -78,7 +78,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+14a",
         "recovery": "r",
         "startup": "i15~18 i3~6",
         "target": "M,M"
@@ -92,7 +92,7 @@
         "notes": "Throw break 1 or 2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1",
         "recovery": "r",
         "startup": "i12~14",
         "target": "t"
@@ -106,7 +106,7 @@
         "notes": "\n* Weapon\n* Alternate input: ws1+4\n* Power up during NSS or Heat (chip damage on block, recovers health on hit)",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+14",
         "recovery": "r",
         "startup": "i6~9",
         "target": "m"
@@ -148,7 +148,7 @@
         "notes": "\n* Balcony break\n* Weapon\n* Combo from 1st CH?\n* Cancel to r? with B\n* Sometimes written as 1SS.2,1",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+12a",
         "recovery": "r",
         "startup": ",i26~27",
         "target": "h,m"
@@ -162,7 +162,7 @@
         "notes": "\n* Tornado\n* Combo from 1st hit\n* Transition to NSS on hit or block\n* Transition to r? KIN with 1+2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+15g?",
         "recovery": "r NSS",
         "startup": ",i24",
         "target": "h,h"
@@ -176,7 +176,7 @@
         "notes": "\n* Heat Burst\n* Cancel to r? with b,b",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+2c",
         "recovery": "r",
         "startup": "i16",
         "target": "m"
@@ -190,7 +190,7 @@
         "notes": "\n* Balcony break\n* Combo from 1st CH?",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+16a (+7)",
         "recovery": "r",
         "startup": ",i26~27",
         "target": "h,h"
@@ -204,7 +204,7 @@
         "notes": "\n* Spike\n* Throw break 1 or 2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1",
         "recovery": "r",
         "startup": "i12~14",
         "target": "t"
@@ -218,7 +218,7 @@
         "notes": "\n* Combo from 1st hit",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-1",
         "recovery": "r FC",
         "startup": ",i22",
         "target": "h,L?"
@@ -232,7 +232,7 @@
         "notes": "\n* Balcony break\n* Combo from 1st hit",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+19a",
         "recovery": "r NSS",
         "startup": ",i18",
         "target": "h,h"
@@ -288,7 +288,7 @@
         "notes": "\n* Balcony break\n* Weapon\n* Combo from 2nd hit\n* Deals chip damage on block\n* Power up during NSS or Heat (recovers health on hit, consumes Heat)",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+20a (+10)",
         "recovery": "r",
         "startup": ",i26~27",
         "target": "m,m,M?"
@@ -316,7 +316,7 @@
         "notes": "\n* Transition to r? DGF with 1SS.U\n* Combo from 1st hit",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+3",
         "recovery": "r",
         "startup": "i17~18 i10~11",
         "target": "m,m"
@@ -344,7 +344,7 @@
         "notes": "Tornado",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+52a (+42)",
         "recovery": "r",
         "startup": "i25~26",
         "target": "m"
@@ -400,7 +400,7 @@
         "notes": "\n* Weapon",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-18",
         "recovery": "r",
         "startup": ",i67",
         "target": "h,h,m,h,m!"
@@ -428,7 +428,7 @@
         "notes": "\n* Balcony break\n* Combo from 2nd CH?",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+18a (+9)",
         "recovery": "r",
         "startup": ",i24~25",
         "target": "h,h,h"
@@ -512,7 +512,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-71",
         "recovery": "r FUFT",
         "startup": ",i11~12",
         "target": "h,h,h,h,h"
@@ -596,7 +596,7 @@
         "notes": "\n* Spike\n* Unbreakable",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1",
         "recovery": "r BT",
         "startup": "",
         "target": "t"
@@ -610,7 +610,7 @@
         "notes": "\n* Weapon",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+2a",
         "recovery": "r",
         "startup": "i59~61",
         "target": "m!"
@@ -638,7 +638,7 @@
         "notes": "Alternate input: BDS.2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+27a",
         "recovery": "r",
         "startup": "i21~40",
         "target": "h!"
@@ -680,7 +680,7 @@
         "notes": "\n* Combo from 1st CH?",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+5",
         "recovery": "r BT",
         "startup": ",i25",
         "target": "h,m"
@@ -694,7 +694,7 @@
         "notes": "\n* Balcony break\n* Combo from 1st CH?",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+5",
         "recovery": "r BT",
         "startup": ",i25~26",
         "target": "h,h"
@@ -708,7 +708,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+11a",
         "recovery": "r BT",
         "startup": "i24~26",
         "target": "m"
@@ -736,7 +736,7 @@
         "notes": "Weapon",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+3",
         "recovery": "r FC",
         "startup": "i17~18",
         "target": "L"
@@ -750,7 +750,7 @@
         "notes": "\n* Weapon\n* Deals chip damage on block\n* Power up during NSS or Heat (recovers health on hit, consumes Heat)",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1c",
         "recovery": "r",
         "startup": "i24~25",
         "target": "M"
@@ -820,7 +820,7 @@
         "notes": "Weapon",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0",
         "recovery": "r",
         "startup": "i16~17",
         "target": "m"
@@ -834,7 +834,7 @@
         "notes": "\n* Weapon\n* Balcony break\n* Combo from 1st hit",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+17a (+8)",
         "recovery": "r",
         "startup": ",i27~28",
         "target": "m,h"
@@ -848,7 +848,7 @@
         "notes": "\n* Weapon\n* Combo from 1st hit\n* In 1SS transition to r? NSS with B",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+5",
         "recovery": "r",
         "startup": ",i22~23",
         "target": "m,m"
@@ -862,7 +862,7 @@
         "notes": "\n* Balcony break\n* Weapon\n* Combo from 2nd CH?",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+8a (-1)",
         "recovery": "r",
         "startup": ",i19~20",
         "target": "m,m,h"
@@ -876,7 +876,7 @@
         "notes": "\n* Tornado\n* Weapon\n* Combo from 2nd CH?",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+16a (+9)",
         "recovery": "r",
         "startup": ",i19~20",
         "target": "m,m,M?"
@@ -890,7 +890,7 @@
         "notes": "\n* Spike\n* Weapon\n* Combo from 2nd CH?",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+2c",
         "recovery": "r",
         "startup": ",i29~30",
         "target": "m,m,m"
@@ -932,7 +932,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+4",
         "recovery": "r",
         "startup": "i26~28",
         "target": "L"
@@ -960,7 +960,7 @@
         "notes": "\n* Combo from 1st hit",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0",
         "recovery": "r",
         "startup": "i25~26",
         "target": "Lm"
@@ -1030,7 +1030,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-37",
         "recovery": "r FUFT",
         "startup": ",i10~14",
         "target": "m,m,m,m,m"
@@ -1142,7 +1142,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-1",
         "recovery": "r",
         "startup": "i17",
         "target": "l"
@@ -1156,7 +1156,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-",
         "recovery": "r",
         "startup": "i13",
         "target": "m"
@@ -1170,7 +1170,7 @@
         "notes": "\n* Balcony break\n* Combo from 1st hit",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-",
         "recovery": "r",
         "startup": ",i25~26",
         "target": "m,h"
@@ -1184,7 +1184,7 @@
         "notes": "\n* Tornado\n* Weapon",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+17a (+10)",
         "recovery": "r",
         "startup": ",i26~27",
         "target": "m,h,M?"
@@ -1198,7 +1198,7 @@
         "notes": "\n* Links to db+2 extensions",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+2",
         "recovery": "r",
         "startup": ",i10~14",
         "target": "m,h,m"
@@ -1212,7 +1212,7 @@
         "notes": "\n* Weapon\n* Transition to r? KIN with 1+2\n* Alternate input f,n,d,df+1 to power up",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+35a (+25)",
         "recovery": "r",
         "startup": "i20~21",
         "target": "M?"
@@ -1226,7 +1226,7 @@
         "notes": "\n* Combo from 1st hit",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+4",
         "recovery": "r",
         "startup": ",i17",
         "target": "m,m"
@@ -1240,7 +1240,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+34a (+24)",
         "recovery": "r",
         "startup": "i15~16",
         "target": "m"
@@ -1254,7 +1254,7 @@
         "notes": "\n* Balcony break\n* Alternate input f,n,d,df+2 to power up",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+6",
         "recovery": "r",
         "startup": "i17~18",
         "target": "m"
@@ -1282,7 +1282,7 @@
         "notes": "\n* Weapon\n* Combo from 1st hit\n* Power up during NSS or Heat (recovers health on hit, consumes Heat)\n* Input can be held to transition to d+1*",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+4c",
         "recovery": "r",
         "startup": ",i23~24",
         "target": "m,M?"
@@ -1296,7 +1296,7 @@
         "notes": "\n* Weapon\n* Deals chip damage on block\n* Power up during NSS or Heat (recovers health on hit, consumes Heat)",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+10a",
         "recovery": "r",
         "startup": "i30~31",
         "target": ""
@@ -1324,7 +1324,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "?a",
         "recovery": "r DGF",
         "startup": "i16~18",
         "target": "h"
@@ -1352,7 +1352,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+6c",
         "recovery": "r",
         "startup": "i22~23",
         "target": "L?"
@@ -1366,7 +1366,7 @@
         "notes": "\n* Spike\n* Transitions to attack throw on front standing or airborne hit only",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0d",
         "recovery": "r",
         "startup": "i20~21",
         "target": "h!,t"
@@ -1408,7 +1408,7 @@
         "notes": "\n* Homing\n* Balcony break\n* Weapon\n* Deals chip damage on block\n* Power up during NSS or Heat (recovers health on hit, consumes Heat)",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+18a (+9)",
         "recovery": "r",
         "startup": "i16~17 i11~12 i11~12",
         "target": "h"
@@ -1422,7 +1422,7 @@
         "notes": "\n* Homing\n* Balcony break",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+19a (+10)",
         "recovery": "r DGF",
         "startup": "i20~21",
         "target": "h"
@@ -1464,7 +1464,7 @@
         "notes": "\n* Tornado\n* Weapon\n* Combo from 1st CH?\n* Alternate input: BT.2,1",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+17a (+10)",
         "recovery": "r",
         "startup": ",i26~27",
         "target": "h,M?"
@@ -1492,7 +1492,7 @@
         "notes": "\n* Homing\n* Balcony break",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+17a (+8)",
         "recovery": "r",
         "startup": "i16~17",
         "target": "h"
@@ -1506,7 +1506,7 @@
         "notes": "\n* Balcony break\n* Transition to FLE on hit\n* Attacks after 1st only come out on hit\n* Combo from 1st hit does 2,1,1 damage\n* Cancel to r? BT with B",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-8",
         "recovery": "r",
         "startup": "i21~25",
         "target": "m"
@@ -1534,7 +1534,7 @@
         "notes": "\n* Balcony break\n* Absorbs an attack to power up and deals more damage on block",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+21a (+11)",
         "recovery": "r",
         "startup": "i18",
         "target": "m"
@@ -1548,7 +1548,7 @@
         "notes": "\n* Alternate input: db,b+1",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+70a (+54)",
         "recovery": "r",
         "startup": "i26",
         "target": "l!"
@@ -1562,7 +1562,7 @@
         "notes": "\n* Homing",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+4c",
         "recovery": "r FC",
         "startup": "i18~19",
         "target": "L"
@@ -1576,7 +1576,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+3",
         "recovery": "r",
         "startup": "i22~24",
         "target": "m"
@@ -1590,7 +1590,7 @@
         "notes": "\n* Weapon\n* 60 self-damage\n* NSS.f,F+1+4 will always cancel into Confusion",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-65",
         "recovery": "r FDFT",
         "startup": "i45",
         "target": "m!"
@@ -1632,7 +1632,7 @@
         "notes": "Elbow",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+4",
         "recovery": "r",
         "startup": "i15",
         "target": "m"
@@ -1646,7 +1646,7 @@
         "notes": "\n* Transition to attack throw on standing or airborne front hit only\n* Can transition to r? IND with d+3+4",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+4",
         "recovery": "r BT",
         "startup": "",
         "target": "m,t"
@@ -1660,7 +1660,7 @@
         "notes": "\n* Can transition to r? KIN with 1+2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+5",
         "recovery": "r",
         "startup": "i23~24",
         "target": "m"
@@ -1674,7 +1674,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-9",
         "recovery": "r",
         "startup": "i22~24",
         "target": "m"
@@ -1688,7 +1688,7 @@
         "notes": "\n* Balcony break\n* Combo from 2nd CH?\n* Can transition to r? IND with 3+4 on wall hit",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-9",
         "recovery": "r",
         "startup": ",i12~18",
         "target": "m,m"
@@ -1716,7 +1716,7 @@
         "notes": "\n* Balcony break\n* Knee",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+37a (+23)",
         "recovery": "r",
         "startup": "i15~16",
         "target": "m"
@@ -1758,7 +1758,7 @@
         "notes": "Tornado",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+31a (+21)",
         "recovery": "r",
         "startup": "i18~19",
         "target": "h"
@@ -1772,7 +1772,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+30a",
         "recovery": "r FDFT",
         "startup": "i24~28",
         "target": "L"
@@ -1786,7 +1786,7 @@
         "notes": "Alternate input: FLE.4",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+30a",
         "recovery": "r FLE",
         "startup": "",
         "target": "L"
@@ -1800,7 +1800,7 @@
         "notes": "Tornado",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+52a (+42)",
         "recovery": "r",
         "startup": "i25~26",
         "target": "m"
@@ -1940,7 +1940,7 @@
         "notes": "Balcony break",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+30a (+20)",
         "recovery": "r FLE",
         "startup": "i30~45",
         "target": "m!"
@@ -1996,7 +1996,7 @@
         "notes": "\n* Heat Smash\n* Balcony break\n* Recovers health on hit\n* Transition to r? DGF on block with U",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-3",
         "recovery": "r",
         "startup": "i18~19",
         "target": "m,t"
@@ -2066,7 +2066,7 @@
         "notes": "Weapon",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0",
         "recovery": "r",
         "startup": "i53~55",
         "target": ""
@@ -2136,7 +2136,7 @@
         "notes": "Can transition to r? DGF with U",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+3",
         "recovery": "r",
         "startup": "i17~18 i10~11",
         "target": "m,m"
@@ -2164,7 +2164,7 @@
         "notes": "Homing",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+4c",
         "recovery": "r",
         "startup": "i47~48",
         "target": "L"
@@ -2234,7 +2234,7 @@
         "notes": "\n* Weapon\n* Power up during NSS or Heat (deals chip damage on block, recovers health on hit, consumes Heat)",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+7c",
         "recovery": "r",
         "startup": ",i23~24 i14~15",
         "target": "m,m"
@@ -2248,7 +2248,7 @@
         "notes": "\n* Weapon\n* Combos from any hit",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+11a",
         "recovery": "r BT",
         "startup": "i12~13 i6~7 i7~8 i11~13",
         "target": "m,m,m,m"
@@ -2262,7 +2262,7 @@
         "notes": "\n* Weapon\n* Power up during NSS or Heat (deals chip damage on block, recovers health on hit, consumes Heat)",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+14",
         "recovery": "r",
         "startup": "i10~13",
         "target": "m"
@@ -2318,7 +2318,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+13a",
         "recovery": "r FC",
         "startup": "i25~32",
         "target": "L"
@@ -2332,7 +2332,7 @@
         "notes": "\n* Homing\n* Balcony break\n* Can transition to r? KIN with 1+2\n* Can transition to r? MED with 3+4\n* Alternate input: SS.4",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+20a (+11)",
         "recovery": "r",
         "startup": "i16~17",
         "target": "h"
@@ -2346,7 +2346,7 @@
         "notes": "\n* Weapon",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+6a",
         "recovery": "r",
         "startup": "i46",
         "target": "m!"
@@ -2374,7 +2374,7 @@
         "notes": "\n* Tornado\n* Weapon\n* Combo from 1st hit",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+30a (+20)",
         "recovery": "r",
         "startup": ",i23~24",
         "target": "m,M?"
@@ -2388,7 +2388,7 @@
         "notes": "\n* Weapon",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+3",
         "recovery": "r FC",
         "startup": "i23~24",
         "target": "L"
@@ -2416,7 +2416,7 @@
         "notes": "\n* Weapon\n* Input can be held\n* Deals chip damage on block\n* Powers up during NSS or Heat (recovers health on hit, consumes Heta)",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-2",
         "recovery": "r",
         "startup": "i19~20 i6~7 i7~8",
         "target": "m,m,m"
@@ -2458,7 +2458,7 @@
         "notes": "Throw break 1",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0",
         "recovery": "r",
         "startup": "",
         "target": "t"
@@ -2486,7 +2486,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+43a",
         "recovery": "r BT",
         "startup": "i28~39",
         "target": "m"
@@ -2500,7 +2500,7 @@
         "notes": "\n* Weapon\n* Increased damage on block\n* Recovers health on hit",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+64a",
         "recovery": "r 1SS",
         "startup": "i8~11",
         "target": "m"
@@ -2514,7 +2514,7 @@
         "notes": "\n* Balcony break\n* Weapon\n* Combo from 2nd hit\n* Deals chip damage on block\n* Has clean hit property\n* Recovers health on hit\n* Alternate input: H.3,2,1+2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+20a (+10)",
         "recovery": "r 1SS",
         "startup": ",i26~27",
         "target": "m,m,M?"
@@ -2556,7 +2556,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+6",
         "recovery": "r NSS",
         "startup": "i11",
         "target": "sl"
@@ -2598,7 +2598,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+67a (+51)",
         "recovery": "r FC",
         "startup": "i20~21",
         "target": "L"
@@ -2612,7 +2612,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+22c",
         "recovery": "r IND",
         "startup": "i27~29",
         "target": "L?"
@@ -2626,7 +2626,7 @@
         "notes": "\n* Balcony break\n* Weapon\n* Deals chip damage on block\n* Has clean hit property\n* Recovers health on hit, consumes Heat\n* Alternate input: H.ub+1+2)",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+16a (+6)",
         "recovery": "r 1SS",
         "startup": "i24~25",
         "target": "M?"
@@ -2668,7 +2668,7 @@
         "notes": "\n* Unbreakable\n* Self-damage",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0",
         "recovery": "r",
         "startup": "i15~16",
         "target": "t"
@@ -2696,7 +2696,7 @@
         "notes": "\n* Throw break 1+2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+0",
         "recovery": "r",
         "startup": "i15~16",
         "target": "t"
@@ -2724,7 +2724,7 @@
         "notes": "Throw break 2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-3",
         "recovery": "r",
         "startup": "",
         "target": "t"
@@ -2738,7 +2738,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+2",
         "recovery": "r",
         "startup": "i17~18",
         "target": "m"
@@ -2752,7 +2752,7 @@
         "notes": "Tornado",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+30a (+20)",
         "recovery": "r",
         "startup": "i18~19",
         "target": "m"
@@ -2766,7 +2766,7 @@
         "notes": "\n* Spike",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+24a",
         "recovery": "r",
         "startup": "i39~42 i3~6",
         "target": "M,M"
@@ -2780,7 +2780,7 @@
         "notes": "\n* Balcony break\n* Weapon\n* Deals chip damage on block\n* Power up during NSS or Heat (recovers health on hit, consumes Heat)",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+27a (+17)",
         "recovery": "r",
         "startup": "i24~25",
         "target": "M?"
@@ -2794,7 +2794,7 @@
         "notes": "\n* Weapon",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-24",
         "recovery": "r",
         "startup": "i50~52",
         "target": "m!"
@@ -2808,7 +2808,7 @@
         "notes": "\n* Weapon",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1~+2",
         "recovery": "r",
         "startup": ",i18~19",
         "target": "m!h!"
@@ -2822,7 +2822,7 @@
         "notes": "\n* Weapon\n* Cancel to r? with B",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-57",
         "recovery": "r",
         "startup": ",i28~113",
         "target": "m!,m!"
@@ -2836,7 +2836,7 @@
         "notes": "\n* Spike\n* Weapon\n* Alternate inputs: ub+1 u+1",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+5~+6",
         "recovery": "r",
         "startup": "i24~25",
         "target": "m"
@@ -2850,7 +2850,7 @@
         "notes": "\n* Spike\n* Throw break 1+2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+1",
         "recovery": "r",
         "startup": "i11",
         "target": "t"
@@ -2878,7 +2878,7 @@
         "notes": "Can transition to r? DGF with 1+2",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+25a",
         "recovery": "r",
         "startup": ",i55~56",
         "target": "M!,M!"
@@ -2892,7 +2892,7 @@
         "notes": "Deals chip damage on block",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+34",
         "recovery": "r",
         "startup": ",i55~56",
         "target": "M!,M?"
@@ -2906,7 +2906,7 @@
         "notes": "\n* Weapon\n* Cancel to r? FC with D",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+6~+7",
         "recovery": "r FC",
         "startup": "i35~36",
         "target": "m"
@@ -2920,7 +2920,7 @@
         "notes": "Knee",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+32a (+22)",
         "recovery": "r",
         "startup": "i15",
         "target": "m"
@@ -2934,7 +2934,7 @@
         "notes": "\n* Spike\n* On hit, jumps backward\n* In 1SS can transitions to r? DGF with 1+2\n* In 1SS can transitions to r? FLE with d+1+2\n* Can transitions to r? IND with d+3+4",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-4a",
         "recovery": "r",
         "startup": "i31~35",
         "target": "M"
@@ -2962,7 +2962,7 @@
         "notes": "On hit, jumps backward",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "-14",
         "recovery": "r",
         "startup": ",i31~35",
         "target": "M,h,M"
@@ -3032,7 +3032,7 @@
         "notes": "\n* Homing\n* Balcony break\n* Spike",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+22a",
         "recovery": "r",
         "startup": "i20~22",
         "target": "m"
@@ -3046,7 +3046,7 @@
         "notes": "Transitions to attack throw on front hit only",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+15a",
         "recovery": "r",
         "startup": "i17",
         "target": "m"
@@ -3060,7 +3060,7 @@
         "notes": "",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+12c",
         "recovery": "r FUFT",
         "startup": "i23~24",
         "target": "L"
@@ -3116,7 +3116,7 @@
         "notes": "Combo from 3rd CH?",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+6c",
         "recovery": "r",
         "startup": ",i25~26",
         "target": "m,h,h,m"
@@ -3186,7 +3186,7 @@
         "notes": "\n* Weapon\n* Combo from 1st hit",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+36a (+26)",
         "recovery": "r",
         "startup": ",i27~28",
         "target": "m,m"
@@ -3214,7 +3214,7 @@
         "notes": "Combo from 2nd CH",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+5",
         "recovery": "r BT",
         "startup": ",i25",
         "target": "m,h,m"
@@ -3228,7 +3228,7 @@
         "notes": "\n* Balcony break\n* Combo from 2nd CH",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+27A (+17)",
         "recovery": "r NSS",
         "startup": ",i25~26",
         "target": "m,h,h"
@@ -3270,7 +3270,7 @@
         "notes": "\n* Can transition to r? KIN with 1+2\n* Can transition to r? NSS with B",
         "on_block": "",
         "on_ch": "",
-        "on_hit": "",
+        "on_hit": "+5",
         "recovery": "r",
         "startup": "i11~12",
         "target": "m"

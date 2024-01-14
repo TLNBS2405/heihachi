@@ -29,18 +29,21 @@ class MyTestCase(unittest.TestCase):
 
     def test_complete_parent_input(self):
         character_movelist = wavu_reader.get_wavu_character_movelist("Azucena")
+        move7 = wavu_reader.get_move("Azucena-BT.3",character_movelist)
         move = wavu_reader.get_move("Azucena-df+1,4,1",character_movelist)
         move2 = wavu_reader.get_move("Azucena-f+4,4~3",character_movelist)
         move3 = wavu_reader.get_move("Azucena-LIB.1,2",character_movelist)
         move4 = wavu_reader.get_move("Azucena-b+4,3,4,3",character_movelist)
         move5 = wavu_reader.get_move("Azucena-df+1,4,1~2",character_movelist)
         move6 = wavu_reader.get_move("Azucena-ws4,1,3",character_movelist)
+
         self.assertEqual(move.input,"df+1,4,1")
         self.assertEqual(move2.input,"f+4,4~3")
         self.assertEqual(move3.damage,"14,20")
         self.assertEqual(move4.damage,"10,10,16,23")
         self.assertEqual(move5.input,"df+1,4,1~2")
         self.assertEqual(move6.on_ch,"+27a")
+        self.assertEqual(move7.on_hit,"+4~+5")
 
         character_movelist = wavu_reader.get_wavu_character_movelist("Bryan")
         move7 = wavu_reader.get_move("Bryan-4,3,f+4",character_movelist)
