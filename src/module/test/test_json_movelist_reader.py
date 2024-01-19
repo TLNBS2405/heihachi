@@ -1,12 +1,12 @@
+import os
 import unittest
 from src.module import json_movelist_reader
-
+base_path = os.path.dirname(__file__)
 class MyTestCase(unittest.TestCase):
 
+
     def test_get_by_move_type(self):
-
-        azu_move_list = json_movelist_reader.get_movelist("azucena")
-
+        azu_move_list = json_movelist_reader.get_movelist("azucena",".")
 
         result = json_movelist_reader.get_by_move_type("Homing",azu_move_list)
         self.assertTrue(result[0])
@@ -23,19 +23,19 @@ class MyTestCase(unittest.TestCase):
 
     def test_get_movelist_from_json(self):
 
-        result = json_movelist_reader.get_movelist("azucena")
+        result = json_movelist_reader.get_movelist("azucena",".")
         self.assertEqual(result[0]["id"],"Azucena-1")
 
     def test_get_similar_moves(self):
 
-        move_list = json_movelist_reader.get_movelist("azucena")
+        move_list = json_movelist_reader.get_movelist("azucena",".")
         similar_moves = json_movelist_reader.get_similar_moves("fff3+4",move_list)
         self.assertTrue(similar_moves[0])
 
 
     def test_get_move(self):
 
-        azu_move_list = json_movelist_reader.get_movelist("azucena")
+        azu_move_list = json_movelist_reader.get_movelist("azucena",".")
         move = json_movelist_reader.get_move("d/f+1",azu_move_list)
         self.assertEqual(move["id"],"Azucena-df+1")
 

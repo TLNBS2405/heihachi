@@ -19,6 +19,7 @@ discord_token = CONFIG_PATH.read_config()['DISCORD_TOKEN']
 feedback_channel_id = CONFIG_PATH.read_config()['FEEDBACK_CHANNEL_ID']
 
 character_list = []
+base_path = os.path.dirname(__file__)
 
 
 class Heihachi(discord.Client):
@@ -47,7 +48,7 @@ def create_frame_data_embed(name: str, move: str) -> discord.Embed:
     character_name = util.correct_character_name(name.lower())
     if character_name:
         character = util.get_character_by_name(character_name, character_list)
-        move_list = json_movelist_reader.get_movelist(character_name)
+        move_list = json_movelist_reader.get_movelist(character_name,"./src/json_movelist")
         move_type = util.get_move_type(move)
 
         if move_type:
@@ -109,7 +110,8 @@ try:
     scheduler = sched.scheduler(time.time, time.sleep)
 
     # Repeat importing move list of all character from wavu.wiki once an hour
-    scheduler_thread = threading.Thread(target=util.periodic_function, args=(scheduler, 3600, util.create_json_movelists, CHARACTER_LIST_PATH))
+    scheduler_thread = threading.Thread(target=util.periodic_function,
+                                        args=(scheduler, 3600, util.create_json_movelists, CHARACTER_LIST_PATH))
     scheduler_thread.start()
 
     hei.run(discord_token)
