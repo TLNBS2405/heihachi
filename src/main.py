@@ -1,12 +1,10 @@
 import datetime, logging, os, discord, sched, time, sys
+import threading
 
 from src.module import configurator
 from src.module import json_movelist_reader
 from src.module import embed
 from src.module import util
-from src.module import button
-
-from threading import Thread
 
 sys.path.insert(0, (os.path.dirname(os.path.dirname(__file__))))
 
@@ -108,12 +106,11 @@ async def self(interaction: discord.Interaction, message: str):
 
 try:
     character_list = util.create_json_movelists(CHARACTER_LIST_PATH)
-    print("Character jsons are successfully created")
     scheduler = sched.scheduler(time.time, time.sleep)
 
     # Repeat importing move list of all character from wavu.wiki once an hour
-    scheduler.enter(3600, 1, util.schedule_create_json_movelists, (CHARACTER_LIST_PATH, scheduler,))
-    Thread(target=scheduler.run).start()
+    scheduler_thread = threading.Thread(target=util.periodic_function, args=(scheduler, 3600, util.create_json_movelists, CHARACTER_LIST_PATH))
+    scheduler_thread.start()
 
     hei.run(discord_token)
 

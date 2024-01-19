@@ -53,16 +53,14 @@ def create_json_movelists(character_list_path: str) -> List[character.Character]
             cha = wavu_importer.import_character(character_meta)
             cha.export_movelist_as_json()
             cha_list.append(cha)
-
+    print("Character jsons are successfully created")
     return cha_list
 
 
-def schedule_create_json_movelists(character_list_path: str, scheduler):
-    try:
-        create_json_movelists(character_list_path)
-        scheduler.enter(3600, 1, create_json_movelists, (character_list_path, scheduler,))
+def periodic_function(scheduler, interval, function, character_list_path: str):
+    while True:
+        scheduler.enter(interval, 1, function, (character_list_path,))
+        scheduler.run()
 
-    except Exception as e:
-        raise Exception("Error when importing character from wavu" + str(e))
 
 

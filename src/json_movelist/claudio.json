@@ -196,7 +196,7 @@
         "target": "m"
     },
     {
-        "damage": "14,22",
+        "damage": "21,22",
         "gif": "",
         "id": "Claudio-3,2",
         "input": "3,2",
@@ -207,7 +207,7 @@
         "on_hit": "",
         "recovery": "",
         "startup": "",
-        "target": "m,h"
+        "target": "h,h"
     },
     {
         "damage": "20",

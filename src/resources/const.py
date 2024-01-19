@@ -15,23 +15,25 @@ CHARACTER_ALIAS = {
     'jin': ['jim'],
     'kazuya': ['kaz', 'kazze', 'masku'],
     'king': ['kin'],
-    'kuma': ['panda', 'karhu', 'bear'],
+    'kuma': ['karhu'],
     'lars': ['lar'],
     'law': ['marshall'],
     'lee': ['violet'],
     'leo': [],
     'lili': ['lil'],
-    'raven': ['masterraven', 'mraven', 'maven', 'mrv', 'raven', 'mr'],
+    'raven': ['masterraven', 'mraven', 'maven', 'mrv', 'raven', 'rav'],
     'reina': ['rei'],
     'nina': ['nin'],
+    'panda': ['pan'],
     'paul': [],
     'shaheen': ['sha'],
     'steve': ['stv', 'ste', 'fox'],
     'yoshimitsu': ['yoshi', 'manji', 'yos'],
     'xiaoyu': ['xiao', 'ling'],
     'zafina': ['zaffy', 'zaf'],
-    "leroy": ['ler'],
-    "generic": []
+    'leroy': ['ler'],
+    'victor': ['vic'],
+    'generic': []
 }
 
 MOVE_TYPES = {
