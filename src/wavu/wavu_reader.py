@@ -88,11 +88,13 @@ def _create_alias(input: str) -> List[str]:
     result.append(input)
     return result
 
+
 def _empty_value_if_none(value):
     if not value:
         return ""
     else:
         return value
+
 
 def _convert_json_movelist(move_list_json: list) -> List[Move]:
     move_list = []
@@ -101,9 +103,9 @@ def _convert_json_movelist(move_list_json: list) -> List[Move]:
             alias = []
             id = _normalize_data(move["title"]["id"])
             name = _normalize_data(move["title"]["name"])
-
             input = _normalize_data(
-                _get_all_parent_values_of("input", move["title"]["parent"], move_list_json) + move["title"]["input"])
+                _get_all_parent_values_of("input", _normalize_data(move["title"]["parent"]), move_list_json)
+                + _normalize_data(move["title"]["input"]))
             if "_" in input:
                 result = _create_alias(input)
                 input = result[-1]
