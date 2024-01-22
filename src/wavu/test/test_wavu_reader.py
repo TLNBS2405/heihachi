@@ -49,3 +49,10 @@ class MyTestCase(unittest.TestCase):
         move7 = wavu_reader.get_move("Bryan-4,3,f+4",character_movelist)
         self.assertEqual(move7.on_ch,"+31a (+21)")
 
+    def test_first_parent_input(self):
+        character_movelist = wavu_reader.get_wavu_character_movelist("Azucena")
+        move = wavu_reader.get_move("Azucena-df+1,4,1",character_movelist)
+        self.assertEqual(move.startup,"i13~14")
+        move = wavu_reader.get_move("Azucena-b+4,3,4",character_movelist)
+        self.assertEqual(move.startup,"i15~16")
+

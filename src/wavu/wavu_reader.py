@@ -60,6 +60,23 @@ def _get_all_parent_values_of(field: str, move_id: str, move_list_json: list) ->
         return ""
 
 
+def _get_first_parent_value_of(field: str, move_id: str, move_list_json: list) -> str:
+    if move_id:
+        for move in move_list_json:
+            if move["title"]["id"] == move_id:
+                if move["title"]["parent"]:
+                    original_move = move["title"]["parent"]
+                    if "_" in original_move:
+                        original_move = original_move.split("_")[0]
+                    parent_input = _get_first_parent_value_of(field, original_move, move_list_json)
+                    if parent_input:
+                        return parent_input
+                else:
+                    return move["title"][field]
+    else:
+        return ""
+
+
 def _normalize_data(data):
     if data:
         # remove non-ascii stuff
@@ -121,7 +138,8 @@ def _convert_json_movelist(move_list_json: list) -> List[Move]:
             on_block = _normalize_data(move["title"]["block"])
             on_hit = _normalize_data(_normalize_hit_ch_input(move["title"]["hit"]))
             on_ch = _normalize_data(_normalize_hit_ch_input(move["title"]["ch"]))
-            startup = _normalize_data(move["title"]["startup"])
+            startup = _normalize_data(_get_first_parent_value_of("startup", _normalize_data(move["title"]["id"])
+                                                                 , move_list_json))
             recovery = _normalize_data(move["title"]["recv"])
 
             notes = html.unescape(_normalize_data(move["title"]["notes"]))
