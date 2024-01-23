@@ -138,6 +138,8 @@ def _convert_json_movelist(move_list_json: list) -> List[Move]:
             on_block = _normalize_data(move["title"]["block"])
             on_hit = _normalize_data(_normalize_hit_ch_input(move["title"]["hit"]))
             on_ch = _normalize_data(_normalize_hit_ch_input(move["title"]["ch"]))
+            if not on_ch or on_ch == "":
+                on_ch = on_hit
             startup = _normalize_data(_get_first_parent_value_of("startup", _normalize_data(move["title"]["id"])
                                                                  , move_list_json))
             recovery = _normalize_data(move["title"]["recv"])

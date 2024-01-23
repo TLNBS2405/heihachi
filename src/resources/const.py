@@ -11,7 +11,7 @@ CHARACTER_ALIAS = {
     'jun': [],
     'feng': ['fen'],
     'hwoarang': ['hwo'],
-    'jack8': ['j8', 'jack-8', 'jack'],
+    'jack-8': ['j8', 'jack8', 'jack'],
     'jin': ['jim'],
     'kazuya': ['kaz', 'kazze', 'masku'],
     'king': ['kin'],

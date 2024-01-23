@@ -14,12 +14,12 @@ logger.setLevel(logging.WARNING)
 base_path = os.path.dirname(__file__)
 CONFIG_PATH = configurator.Configurator(os.path.abspath(os.path.join(base_path, "resources", "config.json")))
 CHARACTER_LIST_PATH = os.path.abspath(os.path.join(base_path, "resources", "character_list.json"))
+JSON_PATH = os.path.abspath(os.path.join(base_path, "json_movelist"))
 
 discord_token = CONFIG_PATH.read_config()['DISCORD_TOKEN']
 feedback_channel_id = CONFIG_PATH.read_config()['FEEDBACK_CHANNEL_ID']
 
 character_list = []
-base_path = os.path.dirname(__file__)
 
 
 class Heihachi(discord.Client):
@@ -48,7 +48,7 @@ def create_frame_data_embed(name: str, move: str) -> discord.Embed:
     character_name = util.correct_character_name(name.lower())
     if character_name:
         character = util.get_character_by_name(character_name, character_list)
-        move_list = json_movelist_reader.get_movelist(character_name,"./src/json_movelist")
+        move_list = json_movelist_reader.get_movelist(character_name,JSON_PATH)
         move_type = util.get_move_type(move)
 
         if move_type:
