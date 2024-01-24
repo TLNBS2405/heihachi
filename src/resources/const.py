@@ -62,6 +62,7 @@ REPLACE = {
     'fc+': 'fc',
     'cd+': 'cd',
     'wr+': 'wr',
+    'fff':'wr',
     'ra+': 'ra',
     'ss+': 'ss',
     '(': '',
