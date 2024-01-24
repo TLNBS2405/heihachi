@@ -35,11 +35,11 @@ class MyTestCase(unittest.TestCase):
 
     def test_get_move(self):
 
-        claudio_move_list = json_movelist_reader.get_movelist("claudio","./")
+        claudio_move_list = json_movelist_reader.get_movelist("claudio","./src/module/test")
         move = json_movelist_reader.get_move("stb wr1+2",claudio_move_list)
         self.assertEqual(move["id"],"Claudio-STB.f,f,F+1+2")
 
-        azu_move_list = json_movelist_reader.get_movelist("azucena","./")
+        azu_move_list = json_movelist_reader.get_movelist("azucena","./src/module/test")
         move = json_movelist_reader.get_move("d/f+1",azu_move_list)
         self.assertEqual(move["id"],"Azucena-df+1")
 
@@ -85,7 +85,7 @@ class MyTestCase(unittest.TestCase):
         move = json_movelist_reader.get_move("LIB d2+4",azu_move_list)
         self.assertEqual(move["id"],"Azucena-LIB.d+1+3_d+2+4")
 
-        jun_move_list = json_movelist_reader.get_movelist("jun","./")
+        jun_move_list = json_movelist_reader.get_movelist("jun","./src/module/test")
         move = json_movelist_reader.get_move("12u",jun_move_list)
         self.assertEqual(move["id"],"Jun-1,2,u_d")
 
