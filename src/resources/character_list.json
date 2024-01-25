@@ -50,9 +50,14 @@
     "wavu_page": "https://wavu.wiki/t/Nina_movelist_(Tekken_8)"
   },
   {
+    "name": "paul",
+    "portrait": "https://i.imgur.com/44jv2IR.png",
+    "wavu_page": "https://wavu.wiki/t/Paul_movelist_(Tekken_8)"
+  },
+  {
     "name": "raven",
     "portrait": "https://i.imgur.com/r1CYJOr.png",
-    "wavu_page": "https://wavu.wiki/t/Kazuya_movelist_(Tekken_8)"
+    "wavu_page": "https://wavu.wiki/t/Raven_movelist"
   },
   {
     "name": "steve",
