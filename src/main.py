@@ -5,6 +5,7 @@ from src.module import configurator
 from src.module import json_movelist_reader
 from src.module import embed
 from src.module import util
+from src.module import button
 
 sys.path.insert(0, (os.path.dirname(os.path.dirname(__file__))))
 
@@ -18,7 +19,7 @@ JSON_PATH = os.path.abspath(os.path.join(base_path, "json_movelist"))
 
 discord_token = CONFIG_PATH.read_config()['DISCORD_TOKEN']
 feedback_channel_id = CONFIG_PATH.read_config()['FEEDBACK_CHANNEL_ID']
-
+actioned_channel_id = CONFIG_PATH.read_config()['ACTION_CHANNEL_ID']
 character_list = []
 
 
@@ -97,7 +98,8 @@ async def self(interaction: discord.Interaction, message: str):
                 str(interaction.user.name), interaction.user.id,
                 interaction.guild, message)
             channel = hei.get_channel(feedback_channel_id)
-            await channel.send(content=feedback_message)
+            actioned_channel = hei.get_channel(actioned_channel_id)
+            await channel.send(content=feedback_message,view=button.DoneButton(actioned_channel))
             result = embed.success_embed("Feedback sent")
         except Exception as e:
             result = embed.error_embed("Feedback couldn't be sent caused by: " + e)
