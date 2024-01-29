@@ -104,7 +104,7 @@ async def self(interaction: discord.Interaction, message: str):
         except Exception as e:
             result = embed.error_embed("Feedback couldn't be sent caused by: " + e)
 
-        await interaction.response.send_message(embed=result, ephemeral=True)
+        await interaction.response.send_message(embed=result, ephemeral=False)
 
 
 try:
