@@ -135,23 +135,25 @@ def _convert_json_movelist(move_list_json: list) -> List[Move]:
                 _get_all_parent_values_of("damage", _normalize_data(move["title"]["parent"]),
                                           move_list_json) + _normalize_data(move["title"]["damage"]))
 
-            on_block = _normalize_data(move["title"]["block"])
-            on_hit = _normalize_data(_normalize_hit_ch_input(move["title"]["hit"]))
-            on_ch = _normalize_data(_normalize_hit_ch_input(move["title"]["ch"]))
+            on_block = _remove_html_tags(_normalize_data(move["title"]["block"]))
+            on_hit = _remove_html_tags(_normalize_data(_normalize_hit_ch_input(move["title"]["hit"])))
+            on_ch = _remove_html_tags(_normalize_data(_normalize_hit_ch_input(move["title"]["ch"])))
             if not on_ch or on_ch == "":
                 on_ch = on_hit
             startup = _normalize_data(_get_first_parent_value_of("startup", _normalize_data(move["title"]["id"])
                                                                  , move_list_json))
             recovery = _normalize_data(move["title"]["recv"])
-
-            notes = html.unescape(_normalize_data(move["title"]["notes"]))
-            notes = BeautifulSoup(notes, features="lxml").get_text()
-            notes = notes.replace("* \n", "* ")
+            notes = _remove_html_tags(move["title"]["notes"])
 
             move = Move(id, name, input, target, damage, on_block, on_hit, on_ch, startup, recovery, notes, "", alias)
             move_list.append(move)
     return move_list
 
+def _remove_html_tags(data):
+    result = html.unescape(_normalize_data(data))
+    result = BeautifulSoup(result, features="lxml").get_text()
+    result = result.replace("* \n", "* ")
+    return result
 
 def _normalize_hit_ch_input(entry: str) -> str:
     entry = _empty_value_if_none(entry)
