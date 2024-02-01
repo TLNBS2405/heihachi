@@ -45,6 +45,7 @@ def error_embed(message):
                           description=message)
     return embed
 
+
 def success_embed(message):
     embed = discord.Embed(title='Success',
                           colour=SUCCESS_COLOR,

@@ -19,15 +19,18 @@ def correct_character_name(alias: str):
 
     return None
 
-def get_character_by_name(name :str, character_list :[]) -> character.Character:
+
+def get_character_by_name(name: str, character_list: []) -> character.Character:
     for character in character_list:
         if character.name == name:
             return character
+
 
 def get_move_type(original_move: str):
     for k in const.MOVE_TYPES.keys():
         if original_move.lower() in const.MOVE_TYPES[k]:
             return k
+
 
 def is_user_blacklisted(user_id):
     if user_id in const.ID_BLACKLIST:
@@ -61,6 +64,3 @@ def periodic_function(scheduler, interval, function, character_list_path: str):
     while True:
         scheduler.enter(interval, 1, function, (character_list_path,))
         scheduler.run()
-
-
-

@@ -149,11 +149,13 @@ def _convert_json_movelist(move_list_json: list) -> List[Move]:
             move_list.append(move)
     return move_list
 
+
 def _remove_html_tags(data):
     result = html.unescape(_normalize_data(data))
     result = BeautifulSoup(result, features="lxml").get_text()
     result = result.replace("* \n", "* ")
     return result
+
 
 def _normalize_hit_ch_input(entry: str) -> str:
     entry = _empty_value_if_none(entry)
