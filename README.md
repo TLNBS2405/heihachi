@@ -17,5 +17,5 @@ The executable is `src/main.py`. Don't forget to put this project into your PYTH
 ```
 Slash Command
 /fd <character> <move>       -    get frame data of a move from a character
-
+/<character> <move> - same as above
 ```

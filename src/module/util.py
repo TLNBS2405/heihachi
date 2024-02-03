@@ -64,3 +64,16 @@ def periodic_function(scheduler, interval, function, character_list_path: str):
     while True:
         scheduler.enter(interval, 1, function, (character_list_path,))
         scheduler.run()
+
+
+def create_character_tree_commands(character_list):
+    f = open("out.txt", "a")
+    for c in character_list:
+        fd_command = ("@tree.command(name=\"{}\", description=\"Frame data from {}\") \n async def self("
+                      "interaction: discord.Interaction, move: str): \n\tif not (util.is_user_blacklisted("
+                      "interaction.user.id) or util.is_author_newly_created(interaction)): \n\t\tembed = "
+                      "create_frame_data_embed(\"{}\", move) \n\t\tawait interaction.response.send_message(embed=embed,"
+                      "ephemeral=False) \n").format(c.name, c.name, c.name)
+        f.write(fd_command + "\n")
+    f.close()
+    print("done")
