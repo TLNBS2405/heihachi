@@ -163,5 +163,5 @@ def _process_links(data: str | None) -> str:
     def _replace_link(match):
         page, section, data = match.group('page'), match.group('section'), match.group('data')
         hover_text = 'Combo' if section == 'Staples' else 'Mini-combo'
-        return f'[{data}](https://wavu.wiki/t/{page.replace(' ', '_')}#{section} \'{hover_text}\')'
+        return f"[{data}](https://wavu.wiki/t/{page.replace(' ', '_')}#{section} \'{hover_text}\')"
     return link_replace_pattern.sub(_replace_link, _empty_value_if_none(data))
