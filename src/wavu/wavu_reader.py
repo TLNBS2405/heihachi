@@ -160,10 +160,13 @@ def _remove_html_tags(data):
 def _normalize_hit_ch_input(entry: str) -> str:
     entry = _empty_value_if_none(entry)
     if "|" in entry:
-        pattern = r'\|([^|]+)\]\]'
+        pattern = r'\[\[(?P<page>[^#]+)#(?P<section>[^|]+)\|(?P<data>[^|]+)\]\]'
         match = re.search(pattern, entry)
         if match:
-            return match.group(1)
+            page, section, data = match.group('page'), match.group('section'), match.group('data')
+            hover_text = 'Combo' if section == 'Staples' else 'Mini-combo'
+            embed_text = f'[{data}](https://wavu.wiki/t/{page.replace(' ', '_')}#{section} \'{hover_text}\')'
+            return embed_text
         return entry
     else:
         return entry
