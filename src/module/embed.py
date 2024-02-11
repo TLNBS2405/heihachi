@@ -2,6 +2,7 @@ import discord
 from src.module import character
 
 MOVE_NOT_FOUND_TITLE = 'Move not found'
+WAVU_LOGO = "https://wavu.wiki/android-chrome-192x192.png"
 SUCCESS_COLOR = discord.Colour.from_rgb(50, 168, 82)
 WARNING_COLOR = discord.Colour.from_rgb(253, 218, 13)
 ERROR_COLOR = discord.Colour.from_rgb(220, 20, 60)
@@ -62,12 +63,11 @@ def move_embed(character: character, move: dict):
                           )
 
     embed.set_thumbnail(url=character.portrait[0])
-    embed.set_footer(text="Wavu.wiki", icon_url="https://wavu.wiki/android-chrome-192x192.png")
+    embed.set_footer(text="Wavu.wiki", icon_url=WAVU_LOGO)
     embed.set_author(name=_upper_first_letter(character.name), url=character.wavu_page)
 
     embed.add_field(name='Target', value=move['target'])
     embed.add_field(name='Damage', value=move['damage'])
-
     embed.add_field(name='Startup', value=move['startup'])
 
     embed.add_field(name="Block", value=move['on_block'])
