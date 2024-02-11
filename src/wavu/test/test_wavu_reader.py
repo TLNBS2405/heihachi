@@ -42,12 +42,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(move3.damage,"14,20")
         self.assertEqual(move4.damage,"10,10,16,23")
         self.assertEqual(move5.input,"df+1,4,1~2")
-        self.assertEqual(move6.on_ch,"+27a")
+        self.assertEqual(move6.on_ch,"[+27a](https://wavu.wiki/t/Azucena_combos#Mini-combos 'Mini-combo')")
         self.assertEqual(move7.on_hit,"+4~+5")
 
         character_movelist = wavu_reader.get_wavu_character_movelist("Bryan")
         move7 = wavu_reader.get_move("Bryan-4,3,f+4",character_movelist)
-        self.assertEqual(move7.on_ch,"+31a (+21)")
+        self.assertEqual(move7.on_ch,"[+31a (+21)](https://wavu.wiki/t/Bryan_combos#Staples 'Combo')")
 
     def test_first_parent_input(self):
         character_movelist = wavu_reader.get_wavu_character_movelist("Azucena")
