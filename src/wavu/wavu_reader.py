@@ -1,6 +1,6 @@
 import json, requests, re, html
 
-from typing import List
+from typing import List, Optional
 from mediawiki import MediaWiki
 from src.module.character import Move
 from src.resources import const
@@ -159,7 +159,7 @@ def _remove_html_tags(data):
     return result
 
 link_replace_pattern = re.compile(r'\[\[(?P<page>[^#]+)#(?P<section>[^|]+)\|(?P<data>[^|]+)\]\]')
-def _process_links(data: str | None) -> str:
+def _process_links(data: Optional[str]) -> str:
     def _replace_link(match):
         page, section, data = match.group('page'), match.group('section'), match.group('data')
         hover_text = 'Combo' if section == 'Staples' else 'Mini-combo'
