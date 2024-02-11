@@ -62,7 +62,7 @@ def move_embed(character: character, move: dict):
                           )
 
     embed.set_thumbnail(url=character.portrait[0])
-    embed.set_footer(text="Wavu.wiki", icon_url="https://i.imgur.com/xfdEUee.png")
+    embed.set_footer(text="Wavu.wiki", icon_url="https://wavu.wiki/android-chrome-192x192.png")
     embed.set_author(name=_upper_first_letter(character.name), url=character.wavu_page)
 
     embed.add_field(name='Target', value=move['target'])
