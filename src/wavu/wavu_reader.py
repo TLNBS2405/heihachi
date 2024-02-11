@@ -136,14 +136,14 @@ def _convert_json_movelist(move_list_json: list) -> List[Move]:
                                           move_list_json) + _normalize_data(move["title"]["damage"]))
 
             on_block = _remove_html_tags(_normalize_data(move["title"]["block"]))
-            on_hit = _remove_html_tags(_normalize_data(_normalize_hit_ch_input(move["title"]["hit"])))
-            on_ch = _remove_html_tags(_normalize_data(_normalize_hit_ch_input(move["title"]["ch"])))
+            on_hit = _remove_html_tags(_normalize_data(_process_links(move["title"]["hit"])))
+            on_ch = _remove_html_tags(_normalize_data(_process_links(move["title"]["ch"])))
             if not on_ch or on_ch == "":
                 on_ch = on_hit
             startup = _normalize_data(_get_first_parent_value_of("startup", _normalize_data(move["title"]["id"])
                                                                  , move_list_json))
             recovery = _normalize_data(move["title"]["recv"])
-            notes = _remove_html_tags(move["title"]["notes"])
+            notes = _remove_html_tags(_process_links(move["title"]["notes"]))
 
             move = Move(id, name, input, target, damage, on_block, on_hit, on_ch, startup, recovery, notes, "", alias)
             move_list.append(move)
@@ -154,16 +154,14 @@ def _remove_html_tags(data):
     result = html.unescape(_normalize_data(data))
     result = BeautifulSoup(result, features="lxml").get_text()
     result = result.replace("* \n", "* ")
+    result = re.sub(r"(\n)+", "\n", result)
+    result = result.replace("'''", "")
     return result
 
-
-def _normalize_hit_ch_input(entry: str) -> str:
-    entry = _empty_value_if_none(entry)
-    if "|" in entry:
-        pattern = r'\|([^|]+)\]\]'
-        match = re.search(pattern, entry)
-        if match:
-            return match.group(1)
-        return entry
-    else:
-        return entry
+link_replace_pattern = re.compile(r'\[\[(?P<page>[^#]+)#(?P<section>[^|]+)\|(?P<data>[^|]+)\]\]')
+def _process_links(data: str | None) -> str:
+    def _replace_link(match):
+        page, section, data = match.group('page'), match.group('section'), match.group('data')
+        hover_text = 'Combo' if section == 'Staples' else 'Mini-combo'
+        return f"[{data}](https://wavu.wiki/t/{page.replace(' ', '_')}#{section} \'{hover_text}\')"
+    return link_replace_pattern.sub(_replace_link, _empty_value_if_none(data))
