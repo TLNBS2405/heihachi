@@ -18,8 +18,8 @@ The Heihachi bot is configured using the `src/resources/config.json` file. A sam
 ```json
 {
     "DISCORD_TOKEN": "YOUR_DISCORD_TOKEN",
-    "FEEDBACK_CHANNEL_ID": [feedback_channel_id],
-    "ACTION_CHANNEL_ID": [action_channel_id]
+    "FEEDBACK_CHANNEL_ID": "feedback_channel_id",
+    "ACTION_CHANNEL_ID": "action_channel_id"
 }
 ```
 You can obtain your own Discord token by creating a Discord bot ([instructions](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token)).
