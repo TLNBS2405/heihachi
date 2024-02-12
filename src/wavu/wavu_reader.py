@@ -119,7 +119,7 @@ def _convert_json_movelist(move_list_json: list) -> List[Move]:
         if move["title"]["ns"] == "0":
             alias = []
             id = _normalize_data(move["title"]["id"])
-            name = _normalize_data(_process_links(move["title"]["name"]))
+            name = html.unescape(_normalize_data(_process_links(move["title"]["name"])))
             input = _normalize_data(
                 _get_all_parent_values_of("input", _normalize_data(move["title"]["parent"]), move_list_json)
                 + _normalize_data(move["title"]["input"]))
@@ -159,13 +159,25 @@ def _remove_html_tags(data):
     return result
 
 
-link_replace_pattern = re.compile(r'\[\[(?P<page>[^#]+)#(?P<section>[^|]+)\|(?P<data>[^|]+)\]\]')
-
+link_replace_pattern = re.compile(r'\[\[(?P<page>[^#]+)(#(?P<section>[^|]+))?\|(?P<data>[^|]+)\]\]')
+WAVU_PAGE_STEM = 'https://wavu.wiki/t/'
 
 def _process_links(data: str | None) -> str:
-    def _replace_link(match):
-        page, section, data = match.group('page'), match.group('section'), match.group('data')
-        hover_text = 'Combo' if section == 'Staples' else 'Mini-combo'
-        return f"[{data}](https://wavu.wiki/t/{page.replace(' ', '_')}#{section} \'{hover_text}\')"
+    def _replace_link(matchobj):
+        print(matchobj.groupdict())
+        page, section, data = matchobj.group('page'), matchobj.group('section'), matchobj.group('data')
+        if section:
+            match section:
+                case 'Staples':
+                    hover_text = 'Combo'
+                case 'Mini-combos':
+                    hover_text = 'Mini-combo'
+                case _:
+                    hover_text = page.replace('_', ' ').title()
+            replacement = f"[{data}]({WAVU_PAGE_STEM}{page.replace(' ', '_')}#{section} '{hover_text}')"
+        else:
+            hover_text = page.replace('_', ' ').title()
+            replacement = f"[{data}]({WAVU_PAGE_STEM}{page.replace(' ', '_')} '{hover_text}')"
+        return replacement
 
     return link_replace_pattern.sub(_replace_link, _empty_value_if_none(data))
