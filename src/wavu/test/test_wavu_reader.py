@@ -27,6 +27,11 @@ class MyTestCase(unittest.TestCase):
         move = wavu_reader.get_move("Azucena-df+1,4",character_movelist)
         self.assertEqual(move.id,"Azucena-df+1,4")
 
+    def test_process_name(self):
+        character_movelist = wavu_reader.get_wavu_character_movelist("Jin")
+        move = wavu_reader.get_move("Jin-1,2,3",character_movelist)
+        self.assertEqual(move.name,"Left Right > Axe Kick")
+
     def test_complete_parent_input(self):
         character_movelist = wavu_reader.get_wavu_character_movelist("Azucena")
         move7 = wavu_reader.get_move("Azucena-BT.3",character_movelist)
@@ -56,3 +61,6 @@ class MyTestCase(unittest.TestCase):
         move = wavu_reader.get_move("Azucena-b+4,3,4",character_movelist)
         self.assertEqual(move.startup,"i15~16")
 
+    def test_process_links(self):
+        self.assertEqual(wavu_reader._process_links('[[Snake_Edge|Snake Edge]]'), '[Snake Edge](https://wavu.wiki/t/Snake_Edge \'Snake Edge\')')
+        self.assertEqual(wavu_reader._process_links('[[Azucena combos#Mini-combos|+27a]]'), '[+27a](https://wavu.wiki/t/Azucena_combos#Mini-combos \'Mini-combo\')'),
