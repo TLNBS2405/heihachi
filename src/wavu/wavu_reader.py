@@ -164,7 +164,6 @@ WAVU_PAGE_STEM = 'https://wavu.wiki/t/'
 
 def _process_links(data: str | None) -> str:
     def _replace_link(matchobj):
-        print(matchobj.groupdict())
         page, section, data = matchobj.group('page'), matchobj.group('section'), matchobj.group('data')
         if section:
             match section:
