@@ -342,5 +342,5 @@ try:
     hei.run(discord_token)
 
 except Exception as e:
-    time_now = datetime.datetime.now().strftime("%Y-%m-%d  %H:%M:%S")
+    time_now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     logger.error(f'{time_now} \n Error: {e}')
