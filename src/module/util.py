@@ -56,7 +56,8 @@ def create_json_movelists(character_list_path: str) -> List[character.Character]
             cha = wavu_importer.import_character(character_meta)
             cha.export_movelist_as_json()
             cha_list.append(cha)
-    print("Character jsons are successfully created")
+    time_now = datetime.datetime.now().strftime("%Y-%m-%d  %H:%M:%S")
+    print(f'{time_now} - Character jsons are successfully created')
     return cha_list
 
 
