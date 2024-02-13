@@ -1,4 +1,5 @@
-import os, json
+import os
+import json
 
 
 class Configurator:
@@ -7,7 +8,8 @@ class Configurator:
 
     def _create_file_if_not_exist(self):
         if not os.path.exists(self.config_path):
-            with open(self.config_path, "w"): pass
+            with open(self.config_path, "w"):
+                pass
 
     def read_config(self) -> dict:
         self._create_file_if_not_exist()

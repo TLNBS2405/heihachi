@@ -2,14 +2,15 @@ from difflib import SequenceMatcher
 from heapq import nlargest as _nlargest
 
 from src.resources import const
-import os, json
+import os
+import json
 
 base_path = os.path.dirname(__file__)
 
 
-def get_movelist(character_name: str, json_folder_path :str) -> dict:
+def get_movelist(character_name: str, json_folder_path: str) -> dict:
     filepath = os.path.abspath(os.path.join(json_folder_path, character_name + ".json"))
-    with open(filepath, encoding='utf-8') as move_file:
+    with open(filepath, encoding="utf-8") as move_file:
         move_file_contents = json.loads(move_file.read())
         return move_file_contents
 
@@ -24,16 +25,16 @@ def _simplify_input(input: str) -> str:
         input = input.replace(old, new)
 
     # cd works, ewgf doesn't, for some reason
-    if input[:2].lower() == 'cd' and input[:3].lower() != 'cds':
-        input = input.lower().replace('cd', 'fnddf')
-    if input[:2].lower() == 'wr':
-        input = input.lower().replace('wr', 'fff')
+    if input[:2].lower() == "cd" and input[:3].lower() != "cds":
+        input = input.lower().replace("cd", "fnddf")
+    if input[:2].lower() == "wr":
+        input = input.lower().replace("wr", "fff")
     return input
 
 
 def _is_command_in_alias(command: str, item: dict) -> bool:
-    if 'alias' in item:
-        aliases = item['alias']
+    if "alias" in item:
+        aliases = item["alias"]
         for alias in aliases:
             if _simplify_input(command) == _simplify_input(alias):
                 return True
@@ -41,14 +42,20 @@ def _is_command_in_alias(command: str, item: dict) -> bool:
 
 
 def get_move(input: str, character_movelist: dict):
-    result = [entry for entry in character_movelist if _simplify_input(entry["input"]) == _simplify_input(input)]
+    result = [
+        entry
+        for entry in character_movelist
+        if _simplify_input(entry["input"]) == _simplify_input(input)
+    ]
     if result:
-        result[0]['input'] = result[0]['input'].replace("\\", "")
+        result[0]["input"] = result[0]["input"].replace("\\", "")
         return result[0]
     else:
-        result = list(filter(lambda x: (_is_command_in_alias(input, x)), character_movelist))
+        result = list(
+            filter(lambda x: (_is_command_in_alias(input, x)), character_movelist)
+        )
         if result:
-            result[0]['input'] = result[0]['input'].replace("\\", "")
+            result[0]["input"] = result[0]["input"].replace("\\", "")
             return result[0]
         return {}
 
@@ -68,7 +75,7 @@ def get_by_move_type(move_type: str, move_list: dict) -> list:
     if moves:
         result = []
         for move in moves:
-            result.append(move['input'])
+            result.append(move["input"])
         return list(set(result))
     else:
         return []
@@ -95,9 +102,11 @@ def _get_close_matches_indexes(word, possibilities, n=3, cutoff=0.6):
     s.set_seq2(word)
     for idx, x in enumerate(possibilities):
         s.set_seq1(x)
-        if s.real_quick_ratio() >= cutoff and \
-                s.quick_ratio() >= cutoff and \
-                s.ratio() >= cutoff:
+        if (
+            s.real_quick_ratio() >= cutoff
+            and s.quick_ratio() >= cutoff
+            and s.ratio() >= cutoff
+        ):
             result.append((s.ratio(), idx))
 
     # Move the best scorers to head of list
@@ -112,7 +121,9 @@ def get_similar_moves(input: str, move_list: dict) -> list[str]:
     for entry in move_list:
         command_list.append(entry["input"])
 
-    moves_indexes = _get_close_matches_indexes(_simplify_input(input), map(_simplify_input, command_list), 5, 0.7)
+    moves_indexes = _get_close_matches_indexes(
+        _simplify_input(input), map(_simplify_input, command_list), 5, 0.7
+    )
 
     result = []
     for index in moves_indexes:

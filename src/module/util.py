@@ -3,7 +3,9 @@ from typing import List
 from src.resources import const
 from src.module import character
 
-import discord, datetime, json
+import discord
+import datetime
+import json
 
 from src.wavu import wavu_importer
 
@@ -40,7 +42,9 @@ def is_user_blacklisted(user_id):
 
 
 def is_author_newly_created(interaction: discord.Interaction):
-    today = datetime.datetime.strptime(datetime.datetime.now().isoformat(), "%Y-%m-%dT%H:%M:%S.%f")
+    today = datetime.datetime.strptime(
+        datetime.datetime.now().isoformat(), "%Y-%m-%dT%H:%M:%S.%f"
+    )
     age = today - interaction.user.created_at.replace(tzinfo=None)
     if age.days < 120:
         return True
@@ -57,7 +61,7 @@ def create_json_movelists(character_list_path: str) -> List[character.Character]
             cha.export_movelist_as_json()
             cha_list.append(cha)
     time_now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print(f'{time_now} - Character jsons are successfully created')
+    print(f"{time_now} - Character jsons are successfully created")
     return cha_list
 
 
@@ -70,11 +74,13 @@ def periodic_function(scheduler, interval, function, character_list_path: str):
 def create_character_tree_commands(character_list):
     f = open("out.txt", "a")
     for c in character_list:
-        fd_command = ("@tree.command(name=\"{}\", description=\"Frame data from {}\") \n async def self("
-                      "interaction: discord.Interaction, move: str): \n\tif not (util.is_user_blacklisted("
-                      "interaction.user.id) or util.is_author_newly_created(interaction)): \n\t\tembed = "
-                      "create_frame_data_embed(\"{}\", move) \n\t\tawait interaction.response.send_message(embed=embed,"
-                      "ephemeral=False) \n").format(c.name, c.name, c.name)
+        fd_command = (
+            '@tree.command(name="{}", description="Frame data from {}") \n async def self('
+            "interaction: discord.Interaction, move: str): \n\tif not (util.is_user_blacklisted("
+            "interaction.user.id) or util.is_author_newly_created(interaction)): \n\t\tembed = "
+            'create_frame_data_embed("{}", move) \n\t\tawait interaction.response.send_message(embed=embed,'
+            "ephemeral=False) \n"
+        ).format(c.name, c.name, c.name)
         f.write(fd_command + "\n")
     f.close()
     print("done")
