@@ -1,16 +1,16 @@
 from typing import List
 
-from src.resources import const
-from src.module import character
+from resources import const
+from heihachi import character
 
 import discord
 import datetime
 import json
 
-from src.wavu import wavu_importer
+from wavu import wavu_importer
 
 
-def correct_character_name(alias: str):
+def correct_character_name(alias: str) -> str | None:
     # check if input in dictionary or in dictionary values
     if alias in const.CHARACTER_ALIAS:
         return alias
@@ -22,7 +22,9 @@ def correct_character_name(alias: str):
     return None
 
 
-def get_character_by_name(name: str, character_list: []) -> character.Character:
+def get_character_by_name(
+    name: str, character_list: List[character.Character]
+) -> character.Character:
     for character in character_list:
         if character.name == name:
             return character
@@ -34,11 +36,8 @@ def get_move_type(original_move: str):
             return k
 
 
-def is_user_blacklisted(user_id):
-    if user_id in const.ID_BLACKLIST:
-        return True
-    else:
-        return False
+def is_user_blacklisted(user_id: str) -> bool:
+    return user_id in const.ID_BLACKLIST
 
 
 def is_author_newly_created(interaction: discord.Interaction):

@@ -1,6 +1,5 @@
-src/resources/config.json
-src/json_movelist/
-!src/json_movelist/empty.json
+**/**/config.json
+json_movelist/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

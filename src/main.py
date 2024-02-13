@@ -4,16 +4,13 @@ import os
 import discord
 import sched
 import time
-import sys
 import threading
 
-from src.module import configurator
-from src.module import json_movelist_reader
-from src.module import embed
-from src.module import util
-from src.module import button
-
-sys.path.insert(0, (os.path.dirname(os.path.dirname(__file__))))
+from heihachi import configurator
+from heihachi import json_movelist_reader
+from heihachi import embed
+from heihachi import util
+from heihachi import button
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.WARNING)

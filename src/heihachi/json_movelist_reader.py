@@ -1,11 +1,9 @@
 from difflib import SequenceMatcher
 from heapq import nlargest as _nlargest
 
-from src.resources import const
+from resources import const
 import os
 import json
-
-base_path = os.path.dirname(__file__)
 
 
 def get_movelist(character_name: str, json_folder_path: str) -> dict:

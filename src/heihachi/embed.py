@@ -1,5 +1,5 @@
 import discord
-from src.module import character
+from heihachi import character
 
 MOVE_NOT_FOUND_TITLE = "Move not found"
 WAVU_LOGO = "https://wavu.wiki/android-chrome-192x192.png"

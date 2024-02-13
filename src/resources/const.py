@@ -1,4 +1,5 @@
 WAVU_API_URL = "https://wavu.wiki/w/api.php"
+MOVELIST_BASE_PATH = "json_movelist"
 
 CHARACTER_ALIAS = {
     "alisa": ["ali", "als"],

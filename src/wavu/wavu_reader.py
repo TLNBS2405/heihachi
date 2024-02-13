@@ -5,8 +5,8 @@ import html
 
 from typing import List
 from mediawiki import MediaWiki
-from src.module.character import Move
-from src.resources import const
+from heihachi.character import Move
+from resources import const
 from bs4 import BeautifulSoup
 
 wavuwiki = MediaWiki(url=const.WAVU_API_URL)

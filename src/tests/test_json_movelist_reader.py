@@ -1,15 +1,13 @@
 import os
 import unittest
-from src.module import json_movelist_reader
+from heihachi import json_movelist_reader
 
 base_path = os.path.dirname(__file__)
 
 
 class MyTestCase(unittest.TestCase):
     def test_get_by_move_type(self):
-        azu_move_list = json_movelist_reader.get_movelist(
-            "azucena", "./src/module/test"
-        )
+        azu_move_list = json_movelist_reader.get_movelist("azucena", "src/tests/assets")
 
         result = json_movelist_reader.get_by_move_type("Homing", azu_move_list)
         self.assertTrue(result[0])
@@ -24,24 +22,22 @@ class MyTestCase(unittest.TestCase):
         self.assertTrue(result[0])
 
     def test_get_movelist_from_json(self):
-        result = json_movelist_reader.get_movelist("azucena", "./src/module/test")
+        result = json_movelist_reader.get_movelist("azucena", "src/tests/assets")
         self.assertEqual(result[0]["id"], "Azucena-1")
 
     def test_get_similar_moves(self):
-        move_list = json_movelist_reader.get_movelist("azucena", "./src/module/test")
+        move_list = json_movelist_reader.get_movelist("azucena", "src/tests/assets")
         similar_moves = json_movelist_reader.get_similar_moves("fff3+4", move_list)
         self.assertTrue(similar_moves[0])
 
     def test_get_move(self):
         claudio_move_list = json_movelist_reader.get_movelist(
-            "claudio", "./src/module/test"
+            "claudio", "src/tests/assets"
         )
         move = json_movelist_reader.get_move("stb wr1+2", claudio_move_list)
         self.assertEqual(move["id"], "Claudio-STB.f,f,F+1+2")
 
-        azu_move_list = json_movelist_reader.get_movelist(
-            "azucena", "./src/module/test"
-        )
+        azu_move_list = json_movelist_reader.get_movelist("azucena", "src/tests/assets")
         move = json_movelist_reader.get_move("d/f+1", azu_move_list)
         self.assertEqual(move["id"], "Azucena-df+1")
 
@@ -87,7 +83,7 @@ class MyTestCase(unittest.TestCase):
         move = json_movelist_reader.get_move("LIB d2+4", azu_move_list)
         self.assertEqual(move["id"], "Azucena-LIB.d+1+3_d+2+4")
 
-        jun_move_list = json_movelist_reader.get_movelist("jun", "./src/module/test")
+        jun_move_list = json_movelist_reader.get_movelist("jun", "src/tests/assets")
         move = json_movelist_reader.get_move("12u", jun_move_list)
         self.assertEqual(move["id"], "Jun-1,2,u_d")
 

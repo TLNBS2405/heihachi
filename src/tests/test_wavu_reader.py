@@ -1,5 +1,5 @@
 import unittest
-from src.wavu import wavu_reader
+from wavu import wavu_reader
 
 
 class MyTestCase(unittest.TestCase):
