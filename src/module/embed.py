@@ -59,7 +59,7 @@ def move_embed(character: character, move: dict):
     embed = discord.Embed(title='**' + move['input'] + '**',
                           colour=SUCCESS_COLOR,
                           description=move['name'],
-                          url=character.wavu_page,
+                          url=f'{character.wavu_page}_movelist#{move["id"]}',
                           )
 
     embed.set_thumbnail(url=character.portrait[0])
