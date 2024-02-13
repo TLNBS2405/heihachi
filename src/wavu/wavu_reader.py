@@ -156,6 +156,7 @@ def _remove_html_tags(data):
     result = result.replace("* \n", "* ")
     result = re.sub(r"(\n)+", "\n", result)
     result = result.replace("'''", "")
+    result = result.replace('**', ' *') # hack/fix for nested Plainlists
     return result
 
 
