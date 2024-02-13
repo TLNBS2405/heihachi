@@ -1,16 +1,19 @@
+import json
+import os
 from difflib import SequenceMatcher
 from heapq import nlargest as _nlargest
+from typing import List, Tuple
 
+from heihachi.character import Move
 from resources import const
-import os
-import json
 
 
-def get_movelist(character_name: str, json_folder_path: str) -> dict:
+def get_movelist(character_name: str, json_folder_path: str) -> Tuple[Move, ...]:
     filepath = os.path.abspath(os.path.join(json_folder_path, character_name + ".json"))
     with open(filepath, encoding="utf-8") as move_file:
         move_file_contents = json.loads(move_file.read())
-        return move_file_contents
+        movelist = tuple(Move(**move) for move in move_file_contents)
+        return movelist
 
 
 def _simplify_input(input: str) -> str:
@@ -30,63 +33,58 @@ def _simplify_input(input: str) -> str:
     return input
 
 
-def _is_command_in_alias(command: str, item: dict) -> bool:
-    if "alias" in item:
-        aliases = item["alias"]
-        for alias in aliases:
-            if _simplify_input(command) == _simplify_input(alias):
-                return True
+def _is_command_in_alias(command: str, move: Move) -> bool:
+    for alias in move.alias:
+        if _simplify_input(command) == _simplify_input(alias):
+            return True
     return False
 
 
-def get_move(input: str, character_movelist: dict):
-    result = [
-        entry
-        for entry in character_movelist
-        if _simplify_input(entry["input"]) == _simplify_input(input)
-    ]
+def get_move(input: str, character_movelist: Tuple[Move, ...]) -> Move | None:
+    result = [entry for entry in character_movelist if _simplify_input(entry.input) == _simplify_input(input)]
     if result:
-        result[0]["input"] = result[0]["input"].replace("\\", "")
         return result[0]
     else:
-        result = list(
-            filter(lambda x: (_is_command_in_alias(input, x)), character_movelist)
-        )
+        result = list(filter(lambda x: (_is_command_in_alias(input, x)), character_movelist))
         if result:
-            result[0]["input"] = result[0]["input"].replace("\\", "")
             return result[0]
-        return {}
+        else:
+            return None
 
 
-def _correct_move_type(move_type: str) -> str:
+def _correct_move_type(move_type: str) -> str | None:
     for k in const.MOVE_TYPES.keys():
         if move_type in const.MOVE_TYPES[k]:
             return k
+    return None
 
 
-def get_by_move_type(move_type: str, move_list: dict) -> list:
+def get_by_move_type(move_type: str, move_list: Tuple[Move, ...]) -> List[Move]:
     """Gets a list of moves that match move_type from local_json
     returns a list of move Commands if finds match(es), else empty list"""
+
     move_type = _correct_move_type(move_type.lower()).lower()
-    moves = list(filter(lambda x: (move_type in x["notes"].lower()), move_list))
+    moves = list(filter(lambda x: (move_type in x.notes.lower()), move_list))
 
-    if moves:
-        result = []
-        for move in moves:
-            result.append(move["input"])
-        return list(set(result))
-    else:
-        return []
+    result = []
+    for move in moves:
+        result.append(move)
+    return result
 
 
-def _get_close_matches_indexes(word, possibilities, n=3, cutoff=0.6):
+def _get_close_matches_indexes(word: str, possibilities: List[str], n: int = 3, cutoff: float = 0.6) -> List[int]:
     """Use SequenceMatcher to return a list of the indexes of the best
-    "good enough" matches. word is a sequence for which close matches
+    "good enough" matches.
+
+    word is a sequence for which close matches
     are desired (typically a string).
+
     possibilities is a list of sequences against which to match word
     (typically a list of strings).
+
     Optional arg n (default 3) is the maximum number of close matches to
     return.  n must be > 0.
+
     Optional arg cutoff (default 0.6) is a float in [0, 1].  Possibilities
     that don't score at least that similar to word are ignored.
     """
@@ -100,11 +98,7 @@ def _get_close_matches_indexes(word, possibilities, n=3, cutoff=0.6):
     s.set_seq2(word)
     for idx, x in enumerate(possibilities):
         s.set_seq1(x)
-        if (
-            s.real_quick_ratio() >= cutoff
-            and s.quick_ratio() >= cutoff
-            and s.ratio() >= cutoff
-        ):
+        if s.real_quick_ratio() >= cutoff and s.quick_ratio() >= cutoff and s.ratio() >= cutoff:
             result.append((s.ratio(), idx))
 
     # Move the best scorers to head of list
@@ -114,14 +108,12 @@ def _get_close_matches_indexes(word, possibilities, n=3, cutoff=0.6):
     return [x for score, x in result]
 
 
-def get_similar_moves(input: str, move_list: dict) -> list[str]:
+def get_similar_moves(input: str, move_list: Tuple[Move, ...]) -> List[Move]:
     command_list = []
     for entry in move_list:
-        command_list.append(entry["input"])
+        command_list.append(entry.input)
 
-    moves_indexes = _get_close_matches_indexes(
-        _simplify_input(input), map(_simplify_input, command_list), 5, 0.7
-    )
+    moves_indexes = _get_close_matches_indexes(_simplify_input(input), list(map(_simplify_input, command_list)), 5, 0.7)
 
     result = []
     for index in moves_indexes:

@@ -34,7 +34,6 @@ CHARACTER_ALIAS = {
     "zafina": ["zaffy", "zaf"],
     "leroy": ["ler"],
     "victor": ["vic"],
-    "generic": [],
 }
 
 MOVE_TYPES = {

@@ -1,13 +1,14 @@
-import json
-import requests
-import re
 import html
+import json
+import re
+from typing import List, Tuple
 
-from typing import List
+import requests
+from bs4 import BeautifulSoup
 from mediawiki import MediaWiki
+
 from heihachi.character import Move
 from resources import const
-from bs4 import BeautifulSoup
 
 wavuwiki = MediaWiki(url=const.WAVU_API_URL)
 session = requests.Session()
@@ -21,7 +22,7 @@ def _upper_first_letter(input: str) -> str:
         return input
 
 
-def get_wavu_character_movelist(character_name: str) -> List[Move]:
+def get_wavu_character_movelist(character_name: str) -> Tuple[Move, ...]:
     params = {
         "action": "cargoquery",
         "tables": "Move",
@@ -40,7 +41,7 @@ def get_wavu_character_movelist(character_name: str) -> List[Move]:
     content = json.loads(response.content)
     move_list_json = content["cargoquery"]
     move_list = _convert_json_movelist(move_list_json)
-    return move_list
+    return tuple(move_list)
 
 
 def get_move(move_id: str, move_list: List[Move]) -> Move:
@@ -57,9 +58,7 @@ def _get_all_parent_values_of(field: str, move_id: str, move_list_json: list) ->
                     original_move = move["title"]["parent"]
                     if "_" in original_move:
                         original_move = original_move.split("_")[0]
-                    complete_input += _get_all_parent_values_of(
-                        field, original_move, move_list_json
-                    )
+                    complete_input += _get_all_parent_values_of(field, original_move, move_list_json)
                 return complete_input + _normalize_data(move["title"][field])
     else:
         return ""
@@ -73,9 +72,7 @@ def _get_first_parent_value_of(field: str, move_id: str, move_list_json: list) -
                     original_move = move["title"]["parent"]
                     if "_" in original_move:
                         original_move = original_move.split("_")[0]
-                    parent_input = _get_first_parent_value_of(
-                        field, original_move, move_list_json
-                    )
+                    parent_input = _get_first_parent_value_of(field, original_move, move_list_json)
                     if parent_input:
                         return parent_input
                 else:
@@ -128,9 +125,7 @@ def _convert_json_movelist(move_list_json: list) -> List[Move]:
             id = _normalize_data(move["title"]["id"])
             name = html.unescape(_normalize_data(_process_links(move["title"]["name"])))
             input = _normalize_data(
-                _get_all_parent_values_of(
-                    "input", _normalize_data(move["title"]["parent"]), move_list_json
-                )
+                _get_all_parent_values_of("input", _normalize_data(move["title"]["parent"]), move_list_json)
                 + _normalize_data(move["title"]["input"])
             )
             if "_" in input:
@@ -139,31 +134,21 @@ def _convert_json_movelist(move_list_json: list) -> List[Move]:
                 alias = result[0 : (len(result) - 1)]
 
             target = _normalize_data(
-                _get_all_parent_values_of(
-                    "target", _normalize_data(move["title"]["parent"]), move_list_json
-                )
+                _get_all_parent_values_of("target", _normalize_data(move["title"]["parent"]), move_list_json)
                 + _normalize_data(move["title"]["target"])
             )
             damage = _normalize_data(
-                _get_all_parent_values_of(
-                    "damage", _normalize_data(move["title"]["parent"]), move_list_json
-                )
+                _get_all_parent_values_of("damage", _normalize_data(move["title"]["parent"]), move_list_json)
                 + _normalize_data(move["title"]["damage"])
             )
 
             on_block = _remove_html_tags(_normalize_data(move["title"]["block"]))
-            on_hit = _remove_html_tags(
-                _normalize_data(_process_links(move["title"]["hit"]))
-            )
-            on_ch = _remove_html_tags(
-                _normalize_data(_process_links(move["title"]["ch"]))
-            )
+            on_hit = _remove_html_tags(_normalize_data(_process_links(move["title"]["hit"])))
+            on_ch = _remove_html_tags(_normalize_data(_process_links(move["title"]["ch"])))
             if not on_ch or on_ch == "":
                 on_ch = on_hit
             startup = _normalize_data(
-                _get_first_parent_value_of(
-                    "startup", _normalize_data(move["title"]["id"]), move_list_json
-                )
+                _get_first_parent_value_of("startup", _normalize_data(move["title"]["id"]), move_list_json)
             )
             recovery = _normalize_data(move["title"]["recv"])
             notes = _remove_html_tags(_process_links(move["title"]["notes"]))
@@ -197,9 +182,7 @@ def _remove_html_tags(data):
     return result
 
 
-link_replace_pattern = re.compile(
-    r"\[\[(?P<page>[^#]+)(#(?P<section>[^|]+))?\|(?P<data>[^|]+)\]\]"
-)
+link_replace_pattern = re.compile(r"\[\[(?P<page>[^#]+)(#(?P<section>[^|]+))?\|(?P<data>[^|]+)\]\]")
 WAVU_PAGE_STEM = "https://wavu.wiki/t/"
 
 
@@ -221,9 +204,7 @@ def _process_links(data: str | None) -> str:
             replacement = f"[{data}]({WAVU_PAGE_STEM}{page.replace(' ', '_')}#{section} '{hover_text}')"
         else:
             hover_text = page.replace("_", " ").title()
-            replacement = (
-                f"[{data}]({WAVU_PAGE_STEM}{page.replace(' ', '_')} '{hover_text}')"
-            )
+            replacement = f"[{data}]({WAVU_PAGE_STEM}{page.replace(' ', '_')} '{hover_text}')"
         return replacement
 
     return link_replace_pattern.sub(_replace_link, _empty_value_if_none(data))

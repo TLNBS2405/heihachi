@@ -1,24 +1,66 @@
-import os
 import json
+import logging
+from dataclasses import dataclass
+from typing import Any, Optional
+
+logger = logging.getLogger(__name__)
 
 
+@dataclass
 class Configurator:
-    def __init__(self, config_path):
-        self.config_path = config_path
+    """
+    Class to handle the configuration of the bot
+    """
 
-    def _create_file_if_not_exist(self):
-        if not os.path.exists(self.config_path):
-            with open(self.config_path, "w"):
-                pass
+    discord_token: str
+    feedback_channel_id: int | None
+    action_channel_id: int | None
 
-    def read_config(self) -> dict:
-        self._create_file_if_not_exist()
-        with open(self.config_path) as config_json:
-            config_data = json.load(config_json)
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "DISCORD_TOKEN": self.discord_token,
+            "FEEDBACK_CHANNEL_ID": self.feedback_channel_id,
+            "ACTION_CHANNEL_ID": self.action_channel_id,
+        }
 
-        return config_data
+    @staticmethod
+    def from_file(config_path: str) -> Optional["Configurator"]:
+        """
+        Load the configuration from a file
+        """
 
-    def write_config(self, config_json):
-        self._create_file_if_not_exist()
-        with open(self.config_path, "w") as outfile:
-            json.dump(config_json, outfile, indent=4)
+        try:
+            with open(config_path) as config_json:
+                config_data = json.load(config_json)
+                logger.debug(config_data)
+
+            return Configurator(
+                discord_token=config_data["DISCORD_TOKEN"],
+                feedback_channel_id=config_data.get("FEEDBACK_CHANNEL_ID", None),
+                action_channel_id=config_data.get("ACTION_CHANNEL_ID", None),
+            )
+        except FileNotFoundError:
+            logger.error(f"Config file not found at {config_path}")
+            return None
+
+    def to_file(self, config_path: str) -> None:
+        """
+        Write the configuration to a file
+        """
+
+        try:
+            with open(config_path, "w") as outfile:
+                json.dump(self, outfile, cls=ConfiguratorEncoder, indent=4)
+        except Exception as e:
+            logger.error(f"Error writing to file: {e}")
+
+
+class ConfiguratorEncoder(json.JSONEncoder):
+    """
+    Custom JSON encoder for the Configurator class
+    """
+
+    def default(self, o: Any) -> Any:
+        if isinstance(o, Configurator):
+            return o.to_dict()
+        return super().default(o)

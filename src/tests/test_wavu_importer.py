@@ -1,5 +1,5 @@
-import unittest
 import json
+import unittest
 
 from wavu import wavu_importer
 

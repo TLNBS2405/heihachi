@@ -1,8 +1,9 @@
-from typing import Tuple
-import os
 import json
-from json import JSONEncoder
+import logging
 from dataclasses import dataclass
+from typing import Tuple
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -19,40 +20,31 @@ class Move:
     recovery: str = ""
     notes: str = ""
     gif: str = ""
-    alias: Tuple[str] = ()
-
-
-class MoveEncoder(JSONEncoder):
-    def default(self, o):
-        return o.__dict__
+    alias: Tuple[str, ...] = ()
 
 
 @dataclass
 class Character:
     name: str
+
+    "The URL to the character's portrait image to be used in embeds"
     portrait: str
-    move_list: Tuple[Move]
-    move_list_path: str
+
+    move_list: Tuple[Move, ...]
+
+    "The URL of the character's page on wavu.wiki"
     wavu_page: str
 
-    def export_movelist_as_json(self):
-        self.__create_move_list_file()
-        with open(self.move_list_path, "w", encoding="utf-8") as outfile:
-            json.dump(
-                self.move_list,
-                outfile,
-                sort_keys=True,
-                indent=4,
-                cls=MoveEncoder,
-                ensure_ascii=False,
-            )
-
-    def __create_move_list_file(self):
-        if not os.path.exists(self.move_list_path):
-            with open(self.move_list_path, "w"):
-                pass
-
-
-class ClassEncoder(JSONEncoder):
-    def default(self, o):
-        return o.__dict__
+    def export_movelist_as_json(self, move_list_path: str) -> None:
+        try:
+            with open(move_list_path, "w", encoding="utf-8") as outfile:
+                json.dump(
+                    self.move_list,
+                    outfile,
+                    sort_keys=True,
+                    default=vars,
+                    indent=4,
+                    ensure_ascii=False,
+                )
+        except Exception as e:
+            logger.error(f"Error writing to file: {e}")
