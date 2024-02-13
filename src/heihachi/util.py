@@ -1,5 +1,6 @@
 import datetime
 import json
+import logging
 from typing import List
 
 import discord
@@ -7,6 +8,8 @@ import discord
 from heihachi import character
 from resources import const
 from wavu import wavu_importer
+
+logger = logging.getLogger(__name__)
 
 
 def correct_character_name(alias: str) -> str | None:
@@ -55,7 +58,7 @@ def create_json_movelists(character_list_path: str) -> List[character.Character]
             character.export_movelist_as_json(f"{const.MOVELIST_BASE_PATH}/{character.name}.json")
             char_list.append(character)
     time_now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print(f"{time_now} - Character jsons are successfully created")
+    logger.info(f"{time_now} - Character jsons are successfully created")
     return char_list
 
 
@@ -77,4 +80,4 @@ def create_character_tree_commands(character_list):
         ).format(c.name, c.name, c.name)
         f.write(fd_command + "\n")
     f.close()
-    print("done")
+    logger.info("done")

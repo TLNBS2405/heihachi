@@ -4,6 +4,7 @@ import os
 import sched
 import threading
 import time
+from typing import Any, Coroutine
 
 import discord
 
@@ -11,17 +12,17 @@ from heihachi import button, configurator, embed, json_movelist_reader, util
 from resources import const
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.WARNING)
+logger.setLevel(logging.INFO)
 
-base_path = os.path.dirname(__file__)
 try:
     config = configurator.Configurator.from_file(os.path.abspath("config.json"))
     assert config is not None
 except FileNotFoundError:
     logger.error("Config file not found. Exiting.")
     exit(1)
-CHARACTER_LIST_PATH = os.path.abspath(os.path.join(base_path, "resources", "character_list.json"))
-JSON_PATH = os.path.abspath(os.path.join(base_path, "json_movelist"))
+
+CHARACTER_LIST_PATH = os.path.abspath(os.path.join("src", "resources", "character_list.json"))
+JSON_PATH = os.path.abspath(os.path.join("json_movelist"))
 
 
 class Heihachi(discord.Client):
@@ -38,9 +39,10 @@ class Heihachi(discord.Client):
 
 
 def create_frame_data_embed(name: str, move: str) -> discord.Embed:
-    character_name = util.correct_character_name(name.lower())
+    character_name = util.correct_character_name(name.lower())  # TODO: locate similar character names
     if character_name:
         character = util.get_character_by_name(character_name, character_list)
+        assert character is not None
         move_list = json_movelist_reader.get_movelist(character_name, JSON_PATH)
         move_type = util.get_move_type(move)
 
@@ -59,7 +61,7 @@ def create_frame_data_embed(name: str, move: str) -> discord.Embed:
                 similar_moves_embed = embed.similar_moves_embed(similar_moves, character_name)
                 return similar_moves_embed
     else:
-        error_embed = embed.error_embed(f"Character {name} does not exist.")
+        error_embed = embed.error_embed(f"Could not locate character {name}.")
         return error_embed
 
 
@@ -91,15 +93,18 @@ async def self(interaction: discord.Interaction, character_name: str, move: str)
         await interaction.response.send_message(embed=embed, ephemeral=False)
 
 
-for character in const.CHARACTER_ALIAS:
-    name = character.lower()
-
-    @tree.command(name=name, description=f"Frame data from {name}")
-    async def self(interaction: discord.Interaction, move: str) -> None:
+def character_command_factory(name: str):
+    async def command(interaction: discord.Interaction, move: str) -> None:
         if not (util.is_user_blacklisted(str(interaction.user.id)) or util.is_author_newly_created(interaction)):
             embed = create_frame_data_embed(name, move)
             await interaction.response.send_message(embed=embed, ephemeral=False)
 
+    return command
+
+
+for character in const.CHARACTER_ALIAS:
+    name = character.lower()
+    tree.command(name=name, description=f"Frame data from {name}")(character_command_factory(name))
 
 if config.feedback_channel_id:
 

@@ -59,7 +59,7 @@ def move_embed(character: Character, move: Move) -> discord.Embed:
         url=f"{character.wavu_page}_movelist#{move.id}",
     )
 
-    embed.set_thumbnail(url=character.portrait[0])
+    embed.set_thumbnail(url=character.portrait)
     embed.set_footer(text="Wavu Wiki", icon_url=WAVU_LOGO)
     embed.set_author(name=character.name.title(), url=character.wavu_page)
 
