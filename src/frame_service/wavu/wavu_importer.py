@@ -8,10 +8,14 @@ from . import wavu_reader
 
 WAVU_CHARACTER_META_PATH = os.path.join(os.path.dirname(__file__), "static", "character_list.json")
 WAVU_API_URL = "https://wavu.wiki/w/api.php"
+WAVU_LOGO = "https://wavu.wiki/android-chrome-192x192.png"
 
 
 class Wavu(FrameService):
     def __init__(self) -> None:
+        self.name = "Wavu Wiki"
+        self.icon = WAVU_LOGO
+
         try:
             with open(WAVU_CHARACTER_META_PATH, "r") as f:
                 self.character_meta = json.load(f)

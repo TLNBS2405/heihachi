@@ -7,8 +7,6 @@ from framedb.const import CharacterName, MoveType
 
 MOVE_NOT_FOUND_TITLE = "Move not found"
 
-WAVU_LOGO = "https://wavu.wiki/android-chrome-192x192.png"
-
 SUCCESS_COLOR = discord.Colour.from_rgb(50, 168, 82)
 WARNING_COLOR = discord.Colour.from_rgb(253, 218, 13)
 ERROR_COLOR = discord.Colour.from_rgb(220, 20, 60)
