@@ -11,16 +11,16 @@ def config():
 
 
 def test_from_file():
-    config = Configurator.from_file("src/tests/assets/test_config.json")
+    config = Configurator.from_file("src/tests/static/test_config.json")
     assert config.discord_token == "123456789"
     assert config.feedback_channel_id == 123456789
     assert config.action_channel_id == 987654321
 
 
 def test_to_file(config):
-    config.to_file("src/tests/assets/test_config_tmp.json")
-    config = Configurator.from_file("src/tests/assets/test_config_tmp.json")
+    config.to_file("src/tests/static/test_config_tmp.json")
+    config = Configurator.from_file("src/tests/static/test_config_tmp.json")
     assert config.discord_token == "123456789"
     assert config.feedback_channel_id == 123456789
     assert config.action_channel_id == 987654321
-    os.remove("src/tests/assets/test_config_tmp.json")
+    os.remove("src/tests/static/test_config_tmp.json")

@@ -4,10 +4,9 @@ import logging
 from typing import List
 
 import discord
-
-from heihachi import character
-from resources import const
 from wavu import wavu_importer
+
+from framedb import character, const
 
 logger = logging.getLogger(__name__)
 

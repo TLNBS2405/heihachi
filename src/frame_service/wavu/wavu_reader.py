@@ -7,8 +7,9 @@ import requests
 from bs4 import BeautifulSoup
 from mediawiki import MediaWiki
 
-from heihachi.character import Move
-from resources import const
+from framedb import const
+from framedb.character import Move
+from framedb.const import CharacterName
 
 wavuwiki = MediaWiki(url=const.WAVU_API_URL)
 session = requests.Session()
@@ -22,14 +23,14 @@ def _upper_first_letter(input: str) -> str:
         return input
 
 
-def get_wavu_character_movelist(character_name: str) -> Tuple[Move, ...]:
+def get_wavu_character_movelist(character_name: CharacterName) -> Tuple[Move, ...]:
     params = {
         "action": "cargoquery",
         "tables": "Move",
         "fields": "id,name,input,parent,target,damage,startup, recv, tot, crush, block,hit,ch,notes,_pageNamespace=ns",
         "join_on": "",
         "group_by": "",
-        "where": "id LIKE '" + _upper_first_letter(character_name) + "%'",
+        "where": "id LIKE '" + _upper_first_letter(character_name.value) + "%'",
         "having": "",
         "order_by": "id",
         "offset": "0",
@@ -49,10 +50,10 @@ def get_move(move_id: str, move_list: List[Move]) -> Move:
     return result[0]
 
 
-def _get_all_parent_values_of(field: str, move_id: str, move_list_json: list) -> str:
+def _get_all_parent_values_of(field: str, move_id: str, move_list: Tuple[Move]) -> str:
     complete_input = ""
     if move_id:
-        for move in move_list_json:
+        for move in move_list:
             if move["title"]["id"] == move_id:
                 if move["title"]["parent"]:
                     original_move = move["title"]["parent"]

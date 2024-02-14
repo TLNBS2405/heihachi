@@ -1,15 +1,18 @@
+#!/usr/bin/env python3
+
+"""The entry point for the bot."""
+
 import datetime
 import logging
 import os
 import sched
 import threading
 import time
-from typing import Any, Coroutine
 
 import discord
 
+from framedb import const
 from heihachi import button, configurator, embed, json_movelist_reader, util
-from resources import const
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -30,7 +33,7 @@ class Heihachi(discord.Client):
         super().__init__(intents=intents)
         self.synced = False
 
-    async def on_ready(self):
+    async def on_ready(self) -> None:
         await self.wait_until_ready()
         if not self.synced:
             await tree.sync()

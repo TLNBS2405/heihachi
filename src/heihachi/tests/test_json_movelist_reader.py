@@ -2,7 +2,7 @@ from heihachi import json_movelist_reader
 
 
 def test_get_by_move_type() -> None:
-    azu_move_list = json_movelist_reader.get_movelist("azucena", "src/tests/assets")
+    azu_move_list = json_movelist_reader.get_movelist("azucena", "src/tests/static")
 
     result = json_movelist_reader.get_by_move_type("Homing", azu_move_list)
     assert len(result) > 0
@@ -18,23 +18,23 @@ def test_get_by_move_type() -> None:
 
 
 def test_get_movelist_from_json() -> None:
-    result = json_movelist_reader.get_movelist("azucena", "src/tests/assets")
+    result = json_movelist_reader.get_movelist("azucena", "src/tests/static")
     assert result[0].id == "Azucena-1"
 
 
 def test_get_similar_moves() -> None:
-    move_list = json_movelist_reader.get_movelist("azucena", "src/tests/assets")
+    move_list = json_movelist_reader.get_movelist("azucena", "src/tests/static")
     similar_moves = json_movelist_reader.get_similar_moves("fff3+4", move_list)
     assert len(similar_moves) > 0
 
 
 def test_get_move() -> None:
-    claudio_move_list = json_movelist_reader.get_movelist("claudio", "src/tests/assets")
+    claudio_move_list = json_movelist_reader.get_movelist("claudio", "src/tests/static")
     move = json_movelist_reader.get_move("stb wr1+2", claudio_move_list)
     assert move is not None
     assert move.id == "Claudio-STB.f,f,F+1+2"
 
-    azu_move_list = json_movelist_reader.get_movelist("azucena", "src/tests/assets")
+    azu_move_list = json_movelist_reader.get_movelist("azucena", "src/tests/static")
     move = json_movelist_reader.get_move("d/f+1", azu_move_list)
     assert move is not None
     assert move.id == "Azucena-df+1"
@@ -99,7 +99,7 @@ def test_get_move() -> None:
     assert move is not None
     assert move.id == "Azucena-LIB.d+1+3_d+2+4"
 
-    jun_move_list = json_movelist_reader.get_movelist("jun", "src/tests/assets")
+    jun_move_list = json_movelist_reader.get_movelist("jun", "src/tests/static")
     move = json_movelist_reader.get_move("12u", jun_move_list)
     assert move is not None
     assert move.id == "Jun-1,2,u_d"
