@@ -1,4 +1,4 @@
-import datetime, logging, os, discord, sched, time, sys
+import datetime, json, logging, os, discord, sched, time, sys
 import threading
 
 from src.module import configurator
@@ -90,228 +90,19 @@ async def self(interaction: discord.Interaction, character_name: str, move: str)
         await interaction.response.send_message(embed=embed, ephemeral=False)
 
 
-@tree.command(name="alisa", description="Frame data from alisa")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("alisa", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
+def character_command_factory(name: str):
+    async def command(interaction: discord.Interaction, move: str) -> None:
+        if not (util.is_user_blacklisted(str(interaction.user.id)) or util.is_author_newly_created(interaction)):
+            embed = create_frame_data_embed(name, move)
+            await interaction.response.send_message(embed=embed, ephemeral=False)
 
+    return command
 
-@tree.command(name="asuka", description="Frame data from asuka")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("asuka", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="azucena", description="Frame data from azucena")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("azucena", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="bryan", description="Frame data from bryan")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("bryan", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="claudio", description="Frame data from claudio")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("claudio", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="devil_jin", description="Frame data from devil_jin")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("devil_jin", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="dragunov", description="Frame data from dragunov")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("dragunov", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="feng", description="Frame data from feng")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("feng", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="hwoarang", description="Frame data from hwoarang")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("hwoarang", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="jack-8", description="Frame data from jack-8")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("jack-8", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="jin", description="Frame data from jin")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("jin", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="jun", description="Frame data from jun")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("jun", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="kazuya", description="Frame data from kazuya")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("kazuya", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="king", description="Frame data from king")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("king", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="kuma", description="Frame data from kuma")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("kuma", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="lars", description="Frame data from lars")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("lars", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="law", description="Frame data from law")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("law", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="lee", description="Frame data from lee")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("lee", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="leo", description="Frame data from leo")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("leo", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="leroy", description="Frame data from leroy")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("leroy", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="lili", description="Frame data from lili")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("lili", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="nina", description="Frame data from nina")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("nina", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="panda", description="Frame data from panda")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("panda", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="paul", description="Frame data from paul")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("paul", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="raven", description="Frame data from raven")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("raven", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="reina", description="Frame data from reina")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("reina", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="shaheen", description="Frame data from shaheen")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("shaheen", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="steve", description="Frame data from steve")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("steve", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="victor", description="Frame data from victor")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("victor", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="xiaoyu", description="Frame data from xiaoyu")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("xiaoyu", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="yoshimitsu", description="Frame data from yoshimitsu")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("yoshimitsu", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
-
-
-@tree.command(name="zafina", description="Frame data from zafina")
-async def self(interaction: discord.Interaction, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed("zafina", move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
+with open(CHARACTER_LIST_PATH) as json_file:
+    character_names = json.load(json_file)
+for character in character_names:
+    name = character["name"].lower()
+    tree.command(name=name, description=f"Frame data from {name}")(character_command_factory(name))
 
 
 @tree.command(name="feedback", description="Send feedback incase of wrong data")
