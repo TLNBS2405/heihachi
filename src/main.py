@@ -98,6 +98,7 @@ def character_command_factory(name: str):
 
     return command
 
+
 with open(CHARACTER_LIST_PATH) as json_file:
     character_names = json.load(json_file)
 for character in character_names:

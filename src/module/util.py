@@ -42,7 +42,7 @@ def is_user_blacklisted(user_id):
 def is_author_newly_created(interaction: discord.Interaction):
     today = datetime.datetime.strptime(datetime.datetime.now().isoformat(), "%Y-%m-%dT%H:%M:%S.%f")
     age = today - interaction.user.created_at.replace(tzinfo=None)
-    if age.days < 120:
+    if age.days < 60:
         return True
     return False
 
