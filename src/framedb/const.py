@@ -1,5 +1,7 @@
 import enum
 
+NUM_CHARACTERS = 32
+
 
 class CharacterName(enum.Enum):
     ALISA = "alisa"
@@ -48,6 +50,7 @@ CHARACTER_ALIAS = {
     CharacterName.HWOARANG: ["hwo"],
     CharacterName.JACK_8: ["j8", "jack8", "jack"],
     CharacterName.JIN: ["jim"],
+    CharacterName.JUN: [],
     CharacterName.KAZUYA: ["kaz", "kazze", "masku"],
     CharacterName.KING: ["kin"],
     CharacterName.KUMA: ["karhu"],
