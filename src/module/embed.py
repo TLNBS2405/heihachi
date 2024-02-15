@@ -56,17 +56,16 @@ def success_embed(message):
 
 def move_embed(character: character, move: dict):
     """Returns the embed message for character and move"""
-    move_id = move["id"].replace(" ","_")
-    url= f'{character.wavu_page}_movelist#{move_id}'
     embed = discord.Embed(title='**' + move['input'] + '**',
                           colour=SUCCESS_COLOR,
                           description=move['name'],
-                          url=url,
+                          url=f'{character.wavu_page}_movelist#{move["id"].replace(" ", "_")}',
+
                           )
 
     embed.set_thumbnail(url=character.portrait[0])
     embed.set_footer(text="Wavu.wiki", icon_url=WAVU_LOGO)
-    embed.set_author(name=_upper_first_letter(character.name), url=character.wavu_page)
+    embed.set_author(name=_upper_first_letter(character.name.replace('_', ' ').title()), url=character.wavu_page)
 
     embed.add_field(name='Target', value=move['target'])
     embed.add_field(name='Damage', value=move['damage'])

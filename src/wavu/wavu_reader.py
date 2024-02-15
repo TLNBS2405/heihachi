@@ -10,14 +10,6 @@ wavuwiki = MediaWiki(url=const.WAVU_API_URL)
 session = requests.Session()
 
 
-def _upper_first_letter(input: str) -> str:
-    if input:
-        result_string = input[0].capitalize() + input[1:]
-        return result_string
-    else:
-        return input
-
-
 def get_wavu_character_movelist(character_name: str) -> List[Move]:
     params = {
         "action": "cargoquery",
@@ -25,7 +17,7 @@ def get_wavu_character_movelist(character_name: str) -> List[Move]:
         "fields": "id,name,input,parent,target,damage,startup, recv, tot, crush, block,hit,ch,notes,_pageNamespace=ns",
         "join_on": "",
         "group_by": "",
-        "where": "id LIKE '" + _upper_first_letter(character_name) + "%'",
+        "where": "id LIKE '" + character_name.replace('_', ' ').title() + "%'",
         "having": "",
         "order_by": "id",
         "offset": "0",
