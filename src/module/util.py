@@ -22,7 +22,7 @@ def correct_character_name(alias: str):
 
 def get_character_by_name(name: str, character_list: []) -> character.Character:
     for character in character_list:
-        if character.name == name:
+        if str(character.name).lower() == name.lower():
             return character
 
 

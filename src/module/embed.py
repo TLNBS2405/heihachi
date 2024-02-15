@@ -60,6 +60,7 @@ def move_embed(character: character, move: dict):
                           colour=SUCCESS_COLOR,
                           description=move['name'],
                           url=f'{character.wavu_page}_movelist#{move["id"].replace(" ", "_")}',
+
                           )
 
     embed.set_thumbnail(url=character.portrait[0])
