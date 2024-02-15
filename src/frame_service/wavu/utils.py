@@ -1,5 +1,6 @@
 import html
 import json
+import os
 import re
 from dataclasses import dataclass
 from typing import Any, Dict, List, Tuple
@@ -40,7 +41,7 @@ class WavuMove(Move):
     parent: str = ""
 
 
-def _get_wavu_character_movelist(character_name: CharacterName, format: str = "json") -> Dict[str, Move]:
+def _get_wavu_response(character_name: CharacterName, format: str = "json") -> Any:
     """
     Get the movelist for a character from the Wavu API
     """
@@ -59,9 +60,19 @@ def _get_wavu_character_movelist(character_name: CharacterName, format: str = "j
     with requests.session() as session:
         response = session.get(WAVU_API_URL, params=params)  # TODO: use MediaWiki library to handle
     content = json.loads(response.content)
-    movelist_raw = content["cargoquery"]
+    return content
+
+
+def _get_wavu_character_movelist(character_name: CharacterName, format: str = "json", content: Any = None) -> Dict[str, Move]:
+    """
+    Get the movelist for a character from a Wavu API response
+    """
+
+    if content is None:
+        content = _get_wavu_response(character_name, format)
     match format:
         case "json":
+            movelist_raw = content["cargoquery"]
             movelist = _convert_wavu_movelist(_convert_json_movelist(movelist_raw))
         case _:
             raise NotImplementedError(f"Format {format} not implemented")
@@ -80,10 +91,11 @@ def _convert_json_move(move_json: Any) -> WavuMove:
     name = html.unescape(_normalize_data(_process_links(move_json["name"])))
 
     input = _normalize_data(move_json["input"])
-    if "_" in input:
-        input, alias = _create_aliases(input)
+
+    if "alias" in move_json:
+        alias = tuple(_normalize_data(move_json["alias"]).split(","))
     else:
-        alias = []
+        alias = ()
 
     target = _normalize_data(move_json["target"])
 
@@ -117,7 +129,7 @@ def _convert_json_move(move_json: Any) -> WavuMove:
         notes,
         "",  # image
         "",  # video
-        tuple(alias),
+        alias,
         parent,
     )
     return move
@@ -156,6 +168,7 @@ def _convert_wavu_movelist(movelist: List[WavuMove]) -> Dict[str, Move]:
         parent_input = curr_move.input
         parent_target = curr_move.target
         parent_damage = curr_move.damage
+        root_startup = curr_move.startup  # child move startups are equal to oldest parent move startup
         seen[curr_move.id] = True
 
         while stack:
@@ -165,11 +178,15 @@ def _convert_wavu_movelist(movelist: List[WavuMove]) -> Dict[str, Move]:
             curr_move.input = parent_input + curr_move.input
             curr_move.target = parent_target + curr_move.target
             curr_move.damage = parent_damage + curr_move.damage
+            curr_move.startup = root_startup
             seen[curr_move.id] = True
 
             parent_input = curr_move.input
             parent_target = curr_move.target
             parent_damage = curr_move.damage
+
+        if "_" in move.input:
+            move.input, move.alias = _create_aliases(move.input)
 
     return {move.id: move for move in movelist}
 
@@ -186,29 +203,19 @@ def _normalize_data(data: str | None) -> str:
         return ""
 
 
-def _create_aliases(input: str) -> Tuple[str, List[str]]:
+def _create_aliases(input: str) -> Tuple[str, Tuple[str, ...]]:
     """
     Create move aliases from the input string
 
-    E.g., "f+1+3_f+2+4" -> ["f+2+4", "f+1+3"]
+    E.g., "f+1+3_f+2+4" -> "f+1+3", ("f+2+4")
     """
 
     parts = input.split("_")
     input = parts[0]
-    aliases = parts[1:]
-    result = []
-    for entry in aliases:  # TODO: this can probably be done better
-        num_characters = len(entry)
-        x = len(input) - num_characters
-        if x < 0:
-            x = 0
-        original_input = input[0:x]
-        alias = original_input + entry
-        if len(alias) > len(input):
-            input = input + entry[len(input) :]
+    parent = input.split(",")[:-1]
+    aliases = [f"{','.join(parent + [part])}" for part in parts[1:]]
 
-        result.append(alias)
-    return input, result
+    return input, tuple(aliases)
 
 
 def _remove_html_tags(data: str) -> str:
@@ -249,3 +256,13 @@ def _process_links(data: str | None) -> str:
         return replacement
 
     return link_replace_pattern.sub(_replace_link, _empty_value_if_none(data))
+
+
+if __name__ == "__main__":
+    # Fetch cargo movelists for all chars for testing purposes
+    for char in CharacterName:
+        print(f"Getting movelist for {char.value.title()}...")
+        movelist = _get_wavu_response(char)
+        print(f"Got {len(movelist)} moves for {char.value.title()}")
+        with open(os.path.join(os.path.dirname(__file__), "tests", "static", f"{char.value}.json"), "w") as f:
+            json.dump(movelist, f, indent=4)
