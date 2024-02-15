@@ -11,14 +11,15 @@ import time
 
 import discord
 
+from frame_service.json_directory import json_directory
 from framedb import const
-from heihachi import button, configurator, embed, json_movelist_reader, util
+from heihachi import button, configurator, embed, util
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 try:
-    config = configurator.Configurator.from_file(os.path.abspath("config.json"))
+    config = configurator.Configurator.from_file(os.path.abspath("config.json"))  # TODO: take as cmdline arg
     assert config is not None
 except FileNotFoundError:
     logger.error("Config file not found. Exiting.")
@@ -46,21 +47,21 @@ def create_frame_data_embed(name: str, move: str) -> discord.Embed:
     if character_name:
         character = util.get_character_by_name(character_name, character_list)
         assert character is not None
-        move_list = json_movelist_reader.get_movelist(character_name, JSON_PATH)
+        move_list = json_directory.get_movelist(character_name, JSON_PATH)
         move_type = util.get_move_type(move)
 
         if move_type:
-            moves = json_movelist_reader.get_by_move_type(move_type, move_list)
+            moves = json_directory.get_by_move_type(move_type, move_list)
             moves_embed = embed.move_list_embed(character, moves, move_type)
             return moves_embed
         else:
-            character_move = json_movelist_reader.get_move(move, move_list)
+            character_move = json_directory.get_move(move, move_list)
 
             if character_move:
                 move_embed = embed.move_embed(character, character_move)
                 return move_embed
             else:
-                similar_moves = json_movelist_reader.get_similar_moves(move, move_list)
+                similar_moves = json_directory.get_similar_moves(move, move_list)
                 similar_moves_embed = embed.similar_moves_embed(similar_moves, character_name)
                 return similar_moves_embed
     else:

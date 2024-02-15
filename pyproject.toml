@@ -69,6 +69,6 @@ addopts = [
     "--import-mode=importlib"
 ]
 testpaths = [
-    "src/tests"
+    "src/**/tests"
 ]
 console_output_style = "progress"
