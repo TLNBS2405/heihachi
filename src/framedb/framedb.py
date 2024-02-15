@@ -4,10 +4,9 @@ from difflib import SequenceMatcher
 from heapq import nlargest as _nlargest
 from typing import Dict, List
 
-from frame_service import FrameService
-
 from .character import Character, Move
 from .const import MOVE_TYPE_ALIAS, REPLACE, CharacterName, MoveType
+from .frame_service import FrameService
 
 logger = logging.getLogger(__name__)
 
@@ -107,6 +106,16 @@ class FrameDb:
             moves = []
 
         return moves
+
+    def get_move_by_id(self, character: CharacterName, move_id: str) -> Move | None:
+        """Given a move id for a known character, retrieve the move from the database."""
+
+        character_movelist = self.frames[character].movelist
+        if move_id not in character_movelist:
+            logger.warning(f"Move {move_id} not found for {character}")
+            return None
+        else:
+            return character_movelist[move_id]
 
     def get_similar_moves(self, character: CharacterName, input_query: str) -> List[Move]:
         """

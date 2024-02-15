@@ -1,13 +1,11 @@
 import json
 import os
 
-from frame_service import FrameService
-from framedb import Character, CharacterName
+from framedb import Character, CharacterName, FrameService
 
-from . import wavu_reader
+from . import utils
 
 WAVU_CHARACTER_META_PATH = os.path.join(os.path.dirname(__file__), "static", "character_list.json")
-WAVU_API_URL = "https://wavu.wiki/w/api.php"
 WAVU_LOGO = "https://wavu.wiki/android-chrome-192x192.png"
 
 
@@ -31,10 +29,10 @@ class Wavu(FrameService):
         if target_char_meta is None:
             raise Exception(f"Could not find character meta data for {character.value}")
 
-        name = target_char_meta["name"]
+        name = CharacterName(target_char_meta["name"])
         portrait = target_char_meta["portrait"]
         page = target_char_meta["page"]
 
-        movelist = wavu_reader.get_wavu_character_movelist(name)
+        movelist = utils._get_wavu_character_movelist(name)
         char = Character(name, portrait, movelist, page)
         return char

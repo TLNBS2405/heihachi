@@ -1,1 +1,1 @@
-from .frame_service import FrameService
+from .wavu import Wavu

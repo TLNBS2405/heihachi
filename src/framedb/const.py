@@ -13,6 +13,7 @@ class CharacterName(enum.Enum):
     HWOARANG = "hwoarang"
     JACK_8 = "jack-8"
     JIN = "jin"
+    JUN = "jun"
     KAZUYA = "kazuya"
     KING = "king"
     KUMA = "kuma"

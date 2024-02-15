@@ -3,7 +3,7 @@ import logging
 from dataclasses import dataclass
 from typing import Dict, Tuple
 
-from framedb import CharacterName
+from .const import CharacterName
 
 logger = logging.getLogger(__name__)
 
