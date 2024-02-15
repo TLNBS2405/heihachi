@@ -123,16 +123,14 @@ async def self(interaction: discord.Interaction, message: str):
         await interaction.response.send_message(embed=result, ephemeral=False)
 
 
-try:
-    character_list = util.create_json_movelists(CHARACTER_LIST_PATH)
-    scheduler = sched.scheduler(time.time, time.sleep)
 
-    # Repeat importing move list of all character from wavu.wiki once an hour
-    scheduler_thread = threading.Thread(target=util.periodic_function,
-                                        args=(scheduler, 3600, util.create_json_movelists, CHARACTER_LIST_PATH))
-    scheduler_thread.start()
-    hei.run(discord_token)
+character_list = util.create_json_movelists(CHARACTER_LIST_PATH)
+scheduler = sched.scheduler(time.time, time.sleep)
 
-except Exception as e:
-    time_now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    logger.error(f'{time_now} \n Error: {e}')
+# Repeat importing move list of all character from wavu.wiki once an hour
+scheduler_thread = threading.Thread(target=util.periodic_function,
+                                    args=(scheduler, 3600, util.create_json_movelists, CHARACTER_LIST_PATH))
+scheduler_thread.start()
+hei.run(discord_token)
+
+
