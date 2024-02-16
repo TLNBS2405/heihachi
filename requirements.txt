@@ -1,5 +1,4 @@
 beautifulsoup4
 discord.py
-pymediawiki
 Requests
 lxml

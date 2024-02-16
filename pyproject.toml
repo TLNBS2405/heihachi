@@ -22,7 +22,6 @@ requires-python = ">= 3.10"
 dependencies = [
     "discord.py",
     "beautifulsoup4",
-    "pymediawiki",
     "Requests",
     "lxml"
 ]
