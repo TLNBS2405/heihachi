@@ -1,4 +1,5 @@
 import enum
+from typing import Dict, List
 
 NUM_CHARACTERS = 32
 
@@ -38,7 +39,7 @@ class CharacterName(enum.Enum):
     VICTOR = "victor"
 
 
-CHARACTER_ALIAS = {
+CHARACTER_ALIAS: Dict[CharacterName, List[str]] = {
     CharacterName.ALISA: ["ali", "als"],
     CharacterName.ASUKA: ["asu", "oscar"],
     CharacterName.AZUCENA: ["azu", "cafe"],
@@ -84,7 +85,7 @@ class MoveType(enum.Enum):
     HS = "Heat Smash"
 
 
-MOVE_TYPE_ALIAS = {
+MOVE_TYPE_ALIAS: Dict[MoveType, List[str]] = {
     MoveType.RA: ["ra", "rage_art", "rageart", "rage art"],
     MoveType.T: ["screw", "t!", "t", "screws", "tor", "tornado"],
     MoveType.HOMING: ["homing", "homari"],
@@ -102,7 +103,7 @@ MOVE_TYPE_ALIAS = {
     MoveType.HS: ["hs", "smash", "heat smash"],
 }
 
-SORT_ORDER = {
+SORT_ORDER: Dict[MoveType, int] = {
     MoveType.RA: 0,
     MoveType.HE: 1,
     MoveType.HS: 2,
@@ -112,7 +113,7 @@ SORT_ORDER = {
     MoveType.TH: 6,
 }
 
-REPLACE = {
+REPLACE: Dict[str, str] = {
     " ": "",
     ",": "",
     "/": "",
@@ -136,7 +137,7 @@ REPLACE = {
     "fc.": "fc",
 }
 
-EMOJI_LIST = [
+EMOJI_LIST: List[str] = [
     "1\ufe0f\u20e3",
     "2\ufe0f\u20e3",
     "3\ufe0f\u20e3",

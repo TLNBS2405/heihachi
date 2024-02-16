@@ -10,7 +10,7 @@ from framedb import CharacterName
 
 
 @pytest.fixture
-def wavu_response(request) -> Any:
+def wavu_response(request: Any) -> Any:
     with open(os.path.join(STATIC_BASE, f"{request.param.value}.json"), "r") as f:
         return request.param, json.load(f)
 
@@ -22,9 +22,9 @@ def test_get_wavu_response() -> None:
 
 class TestGetWavuCharacterMovelist:
     @pytest.mark.parametrize("wavu_response", [CharacterName.AZUCENA], indirect=True)
-    def test_get_wavu_character_movelist(self, wavu_response) -> None:
+    def test_get_wavu_character_movelist(self, wavu_response: Any) -> None:
         char_name, response = wavu_response
-        movelist = utils._get_wavu_character_movelist(char_name, content=response)
+        movelist = utils._get_wavu_character_movelist(response)
         assert movelist["Azucena-1"].input == "1"
         assert movelist["Azucena-df+1,4"].id == "Azucena-df+1,4"
         assert movelist["Azucena-df+1,4,1"].input == "df+1,4,1"
@@ -38,30 +38,30 @@ class TestGetWavuCharacterMovelist:
         assert movelist["Azucena-BT.3"].on_hit == "+4~+5"
 
     @pytest.mark.parametrize("wavu_response", [CharacterName.ASUKA], indirect=True)
-    def test_get_wavu_character_movelist_aliases(self, wavu_response) -> None:
+    def test_get_wavu_character_movelist_aliases(self, wavu_response: Any) -> None:
         char_name, response = wavu_response
-        movelist = utils._get_wavu_character_movelist(char_name, content=response)
+        movelist = utils._get_wavu_character_movelist(response)
         assert movelist["Asuka-Destabilizer.1"].alias == ()  # TODO: what should this be?
         assert movelist["Asuka-f+1+3"].alias == ("f+2+4",)
 
     @pytest.mark.parametrize("wavu_response", [CharacterName.BRYAN], indirect=True)
-    def test_get_wavu_character_movelist_links(self, wavu_response) -> None:
+    def test_get_wavu_character_movelist_links(self, wavu_response: Any) -> None:
         char_name, response = wavu_response
-        movelist = utils._get_wavu_character_movelist(char_name, content=response)
+        movelist = utils._get_wavu_character_movelist(response)
         assert movelist["Bryan-4,3,f+4"].on_ch == "[+31a (+21)](https://wavu.wiki/t/Bryan_combos#Staples 'Combo')"
 
     @pytest.mark.parametrize("wavu_response", [CharacterName.JUN], indirect=True)
-    def test_get_wavu_character_movelist_aliases_and_links(self, wavu_response) -> None:
+    def test_get_wavu_character_movelist_aliases_and_links(self, wavu_response: Any) -> None:
         char_name, response = wavu_response
-        movelist = utils._get_wavu_character_movelist(char_name, content=response)
+        movelist = utils._get_wavu_character_movelist(response)
         move = movelist["Jun-1,2,u_d"]
         assert move.alias == ("1,2,d",)
         assert move.input == "1,2,u"
 
     @pytest.mark.parametrize("wavu_response", [CharacterName.JIN], indirect=True)
-    def test_get_wavu_character_movelist_html(self, wavu_response) -> None:
+    def test_get_wavu_character_movelist_html(self, wavu_response: Any) -> None:
         char_name, response = wavu_response
-        movelist = utils._get_wavu_character_movelist(char_name, content=response)
+        movelist = utils._get_wavu_character_movelist(response)
         assert movelist["Jin-1,2,3"].name == "Left Right > Axe Kick"
 
 

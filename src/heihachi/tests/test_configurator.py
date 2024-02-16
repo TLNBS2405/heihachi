@@ -1,4 +1,5 @@
 import os
+from typing import Callable
 
 import pytest
 
@@ -9,7 +10,7 @@ STATIC_BASE = os.path.join(os.path.dirname(__file__), "static")
 
 
 @pytest.fixture
-def config():
+def config() -> Configurator:
     return Configurator(
         discord_token="123456789",
         feedback_channel_id=123456789,
@@ -19,7 +20,7 @@ def config():
     )
 
 
-def test_from_file():
+def test_from_file() -> None:
     config = Configurator.from_file(os.path.join(STATIC_BASE, "test_config.json"))
     assert config
     assert config.discord_token == "123456789"
@@ -27,11 +28,11 @@ def test_from_file():
     assert config.action_channel_id == 987654321
 
 
-def test_to_file(config):
+def test_to_file(config: Configurator) -> None:
     config.to_file(os.path.join(STATIC_BASE, "test_config_tmp.json"))
-    config = Configurator.from_file(os.path.join(STATIC_BASE, "test_config_tmp.json"))
-    assert config
-    assert config.discord_token == "123456789"
-    assert config.feedback_channel_id == 123456789
-    assert config.action_channel_id == 987654321
+    new_config = Configurator.from_file(os.path.join(STATIC_BASE, "test_config_tmp.json"))
+    assert new_config
+    assert new_config.discord_token == "123456789"
+    assert new_config.feedback_channel_id == 123456789
+    assert new_config.action_channel_id == 987654321
     os.remove(os.path.join(STATIC_BASE, "test_config_tmp.json"))

@@ -35,6 +35,7 @@ dev = [
     "pre-commit",
     "mypy",
     "pytest",
+    "types-requests"
 ]
 
 [tool.ruff]

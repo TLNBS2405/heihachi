@@ -65,14 +65,13 @@ def _get_wavu_response(
 
 
 def _get_wavu_character_movelist(
-    session: requests.Session, character_name: CharacterName, format: str = "json", content: Any = None
+    content: Any,
+    format: str = "json",
 ) -> Dict[str, Move]:
     """
     Get the movelist for a character from a Wavu API response
     """
 
-    if content is None:
-        content = _get_wavu_response(session, character_name, format)
     match format:
         case "json":
             movelist_raw = content["cargoquery"]
@@ -238,7 +237,7 @@ WAVU_PAGE_STEM = "https://wavu.wiki/t/"
 
 
 def _process_links(data: str | None) -> str:
-    def _replace_link(matchobj):
+    def _replace_link(matchobj: re.Match[str]) -> str:
         page, section, data = (
             matchobj.group("page"),
             matchobj.group("section"),
@@ -263,9 +262,11 @@ def _process_links(data: str | None) -> str:
 
 if __name__ == "__main__":
     # Fetch cargo movelists for all chars for testing purposes
-    for char in CharacterName:
-        print(f"Getting movelist for {char.value.title()}...")
-        movelist = _get_wavu_response(char)
-        print(f"Got {len(movelist)} moves for {char.value.title()}")
-        with open(os.path.join(os.path.dirname(__file__), "tests", "static", f"{char.value}.json"), "w") as f:
-            json.dump(movelist, f, indent=4)
+    with requests.session() as session:
+        for char in CharacterName:
+            print(f"Getting movelist for {char.value.title()}...")
+            response = _get_wavu_response(session, char)
+            movelist = _get_wavu_character_movelist(response)
+            print(f"Got {len(movelist)} moves for {char.value.title()}")
+            with open(os.path.join(os.path.dirname(__file__), "tests", "static", f"{char.value}.json"), "w") as f:
+                json.dump(movelist, f, indent=4)

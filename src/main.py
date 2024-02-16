@@ -12,8 +12,8 @@ from typing import Any, Callable, Tuple
 
 from frame_service import Wavu
 from framedb import FrameDb
-from heihachi import Configurator
 from heihachi.bot import FrameDataBot
+from heihachi.configurator import Configurator
 
 "How often to update the bot's frame data from the external service and write to file."
 UPDATE_INTERVAL_SEC = 3600
@@ -28,7 +28,9 @@ logger.addHandler(stream_handler)
 logger.setLevel(logging.INFO)
 
 
-def periodic_function(scheduler: sched.scheduler, interval: float, function: Callable, args: Tuple[Any, ...]) -> None:
+def periodic_function(
+    scheduler: sched.scheduler, interval: float, function: Callable[..., Any], args: Tuple[Any, ...]
+) -> None:
     "Run a function periodically"
 
     while True:

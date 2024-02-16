@@ -83,8 +83,10 @@ class FrameDb:
     def _correct_character_name(char_name_query: str) -> str | None:  # TODO: overlap with get_character_by_name?
         "Check if input in dictionary or in dictionary values"
 
-        if char_name_query in CHARACTER_ALIAS:
-            return char_name_query
+        try:
+            return CharacterName(char_name_query).value
+        except ValueError:
+            pass
 
         for key, value in CHARACTER_ALIAS.items():
             if char_name_query in value:
@@ -176,6 +178,7 @@ class FrameDb:
         for move_type, aliases in MOVE_TYPE_ALIAS.items():
             if move_type_query.lower() in aliases:
                 return move_type
+        return None
 
 
 def _get_close_matches_indices(word: str, possibilities: List[str], n: int = 5, cutoff: float = 0.7) -> List[int]:

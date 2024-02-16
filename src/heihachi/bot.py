@@ -6,7 +6,8 @@ import discord
 import discord.ext.commands
 
 from framedb import CharacterName, FrameDb, FrameService
-from heihachi import Configurator, button, embed
+from heihachi import button, embed
+from heihachi.configurator import Configurator
 from heihachi.embed import get_frame_data_embed
 
 logger = logging.getLogger("main")
@@ -54,7 +55,7 @@ class FrameDataBot(discord.Client):
         else:
             return False
 
-    def is_author_newly_created(self, interaction: discord.Interaction) -> bool:
+    def is_author_newly_created(self, interaction: discord.Interaction["FrameDataBot"]) -> bool:
         "Check if author of an interaction is newly created"
 
         today = datetime.datetime.strptime(datetime.datetime.now().isoformat(), "%Y-%m-%dT%H:%M:%S.%f")
@@ -81,10 +82,12 @@ class FrameDataBot(discord.Client):
         else:
             logger.warning(f"Received a {message=} when the bot is not logged in")
 
-    def _character_command_factory(self, name: str) -> Callable[[discord.Interaction, str], Coroutine[Any, Any, None]]:
+    def _character_command_factory(
+        self, name: str
+    ) -> Callable[[discord.Interaction["FrameDataBot"], str], Coroutine[Any, Any, None]]:
         "A factory function to create /character command functions"
 
-        async def _character_command(interaction: discord.Interaction, move: str) -> None:
+        async def _character_command(interaction: discord.Interaction["FrameDataBot"], move: str) -> None:
             if not (self.is_user_blacklisted(str(interaction.user.id)) or self.is_author_newly_created(interaction)):
                 embed = get_frame_data_embed(self.framedb, self.frame_service, name, move)
                 await interaction.response.send_message(embed=embed, ephemeral=False)
@@ -95,7 +98,7 @@ class FrameDataBot(discord.Client):
         "Add all frame commands to the bot"
 
         @self.tree.command(name="fd", description="Frame data from a character move")
-        async def _frame_data_cmd(interaction: discord.Interaction, character: str, move: str) -> None:
+        async def _frame_data_cmd(interaction: discord.Interaction["FrameDataBot"], character: str, move: str) -> None:
             character_name_query = character
             move_query = move
             if not (self.is_user_blacklisted(str(interaction.user.id)) or self.is_author_newly_created(interaction)):
@@ -111,7 +114,7 @@ class FrameDataBot(discord.Client):
         if self.config.feedback_channel_id and self.config.action_channel_id:
 
             @self.tree.command(name="feedback", description="Send feedback incase of wrong data")
-            async def _feedback_cmd(interaction: discord.Interaction, message: str) -> None:
+            async def _feedback_cmd(interaction: discord.Interaction["FrameDataBot"], message: str) -> None:
                 if not (self.is_user_blacklisted(str(interaction.user.id)) or self.is_author_newly_created(interaction)):
                     try:
                         feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(
@@ -122,12 +125,14 @@ class FrameDataBot(discord.Client):
                         )
                         try:
                             assert self.config.feedback_channel_id and self.config.action_channel_id
-                            channel = self.get_channel(self.config.feedback_channel_id)
+                            feedback_channel = self.get_channel(self.config.feedback_channel_id)
                             actioned_channel = self.get_channel(self.config.action_channel_id)
                         except Exception as e:
                             logger.error(f"Error getting channel: {e}")
-                        assert channel and actioned_channel
-                        await channel.send(content=feedback_message, view=button.DoneButton(actioned_channel))
+                        assert feedback_channel and actioned_channel
+                        assert isinstance(feedback_channel, discord.channel.TextChannel)
+                        assert isinstance(actioned_channel, discord.channel.TextChannel)
+                        await feedback_channel.send(content=feedback_message, view=button.DoneButton(actioned_channel))
                         result = embed.get_success_embed("Feedback sent")
                     except Exception as e:
                         result = embed.get_error_embed(f"Feedback couldn't be sent, caused by: {str(e)}")

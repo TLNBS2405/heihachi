@@ -1,1 +1,1 @@
-from .wavu import Wavu
+from .wavu import Wavu as Wavu

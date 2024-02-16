@@ -1,4 +1,4 @@
-from typing import List
+from typing import Any, List
 
 import discord
 
@@ -41,12 +41,12 @@ def get_move_list_embed(
     return embed
 
 
-def get_error_embed(message) -> discord.Embed:
+def get_error_embed(message: Any | None) -> discord.Embed:
     embed = discord.Embed(title="Error", colour=ERROR_COLOR, description=message)
     return embed
 
 
-def get_success_embed(message) -> discord.Embed:
+def get_success_embed(message: Any | None) -> discord.Embed:
     embed = discord.Embed(title="Success", colour=SUCCESS_COLOR, description=message)
     return embed
 

@@ -1,5 +1,7 @@
 import os
 
+import requests
+
 from frame_service import Wavu
 from framedb import CharacterName
 from framedb.const import NUM_CHARACTERS
@@ -15,7 +17,8 @@ def test_wavu_creation() -> None:
 
 def test_get_frame_data() -> None:
     wavu = Wavu()
-    char = wavu.get_frame_data(CharacterName.AZUCENA)
+    with requests.session() as session:
+        char = wavu.get_frame_data(CharacterName.AZUCENA, session)
     assert char.name.value.title() == "Azucena"
     assert char.portrait == "https://i.imgur.com/fjMRO7I.png"
 
