@@ -1,0 +1,1334 @@
+{
+    "cargoquery": [
+        {
+            "title": {
+                "id": "Jin-1",
+                "name": "Jab",
+                "input": "1",
+                "parent": null,
+                "target": "h",
+                "damage": "5",
+                "startup": "i10",
+                "recv": null,
+                "tot": "27",
+                "crush": null,
+                "block": "+1",
+                "hit": "+8",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-1+2",
+                "name": "Median Line Destruction",
+                "input": "1+2",
+                "parent": null,
+                "target": "m,m,h",
+                "damage": "4,4,16",
+                "startup": "i13",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "+12a (+3)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-1,2",
+                "name": "Left Right Combo",
+                "input": ",2",
+                "parent": "Jin-1",
+                "target": ",h",
+                "damage": ",12",
+                "startup": "i10",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-3",
+                "hit": "+6",
+                "ch": null,
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-1,2,1",
+                "name": "Left Right &gt; Black Wing Rondo",
+                "input": ",1",
+                "parent": "Jin-1,2",
+                "target": ",m",
+                "damage": ",20",
+                "startup": "i20-22",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-16",
+                "hit": "+31a (+21)",
+                "ch": null,
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-1,2,3",
+                "name": "Left Right &gt; Axe Kick",
+                "input": ",3",
+                "parent": "Jin-1,2",
+                "target": ",m",
+                "damage": ",20",
+                "startup": "i24~26",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "0",
+                "hit": "+31d",
+                "ch": null,
+                "notes": "Interruptable by i10 from 2nd on block",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-1,2,4",
+                "name": "Left Right &gt; Spinning Hook Kick",
+                "input": ",4",
+                "parent": "Jin-1,2",
+                "target": ",h",
+                "damage": ",26",
+                "startup": "i20-22",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-4",
+                "hit": "+23a (+14)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-1,3",
+                "name": "Left Jab &gt; Double Low (1)",
+                "input": ",3",
+                "parent": "Jin-1",
+                "target": ",l",
+                "damage": ",9",
+                "startup": "i16~17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "-1",
+                "ch": null,
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-1,3,4",
+                "name": "Left Jab &gt; Double Low",
+                "input": ",4",
+                "parent": "Jin-1,3",
+                "target": ",l",
+                "damage": ",17",
+                "startup": "i23",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "+3",
+                "ch": "+28a",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-2",
+                "name": "Right Jab",
+                "input": "2",
+                "parent": null,
+                "target": "h",
+                "damage": "9",
+                "startup": "i10",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "0",
+                "hit": "+9",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-2,1",
+                "name": "Double Thrust",
+                "input": ",1",
+                "parent": "Jin-2",
+                "target": "h",
+                "damage": "9",
+                "startup": "i16~17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-3",
+                "hit": "+6",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-2,1,4",
+                "name": "Double Thrust &gt; Roundhouse",
+                "input": ",4",
+                "parent": "Jin-2,1",
+                "target": ",m",
+                "damage": ",18",
+                "startup": "i18~20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+4",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd CH\n* Can be delayed\n* Combo can be delayed 9f from CH&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-2,1,4~4",
+                "name": "Double Thrust &gt; Low Trick Kick",
+                "input": "~4",
+                "parent": "Jin-2,1",
+                "target": "l",
+                "damage": "20",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-31",
+                "hit": "+16d",
+                "ch": null,
+                "notes": "Interruptable by i16 after 2nd on block",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-2+3",
+                "name": "Heat Burst",
+                "input": "2+3",
+                "parent": null,
+                "target": "m",
+                "damage": "12",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Burst&lt;/div&gt;\n* Alternate input: R1\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-2,4",
+                "name": "Switchblade",
+                "input": ",4",
+                "parent": "Jin-2",
+                "target": ",h",
+                "damage": ",20",
+                "startup": "i24~27",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+11",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Combo from 1st hit\n* Can cancel into ZEN&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-2,4,F",
+                "name": null,
+                "input": ",F",
+                "parent": "Jin-2,4",
+                "target": null,
+                "damage": null,
+                "startup": "i24~27",
+                "recv": "r ZEN",
+                "tot": null,
+                "crush": null,
+                "block": "-6",
+                "hit": "+14",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-3",
+                "name": null,
+                "input": "3",
+                "parent": null,
+                "target": "h",
+                "damage": "19",
+                "startup": "i14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-7",
+                "hit": "+4",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-3,1",
+                "name": null,
+                "input": ",1",
+                "parent": "Jin-3",
+                "target": ",h",
+                "damage": ",7",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-1",
+                "hit": "+7",
+                "ch": null,
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-3,1,4",
+                "name": "Kishin Rekko",
+                "input": ",4",
+                "parent": "Jin-3,1",
+                "target": ",l",
+                "damage": ",18",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "+3",
+                "ch": "+28d",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd CH\n* Can be delayed\n* Combo can be delayed 9f from CH&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-3,1,F",
+                "name": null,
+                "input": ",F",
+                "parent": "Jin-3,1",
+                "target": null,
+                "damage": null,
+                "startup": null,
+                "recv": "r ZEN",
+                "tot": null,
+                "crush": null,
+                "block": "+4",
+                "hit": "+12",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-4",
+                "name": "High Right Roundhouse",
+                "input": "4",
+                "parent": null,
+                "target": "h",
+                "damage": "15",
+                "startup": "i13~14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+10",
+                "ch": "+13c",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-4~3",
+                "name": "Spinning Flare Kick",
+                "input": "4~3",
+                "parent": null,
+                "target": "M",
+                "damage": "27",
+                "startup": "i24~34",
+                "recv": "r FUFT",
+                "tot": null,
+                "crush": "js12~",
+                "block": "-14~-4",
+                "hit": "-4a",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow floor-break&quot;\n&gt;Floor Break&lt;/div&gt;\n* Alternate input:\n** ws4~3\n** CD.df+4,3+4&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-b1",
+                "name": null,
+                "input": "b1",
+                "parent": null,
+                "target": "h",
+                "damage": "11",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+2",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-b1,2",
+                "name": "Shun Maten",
+                "input": ",2",
+                "parent": "Jin-b1",
+                "target": "h",
+                "damage": "20",
+                "startup": "i22",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-10",
+                "hit": "KND",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-d+1",
+                "name": "Corpse Thrust &gt; Black Wing Flash",
+                "input": "d+1",
+                "parent": null,
+                "target": "m, th",
+                "damage": "21,10",
+                "startup": "i21",
+                "recv": null,
+                "tot": null,
+                "crush": "ps8~",
+                "block": "-13",
+                "hit": "+0",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Absorb an attack to power up\n* Add chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-d+2",
+                "name": "Scourge",
+                "input": "d+2",
+                "parent": null,
+                "target": "l",
+                "damage": "22",
+                "startup": "i22",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "+4",
+                "ch": "+71(+55)",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-d+3",
+                "name": null,
+                "input": "d+3",
+                "parent": null,
+                "target": "l",
+                "damage": "7",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "-3",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-d+3+4",
+                "name": "Double Lift Kick",
+                "input": "d+3+4",
+                "parent": null,
+                "target": "m,m",
+                "damage": "5,15",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-19",
+                "hit": "+32+(+22)",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-d+3,4",
+                "name": null,
+                "input": ",4",
+                "parent": "Jin-d+3",
+                "target": "h",
+                "damage": "10",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-11",
+                "hit": "-3",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-d+3,4,3",
+                "name": "Kazama Style Three-Quarter Kick",
+                "input": ",3",
+                "parent": "Jin-d+3,4",
+                "target": "m",
+                "damage": "21",
+                "startup": "i24",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+31(+23)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n*\n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* WallSplat\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-d+3,4~4",
+                "name": "Knee Popper &gt; Mid Sidekick",
+                "input": ",4~4",
+                "parent": "Jin-d+3",
+                "target": "m",
+                "damage": "24",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+10(+1)",
+                "ch": null,
+                "notes": "Wallsplat",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-d+4",
+                "name": "Right Sweep",
+                "input": "d+4",
+                "parent": null,
+                "target": "l",
+                "damage": "11",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "-1",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-df+1",
+                "name": "Mid Left Punch",
+                "input": "df+1",
+                "parent": null,
+                "target": "m",
+                "damage": "10",
+                "startup": "i13",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-3",
+                "hit": "+4",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-df+1,4",
+                "name": "Mid Left Punch &gt; High Roundhouse Kick",
+                "input": ",4",
+                "parent": "Jin-df+1",
+                "target": "h",
+                "damage": "18",
+                "startup": "i18",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+10",
+                "ch": null,
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-df+1,4~4",
+                "name": "Mid Left Punch &gt; Mid Sidekick",
+                "input": ",4~4",
+                "parent": "Jin-df+1",
+                "target": "m",
+                "damage": "24",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+10(+1)",
+                "ch": null,
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-df+2",
+                "name": "Fiendish Rend",
+                "input": "df+2",
+                "parent": null,
+                "target": "m",
+                "damage": "12",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+6",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-df+2~df",
+                "name": "Breaking Step",
+                "input": "~df",
+                "parent": "Jin-df+2",
+                "target": null,
+                "damage": null,
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-2",
+                "hit": "+13",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-df+3",
+                "name": "Left Roundhouse",
+                "input": "df+3",
+                "parent": null,
+                "target": "m",
+                "damage": "16",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "+3",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-df+3~",
+                "name": "Brazilian Kick",
+                "input": "df+3~3",
+                "parent": null,
+                "target": "m",
+                "damage": "20",
+                "startup": "i23",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+6c",
+                "hit": "+13c",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-df+3~df",
+                "name": "Breaking Step",
+                "input": "~df",
+                "parent": "Jin-df+3",
+                "target": null,
+                "damage": null,
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+2c",
+                "hit": "+9c",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-df+4",
+                "name": "Right Spinning Axe Kick",
+                "input": "df+4",
+                "parent": null,
+                "target": "m",
+                "damage": "22",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+0",
+                "hit": "+8c/HE",
+                "ch": null,
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-f+1+2",
+                "name": "Double Chamber Punch",
+                "input": "f+1+2",
+                "parent": null,
+                "target": "h,h",
+                "damage": "14,24",
+                "startup": "i14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-6",
+                "hit": "+21a (+11)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-f+3",
+                "name": "Left Sidekick",
+                "input": "f+3",
+                "parent": null,
+                "target": "m",
+                "damage": "12",
+                "startup": "i14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-16",
+                "hit": "-5",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-f+3,1",
+                "name": "Tanden Nidan-uchi",
+                "input": ",1",
+                "parent": "Jin-f+3",
+                "target": ",m",
+                "damage": ",17",
+                "startup": "i22",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+4",
+                "ch": null,
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-f+3,3",
+                "name": "Left Sidekick &gt; Stinger",
+                "input": ",3",
+                "parent": "Jin-f+3",
+                "target": ",m",
+                "damage": ",14",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "+8",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-f+3,3,F",
+                "name": null,
+                "input": ",F",
+                "parent": "Jin-f+3,3",
+                "target": null,
+                "damage": null,
+                "startup": null,
+                "recv": "r ZEN",
+                "tot": null,
+                "crush": null,
+                "block": "-7",
+                "hit": "+9",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-f+4",
+                "name": "Front Thrust Kick",
+                "input": "f+4",
+                "parent": null,
+                "target": "m",
+                "damage": "21",
+                "startup": "i16-17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "+4",
+                "ch": "+42",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-f+4,F",
+                "name": null,
+                "input": ",F",
+                "parent": "Jin-f+4",
+                "target": null,
+                "damage": null,
+                "startup": null,
+                "recv": "r ZEN",
+                "tot": null,
+                "crush": null,
+                "block": "-1",
+                "hit": "+11",
+                "ch": "+49",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-H.2+3",
+                "name": "Hellfire Trespass Slayer",
+                "input": "H.2+3",
+                "parent": null,
+                "target": "m,h,m,th",
+                "damage": "15,12,15,15",
+                "startup": "i15~16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+3",
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Smash&lt;/div&gt;\n* Alternate input: R1\n* Transitions to Breaking Step on block\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-H.2+3,4",
+                "name": "Hellfire Darkside Slayer",
+                "input": "H.2+3,4",
+                "parent": null,
+                "target": "l,m,m",
+                "damage": "12,20,21",
+                "startup": "i15~16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Smash&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-H.2+3,B",
+                "name": "Hellfire Trespass Slayer to Cancel Breaking Step",
+                "input": ",B",
+                "parent": "Jin-H.2+3",
+                "target": null,
+                "damage": null,
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-H.db+1+2",
+                "name": "Awakened Power Stance",
+                "input": "H.db+1+2",
+                "parent": null,
+                "target": "m",
+                "damage": "0",
+                "startup": "i19~34",
+                "recv": null,
+                "tot": null,
+                "crush": "pc",
+                "block": "+4",
+                "hit": "+23",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Partially uses remaining Heat time\n* Transitions to Awakened Breaking Step on hit or block\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-H.db+1+2,1",
+                "name": "Awakened Thunder God Fist",
+                "input": ",1",
+                "parent": "Jin-H.db+1+2",
+                "target": ",m",
+                "damage": "25",
+                "startup": "i20~22",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "+72a (56)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-H.db+1+2,2",
+                "name": "Awakened Wind God Fist",
+                "input": ",2",
+                "parent": "Jin-H.db+1+2",
+                "target": ",s",
+                "damage": "23",
+                "startup": "i11~12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+4",
+                "hit": "+38a (28)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-H.db+1+2,3",
+                "name": "Awakened Demon&#039;s Hoof",
+                "input": ",3",
+                "parent": "Jin-H.db+1+2",
+                "target": ",m",
+                "damage": "25",
+                "startup": "i26~28",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+2",
+                "hit": "+22a",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-H.db+1+2,4",
+                "name": "Awakened Spinning Demon (1)",
+                "input": ",4",
+                "parent": "Jin-H.db+1+2",
+                "target": ",l",
+                "damage": "10",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-23",
+                "hit": "+22a",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-H.db+1+2,4,4",
+                "name": "Awakened Spinning Demon",
+                "input": ",4",
+                "parent": "Jin-H.db+1+2,4",
+                "target": ",m",
+                "damage": ",19",
+                "startup": "i25~26",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-23",
+                "hit": "+20d (-15)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow floor-break&quot;\n&gt;Floor Break&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-H.db+1+2,DF+3",
+                "name": "Awakened Demon&#039;s Tail",
+                "input": ",DF+3",
+                "parent": "Jin-H.db+1+2",
+                "target": ",l",
+                "damage": "24",
+                "startup": "i33~34",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-23",
+                "hit": "-2d",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-R.df+1+2",
+                "name": "Polar Demon Gouge",
+                "input": "R.df+1+2",
+                "parent": null,
+                "target": "m,th,th",
+                "damage": "10,10,35",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Erases opponent&#039;s recoverable health on hit\n* Alternate input: R2\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-ws1",
+                "name": null,
+                "input": "ws1",
+                "parent": null,
+                "target": "m",
+                "damage": null,
+                "startup": "i13",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-6",
+                "hit": "+5",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-ws1,2",
+                "name": "Twin Lancer",
+                "input": ",2",
+                "parent": "Jin-ws1",
+                "target": "m",
+                "damage": null,
+                "startup": "i19~20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "+3",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Transition to -9 (ob) +2 (oh) ZEN with F\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-ws1,3",
+                "name": "Kazama Style 6 Hit Combo Redux (2)",
+                "input": ",3",
+                "parent": "Jin-ws1",
+                "target": "h",
+                "damage": null,
+                "startup": "i14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-6",
+                "hit": "+4",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-ws1,3,2",
+                "name": "Kazama Style 6 Hit Combo Redux (3)",
+                "input": ",2",
+                "parent": "Jin-ws1,3",
+                "target": "m",
+                "damage": null,
+                "startup": "i18",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-11",
+                "hit": "-6",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-ws1,3,2,1",
+                "name": "Kazama Style 6 Hit Combo Redux (4)",
+                "input": ",1",
+                "parent": "Jin-ws1,3,2",
+                "target": "m",
+                "damage": null,
+                "startup": "i10",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-11",
+                "hit": "+3",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-ws1,3,2,1,4",
+                "name": "Kazama Style 6 Hit Combo Redux (5)",
+                "input": ",4",
+                "parent": "Jin-ws1,3,2,1",
+                "target": "l",
+                "damage": null,
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-31",
+                "hit": "+8",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-ws1,3,2,1,4,2",
+                "name": "Kazama Style 6 Hit Combo Redux",
+                "input": ",2",
+                "parent": "Jin-ws1,3,2,1,4",
+                "target": "m",
+                "damage": null,
+                "startup": "i31",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-16",
+                "hit": "-8",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow floor-break&quot;\n&gt;Floor Break&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-ws1,3~3",
+                "name": "Solar Plexus Strike &gt; Brazilian Kick",
+                "input": ",3~3",
+                "parent": "Jin-ws1",
+                "target": "m",
+                "damage": null,
+                "startup": "i23",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+6",
+                "hit": "+13",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-ws2",
+                "name": "Crouching Uppercut",
+                "input": "ws2",
+                "parent": null,
+                "target": "m",
+                "damage": null,
+                "startup": "i14~15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "LNC",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-ws3",
+                "name": "Bamboo Splitter",
+                "input": "ws3",
+                "parent": null,
+                "target": "m",
+                "damage": null,
+                "startup": "i16~18",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+10",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-ws4",
+                "name": "Double Cross Kicks (1)",
+                "input": "ws4",
+                "parent": null,
+                "target": "m",
+                "damage": null,
+                "startup": "i11~12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-3",
+                "hit": "+8",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Jin-ws4,4",
+                "name": "Double Cross Kicks",
+                "input": ",4",
+                "parent": "Jin-ws4",
+                "target": "h",
+                "damage": null,
+                "startup": "i19~20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-7",
+                "hit": "+4",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        }
+    ]
+}

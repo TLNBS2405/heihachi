@@ -1,0 +1,1182 @@
+{
+    "cargoquery": [
+        {
+            "title": {
+                "id": "Lars-1",
+                "name": null,
+                "input": "1",
+                "parent": null,
+                "target": "h",
+                "damage": "5",
+                "startup": "i10",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+1",
+                "hit": "+8",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-1,1",
+                "name": null,
+                "input": ",1",
+                "parent": "Lars-1",
+                "target": ",m",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "0",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-1,1,1",
+                "name": null,
+                "input": ",1",
+                "parent": "Lars-1,1",
+                "target": ",m",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n\n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-1+2",
+                "name": null,
+                "input": "1+2",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i25",
+                "recv": null,
+                "tot": null,
+                "crush": "pc8~",
+                "block": "-12",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-1,2",
+                "name": null,
+                "input": ",2",
+                "parent": "Lars-1",
+                "target": ",h",
+                "damage": ",?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-3",
+                "hit": "+8",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-1,4",
+                "name": null,
+                "input": ",4",
+                "parent": "Lars-1",
+                "target": ",l",
+                "damage": ",?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+1",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Hold d to LEN\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-2",
+                "name": null,
+                "input": "2",
+                "parent": null,
+                "target": "j",
+                "damage": ",?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "?",
+                "hit": "?",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-2,1",
+                "name": null,
+                "input": ",1",
+                "parent": "Lars-2",
+                "target": ",m",
+                "damage": ",?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-6",
+                "hit": "+8",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Transition to LEN\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-3",
+                "name": null,
+                "input": "3",
+                "parent": null,
+                "target": "h",
+                "damage": "?",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-17",
+                "hit": "0",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Hold d to LEN (-11/+6/+6)\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-3+4",
+                "name": null,
+                "input": "3+4",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i17",
+                "recv": null,
+                "tot": null,
+                "crush": "pc8~",
+                "block": "-8",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n\n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-b+1",
+                "name": null,
+                "input": "b+1",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-6",
+                "hit": "+4",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n\n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-b+1+2",
+                "name": null,
+                "input": "b+1+2",
+                "parent": null,
+                "target": "m,m",
+                "damage": "?",
+                "startup": "i21",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+9KG",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n\n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-b+2",
+                "name": null,
+                "input": "b+2",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-7",
+                "hit": "+4",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-b+2,1",
+                "name": null,
+                "input": ",1",
+                "parent": "Lars-b+2",
+                "target": ",m",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-10",
+                "hit": "+4",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-b+2,3",
+                "name": null,
+                "input": ",3",
+                "parent": "Lars-b+2",
+                "target": ",h",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n\n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-b+3",
+                "name": null,
+                "input": "b+3",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+4",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Hold f to SEN (-5/+11/+11)\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-b+3,4",
+                "name": null,
+                "input": ",4",
+                "parent": "Lars-b+3",
+                "target": ",h",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-b+4",
+                "name": null,
+                "input": "b+4",
+                "parent": null,
+                "target": "m",
+                "damage": "55",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "+8",
+                "ch": "Throw",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-d+2",
+                "name": null,
+                "input": "d+2",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i18",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "0c",
+                "hit": "+8c",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Hold d for FC\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-d+3",
+                "name": null,
+                "input": "d+3",
+                "parent": null,
+                "target": "l",
+                "damage": "?",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "?",
+                "hit": "?",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-d+3,1+2",
+                "name": null,
+                "input": ",1+2",
+                "parent": "Lars-d+3",
+                "target": ",h,h",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-7",
+                "hit": "+4",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-d/b+1",
+                "name": null,
+                "input": "d/b+1",
+                "parent": null,
+                "target": "l",
+                "damage": null,
+                "startup": "i19",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "-1",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-d/b+1,1",
+                "name": null,
+                "input": ",1",
+                "parent": "Lars-d/b+1",
+                "target": ",h",
+                "damage": null,
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "-1",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Hold d to LEN\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-d/b+1+2",
+                "name": null,
+                "input": "d/b+1+2",
+                "parent": null,
+                "target": "l",
+                "damage": "?",
+                "startup": "i26",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "+6",
+                "ch": "+10",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Hold d to DEN\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-d/b+2",
+                "name": null,
+                "input": "d/b+2",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-18",
+                "hit": "+3",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Hold f to transistion to SEN\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-d/b+2,1",
+                "name": null,
+                "input": ",1",
+                "parent": "Lars-d/b+2",
+                "target": ",m",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "+6",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-d/b+2,3",
+                "name": null,
+                "input": ",3",
+                "parent": "Lars-d/b+2",
+                "target": ",m",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "+8",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n\n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-d/b+4",
+                "name": null,
+                "input": "d/b+4",
+                "parent": null,
+                "target": "l",
+                "damage": "?",
+                "startup": "i21",
+                "recv": null,
+                "tot": null,
+                "crush": "cs",
+                "block": "-26",
+                "hit": "+5",
+                "ch": "Launch",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-DEN.1",
+                "name": null,
+                "input": "DEN.1",
+                "parent": null,
+                "target": "h",
+                "damage": "?",
+                "startup": "i11",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+1",
+                "hit": "+8",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Hold f to SEN (-3/+4/+4)\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-DEN.1+2",
+                "name": null,
+                "input": "DEN.1+2",
+                "parent": null,
+                "target": "h",
+                "damage": "?",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-10",
+                "hit": "Launch",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n\n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-DEN.1,2",
+                "name": null,
+                "input": ",2",
+                "parent": "Lars-DEN.1",
+                "target": "h",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-6",
+                "hit": "+17",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-DEN.2",
+                "name": null,
+                "input": "DEN.2",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-7",
+                "hit": "+7",
+                "ch": "Launch",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Hold u/f to AVA (?/+9/+9)\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-DEN.2+3",
+                "name": null,
+                "input": "DEN.2+3",
+                "parent": null,
+                "target": "Throw",
+                "damage": "40",
+                "startup": "i11",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-DEN.3",
+                "name": null,
+                "input": "DEN.3",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i22",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+3",
+                "hit": "+17",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* Transition to SEN\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-DEN.3+4",
+                "name": null,
+                "input": "DEN.3+4",
+                "parent": null,
+                "target": "l",
+                "damage": "?",
+                "startup": "i22",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "-3",
+                "ch": "+5s",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Hold f to SEN (-7/+4/+12)\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-DEN.4",
+                "name": null,
+                "input": "DEN.4",
+                "parent": null,
+                "target": "l",
+                "damage": "?",
+                "startup": "i23",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+1",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Hold d to LEN\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-DEN.f",
+                "name": null,
+                "input": "DEN.f",
+                "parent": null,
+                "target": null,
+                "damage": null,
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Transition to SEN\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-d/f+1",
+                "name": null,
+                "input": "d/f+1",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i13",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-1",
+                "hit": "+5",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-d/f+2",
+                "name": null,
+                "input": "d/f+2",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-3",
+                "hit": "+9",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Transition to SEN \n* Hold B to not transition (-11/+3/KND)\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-f+1",
+                "name": null,
+                "input": "f+1",
+                "parent": null,
+                "target": "h",
+                "damage": "?",
+                "startup": "i13",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "?",
+                "hit": "?",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-f+1+2",
+                "name": null,
+                "input": "f+1+2",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "Launch",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-f+1,2",
+                "name": null,
+                "input": ",2",
+                "parent": "Lars-f+1",
+                "target": ",m",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-5",
+                "hit": "+6",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Transition to SEN\n* Hold B to stop transition (-8/+3/+3)\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-f+1,2,2",
+                "name": null,
+                "input": ",3",
+                "parent": "Lars-f+1,2",
+                "target": ",m",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-5",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Transition to DEN\n* Hold B to stop transition (-12/KND/KND)\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-f+1+4",
+                "name": null,
+                "input": "f+1+4",
+                "parent": null,
+                "target": "m",
+                "damage": "28",
+                "startup": "i13",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-18",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-f+2",
+                "name": null,
+                "input": "f+2",
+                "parent": null,
+                "target": "h",
+                "damage": "?",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "?",
+                "hit": "?",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-f+2,1",
+                "name": null,
+                "input": ",1",
+                "parent": "Lars-f+2",
+                "target": ",h",
+                "damage": "?",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-5",
+                "hit": "+6",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Transition to SEN\n* Hold B to stop transition (-6/+5/+5)\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-f+2,4",
+                "name": null,
+                "input": ",4",
+                "parent": "Lars-f+2",
+                "target": ",h",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-f+3",
+                "name": null,
+                "input": "f+3",
+                "parent": null,
+                "target": null,
+                "damage": null,
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Transition to DEN\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-FC.1+2",
+                "name": null,
+                "input": "FC.1+2",
+                "parent": null,
+                "target": "l,l",
+                "damage": null,
+                "startup": "i18",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+1",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-f,f+2",
+                "name": null,
+                "input": "f,f+2",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i21",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "Launch",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n\n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-f,f+4",
+                "name": null,
+                "input": "f,f+4",
+                "parent": null,
+                "target": "l",
+                "damage": "?",
+                "startup": "i21",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-31",
+                "hit": "?",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-f,f+4,2",
+                "name": null,
+                "input": ",2",
+                "parent": "Lars-f,f+4",
+                "target": "h",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "?",
+                "hit": "+9",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Transition to DEN\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-f,f+4,3",
+                "name": null,
+                "input": ",3",
+                "parent": "Lars-f,f+4",
+                "target": "m",
+                "damage": "?",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "?",
+                "hit": "-3",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-LEN.1",
+                "name": null,
+                "input": "LEN.1",
+                "parent": null,
+                "target": "l",
+                "damage": "?",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+4s",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-LEN.2",
+                "name": null,
+                "input": "LEN.2",
+                "parent": null,
+                "target": "m",
+                "damage": "?",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n\n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-SEN.1",
+                "name": null,
+                "input": "SEN.1",
+                "parent": null,
+                "target": "m",
+                "damage": null,
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-6",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-SEN.1+2",
+                "name": null,
+                "input": "SEN.1+2",
+                "parent": null,
+                "target": "m",
+                "damage": null,
+                "startup": "i14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n\n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-SEN.2",
+                "name": null,
+                "input": "SEN.2",
+                "parent": null,
+                "target": "l",
+                "damage": null,
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+6s",
+                "ch": "Launch",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-SEN.3",
+                "name": null,
+                "input": "SEN.3",
+                "parent": null,
+                "target": "m",
+                "damage": null,
+                "startup": "i14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "Launch",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-SEN.3+4",
+                "name": null,
+                "input": "SEN.3+4",
+                "parent": null,
+                "target": "m,m",
+                "damage": null,
+                "startup": "i13",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "0s",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n\n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow floor-break&quot;\n&gt;Floor Break&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-SEN.4",
+                "name": null,
+                "input": "SEN.4",
+                "parent": null,
+                "target": "h",
+                "damage": null,
+                "startup": "i7",
+                "recv": null,
+                "tot": null,
+                "crush": "pc8~",
+                "block": "-9",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n\n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lars-SEN.b",
+                "name": null,
+                "input": "SEN.b",
+                "parent": null,
+                "target": null,
+                "damage": null,
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Transition to DEN\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        }
+    ]
+}

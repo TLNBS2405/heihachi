@@ -1,0 +1,2512 @@
+{
+    "cargoquery": [
+        {
+            "title": {
+                "id": "Kazuya-1",
+                "name": "Jab",
+                "input": "1",
+                "parent": null,
+                "target": "h",
+                "damage": "5",
+                "startup": "i10",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+1",
+                "hit": "+8",
+                "ch": "+8",
+                "notes": "Alternate input: f+1",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-1,1",
+                "name": "Flash Punch Combo (2)",
+                "input": ",1",
+                "parent": "Kazuya-1",
+                "target": ",h",
+                "damage": ",6",
+                "startup": null,
+                "recv": "44",
+                "tot": null,
+                "crush": null,
+                "block": "-1",
+                "hit": "+8",
+                "ch": "+8",
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-1,1,2",
+                "name": "Flash Punch Combo",
+                "input": ",2",
+                "parent": "Kazuya-1,1",
+                "target": ",m",
+                "damage": ",12",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-17",
+                "hit": "+20a(+15)",
+                "ch": "+20a(+15)",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed 11F\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt; on Air hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-1+2",
+                "name": "Acute Pain",
+                "input": "1+2",
+                "parent": null,
+                "target": "m,m",
+                "damage": "5,20",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "+13a",
+                "ch": "+13a",
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-1,2",
+                "name": "One Two Punch",
+                "input": ",2",
+                "parent": "Kazuya-1",
+                "target": ",h",
+                "damage": ",8",
+                "startup": null,
+                "recv": "40",
+                "tot": null,
+                "crush": null,
+                "block": "-1",
+                "hit": "+8",
+                "ch": "+8",
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-1,2,2",
+                "name": "Back Fist Combo",
+                "input": ",2",
+                "parent": "Kazuya-1,2",
+                "target": ",h",
+                "damage": ",12",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+4",
+                "ch": "+4",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Combo can be delayed 12F from 1st hit\n* \n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-1,2,2~3",
+                "name": "Twin Fang Shattered Spine",
+                "input": ",2~3",
+                "parent": "Kazuya-1,2",
+                "target": ",m",
+                "damage": ",23",
+                "startup": "i23",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+6",
+                "ch": "+6",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-1+2+3+4",
+                "name": "Ki Charge",
+                "input": "1+2+3+4",
+                "parent": null,
+                "target": "sp",
+                "damage": "-",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Shift to charging\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-1,2,4",
+                "name": "Twin Fang Stature Smash",
+                "input": ",4",
+                "parent": "Kazuya-1,2",
+                "target": ",l",
+                "damage": ",18",
+                "startup": "i23",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14c",
+                "hit": "-3",
+                "ch": "+0c",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd CH\n* Can be delayed 7F\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-1,2,4,3",
+                "name": "Twin Fang Double Kick",
+                "input": ",3",
+                "parent": "Kazuya-1,2,4",
+                "target": ",m",
+                "damage": ",25",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-2",
+                "hit": "+24a(+15)",
+                "ch": "+69a",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 3rd CH\n* Can be delayed\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-2",
+                "name": "Right Jab",
+                "input": "2",
+                "parent": null,
+                "target": "h",
+                "damage": "12",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-3",
+                "hit": "+8",
+                "ch": "+8",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-2,2",
+                "name": "Double Back Fist",
+                "input": ",2",
+                "parent": "Kazuya-2",
+                "target": ",m",
+                "damage": ",24",
+                "startup": "24-25",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "+7",
+                "ch": "+50a",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st CH\n\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-3",
+                "name": "Face Kick",
+                "input": "3",
+                "parent": null,
+                "target": "h",
+                "damage": "12",
+                "startup": "i14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "+4",
+                "ch": "+4",
+                "notes": "Alternate input: 3+4",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-3,1",
+                "name": "Face Kick to Jab",
+                "input": ",1",
+                "parent": "Kazuya-3",
+                "target": ",h",
+                "damage": ",10",
+                "startup": "i19",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-1",
+                "hit": "+7",
+                "ch": "+7",
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-3,1,4",
+                "name": "Agony Spear",
+                "input": ",4",
+                "parent": "Kazuya-3,1",
+                "target": ",m",
+                "damage": ",17",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-6",
+                "hit": "+8",
+                "ch": "+40a(+32)",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd CH\n* Can be delayed 14F\n* Combo can be delayed 6F from CH\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-3,1,DF",
+                "name": "Face Kick to Jab &gt; Wind God Step",
+                "input": ",DF",
+                "parent": "Kazuya-3,1",
+                "target": ",sp",
+                "damage": ",0",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+2",
+                "hit": "+10",
+                "ch": "+10",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-4",
+                "name": "Roundhouse",
+                "input": "4",
+                "parent": null,
+                "target": "h",
+                "damage": "18",
+                "startup": "i12",
+                "recv": "28",
+                "tot": "40",
+                "crush": null,
+                "block": "-9",
+                "hit": "+2",
+                "ch": "+27a",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-4~3",
+                "name": "Demon Scissors",
+                "input": "4~3",
+                "parent": null,
+                "target": "m,m",
+                "damage": "18,17",
+                "startup": "i31",
+                "recv": null,
+                "tot": null,
+                "crush": "js10~",
+                "block": "-10",
+                "hit": "-1g",
+                "ch": "-1g",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Alternate input: uf+4~3\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow floor-break&quot;\n&gt;Floor Break&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+1",
+                "name": "Sokushitsu Goda (1)",
+                "input": "b+1",
+                "parent": null,
+                "target": "h",
+                "damage": "10",
+                "startup": "i11",
+                "recv": "29",
+                "tot": "40",
+                "crush": null,
+                "block": "-10",
+                "hit": "+1",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+1+2",
+                "name": "Kumo Kiri",
+                "input": "b+1+2",
+                "parent": null,
+                "target": "m",
+                "damage": "21",
+                "startup": "i22",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+5",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* Chip damage when guarded&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+1,2",
+                "name": "Sokushitsu Goda",
+                "input": ",2",
+                "parent": "Kazuya-b+1",
+                "target": ",m",
+                "damage": ",20",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed 14F\n* Combo can be delayed 10F from hit\n* Wallsplat\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+1+4",
+                "name": "Lightning Screw Uppercut",
+                "input": "b+1+4",
+                "parent": null,
+                "target": "ub(m)",
+                "damage": "60",
+                "startup": "i63",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "LNC",
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+2",
+                "name": "Rampaging Demon (1)",
+                "input": "b+2",
+                "parent": null,
+                "target": "m",
+                "damage": "12",
+                "startup": "i14",
+                "recv": "28",
+                "tot": "42",
+                "crush": null,
+                "block": "-8",
+                "hit": "+4",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+2,2",
+                "name": "Danzui Raizanba (2)",
+                "input": ",2",
+                "parent": "Kazuya-b+2",
+                "target": ",m",
+                "damage": ",14",
+                "startup": "i25",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-10",
+                "hit": "+1",
+                "ch": "+1",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+2,2,1+2",
+                "name": "Danzui Raizanba",
+                "input": ",1+2",
+                "parent": "Kazuya-b+2,2",
+                "target": ",h",
+                "damage": ",20",
+                "startup": "i28-32",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+2,4",
+                "name": "Rampaging Demon (2)",
+                "input": ",4",
+                "parent": "Kazuya-b+2",
+                "target": ",h",
+                "damage": ",12",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-3",
+                "hit": "+8",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed 10F\n* Combo can be delayed 5F from hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+2,4,1",
+                "name": "Rampaging Demon",
+                "input": ",1",
+                "parent": "Kazuya-b+2,4",
+                "target": ",m",
+                "damage": ",22",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "Combo from 2nd CH",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+3",
+                "name": "Demon&#039;s Wrath (1)",
+                "input": "b+3",
+                "parent": null,
+                "target": "h",
+                "damage": "15",
+                "startup": "i18",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "+3",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+3,1",
+                "name": "Demon&#039;s Wrath (2)",
+                "input": ",1",
+                "parent": "Kazuya-b+3",
+                "target": ",h",
+                "damage": ",10",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+0",
+                "hit": "+6",
+                "ch": null,
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+3,1,4",
+                "name": "Demon&#039;s Wrath (3)",
+                "input": ",4",
+                "parent": "Kazuya-b+3,1",
+                "target": ",l",
+                "damage": ",10",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-10",
+                "hit": "+7",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+3,1,4,1",
+                "name": "Demon&#039;s Wrath",
+                "input": ",1",
+                "parent": "Kazuya-b+3,1,4",
+                "target": ",m",
+                "damage": ",15",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+3,1,4,3",
+                "name": "Reign of Terror",
+                "input": ",3",
+                "parent": "Kazuya-b+3,1,4",
+                "target": ",l",
+                "damage": ",12",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "+1",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-b+4",
+                "name": "Flash Tornado",
+                "input": "b+4",
+                "parent": null,
+                "target": "h",
+                "damage": "20",
+                "startup": "i17",
+                "recv": "29",
+                "tot": "46",
+                "crush": null,
+                "block": "-5",
+                "hit": "+16Sp",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-(back to wall).b,b,ub",
+                "name": "Wall Jumping Attack",
+                "input": "(back to wall).b,b,ub",
+                "parent": null,
+                "target": "m",
+                "damage": "25",
+                "startup": "i29",
+                "recv": null,
+                "tot": null,
+                "crush": "is8~13",
+                "block": "-1",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Air Status 5F\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-BT.1_2",
+                "name": "Spin Knuckle Jab",
+                "input": "BT.1_2",
+                "parent": null,
+                "target": "h",
+                "damage": "15",
+                "startup": "i8",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "+3",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-BT.3_4",
+                "name": "Spin Kick",
+                "input": "BT.3_4",
+                "parent": null,
+                "target": "h",
+                "damage": "18",
+                "startup": "i10",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-BT.d+1_d+2",
+                "name": "Crouch Spin Knuckle",
+                "input": "BT.d+1_d+2",
+                "parent": null,
+                "target": "sm",
+                "damage": "10",
+                "startup": "i10",
+                "recv": "FC",
+                "tot": null,
+                "crush": null,
+                "block": "-2",
+                "hit": "+9",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-BT.d+3_d+4",
+                "name": "Crouch Spin Kick",
+                "input": "BT.d+3_d+4",
+                "parent": null,
+                "target": "l",
+                "damage": "12",
+                "startup": "i10",
+                "recv": "FC",
+                "tot": null,
+                "crush": null,
+                "block": "-11",
+                "hit": "+3",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-BT.uf+3_uf+4",
+                "name": "Reverse Jump Kick",
+                "input": "BT.uf+3_uf+4",
+                "parent": null,
+                "target": "m",
+                "damage": "-",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": "js",
+                "block": null,
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-d+1",
+                "name": "Crouch Jab",
+                "input": "d+1",
+                "parent": null,
+                "target": "sm",
+                "damage": "5",
+                "startup": "i10",
+                "recv": "FC",
+                "tot": null,
+                "crush": "cs4~",
+                "block": "-5",
+                "hit": "+6",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Returns to standing when input F\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-d+1+2",
+                "name": "Nejiri Uraken",
+                "input": "d+1+2",
+                "parent": null,
+                "target": "l",
+                "damage": "20",
+                "startup": "i23",
+                "recv": "FC",
+                "tot": null,
+                "crush": "cs6~",
+                "block": "-14",
+                "hit": "+3c",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-d+1+2,B",
+                "name": "Nejiri Uraken to Cancel",
+                "input": ",B",
+                "parent": "Kazuya-d+1+2",
+                "target": ",sp",
+                "damage": ",0",
+                "startup": null,
+                "recv": "FC",
+                "tot": null,
+                "crush": "cs6~",
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-d+2",
+                "name": "Crouch Straight",
+                "input": "d+2",
+                "parent": null,
+                "target": "sm",
+                "damage": "8",
+                "startup": "i11",
+                "recv": "FC",
+                "tot": null,
+                "crush": "cs4~",
+                "block": "-4",
+                "hit": "+7",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-d+3",
+                "name": "Crouch Spin Kick",
+                "input": "d+3",
+                "parent": null,
+                "target": "l",
+                "damage": "12",
+                "startup": "i16",
+                "recv": "FC",
+                "tot": null,
+                "crush": "cs4~",
+                "block": "-17",
+                "hit": "-3",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-d+4",
+                "name": "Crouch Chin Kick",
+                "input": "d+4",
+                "parent": null,
+                "target": "l",
+                "damage": "7",
+                "startup": "i12",
+                "recv": "FC",
+                "tot": null,
+                "crush": "cs4~",
+                "block": "-13",
+                "hit": "-2",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-db+1",
+                "name": "Goutsuiken (1)",
+                "input": "db+1",
+                "parent": null,
+                "target": "m",
+                "damage": "7",
+                "startup": "i13",
+                "recv": null,
+                "tot": null,
+                "crush": "cs",
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-db+1,2",
+                "name": "Goutsuiken",
+                "input": ",2",
+                "parent": "Kazuya-db+1",
+                "target": ",mm",
+                "damage": ",8,15",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-db+2",
+                "name": "Lion Slayer",
+                "input": "db+2",
+                "parent": null,
+                "target": "m",
+                "damage": "23",
+                "startup": "i20",
+                "recv": "FC",
+                "tot": null,
+                "crush": null,
+                "block": "-9c",
+                "hit": "+?c",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-db+3",
+                "name": "Sliding Low Kick",
+                "input": "db+3",
+                "parent": null,
+                "target": "l",
+                "damage": "14",
+                "startup": "i19~20",
+                "recv": "FC",
+                "tot": null,
+                "crush": "cs6~",
+                "block": "-12",
+                "hit": "-1",
+                "ch": "+7c",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-db+4",
+                "name": "Stature Smash",
+                "input": "db+4",
+                "parent": null,
+                "target": "l",
+                "damage": "18",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+4",
+                "ch": "+17g",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+1",
+                "name": "Entrails Smash",
+                "input": "df+1",
+                "parent": null,
+                "target": "m",
+                "damage": "11",
+                "startup": "i15~16",
+                "recv": "26",
+                "tot": "41",
+                "crush": null,
+                "block": "-7",
+                "hit": "+9",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+1,2",
+                "name": "Slaughter Hook",
+                "input": ",2",
+                "parent": "Kazuya-df+1",
+                "target": ",h",
+                "damage": ",20",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+1,4",
+                "name": "Slaughter High Kick",
+                "input": ",4",
+                "parent": "Kazuya-df+1",
+                "target": ",h",
+                "damage": ",20",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-3",
+                "hit": "+18Sp",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+1,df+2",
+                "name": "Slaughter Uppercut",
+                "input": ",df+2",
+                "parent": "Kazuya-df+1",
+                "target": ",m",
+                "damage": ",22",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "+?c",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+2",
+                "name": "Abolishing Fist",
+                "input": "df+2",
+                "parent": null,
+                "target": "m",
+                "damage": "22",
+                "startup": "i14",
+                "recv": "32",
+                "tot": "46",
+                "crush": null,
+                "block": "-12",
+                "hit": "+5",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* Crumple stun +13F after CH&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+3",
+                "name": "Impaling Knee",
+                "input": "df+3",
+                "parent": null,
+                "target": "m",
+                "damage": "13",
+                "startup": "i18",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-7",
+                "hit": "+9",
+                "ch": "+9",
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-teal tip&quot;\n&gt;Knee&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+3,2",
+                "name": "Impaling Knee Twin Thrust (2)",
+                "input": ",2",
+                "parent": "Kazuya-df+3",
+                "target": ",m",
+                "damage": ",15",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-11",
+                "hit": "+5",
+                "ch": "+5",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed 10F\n* Combo can be delayed 10F from hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+3,2,1",
+                "name": "Impaling Knee Twin Thrust",
+                "input": ",1",
+                "parent": "Kazuya-df+3,2",
+                "target": ",m",
+                "damage": ",21",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-18",
+                "hit": "KND",
+                "ch": "+24",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Wall Splat\n* Combo from 2nd CH\n* Can be delayed 16F\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+3,2,1*",
+                "name": "Impaling Knee Twin Skewer",
+                "input": ",1*",
+                "parent": "Kazuya-df+3,2",
+                "target": ",m",
+                "damage": ",25",
+                "startup": "i46",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+11(+18w)",
+                "hit": "+10(+1)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Wallsplat\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+3+4",
+                "name": "Kyogeki Goutsuiken (1)",
+                "input": "df+3+4",
+                "parent": null,
+                "target": "mh",
+                "damage": "7,9",
+                "startup": "i18",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+3+4,1",
+                "name": "Kyogeki Goutsuiken (3)",
+                "input": ",1",
+                "parent": "Kazuya-df+3+4",
+                "target": ",m",
+                "damage": ",15",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+3+4,1,2",
+                "name": "Kyogeki Goutsuiken",
+                "input": ",2",
+                "parent": "Kazuya-df+3+4,1",
+                "target": ",sm,sm",
+                "damage": ",14,25",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+4",
+                "name": "Tsunami Kick (1)",
+                "input": "df+4",
+                "parent": null,
+                "target": "m",
+                "damage": "10",
+                "startup": "i13~14",
+                "recv": "28",
+                "tot": "41",
+                "crush": null,
+                "block": "-9",
+                "hit": "+2",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-df+4,4",
+                "name": "Tsunami Kick",
+                "input": ",4",
+                "parent": "Kazuya-df+4",
+                "target": ",m",
+                "damage": ",16",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-15",
+                "hit": "-4c",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed 11F\n* Combo can be delayed 11F from hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.1,1,2,F",
+                "name": "Devil Break",
+                "input": "DVK.1,1,2,F",
+                "parent": null,
+                "target": "h,h,m,th",
+                "damage": "5,6,12,8",
+                "startup": "i10",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "+5",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Partially uses remaining Heat time\n* Only on hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.1+4",
+                "name": "Roar of the Devil",
+                "input": "DVK.1+4",
+                "parent": null,
+                "target": "m",
+                "damage": "27",
+                "startup": "i21-31",
+                "recv": null,
+                "tot": null,
+                "crush": "pc",
+                "block": "-9",
+                "hit": "+3 KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Partially uses remaining Heat time\n* absorb an attack to power up\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.3+4",
+                "name": "Devil Blaster",
+                "input": "DVK.3+4",
+                "parent": null,
+                "target": "ub(m)",
+                "damage": "30",
+                "startup": "i64",
+                "recv": null,
+                "tot": null,
+                "crush": "js25~",
+                "block": null,
+                "hit": "-16(-77)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Partially uses remaining Heat time\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.db+3+4",
+                "name": "Devil Impact",
+                "input": "DVK.db+3+4",
+                "parent": null,
+                "target": "l",
+                "damage": "0",
+                "startup": "i24",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-19",
+                "hit": "+2",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Partially uses remaining Heat time\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.db+3+4~df",
+                "name": "Devil Impact to Wind God Step",
+                "input": ",DF",
+                "parent": "Kazuya-DVK.db+3+4",
+                "target": ",sp",
+                "damage": ",0",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-19",
+                "hit": "+11",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Partially uses remaining Heat time\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.f,F+2",
+                "name": "Chaos Inferno",
+                "input": "DVK.f,F+2",
+                "parent": null,
+                "target": "m,th",
+                "damage": "20,20",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "+0",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Partially uses remaining Heat time\n* Only on hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.f,n,d,df+1",
+                "name": "Damnation",
+                "input": "DVK.f,n,d,df+1",
+                "parent": null,
+                "target": "m,th",
+                "damage": "23,15",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "Th",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Partially uses remaining Heat time\n* On hit, does not shift to throw with n\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.f,n,d,df+3",
+                "name": "Tempest Blaster",
+                "input": "DVK.f,n,d,df+3",
+                "parent": null,
+                "target": "h,th",
+                "damage": "30,15",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": "js",
+                "block": null,
+                "hit": "Th",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.f,n,d,df+4,1,1",
+                "name": "Abyss Damnation",
+                "input": "DVK.f,n,d,df+4,1,1",
+                "parent": null,
+                "target": "l,m,m,th",
+                "damage": "15,23,16,15",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "Th",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Partially uses remaining Heat time\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.f,n,d,df+4,1,1,B",
+                "name": "Spinning Demon to Left Hook &gt; Thunder God Fist",
+                "input": ",B",
+                "parent": "Kazuya-DVK.f,n,d,df+4,1,1",
+                "target": ",sp",
+                "damage": ",0",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-17",
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.OTG.db+1+2",
+                "name": "Grand Inferno",
+                "input": "DVK.OTG.db+1+2",
+                "parent": null,
+                "target": "l",
+                "damage": "20",
+                "startup": "i24-29",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "+13(+1)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Partially uses remaining Heat time\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.SS.2",
+                "name": "Devil Twister",
+                "input": "DVK.SS.2",
+                "parent": null,
+                "target": "m",
+                "damage": "25",
+                "startup": "i17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-15",
+                "hit": "+76",
+                "ch": "+76",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Partially uses remaining Heat time\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.ub+1+2",
+                "name": "Inferno",
+                "input": "DVK.ub+1+2",
+                "parent": null,
+                "target": "ub(h)",
+                "damage": "40",
+                "startup": "i41",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "+14(+44) KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Partially uses remaining Heat time\n* Jack-8 or Alisa can recovery 20 by input 1+2\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-DVK.uf+1+2",
+                "name": "Air Inferno",
+                "input": "DVK.uf+1+2",
+                "parent": null,
+                "target": "ub(h)",
+                "damage": "26",
+                "startup": "i22",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "Alternate input: DVK.u+1+2",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f+1+2",
+                "name": "Glorious Demon God Fist",
+                "input": "f+1+2",
+                "parent": null,
+                "target": "m",
+                "damage": "20",
+                "startup": "i25",
+                "recv": null,
+                "tot": null,
+                "crush": "ps",
+                "block": "-9",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Parries high and mid punches\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f+2",
+                "name": "Soul Thrust",
+                "input": "f+2",
+                "parent": null,
+                "target": "m",
+                "damage": "23",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": "ps8~",
+                "block": "-12",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* absorb an attack to power up\n*  - Add chip damage when guarded\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f+3",
+                "name": "Oni Front Kick",
+                "input": "f+3",
+                "parent": null,
+                "target": "m",
+                "damage": "22",
+                "startup": "i17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "+5",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f+4",
+                "name": "Right Splits Kick",
+                "input": "f+4",
+                "parent": null,
+                "target": "m",
+                "damage": "20",
+                "startup": "i19~20",
+                "recv": "23",
+                "tot": "42",
+                "crush": null,
+                "block": "+4c",
+                "hit": "+7c",
+                "ch": "+31",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-FC.1",
+                "name": "Crouch Jab",
+                "input": "FC.1",
+                "parent": null,
+                "target": "sm",
+                "damage": "5",
+                "startup": "i10",
+                "recv": "FC",
+                "tot": null,
+                "crush": "cs",
+                "block": "-5",
+                "hit": "+6",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Returns to standing when input F\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-FC.2",
+                "name": "Crouch Straight",
+                "input": "FC.2",
+                "parent": null,
+                "target": "sm",
+                "damage": "8",
+                "startup": "i11",
+                "recv": "FC",
+                "tot": null,
+                "crush": "cs",
+                "block": "-4",
+                "hit": "+7",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-FC.3",
+                "name": "Crouch Spin Kick",
+                "input": "FC.3",
+                "parent": null,
+                "target": "l",
+                "damage": "12",
+                "startup": "i16",
+                "recv": "FC",
+                "tot": null,
+                "crush": "cs",
+                "block": "-17",
+                "hit": "-3",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-FC.4",
+                "name": "Crouch Chin Kick",
+                "input": "FC.4",
+                "parent": null,
+                "target": "l",
+                "damage": "10",
+                "startup": "i12",
+                "recv": "FC",
+                "tot": null,
+                "crush": "cs",
+                "block": "-15",
+                "hit": "-4",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-FC.df+3+4",
+                "name": "Tombstone Crusher",
+                "input": "FC.df+3+4",
+                "parent": null,
+                "target": "m",
+                "damage": "24",
+                "startup": "i23",
+                "recv": "FC",
+                "tot": null,
+                "crush": "cs,js13~",
+                "block": "-11c",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,(even numbers frames).n",
+                "name": "Mist Step (Left Side)",
+                "input": "f,(even numbers frames).n",
+                "parent": null,
+                "target": "sp",
+                "damage": null,
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,F+2",
+                "name": "Devil Fist",
+                "input": "f,F+2",
+                "parent": null,
+                "target": "m",
+                "damage": "20(,15)",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "Th",
+                "ch": "Th",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* Damage () is damage bonus when throw\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,F+3",
+                "name": "Left Splits Kick",
+                "input": "f,F+3",
+                "parent": null,
+                "target": "m",
+                "damage": "25",
+                "startup": "i20",
+                "recv": "30",
+                "tot": "50",
+                "crush": null,
+                "block": "-3c",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,F+4",
+                "name": "Devil&#039;s Steel Petal",
+                "input": "f,F+4",
+                "parent": null,
+                "target": "m",
+                "damage": "22",
+                "startup": "i17~18",
+                "recv": "30",
+                "tot": "47",
+                "crush": null,
+                "block": "-9",
+                "hit": "+5",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,f,F+3",
+                "name": "Leaping Side kick",
+                "input": "f,f,F+3",
+                "parent": null,
+                "target": "m",
+                "damage": "30",
+                "startup": "i22~25",
+                "recv": null,
+                "tot": null,
+                "crush": "js3~",
+                "block": "+9",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "Chip damage when guarded",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,n,d,DF",
+                "name": "Wind God Step",
+                "input": "f,n,d,DF",
+                "parent": null,
+                "target": "sp",
+                "damage": null,
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Cannot be buffered\n* Cost 3F\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,n,d,df${justFrame}2",
+                "name": "Electric Wind God Fist",
+                "input": "f,n,d,df#2",
+                "parent": null,
+                "target": "h",
+                "damage": "23",
+                "startup": "i11",
+                "recv": "25",
+                "tot": "36",
+                "crush": null,
+                "block": "+5",
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Total 36F on block or hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,n,d,df+1",
+                "name": "Thunder God Fist",
+                "input": "f,n,d,df+1",
+                "parent": null,
+                "target": "m",
+                "damage": "23",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-16",
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Meaty 1F in actuality\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,n,d,df+1+2",
+                "name": "Patricide Fist",
+                "input": "f,n,d,df+1+2",
+                "parent": null,
+                "target": "m",
+                "damage": "25",
+                "startup": "i24",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,n,d,df+2",
+                "name": "Wind God Fist",
+                "input": "f,n,d,df+2",
+                "parent": null,
+                "target": "h",
+                "damage": "20",
+                "startup": "i11",
+                "recv": "29",
+                "tot": "40",
+                "crush": null,
+                "block": "-10",
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": "Becomes Electric Wind God Fist during Heat (partially uses remaining Heat Time)",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,n,d,df+3",
+                "name": "Hell Lancer",
+                "input": "f,n,d,df+3",
+                "parent": null,
+                "target": "h",
+                "damage": "30",
+                "startup": "i20~29",
+                "recv": null,
+                "tot": null,
+                "crush": "js9~",
+                "block": "-9",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,n,d,df+4",
+                "name": "Spinning Demon (1)",
+                "input": "f,n,d,df+4",
+                "parent": null,
+                "target": "l",
+                "damage": "15",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-23",
+                "hit": "-3c",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Disable 2nd from 1st block\n* 2nd input force to down\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,n,d,df+4,1",
+                "name": "Spinning Demon &gt; Left Hook",
+                "input": ",1",
+                "parent": "Kazuya-f,n,d,df+4",
+                "target": ",m",
+                "damage": ",23",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-16",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,n,d,df+4,4",
+                "name": "Illusive Demon",
+                "input": ",4",
+                "parent": "Kazuya-f,n,d,df+4",
+                "target": ",h",
+                "damage": ",25",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": "js",
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,n,d,df+4,4",
+                "name": "Heat Burst",
+                "input": "2+3",
+                "parent": null,
+                "target": "m",
+                "damage": "15",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Burst&lt;/div&gt;\n* Alternate input: R1\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,n,DF",
+                "name": "Mist Step to Wind God Step",
+                "input": "f,n,DF",
+                "parent": null,
+                "target": "sp",
+                "damage": null,
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Cannot be buffered\n* Connect to Wind God Step\n* Cost: 2F\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-f,(odd numbers frames).n",
+                "name": "Mist Step (Left Side)",
+                "input": "f,(odd numbers frames).n",
+                "parent": null,
+                "target": "sp",
+                "damage": null,
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-H.2+3",
+                "name": "Omega Crash",
+                "input": "H.2+3",
+                "parent": null,
+                "target": "l,m,th",
+                "damage": "12,20,34",
+                "startup": "i18",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "Th",
+                "ch": "Th",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Smash&lt;/div&gt;\n* Alternate input: R1\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-H.b+1+2,F",
+                "name": "Kumo Kiri &gt; Heat Dash",
+                "input": "H.b+1+2,F",
+                "parent": null,
+                "target": "m",
+                "damage": "21",
+                "startup": "i22",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Shift to Devil Form on Heat Activation\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-H.b+4,F",
+                "name": "Flash Tornado &gt; Heat Dash",
+                "input": "H.b+4,F",
+                "parent": null,
+                "target": "h",
+                "damage": "20",
+                "startup": "i17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* Shift to Devil Form on Heat Activation\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-H.db+1,2,F",
+                "name": "Goutsuiken &gt; Heat Dash",
+                "input": "H.db+1,2,F",
+                "parent": null,
+                "target": "m,mm",
+                "damage": "7,8,15",
+                "startup": "i13",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Shift to Devil Form on Heat Activation\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-H.df+1,2,F",
+                "name": "Slaughter Hook &gt; Heat Dash",
+                "input": "H.df+1,2,F",
+                "parent": null,
+                "target": "m,h",
+                "damage": "11,20",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Shift to Devil Form on Heat Activation\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-H.f,F+2,F",
+                "name": "Devil Fist &gt; Heat Dash",
+                "input": "H.f,F+2,F",
+                "parent": null,
+                "target": "m",
+                "damage": "20",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Shift to Devil Form on Heat Activation\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-OTG.d+3+4",
+                "name": "Oni Stomp",
+                "input": "OTG.d+3+4",
+                "parent": null,
+                "target": "l",
+                "damage": "25",
+                "startup": "i23",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "-1",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-R.df+1+2",
+                "name": "Demonic Catastrophe",
+                "input": "R.df+1+2",
+                "parent": null,
+                "target": "m,th",
+                "damage": "10,45",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Erases opponent&#039;s recoverable health on hit\n* Alternate input: R2\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-SS.1+2",
+                "name": "Elkeid",
+                "input": "SS.1+2",
+                "parent": null,
+                "target": "h",
+                "damage": "25",
+                "startup": "i19",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "KND",
+                "ch": "KND*",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-SS.3",
+                "name": "Shattered Spine",
+                "input": "SS.3",
+                "parent": null,
+                "target": "m",
+                "damage": "23",
+                "startup": "i23",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-7",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-u+3",
+                "name": "Searing Edge",
+                "input": "u+3",
+                "parent": null,
+                "target": "m",
+                "damage": "25",
+                "startup": "i19",
+                "recv": null,
+                "tot": null,
+                "crush": "js9~",
+                "block": "-9",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "Alternate input: uf+3",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-ub+1",
+                "name": "Jumping Knuckle",
+                "input": "ub+1",
+                "parent": null,
+                "target": "m",
+                "damage": "12",
+                "startup": "i18",
+                "recv": null,
+                "tot": null,
+                "crush": "js9~",
+                "block": "-12",
+                "hit": "-1",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Alternate input:\n** u+1\n** uf+1&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-ub+1+2",
+                "name": "Inferno",
+                "input": "ub+1+2",
+                "parent": null,
+                "target": "h",
+                "damage": "32",
+                "startup": "i41",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "KND",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Jack-8 or Alisa can recovery 20 by input 1+2\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-ub+2",
+                "name": "Hook",
+                "input": "ub+2",
+                "parent": null,
+                "target": "h",
+                "damage": "17",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+9",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Alternate input:\n** u+2\n** uf+2&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-ub+3",
+                "name": "Jumping Side Kick",
+                "input": "ub+3",
+                "parent": null,
+                "target": "m",
+                "damage": "25",
+                "startup": "i21",
+                "recv": null,
+                "tot": null,
+                "crush": "js9~",
+                "block": "-17",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-ub+4",
+                "name": "Rising Toe Kick",
+                "input": "ub,4",
+                "parent": null,
+                "target": "m",
+                "damage": "11",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": "js9~",
+                "block": "-19",
+                "hit": "-8",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-uf+4",
+                "name": "Roundhouse &gt; Triple Spin Kick (1)",
+                "input": "uf+4",
+                "parent": null,
+                "target": "m",
+                "damage": "16",
+                "startup": "i25",
+                "recv": null,
+                "tot": null,
+                "crush": "js9~",
+                "block": "-12",
+                "hit": "-1",
+                "ch": null,
+                "notes": "Alternate input: u+4",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-uf+4,4",
+                "name": "Roundhouse &gt; Triple Spin Kick (2)",
+                "input": ",4",
+                "parent": "Kazuya-uf+4",
+                "target": ",l",
+                "damage": ",12",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-23",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "Combo from 1st CH",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-uf+4,4,4",
+                "name": "Roundhouse &gt; Triple Spin Kick (3)",
+                "input": ",4",
+                "parent": "Kazuya-uf+4,4",
+                "target": ",l",
+                "damage": ",10",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-23",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-uf+4,4,4,4",
+                "name": "Roundhouse &gt; Triple Spin Kick",
+                "input": ",4",
+                "parent": "Kazuya-uf+4,4,4",
+                "target": ",m",
+                "damage": ",20",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-17",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-uf,n,4",
+                "name": "Delayed Rising Toe Kick",
+                "input": "uf,n,4",
+                "parent": null,
+                "target": "m",
+                "damage": "20",
+                "startup": "i23",
+                "recv": null,
+                "tot": null,
+                "crush": "js9~",
+                "block": "-11",
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-ws1",
+                "name": "Uppercut",
+                "input": "ws1",
+                "parent": null,
+                "target": "m",
+                "damage": "10",
+                "startup": "i13",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-5",
+                "hit": "+5",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-ws1+2",
+                "name": "Fujin Uraken",
+                "input": "ws1+2",
+                "parent": null,
+                "target": "m",
+                "damage": "25",
+                "startup": "i13",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+8",
+                "ch": "+24a",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-ws1,2",
+                "name": "Twin Pistons",
+                "input": ",2",
+                "parent": "Kazuya-ws1",
+                "target": ",m",
+                "damage": ",12",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-ws2",
+                "name": "Demon God Fist",
+                "input": "ws2",
+                "parent": null,
+                "target": "m",
+                "damage": "25",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-18",
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-ws3",
+                "name": "Engetsusen",
+                "input": "ws3",
+                "parent": null,
+                "target": "m",
+                "damage": "24",
+                "startup": "i21",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-5",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* Meaty 1F in actuality&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-ws4",
+                "name": "Toe Smash",
+                "input": "ws4",
+                "parent": null,
+                "target": "m",
+                "damage": "13",
+                "startup": "i11~12",
+                "recv": "22",
+                "tot": "33",
+                "crush": null,
+                "block": "-3",
+                "hit": "+8",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Kazuya-ws4,4",
+                "name": "Tsunami Kick",
+                "input": ",4",
+                "parent": "Kazuya-ws4",
+                "target": ",m",
+                "damage": ",16",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-15",
+                "hit": "-4c",
+                "ch": "-4c",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        }
+    ]
+}

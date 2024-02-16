@@ -1,0 +1,1847 @@
+{
+    "cargoquery": [
+        {
+            "title": {
+                "id": "Claudio-1",
+                "name": "Jab",
+                "input": "1",
+                "parent": null,
+                "target": "h",
+                "damage": "5",
+                "startup": "i10",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+1",
+                "hit": "+8",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-1+2",
+                "name": "Crimson Delta Edge (1)",
+                "input": "1+2",
+                "parent": null,
+                "target": "m",
+                "damage": "20",
+                "startup": "i17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "+2",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-1,2",
+                "name": "Scattered Ashes",
+                "input": ",2",
+                "parent": "Claudio-1",
+                "target": ",h",
+                "damage": ",12",
+                "startup": null,
+                "recv": "43",
+                "tot": null,
+                "crush": null,
+                "block": "-1",
+                "hit": "+6",
+                "ch": null,
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-1+2,1+2",
+                "name": "Crimson Delta Edge (2)",
+                "input": ",1+2",
+                "parent": "Claudio-1+2",
+                "target": ",th",
+                "damage": ",10",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "+0",
+                "ch": null,
+                "notes": "Only comes out on hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-1+2,1+2,2",
+                "name": "Crimson Delta Edge to Starburst",
+                "input": ",2",
+                "parent": "Claudio-1+2,1+2",
+                "target": "th,sp",
+                "damage": ",18",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "th",
+                "ch": "th",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Grants STB on hit\n* Only comes out on hit\n* Deals 20 damage with the input b,f+2\n* Foot-side &amp; Face-up &amp; -5F from Not Starburst\n* Head-side &amp; Face-up &amp; +0F during Starburst\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-1+2+3+4",
+                "name": "Ki Charge",
+                "input": "1+2+3+4",
+                "parent": null,
+                "target": "sp",
+                "damage": "-",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-1+3",
+                "name": "Punishment",
+                "input": "1+3",
+                "parent": null,
+                "target": "th(h)",
+                "damage": "35",
+                "startup": "i12~14",
+                "recv": "r25",
+                "tot": "39",
+                "crush": null,
+                "block": "-2",
+                "hit": "+0d",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Break: 1 or 2\n* Opp. Position on break: Reverse Pos.\n* Opp. Position on hit: Foot-sd. Face-up&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-1,3",
+                "name": "Absolve",
+                "input": ",3",
+                "parent": "Claudio-1",
+                "target": ",l",
+                "damage": ",11",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "-1",
+                "ch": null,
+                "notes": "Combo from 1st CH",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-2",
+                "name": "Right Jab",
+                "input": "2",
+                "parent": null,
+                "target": "h",
+                "damage": "10",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-3",
+                "hit": "+3",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-2,1",
+                "name": "Circle of Judgement (2)",
+                "input": ",1",
+                "parent": "Claudio-2",
+                "target": ",m",
+                "damage": ",13",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-6",
+                "hit": "+5",
+                "ch": null,
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-2,1,2",
+                "name": "Circle of Judgement",
+                "input": ",2",
+                "parent": "Claudio-2,1",
+                "target": ",m",
+                "damage": ",25",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* Combo from 2nd CH\n* Grants STB on hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-2+3",
+                "name": "Heat Burst",
+                "input": "2+3",
+                "parent": null,
+                "target": "m",
+                "damage": "15",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+1",
+                "hit": "+2",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Burst&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-2+4",
+                "name": "Roche Limit",
+                "input": "2+4",
+                "parent": null,
+                "target": "th(h)",
+                "damage": "35",
+                "startup": "i12~14",
+                "recv": "r25",
+                "tot": "39",
+                "crush": null,
+                "block": "-3",
+                "hit": "+0d",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Break: 1 or 2\n* Opp. Position on break: Reverse Pos.\n* Opp. Position on hit: Reverse Pos. Head-sd. Face-up&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-3",
+                "name": "Requiescat (1)",
+                "input": "3",
+                "parent": null,
+                "target": "m",
+                "damage": "14",
+                "startup": "i14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-10",
+                "hit": "+1",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-3,2",
+                "name": "Requiescat",
+                "input": ",2",
+                "parent": "Claudio-3",
+                "target": ",h",
+                "damage": ",22",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-6",
+                "hit": "+15",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* Grants STB on hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-3+4",
+                "name": "Rolling Strike",
+                "input": "3+4",
+                "parent": null,
+                "target": "m",
+                "damage": "20",
+                "startup": "i24~26",
+                "recv": "r? FC",
+                "tot": null,
+                "crush": "js13~",
+                "block": "-10",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-4",
+                "name": "High Kick",
+                "input": "4",
+                "parent": null,
+                "target": "h",
+                "damage": "13",
+                "startup": "i12",
+                "recv": "r27",
+                "tot": "39",
+                "crush": null,
+                "block": "-8",
+                "hit": "+3",
+                "ch": "LNC",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-4,3",
+                "name": "Battle Scars",
+                "input": ",3",
+                "parent": "Claudio-4",
+                "target": ",h",
+                "damage": ",14",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": "js",
+                "block": "+0",
+                "hit": "+15Sp",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* Combo from 1st hit\n* Can be delayed 11F\n* Combo can be delayed 5F from hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-b+1",
+                "name": "Vanishing Storm",
+                "input": "b+1",
+                "parent": null,
+                "target": "m",
+                "damage": "25",
+                "startup": "i18~19",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-5",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-b+1+2",
+                "name": "Judgment Claw",
+                "input": "b+1+2",
+                "parent": null,
+                "target": "m",
+                "damage": "25",
+                "startup": "i22",
+                "recv": null,
+                "tot": null,
+                "crush": "pc8~",
+                "block": "-13",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* absorb an attack to power up\n*  - Add chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-b+2",
+                "name": "Spinning Skies",
+                "input": "b+2",
+                "parent": null,
+                "target": "h",
+                "damage": "25",
+                "startup": "i14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-b+2+3",
+                "name": "Big Bang",
+                "input": "b+2+3",
+                "parent": null,
+                "target": "ub(m)",
+                "damage": "60",
+                "startup": "i72",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "KND",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-b+3",
+                "name": "Burning Core",
+                "input": "b+3",
+                "parent": null,
+                "target": "m",
+                "damage": "14",
+                "startup": "i13",
+                "recv": "23",
+                "tot": "36",
+                "crush": null,
+                "block": "-4",
+                "hit": "+7",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-b+3,3",
+                "name": "Crescent Heel",
+                "input": ",3",
+                "parent": "Claudio-b+3",
+                "target": ",m",
+                "damage": ",21",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+7c",
+                "ch": "LNC",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st CH\n* Can be delayed\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-b+3+4",
+                "name": "Eternal Moon",
+                "input": "b+3+4",
+                "parent": null,
+                "target": "m",
+                "damage": "24",
+                "startup": "i29",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-b+4",
+                "name": "Shining Ray (1)",
+                "input": "b+4",
+                "parent": null,
+                "target": "m",
+                "damage": "10",
+                "startup": "i17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "-3",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-b+4,1",
+                "name": "Shining Wind",
+                "input": ",1",
+                "parent": "Claudio-b+4",
+                "target": ",h",
+                "damage": ",18",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-11",
+                "hit": "+13Sp",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Grants STB on hit\n* Combo from 1st hit\n* Can be delayed 12F\n* Combo can be delayed 10F from CH\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-b+4,2",
+                "name": "Shining Ray",
+                "input": ",2",
+                "parent": "Claudio-b+4",
+                "target": ",m",
+                "damage": ",20",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-11",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* Grants STB on hit\n* Combo from 1st hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-b+4,3",
+                "name": "Axial Ray",
+                "input": ",3",
+                "parent": "Claudio-b+4",
+                "target": ",h",
+                "damage": ",14",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "-4",
+                "ch": "+1",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* Combo from 1st hit\n* Can be delayed 12F\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-b+4,3,2",
+                "name": "Avaritia",
+                "input": ",2",
+                "parent": "Claudio-b+4,3",
+                "target": ",m",
+                "damage": ",20",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": "js",
+                "block": "-13",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "Combo from 2nd CH",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-b+4,4",
+                "name": "Lunar Ray",
+                "input": ",4",
+                "parent": "Claudio-b+4",
+                "target": ",m",
+                "damage": ",16",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "LNC",
+                "ch": null,
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-Back throw",
+                "name": "Sudden Shadow",
+                "input": "Back throw",
+                "parent": null,
+                "target": "th(h)",
+                "damage": "50",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "+0d",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Break: none\n* Opp. Position on break: -\n* Opp. Position on hit: Foot-sd. Face-down&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-(back to wall).b,b,ub",
+                "name": "Wall Jumping Attack",
+                "input": "(back to wall).b,b,ub",
+                "parent": null,
+                "target": "m",
+                "damage": "21",
+                "startup": "i36",
+                "recv": null,
+                "tot": null,
+                "crush": "is8~13",
+                "block": "+0c",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Air Status 5F\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-d+1",
+                "name": "Axion",
+                "input": "d+1",
+                "parent": null,
+                "target": "m",
+                "damage": "14",
+                "startup": "i17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "+2",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-d+1+2",
+                "name": "Superbia",
+                "input": "d+1+2",
+                "parent": null,
+                "target": "m",
+                "damage": "28",
+                "startup": "i13~14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-18",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "Same move as BT.1+2",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-d+2",
+                "name": "Gravity Point",
+                "input": "d+2",
+                "parent": null,
+                "target": "l",
+                "damage": "6",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": "cs6~",
+                "block": "-12",
+                "hit": "-1",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-d+2,2",
+                "name": "Gravity Hole",
+                "input": ",2",
+                "parent": "Claudio-d+2",
+                "target": ",l",
+                "damage": ",8",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "-1",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-d+3",
+                "name": "Crouch Side Kick",
+                "input": "d+3",
+                "parent": null,
+                "target": "l",
+                "damage": "12",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": "cs4~",
+                "block": "-17",
+                "hit": "-3",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-d+4",
+                "name": "Crouch Chin Kick",
+                "input": "d+4",
+                "parent": null,
+                "target": "l",
+                "damage": "7",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": "cs4~",
+                "block": "-13",
+                "hit": "-2",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-db+1",
+                "name": "Crouch Jab",
+                "input": "db+1",
+                "parent": null,
+                "target": "sm",
+                "damage": "5",
+                "startup": "i10",
+                "recv": null,
+                "tot": null,
+                "crush": "cs4~",
+                "block": "-5",
+                "hit": "+6",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Returns to standing when input F\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-db+1+2",
+                "name": "Blue Moon",
+                "input": "db+1+2",
+                "parent": null,
+                "target": "m",
+                "damage": "20",
+                "startup": "i17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-db+2",
+                "name": "Crouch Straight",
+                "input": "db+2",
+                "parent": null,
+                "target": "sm",
+                "damage": "8",
+                "startup": "i11",
+                "recv": null,
+                "tot": null,
+                "crush": "cs4~",
+                "block": "-4",
+                "hit": "+7",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-db+2,1",
+                "name": "Twin Claws",
+                "input": ",1",
+                "parent": "Claudio-db+2",
+                "target": ",m",
+                "damage": ",12",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": "cs",
+                "block": "-13",
+                "hit": "+3",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st CH\n* Same move as FC.2,1\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-db+3",
+                "name": "Acedia",
+                "input": "db+3",
+                "parent": null,
+                "target": "l",
+                "damage": "23",
+                "startup": "i24~25",
+                "recv": null,
+                "tot": null,
+                "crush": "cs6~",
+                "block": "-15",
+                "hit": "+3c",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-db+4",
+                "name": "Lagrange Needle (1)",
+                "input": "db+4",
+                "parent": null,
+                "target": "l",
+                "damage": "7",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "-2",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-db+4,3",
+                "name": "Lagrange Needle",
+                "input": ",3",
+                "parent": "Claudio-db+4",
+                "target": ",h",
+                "damage": ",10",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-11",
+                "hit": "+0",
+                "ch": null,
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-df+1",
+                "name": "Quick Upper",
+                "input": "df+1",
+                "parent": null,
+                "target": "m",
+                "damage": "10",
+                "startup": "i15",
+                "recv": "21",
+                "tot": "36",
+                "crush": null,
+                "block": "-2",
+                "hit": "+9",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-df+1,2",
+                "name": "Sky&#039;s Arc",
+                "input": ",2",
+                "parent": "Claudio-df+1",
+                "target": ",m",
+                "damage": ",15",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-15",
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-df+2",
+                "name": "Chaos Fist",
+                "input": "df+2",
+                "parent": null,
+                "target": "m",
+                "damage": "19",
+                "startup": "i14",
+                "recv": "32",
+                "tot": "46",
+                "crush": null,
+                "block": "-13",
+                "hit": "+5",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-df+3",
+                "name": "Dispel Magic (1)",
+                "input": "df+3",
+                "parent": null,
+                "target": "m",
+                "damage": "12",
+                "startup": "i14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-7",
+                "hit": "+4",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-df+3,1",
+                "name": "Dispel Magic",
+                "input": ",1",
+                "parent": "Claudio-df+3",
+                "target": ",m",
+                "damage": ",18",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Combo from 1st hit\n* Can be delayed 14F\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-df+3,2",
+                "name": "Dispel Force",
+                "input": ",2",
+                "parent": "Claudio-df+3",
+                "target": ",h",
+                "damage": ",10",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-2",
+                "hit": "+4",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed 14F\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-df+4",
+                "name": "Front Kick",
+                "input": "df+4",
+                "parent": null,
+                "target": "m",
+                "damage": "14",
+                "startup": "i13",
+                "recv": "27",
+                "tot": "40",
+                "crush": null,
+                "block": "-8",
+                "hit": "+3",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f+1+2",
+                "name": "Cross Arm Strike",
+                "input": "f+1+2",
+                "parent": null,
+                "target": "m",
+                "damage": "8",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-18",
+                "hit": "-7",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f+1+2,1+2",
+                "name": "Cross Arm Impact",
+                "input": ",1+2",
+                "parent": "Claudio-f+1+2",
+                "target": ",m",
+                "damage": ",16",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f+2",
+                "name": "Trinity of Pain (1)",
+                "input": "f+2",
+                "parent": null,
+                "target": "h",
+                "damage": "9",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+0",
+                "hit": "+6",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f+2,1",
+                "name": "Trinity of Pain (2)",
+                "input": ",1",
+                "parent": "Claudio-f+2",
+                "target": ",m",
+                "damage": ",12",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-10",
+                "hit": "+6c",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f+2,1,1+2",
+                "name": "Trinity of Pain",
+                "input": ",1+2",
+                "parent": "Claudio-f+2,1",
+                "target": ",m",
+                "damage": ",25",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-18",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Can be delayed 14F\n* Combo from 1st or 2nd CH\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f+2,2",
+                "name": "Deadly Sin",
+                "input": ",2",
+                "parent": "Claudio-f+2",
+                "target": "m",
+                "damage": ",20",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-27",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Grants STB on hit\n* Combo from 1st hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f+3",
+                "name": "Sacred Edge",
+                "input": "f+3",
+                "parent": null,
+                "target": "h",
+                "damage": "18",
+                "startup": "i18",
+                "recv": null,
+                "tot": null,
+                "crush": "js9~",
+                "block": "+0",
+                "hit": "+15Sp",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f+3+4",
+                "name": "Above the Storm",
+                "input": "f+3+4",
+                "parent": null,
+                "target": "h",
+                "damage": "18",
+                "startup": "i17",
+                "recv": "36",
+                "tot": "53",
+                "crush": null,
+                "block": "+2",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f+4",
+                "name": "Into the Abyss",
+                "input": "f+4",
+                "parent": null,
+                "target": "m",
+                "damage": "23",
+                "startup": "i22~23",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+4c",
+                "hit": null,
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-FC.df+2",
+                "name": "Dual Guns (1)",
+                "input": "FC.df+2",
+                "parent": null,
+                "target": "m",
+                "damage": "14",
+                "startup": "i14~16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-18",
+                "hit": "-7",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Same move as f,F+2\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-FC.df+2,2",
+                "name": "Dual Guns",
+                "input": ",2",
+                "parent": "Claudio-FC.df+2",
+                "target": ",h",
+                "damage": ",20",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-2c",
+                "hit": null,
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed\n* Same move as f,F+2,2&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f,F+2",
+                "name": "Dual Guns (1)",
+                "input": "f,F+2",
+                "parent": null,
+                "target": "m",
+                "damage": "14",
+                "startup": "i14~16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-18",
+                "hit": "-7",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Same move as FC.df+2\n* Cannot be buffered\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f,F+2,1+2",
+                "name": "Bringer of Justice",
+                "input": ",1+2",
+                "parent": "Claudio-f,F+2",
+                "target": ",m",
+                "damage": ",20",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Grants STB on hit\n* Can be delayed\n* Combo from 1st NH\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f,F+2,2",
+                "name": "Dual Guns",
+                "input": ",2",
+                "parent": "Claudio-f,F+2",
+                "target": ",h",
+                "damage": ",20",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-2c",
+                "hit": null,
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed\n* Same move as FC.df+2,2\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f,F+4",
+                "name": "Invidia",
+                "input": "f,F+4",
+                "parent": null,
+                "target": "m",
+                "damage": "20",
+                "startup": "i15~17",
+                "recv": null,
+                "tot": null,
+                "crush": "js11~",
+                "block": "-1",
+                "hit": "+5",
+                "ch": "+13",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-f,f,F+2",
+                "name": "Ira",
+                "input": "f,f,F+2",
+                "parent": null,
+                "target": "h",
+                "damage": "40",
+                "startup": "i13~16",
+                "recv": "31",
+                "tot": "44",
+                "crush": "js3~",
+                "block": "+7",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* Grants STB on hit\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow wall-crush&quot;\n&gt;Wall Crush +21g at the wall\n&lt;/div&gt;\n\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-H.2,1,2,F",
+                "name": "Circle of Judgement &gt; Heat Dash",
+                "input": "2,1,2",
+                "parent": null,
+                "target": null,
+                "damage": null,
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-H.2+3",
+                "name": "Stella Cadente",
+                "input": "H.2+3",
+                "parent": null,
+                "target": "l,th",
+                "damage": "12,40",
+                "startup": "i18",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "th",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Smash&lt;/div&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-H.3,2,F",
+                "name": "Requiescat &gt; Heat Dash",
+                "input": "H.3,2,F",
+                "parent": null,
+                "target": "m,h",
+                "damage": "14,22",
+                "startup": "i14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+5",
+                "hit": "+34",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-H.b+4,2,F",
+                "name": "Shining Ray &gt; Heat Dash",
+                "input": "H.b+4,2,F",
+                "parent": null,
+                "target": "m,m",
+                "damage": "10,20",
+                "startup": "i17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-H.f,f,F+2,F",
+                "name": "Ira &gt; Heat Dash",
+                "input": "H.f,f,F+2,F",
+                "parent": null,
+                "target": "h",
+                "damage": "40",
+                "startup": "i13",
+                "recv": null,
+                "tot": null,
+                "crush": "js",
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Grants STB on hit\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-Left Throw",
+                "name": "Avalaunche Throw",
+                "input": "Left throw",
+                "parent": null,
+                "target": "th(h)",
+                "damage": "40",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-3",
+                "hit": "-3d",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Break: 1\n* Opp. Position on break: \n* Opp. Position on hit: Right-sd. Face-up&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-R.df+1+2",
+                "name": "La Luce Di Sirio",
+                "input": "R.df+1+2",
+                "parent": null,
+                "target": "m,th",
+                "damage": "10,45",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Rage Art\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-Right Throw",
+                "name": "Prayer into the Void",
+                "input": "Right throw",
+                "parent": null,
+                "target": "th(h)",
+                "damage": "40",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-3",
+                "hit": "+0d",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Break: 2\n* Opp. Position on break: \n* Opp. Position on hit: Foot-sd. Face-up&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-SS.4",
+                "name": "Luxuria",
+                "input": "SS.4",
+                "parent": null,
+                "target": "l",
+                "damage": "20",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+6c",
+                "ch": "KND",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-STB.4,2",
+                "name": "Aurora Pactum",
+                "input": "STB.4,2",
+                "parent": null,
+                "target": "h,sm",
+                "damage": "13,32",
+                "startup": "i28-36",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-17",
+                "hit": "+27(+1)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-STB.b+4,3,2",
+                "name": "Avaritia Burst",
+                "input": "STB.b+4,3,2",
+                "parent": null,
+                "target": "m,h,m",
+                "damage": "10,14,38",
+                "startup": "i17",
+                "recv": null,
+                "tot": null,
+                "crush": "js",
+                "block": "-1",
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd CH\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-STB.d+1,2",
+                "name": "Mystic Ray Burst",
+                "input": "STB.d+1,2",
+                "parent": null,
+                "target": "m,m",
+                "damage": "16,23",
+                "startup": "i28",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+6",
+                "hit": "+28(+13)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-STB.d+2,2",
+                "name": "Gravity Zone",
+                "input": "STB.d+2,2",
+                "parent": null,
+                "target": "l,l",
+                "damage": "7,8",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": "cs",
+                "block": "-13",
+                "hit": "-1",
+                "ch": null,
+                "notes": "Combo from 1st CH",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-STB.db+1+2",
+                "name": "Blue Moon Burst",
+                "input": "STB.db+1+2",
+                "parent": null,
+                "target": "m",
+                "damage": "25",
+                "startup": "i17",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-1",
+                "hit": "Launch",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-STB.f+1+2,1+2",
+                "name": "Cross Arm Impact Burst",
+                "input": "STB.f+1+2,1+2",
+                "parent": null,
+                "target": "m,m",
+                "damage": "8,16",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+64",
+                "ch": "+64",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-STB.f,f,F+1+2",
+                "name": "Anima",
+                "input": "STB.f,f,F+1+2",
+                "parent": null,
+                "target": "h",
+                "damage": "55",
+                "startup": "i13",
+                "recv": null,
+                "tot": null,
+                "crush": "js",
+                "block": "+8",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-STB.ws1,2",
+                "name": "Malefic Draw Burst",
+                "input": "STB.ws1,2",
+                "parent": null,
+                "target": "m,m",
+                "damage": "12,23",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+6",
+                "hit": "KND",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Chip damage when guarded\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-u+2",
+                "name": "Meteor Storm",
+                "input": "u+2",
+                "parent": null,
+                "target": "m",
+                "damage": "21",
+                "startup": "i21",
+                "recv": null,
+                "tot": null,
+                "crush": "js",
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* Grants STB on hit\n* Alternate input: ub+2/uf+2\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-u+3",
+                "name": "Ground Slash Nova",
+                "input": "u+3",
+                "parent": null,
+                "target": "m",
+                "damage": "20",
+                "startup": "i23~25",
+                "recv": null,
+                "tot": null,
+                "crush": "js9~",
+                "block": "+2c",
+                "hit": "+7c",
+                "ch": "LNC",
+                "notes": "Alternate input: ub+3, uf+3",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-uf+1+2",
+                "name": "Gula",
+                "input": "uf+1+2",
+                "parent": null,
+                "target": "th(h)",
+                "damage": "40",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-6",
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Break: 1+2\n* Opp. Position on break:\n* Opp. Position on hit: Reverse Pos. Head-sd. Face-up&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-uf+3+4",
+                "name": "Pollux",
+                "input": "uf+3+4",
+                "parent": null,
+                "target": "mm",
+                "damage": "10,14",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": "js",
+                "block": "-11",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": "JS after Start-up frame",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-uf+4",
+                "name": "Sky Slash Nova",
+                "input": "uf+4",
+                "parent": null,
+                "target": "m",
+                "damage": "13",
+                "startup": "i15",
+                "recv": "38",
+                "tot": "53",
+                "crush": "js9~",
+                "block": "-13",
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": "Alternate input: ub+4, u+4",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-ws1",
+                "name": "Noble Step (1)",
+                "input": "ws1",
+                "parent": null,
+                "target": "m",
+                "damage": "12",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-4",
+                "hit": "+7",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-ws1,1",
+                "name": "Noble Step",
+                "input": ",1",
+                "parent": "Claudio-ws1",
+                "target": ",h",
+                "damage": ",15",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+9",
+                "ch": null,
+                "notes": "Combo from 1st hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-ws1,2",
+                "name": "Malefic Draw",
+                "input": ",2",
+                "parent": "Claudio-ws1",
+                "target": ",m",
+                "damage": ",12",
+                "startup": null,
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": null,
+                "ch": null,
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-ws2",
+                "name": "Sylvia",
+                "input": "ws2",
+                "parent": null,
+                "target": "m",
+                "damage": "20",
+                "startup": "i15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-14",
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": "Grants STB on hit",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-ws3",
+                "name": "Piercing Wind",
+                "input": "ws3",
+                "parent": null,
+                "target": "m",
+                "damage": "20",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-8",
+                "hit": "KND",
+                "ch": "KND",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Claudio-ws4",
+                "name": "Holy Smash",
+                "input": "ws4",
+                "parent": null,
+                "target": "m",
+                "damage": "18",
+                "startup": "i11",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-6",
+                "hit": "+5",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        }
+    ]
+}

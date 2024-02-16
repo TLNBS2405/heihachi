@@ -1,136 +1,106 @@
-import datetime, json, logging, os, discord, sched, time, sys
+#!/usr/bin/env python3
+
+"""The entry point for the bot."""
+
+import argparse
+import logging
+import os
+import sched
 import threading
+import time
+from typing import Any, Callable, Tuple
 
-from src.module import configurator
-from src.module import json_movelist_reader
-from src.module import embed
-from src.module import util
-from src.module import button
+from frame_service import Wavu
+from framedb import FrameDb
+from heihachi.bot import FrameDataBot
+from heihachi.configurator import Configurator
 
-sys.path.insert(0, (os.path.dirname(os.path.dirname(__file__))))
+"How often to update the bot's frame data from the external service and write to file."
+UPDATE_INTERVAL_SEC = 3600
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.WARNING)
-
-base_path = os.path.dirname(__file__)
-CONFIG_PATH = configurator.Configurator(os.path.abspath(os.path.join(base_path, "resources", "config.json")))
-CHARACTER_LIST_PATH = os.path.abspath(os.path.join(base_path, "resources", "character_list.json"))
-JSON_PATH = os.path.abspath(os.path.join(base_path, "json_movelist"))
-
-discord_token = CONFIG_PATH.read_config()['DISCORD_TOKEN']
-feedback_channel_id = CONFIG_PATH.read_config()['FEEDBACK_CHANNEL_ID']
-actioned_channel_id = CONFIG_PATH.read_config()['ACTION_CHANNEL_ID']
-character_list = []
+logger = logging.getLogger("main")
+formatter = logging.Formatter(
+    "%(asctime)s %(levelname)s     %(module)s:%(funcName)s:%(lineno)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
+)
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+logger.addHandler(stream_handler)
+logger.setLevel(logging.INFO)
 
 
-class Heihachi(discord.Client):
-    def __init__(self, *, intents: discord.Intents):
-        super().__init__(intents=intents)
-        self.synced = False
+def periodic_function(
+    scheduler: sched.scheduler, interval: float, function: Callable[..., Any], args: Tuple[Any, ...]
+) -> None:
+    "Run a function periodically"
 
-    async def on_ready(self):
-        await self.wait_until_ready()
-        if not self.synced:
-            await tree.sync()
-            self.synced = True
-        print('Logged on as', self.user)
+    while True:
+        scheduler.enter(interval, 1, function, args)
+        scheduler.run()
 
 
-try:
-    hei = Heihachi(intents=discord.Intents.default())
-    tree = discord.app_commands.CommandTree(hei)
-
-except Exception as e:
-    time_now = datetime.datetime.now().strftime("%Y-%m-%d  %H:%M:%S")
-    logger.error(f'{time_now} \n Error: {e}')
-
-
-def create_frame_data_embed(name: str, move: str) -> discord.Embed:
-    character_name = util.correct_character_name(name.lower())
-    if character_name:
-        character = util.get_character_by_name(character_name, character_list)
-        move_list = json_movelist_reader.get_movelist(character_name, JSON_PATH)
-        move_type = util.get_move_type(move)
-
-        if move_type:
-            moves = json_movelist_reader.get_by_move_type(move_type, move_list)
-            moves_embed = embed.move_list_embed(character, moves, move_type)
-            return moves_embed
-        else:
-            character_move = json_movelist_reader.get_move(move, move_list)
-
-            if character_move:
-                move_embed = embed.move_embed(character, character_move)
-                return move_embed
-            else:
-                similar_moves = json_movelist_reader.get_similar_moves(move, move_list)
-                similar_moves_embed = embed.similar_moves_embed(similar_moves, character_name)
-                return similar_moves_embed
-    else:
-        error_embed = embed.error_embed(f'Character {name} does not exist.')
-        return error_embed
+def get_argparser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Heihachi bot")
+    parser.add_argument("config_file", type=str, help="Path to the config file")
+    parser.add_argument(
+        "--export_dir",
+        type=str,
+        default=os.path.join(os.getcwd(), "json_movelist"),
+        help="Path to the directory to export frame data to",
+    )
+    parser.add_argument("--format", type=str, default="json", help="Format to export frame data to")
+    return parser
 
 
-@hei.event
-async def on_message(message):
-    if not util.is_user_blacklisted(message.author.id) and message.content and message.author.id != hei.user.id:
-        user_command = message.content.split(' ', 1)[1]
-        parameters = user_command.strip().split(' ', 1)
-        character_name = parameters[0].lower()
-        character_move = parameters[1]
+def main() -> None:
+    parser = get_argparser()
+    args = parser.parse_args()
+    config_file_path = args.config_file
+    export_dir_path = args.export_dir
+    _format = args.format
 
-        embed = create_frame_data_embed(character_name, character_move)
-        await message.channel.send(embed=embed)
+    # retrieve config
+    try:
+        config = Configurator.from_file(config_file_path)
+        assert config is not None
+        logger.info(f"Config file loaded from {config_file_path}")
+    except FileNotFoundError:
+        logger.error(f"Config file not found at {config_file_path}. Exiting...")
+        exit(1)
 
+    # initialize bot
+    try:
+        frame_service = Wavu()
+        framedb = FrameDb()
+        framedb.refresh(frame_service, export_dir_path, _format)
+        logger.info(f"Frame data loaded from service {frame_service.name} and written to {export_dir_path} as {_format}")
+        hei = FrameDataBot(framedb, frame_service, config)
 
-@tree.command(name="fd", description="Frame data from a character move")
-async def self(interaction: discord.Interaction, character_name: str, move: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        embed = create_frame_data_embed(character_name, move)
-        await interaction.response.send_message(embed=embed, ephemeral=False)
+    except Exception as e:
+        logger.error(f"Failed to initialize bot: {e}")
+        exit(1)
 
+    # schedule and start the frame data refresh thread
+    try:
+        scheduler = sched.scheduler(time.time, time.sleep)
+        scheduler_thread = threading.Thread(
+            target=periodic_function,
+            daemon=True,
+            args=(scheduler, UPDATE_INTERVAL_SEC, framedb.refresh, (frame_service, export_dir_path, _format)),
+        )
+        scheduler_thread.start()
+        logger.info(f"Frame data refresh thread started with tid: {scheduler_thread.native_id}")
 
-def character_command_factory(name: str):
-    async def command(interaction: discord.Interaction, move: str) -> None:
-        if not (util.is_user_blacklisted(str(interaction.user.id)) or util.is_author_newly_created(interaction)):
-            embed = create_frame_data_embed(name, move)
-            await interaction.response.send_message(embed=embed, ephemeral=False)
+    except Exception as e:
+        logger.error(f"Error in scheduling the frame refresh thread: {e}")
 
-    return command
-
-
-with open(CHARACTER_LIST_PATH) as json_file:
-    character_names = json.load(json_file)
-for character in character_names:
-    name = character["name"].lower()
-    tree.command(name=name, description=f"Frame data from {name}")(character_command_factory(name))
-
-
-@tree.command(name="feedback", description="Send feedback incase of wrong data")
-async def self(interaction: discord.Interaction, message: str):
-    if not (util.is_user_blacklisted(interaction.user.id) or util.is_author_newly_created(interaction)):
-        try:
-            feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(
-                str(interaction.user.name), interaction.user.id,
-                interaction.guild, message)
-            channel = hei.get_channel(feedback_channel_id)
-            actioned_channel = hei.get_channel(actioned_channel_id)
-            await channel.send(content=feedback_message, view=button.DoneButton(actioned_channel))
-            result = embed.success_embed("Feedback sent")
-        except Exception as e:
-            result = embed.error_embed("Feedback couldn't be sent caused by: " + e)
-
-        await interaction.response.send_message(embed=result, ephemeral=False)
-
+    # start the bot
+    try:
+        logger.info("Starting bot...")
+        hei.run(config.discord_token)
+    except Exception as e:
+        logger.error(f"Error in running the bot: {e}")
+    logger.info("Bot stopped")
 
 
-character_list = util.create_json_movelists(CHARACTER_LIST_PATH)
-scheduler = sched.scheduler(time.time, time.sleep)
-
-# Repeat importing move list of all character from wavu.wiki once an hour
-scheduler_thread = threading.Thread(target=util.periodic_function,
-                                    args=(scheduler, 3600, util.create_json_movelists, CHARACTER_LIST_PATH))
-scheduler_thread.start()
-hei.run(discord_token)
-
-
+if __name__ == "__main__":
+    main()

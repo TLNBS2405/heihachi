@@ -1,0 +1,384 @@
+{
+    "cargoquery": [
+        {
+            "title": {
+                "id": "Lee-1",
+                "name": "Jab",
+                "input": "1",
+                "parent": null,
+                "target": "h",
+                "damage": "5",
+                "startup": "i10",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+1",
+                "hit": "+8",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-1,2",
+                "name": null,
+                "input": ",2",
+                "parent": "Lee-1",
+                "target": ",h",
+                "damage": ",9",
+                "startup": ",i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-3",
+                "hit": "+7",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Jail from 1st attack with max delay\n* Move can be delayed 4f&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-1,2,2",
+                "name": null,
+                "input": ",2",
+                "parent": "Lee-1,2",
+                "target": ",m",
+                "damage": ",14",
+                "startup": ",i20~21",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "-2",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Move can be delayed\n* Combo from 2nd CH without delay&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-1,2,4",
+                "name": "Left Right Mid Kick",
+                "input": ",4",
+                "parent": "Lee-1,2",
+                "target": ",m",
+                "damage": ",10",
+                "startup": ",i18",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "-1",
+                "ch": "[[Lee combos#Staples|+58a]]",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Jail from 1st attack\n* Transition to -14 -2 HMS with 3&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-1,2:4",
+                "name": "Left Right Mid Kick",
+                "input": "&amp;#58;4",
+                "parent": "Lee-1,2",
+                "target": ",m",
+                "damage": ",12",
+                "startup": ",i18",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-12",
+                "hit": "+5",
+                "ch": "[[Lee combos#Staples|+58a]]",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* 4 frame window for timed input\n* Jail from 1st attack\n* Transition to -14 +3 HMS with 3&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-1,3",
+                "name": null,
+                "input": ",3",
+                "parent": "Lee-1",
+                "target": ",h",
+                "damage": ",5",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-11",
+                "hit": "+0",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-1,3:3",
+                "name": null,
+                "input": "&amp;#58;3",
+                "parent": "Lee-1,3",
+                "target": ",m",
+                "damage": ",4",
+                "startup": ",i9",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-11",
+                "hit": "+0",
+                "ch": null,
+                "notes": "Jail from 1st attack",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-1,3:3:3",
+                "name": "[[Acid Rain]]",
+                "input": "&amp;#58;3",
+                "parent": "Lee-1,3:3",
+                "target": ",h",
+                "damage": ",14",
+                "startup": ",i21",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-17",
+                "hit": "+14",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Timestop on hit\n* 5 chip damage&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-2+3",
+                "name": null,
+                "input": "2+3",
+                "parent": null,
+                "target": "m",
+                "damage": "12",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "+1",
+                "hit": "+2",
+                "ch": null,
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt; Powercrush. Cancelable with b,b.",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-4",
+                "name": "Magic Four",
+                "input": "4",
+                "parent": null,
+                "target": "h",
+                "damage": "14",
+                "startup": "i11",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+2",
+                "ch": "+2s",
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-4,4",
+                "name": null,
+                "input": ",4",
+                "parent": "Lee-4",
+                "target": ",h",
+                "damage": ",5",
+                "startup": ",i10",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "-2",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Jail from 1st attack\n* Combo from 1st CH [[Lee combos#Mini-combos|+20a (+13)]]&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-4,4,4",
+                "name": "Machinegun Kick",
+                "input": ",4",
+                "parent": "Lee-4,4",
+                "target": ",h",
+                "damage": ",5",
+                "startup": ",i10",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-13",
+                "hit": "-2",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Jail from 1st attack\n* Combo from 1st CH +25a (+18)&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-4,4:4",
+                "name": "Machinegun Kicks Cardinal",
+                "input": "&amp;#58;4",
+                "parent": "Lee-4,4",
+                "target": ",h",
+                "damage": ",12",
+                "startup": ",i20~21",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+15a (+6)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Dash +5g +34d\n&lt;/div&gt;\n* Combo from 1st hit\n* Combo from 1st ch [[Lee combos#Staples|+29a (+22)]]\n* 4 chip damage&lt;/div&gt;",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-b3+4",
+                "name": null,
+                "input": "b3+4",
+                "parent": null,
+                "target": "h",
+                "damage": "23",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-7",
+                "hit": "+17",
+                "ch": null,
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt; \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Dash +5g +34d\n&lt;/div&gt; Powercrush.",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-df+4",
+                "name": null,
+                "input": "df+4",
+                "parent": null,
+                "target": "m",
+                "damage": "14",
+                "startup": "i13-14",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+5",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-df+4,4",
+                "name": "Fabulous Whip",
+                "input": ",4",
+                "parent": "Lee-df+4",
+                "target": ",h",
+                "damage": ",22",
+                "startup": "i22-23",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+10",
+                "ch": null,
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt; \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Dash +5g +34d\n&lt;/div&gt; df43 instead shifts into hms.",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-f+1+3",
+                "name": "Forearm Drop",
+                "input": "f+1+3",
+                "parent": null,
+                "target": "t",
+                "damage": "35",
+                "startup": "i15~17",
+                "recv": "r33",
+                "tot": "50",
+                "crush": null,
+                "block": "-3",
+                "hit": "+1d",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* Same throw as 1+3&lt;/div&gt;",
+                "ns": "2"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-ff3",
+                "name": null,
+                "input": "ff3",
+                "parent": null,
+                "target": "m",
+                "damage": "26",
+                "startup": "i14~15",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+17",
+                "ch": null,
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt; \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Dash +5g +36d\n&lt;/div&gt; Slight lowprofile",
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-H.2+3",
+                "name": null,
+                "input": "H.2+3",
+                "parent": null,
+                "target": "l",
+                "damage": "37",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-15",
+                "hit": "+0",
+                "ch": null,
+                "notes": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Lee-hms.u3",
+                "name": null,
+                "input": "hms.u3",
+                "parent": null,
+                "target": "m",
+                "damage": "26",
+                "startup": "i20~22",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-9",
+                "hit": "+17",
+                "ch": null,
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt; \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Dash +5g +36d\n&lt;/div&gt;",
+                "ns": "0"
+            }
+        }
+    ]
+}

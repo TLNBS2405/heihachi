@@ -1,0 +1,7 @@
+{
+    "DISCORD_TOKEN": "Your Discord token here (see https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token)",
+    "FEEDBACK_CHANNEL_ID": 0,
+    "ACTION_CHANNEL_ID": 0,
+    "BLACKLIST": ["userId1", "userId2"],
+    "ID_BLACKLIST": [0, 1]
+}
