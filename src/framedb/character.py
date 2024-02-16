@@ -5,7 +5,7 @@ from typing import Dict, Tuple
 
 from .const import CharacterName
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("main")
 
 DiscordMd = str  # Discord Markdown
 Url = str

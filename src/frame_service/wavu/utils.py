@@ -41,7 +41,9 @@ class WavuMove(Move):
     parent: str = ""
 
 
-def _get_wavu_response(character_name: CharacterName, format: str = "json") -> Any:
+def _get_wavu_response(
+    session: requests.Session, character_name: CharacterName, format: str = "json"
+) -> Any:  # TODO: take in session as a param to allow reusing a connection between calls for diff. chars.
     """
     Get the movelist for a character from the Wavu API
     """
@@ -57,19 +59,20 @@ def _get_wavu_response(character_name: CharacterName, format: str = "json") -> A
         "format": format,
     }
 
-    with requests.session() as session:
-        response = session.get(WAVU_API_URL, params=params)  # TODO: use MediaWiki library to handle
+    response = session.get(WAVU_API_URL, params=params)  # TODO: use MediaWiki library to handle
     content = json.loads(response.content)
     return content
 
 
-def _get_wavu_character_movelist(character_name: CharacterName, format: str = "json", content: Any = None) -> Dict[str, Move]:
+def _get_wavu_character_movelist(
+    session: requests.Session, character_name: CharacterName, format: str = "json", content: Any = None
+) -> Dict[str, Move]:
     """
     Get the movelist for a character from a Wavu API response
     """
 
     if content is None:
-        content = _get_wavu_response(character_name, format)
+        content = _get_wavu_response(session, character_name, format)
     match format:
         case "json":
             movelist_raw = content["cargoquery"]

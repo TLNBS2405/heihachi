@@ -10,7 +10,7 @@ from framedb import CharacterName, FrameDb, FrameService
 from heihachi import Configurator, button, embed
 from heihachi.embed import get_frame_data_embed
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("main")
 
 
 class FrameDataBot(discord.ext.commands.Bot):
@@ -32,11 +32,14 @@ class FrameDataBot(discord.ext.commands.Bot):
         self.synced = False
 
         self._add_bot_commands()  # TODO: fix bot slash commands not working in Discord
+        logger.debug(f"Bot commands added: {[cmd.name for cmd in self.commands]}")
+        logger.debug(f"Bot command tree: {self.tree.get_commands()}")
 
     async def on_ready(self) -> None:
         await self.wait_until_ready()
         if not self.synced:
             await self.tree.sync()
+            logger.debug("Bot command tree synced")
             self.synced = True
         logger.info(f"Logged on as {self.user}")
 
@@ -62,6 +65,13 @@ class FrameDataBot(discord.ext.commands.Bot):
         return age.days < self.config.new_author_age_limit
 
     async def on_message(self, message: discord.Message) -> None:
+        """
+        Handle message events.
+
+        The frame bot only supports messages of the form `<anything> <character> <move>`.
+        """  # TODO: fix this weird handling of messages, especially the first param
+        # probably want a help message sent in case of an unexpected message
+
         if self.user:
             if not self.is_user_blacklisted(message.author.id) and message.content and message.author.id != self.user.id:
                 user_command = message.content.split(" ", 1)[1]
@@ -77,38 +87,40 @@ class FrameDataBot(discord.ext.commands.Bot):
     def _character_command_factory(self, name: str) -> Callable[[discord.Interaction, str], Coroutine[Any, Any, None]]:
         "A factory function to create /character command functions"
 
-        async def _character_command(interaction: discord.Interaction, move: str) -> None:
-            if not (self.is_user_blacklisted(str(interaction.user.id)) or self.is_author_newly_created(interaction)):
+        async def _character_command(ctx: discord.ext.commands.Context, move: str) -> None:
+            if not (self.is_user_blacklisted(str(ctx.interaction.user.id)) or self.is_author_newly_created(ctx.interaction)):
                 embed = get_frame_data_embed(self.framedb, self.frame_service, name, move)
-                await interaction.response.send_message(embed=embed, ephemeral=False)
+                await ctx.send(embed=embed, ephemeral=False)
 
         return _character_command
 
     def _add_bot_commands(self) -> None:
         "Add all frame commands to the bot"
 
-        @self.command(name="fd", description="Frame data from a character move")
-        async def _frame_data_cmd(interaction: discord.Interaction, character_name_query: str, move_query: str) -> None:
-            if not (self.is_user_blacklisted(str(interaction.user.id)) or self.is_author_newly_created(interaction)):
+        @self.tree.command(name="fd", description="Frame data from a character move")
+        async def _frame_data_cmd(ctx: discord.ext.commands.Context, character_name_query: str, move_query: str) -> None:
+            if not (self.is_user_blacklisted(str(ctx.interaction.user.id)) or self.is_author_newly_created(ctx.interaction)):
                 embed = get_frame_data_embed(self.framedb, self.frame_service, character_name_query, move_query)
-                await interaction.response.send_message(embed=embed, ephemeral=False)
+                await ctx.send(embed=embed, ephemeral=False)
 
         for character in CharacterName:
             char_name = character.value
-            self.command(name=char_name, description=f"Frame data from {char_name}")(
+            self.tree.command(name=char_name, description=f"Frame data from {char_name}")(
                 self._character_command_factory(char_name)
             )
 
         if self.config.feedback_channel_id and self.config.action_channel_id:
 
-            @self.command(name="feedback", description="Send feedback incase of wrong data")
-            async def _feedback_cmd(interaction: discord.Interaction, message: str) -> None:
-                if not (self.is_user_blacklisted(str(interaction.user.id)) or self.is_author_newly_created(interaction)):
+            @self.tree.command(name="feedback", description="Send feedback incase of wrong data")
+            async def _feedback_cmd(ctx: discord.ext.commands.Context, message: str) -> None:
+                if not (
+                    self.is_user_blacklisted(str(ctx.interaction.user.id)) or self.is_author_newly_created(ctx.interaction)
+                ):
                     try:
                         feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(
-                            str(interaction.user.name),
-                            interaction.user.id,
-                            interaction.guild,
+                            str(ctx.interaction.user.name),
+                            ctx.interaction.user.id,
+                            ctx.interaction.guild,
                             message,
                         )
                         try:
@@ -123,7 +135,7 @@ class FrameDataBot(discord.ext.commands.Bot):
                     except Exception as e:
                         result = embed.get_error_embed(f"Feedback couldn't be sent, caused by: {str(e)}")
 
-                    await interaction.response.send_message(embed=result, ephemeral=False)
+                    await ctx.send(embed=result, ephemeral=False)
         else:
             logger.warning("Feedback or Action channel ID is not set. Disabling feedback command.")
 

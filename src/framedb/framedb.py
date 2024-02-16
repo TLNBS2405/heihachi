@@ -4,11 +4,13 @@ from difflib import SequenceMatcher
 from heapq import nlargest as _nlargest
 from typing import Dict, List
 
+import requests
+
 from .character import Character, Move
 from .const import CHARACTER_ALIAS, MOVE_TYPE_ALIAS, REPLACE, CharacterName, MoveType
 from .frame_service import FrameService
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("main")
 
 
 class FrameDb:
@@ -29,19 +31,22 @@ class FrameDb:
         match format:
             case "json":
                 for character in self.frames.values():
-                    character.export_movelist(os.path.join(export_dir_path, f"{character.name}.{format}"), format=format)
-                    logger.info(f"Exported frame data for {character.name} to {export_dir_path}/{character.name}.{format}")
+                    character.export_movelist(os.path.join(export_dir_path, f"{character.name.value}.{format}"), format=format)
+                    logger.info(
+                        f"Exported frame data for {character.name.value} to {export_dir_path}/{character.name.value}.{format}"
+                    )
 
     def load(self, frame_service: FrameService) -> None:
         "Load the frame database using a frame service."
 
-        for character in CharacterName:
-            frames = frame_service.get_frame_data(character)
-            logger.info(f"Retrieved frame data for {character.value} from {frame_service.name}")
-            if frames:
-                self.frames[character] = frames
-            else:
-                logger.warning(f"Could not load frame data for {character}")
+        with requests.session() as session:  # TODO: assumes a frame service will always require a session
+            for character in CharacterName:
+                frames = frame_service.get_frame_data(character, session)
+                logger.info(f"Retrieved frame data for {character.value} from {frame_service.name}")
+                if frames:
+                    self.frames[character] = frames
+                else:
+                    logger.warning(f"Could not load frame data for {character}")
 
     def refresh(self, frame_service: FrameService, export_dir_path: str, format: str = "json") -> None:
         "Refresh the frame database using a frame service."

@@ -4,7 +4,7 @@ import os
 
 from framedb import Character, CharacterName, FrameService, Move
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("main")
 
 
 class JsonDirectory(FrameService):
