@@ -8,11 +8,12 @@ import sched
 import sys
 import threading
 import time
+from typing import Any, Callable, Tuple
 
 from frame_service import Wavu
 from framedb import FrameDb
 from heihachi import configurator
-from heihachi.bot import FrameDataBot, periodic_function
+from heihachi.bot import FrameDataBot
 
 "How often to update the bot's frame data from the external service and write to file."
 UPDATE_INTERVAL_SEC = 3600
@@ -25,6 +26,14 @@ stream_handler = logging.StreamHandler()
 stream_handler.setFormatter(formatter)
 logger.addHandler(stream_handler)
 logger.setLevel(logging.INFO)
+
+
+def periodic_function(scheduler: sched.scheduler, interval: float, function: Callable, args: Tuple[Any, ...]) -> None:
+    "Run a function periodically"
+
+    while True:
+        scheduler.enter(interval, 1, function, args)
+        scheduler.run()
 
 
 def main() -> None:
@@ -57,10 +66,11 @@ def main() -> None:
         scheduler = sched.scheduler(time.time, time.sleep)
         scheduler_thread = threading.Thread(
             target=periodic_function,
+            daemon=True,
             args=(scheduler, UPDATE_INTERVAL_SEC, framedb.refresh, (frame_service, export_dir_path, _format)),
         )
         scheduler_thread.start()
-        logger.info("Frame data refresh thread started")
+        logger.info(f"Frame data refresh thread started with tid: {scheduler_thread.native_id}")
 
     except Exception as e:
         logger.error(f"Error in scheduling the frame refresh thread: {e}")

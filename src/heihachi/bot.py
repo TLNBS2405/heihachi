@@ -1,7 +1,6 @@
 import datetime
 import logging
-import sched
-from typing import Any, Callable, Coroutine, List, Tuple
+from typing import Any, Callable, Coroutine, List
 
 import discord
 import discord.ext.commands
@@ -136,11 +135,3 @@ class FrameDataBot(discord.Client):
                     await interaction.response.send_message(embed=result, ephemeral=False)
         else:
             logger.warning("Feedback or Action channel ID is not set. Disabling feedback command.")
-
-
-def periodic_function(scheduler: sched.scheduler, interval: float, function: Callable, args: Tuple[Any, ...]) -> None:
-    "Run a function periodically"
-
-    while True:
-        scheduler.enter(interval, 1, function, args)
-        scheduler.run()
