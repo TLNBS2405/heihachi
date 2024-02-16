@@ -10,7 +10,13 @@ STATIC_BASE = os.path.join(os.path.dirname(__file__), "static")
 
 @pytest.fixture
 def config():
-    return Configurator(discord_token="123456789", feedback_channel_id=123456789, action_channel_id=987654321)
+    return Configurator(
+        discord_token="123456789",
+        feedback_channel_id=123456789,
+        action_channel_id=987654321,
+        blacklist=None,
+        id_blacklist=None,
+    )
 
 
 def test_from_file():

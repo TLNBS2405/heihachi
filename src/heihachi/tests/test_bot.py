@@ -1,3 +1,6 @@
 import pytest
 
-# TODO: Add tests for the bot
+
+@pytest.mark.skip(reason="Not implemented")
+def test_create_bot():
+    pass

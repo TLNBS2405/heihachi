@@ -2,7 +2,7 @@ from typing import List
 
 import discord
 
-from framedb import Character, CharacterName, FrameService, Move, MoveType
+from framedb import Character, CharacterName, FrameDb, FrameService, Move, MoveType
 
 MOVE_NOT_FOUND_TITLE = "Move not found"
 
@@ -11,7 +11,7 @@ WARNING_COLOR = discord.Colour.from_rgb(253, 218, 13)
 ERROR_COLOR = discord.Colour.from_rgb(220, 20, 60)
 
 
-def similar_moves_embed(
+def get_similar_moves_embed(
     frame_service: FrameService, similar_moves: List[Move], character_name: CharacterName
 ) -> discord.Embed:
     """Returns the embed message for similar moves."""
@@ -26,7 +26,7 @@ def similar_moves_embed(
     return embed
 
 
-def move_list_embed(
+def get_move_list_embed(
     frame_service: FrameService, character: Character, moves: List[Move], move_type: MoveType
 ) -> discord.Embed:
     """Returns the embed message for a list of moves matching to a special move type."""
@@ -41,17 +41,17 @@ def move_list_embed(
     return embed
 
 
-def error_embed(message) -> discord.Embed:
+def get_error_embed(message) -> discord.Embed:
     embed = discord.Embed(title="Error", colour=ERROR_COLOR, description=message)
     return embed
 
 
-def success_embed(message) -> discord.Embed:
+def get_success_embed(message) -> discord.Embed:
     embed = discord.Embed(title="Success", colour=SUCCESS_COLOR, description=message)
     return embed
 
 
-def move_embed(frame_service: FrameService, character: Character, move: Move) -> discord.Embed:
+def get_move_embed(frame_service: FrameService, character: Character, move: Move) -> discord.Embed:
     """Returns the embed message for character and move."""
 
     embed = discord.Embed(
@@ -78,28 +78,27 @@ def move_embed(frame_service: FrameService, character: Character, move: Move) ->
     return embed
 
 
-def create_frame_data_embed(name: str, move: str) -> discord.Embed:
-    character_name = util.correct_character_name(name.lower())  # TODO: fix all this
-    if character_name:
-        character = util.get_character_by_name(character_name, character_list)
-        assert character is not None
-        move_list = json_directory.get_movelist(character_name, JSON_PATH)
-        move_type = util.get_move_type(move)
+def get_frame_data_embed(framedb: FrameDb, frame_service: FrameService, char_query: str, move_query: str) -> discord.Embed:
+    """Creates an embed for the frame data of a character and move."""
+
+    character = framedb.get_character_by_name(char_query)
+    if character:
+        move_type = framedb.get_move_type(move_query)
 
         if move_type:
-            moves = json_directory.get_by_move_type(move_type, move_list)
-            moves_embed = embed.move_list_embed(character, moves, move_type)
-            return moves_embed
+            moves = framedb.get_moves_by_move_type(character.name, move_type.value)
+            moves_embed = get_move_list_embed(frame_service, character, moves, move_type)
+            embed = moves_embed
         else:
-            character_move = json_directory.get_move(move, move_list)
+            character_move = framedb.get_move_by_input(character.name, move_query)
 
             if character_move:
-                move_embed = embed.move_embed(character, character_move)
-                return move_embed
+                move_embed = get_move_embed(frame_service, character, character_move)
+                embed = move_embed
             else:
-                similar_moves = json_directory.get_similar_moves(move, move_list)
-                similar_moves_embed = embed.similar_moves_embed(similar_moves, character_name)
-                return similar_moves_embed
+                similar_moves = framedb.get_similar_moves(character.name, move_query)
+                similar_moves_embed = get_similar_moves_embed(frame_service, similar_moves, character.name)
+                embed = similar_moves_embed
     else:
-        error_embed = embed.error_embed(f"Could not locate character {name}.")
-        return error_embed
+        embed = get_error_embed(f"Could not locate character {char_query}.")
+    return embed

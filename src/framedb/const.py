@@ -9,7 +9,7 @@ class CharacterName(enum.Enum):
     AZUCENA = "azucena"
     BRYAN = "bryan"
     CLAUDIO = "claudio"
-    DEVIL_JIN = "devil jin"
+    DEVIL_JIN = "devil_jin"
     DRAGUNOV = "dragunov"
     FENG = "feng"
     HWOARANG = "hwoarang"

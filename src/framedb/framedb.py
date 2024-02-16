@@ -43,6 +43,12 @@ class FrameDb:
             else:
                 logger.warning(f"Could not load frame data for {character}")
 
+    def refresh(self, frame_service: FrameService, export_dir_path: str, format: str = "json") -> None:
+        "Refresh the frame database using a frame service."
+
+        self.load(frame_service)
+        self.export(export_dir_path, format=format)
+
     @staticmethod
     def _simplify_input(input_query: str) -> str:
         """Removes bells and whistles from a move input query"""
@@ -69,7 +75,7 @@ class FrameDb:
         return False
 
     @staticmethod
-    def _correct_character_name(char_name_query: str) -> str | None:
+    def _correct_character_name(char_name_query: str) -> str | None:  # TODO: overlap with get_character_by_name?
         "Check if input in dictionary or in dictionary values"
 
         if char_name_query in CHARACTER_ALIAS:
@@ -159,7 +165,7 @@ class FrameDb:
                 return character
         return None
 
-    def get_move_type(self, move_type_query: str) -> MoveType | None:
+    def get_move_type(self, move_type_query: str) -> MoveType | None:  # TODO: overlap with get_moves_by_move_type?
         """Given a move type query, return the corresponding move type"""
 
         for move_type, aliases in MOVE_TYPE_ALIAS.items():
