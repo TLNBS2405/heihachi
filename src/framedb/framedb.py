@@ -133,7 +133,7 @@ class FrameDb:
         move_list = self.frames[character].movelist.values()
         move_type = FrameDb._correct_move_type(move_type_query)
         if move_type:
-            moves = list(filter(lambda x: (move_type.value in x.notes.lower()), move_list))
+            moves = list(filter(lambda x: (move_type.value.lower() in x.notes.lower()), move_list))
         else:
             moves = []
 
@@ -168,17 +168,21 @@ class FrameDb:
         """Given a character name query, return the corresponding character"""
 
         for character_name, character in self.frames.items():
-            if character_name.value == name_query:
+            if character_name.value == FrameDb._correct_character_name(name_query):
                 return character
         return None
 
-    def get_move_type(self, move_type_query: str) -> MoveType | None:  # TODO: overlap with get_moves_by_move_type?
+    def get_move_type(self, move_type_query: str) -> MoveType | None:
         """Given a move type query, return the corresponding move type"""
 
-        for move_type, aliases in MOVE_TYPE_ALIAS.items():
-            if move_type_query.lower() in aliases:
-                return move_type
-        return None
+        move_type_candidate = FrameDb._correct_move_type(move_type_query)
+        if move_type_candidate is None:
+            logger.warning(f"Could not match move type {move_type_query} to a known move type. Checking aliases...")
+            for move_type, aliases in MOVE_TYPE_ALIAS.items():
+                if move_type_query.lower() in aliases:
+                    move_type_candidate = move_type
+                    break
+        return move_type_candidate
 
 
 def _get_close_matches_indices(word: str, possibilities: List[str], n: int = 5, cutoff: float = 0.7) -> List[int]:

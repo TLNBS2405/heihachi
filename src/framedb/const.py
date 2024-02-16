@@ -38,6 +38,12 @@ class CharacterName(enum.Enum):
     LEROY = "leroy"
     VICTOR = "victor"
 
+    def pretty(self) -> str:
+        return self.value.replace("_", " ").title()
+
+    def url_encode(self) -> str:
+        return self.pretty().replace(" ", " ")
+
 
 CHARACTER_ALIAS: Dict[CharacterName, List[str]] = {
     CharacterName.ALISA: ["ali", "als"],

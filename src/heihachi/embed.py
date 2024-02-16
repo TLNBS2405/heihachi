@@ -34,7 +34,7 @@ def get_move_list_embed(
     desc_string = "\n".join(sorted([move.input for move in moves]))
 
     embed = discord.Embed(
-        title=f"{character.name} {move_type.value.lower()}:\n",
+        title=f"{character.name.pretty()} {move_type.value.lower()}:\n",
         colour=SUCCESS_COLOR,
         description=desc_string,
     )
@@ -58,12 +58,12 @@ def get_move_embed(frame_service: FrameService, character: Character, move: Move
         title=f"**{move.input}**",
         colour=SUCCESS_COLOR,
         description=move.name,
-        url=f"{character.page}_movelist#{move.id}",  # TODO: this is specific to Wavu, change it to be more generic
+        url=f"{character.page}_movelist#{move.id.replace(' ', '_')}",  # TODO: this is specific to Wavu, change it to be more generic
     )
 
     embed.set_thumbnail(url=character.portrait)
     embed.set_footer(text=frame_service.name, icon_url=frame_service.icon)
-    embed.set_author(name=character.name.value.title(), url=character.page)
+    embed.set_author(name=character.name.pretty(), url=character.page)
 
     embed.add_field(name="Target", value=move.target)
     embed.add_field(name="Damage", value=move.damage)
