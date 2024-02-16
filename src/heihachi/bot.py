@@ -21,16 +21,17 @@ class FrameDataBot(discord.ext.commands.Bot):
         frame_service: FrameService,
         config: Configurator,
         description: str | None = None,
-        intents: discord.Intents = discord.Intents.default(),
     ) -> None:
-        super().__init__(command_prefix, description=description, intents=intents)
+        intents = discord.Intents.default()
+        intents.message_content = True
 
+        super().__init__(command_prefix, description=description, intents=intents)
         self.framedb = framedb
         self.frame_service = frame_service
         self.config = config
         self.synced = False
 
-        self._add_bot_commands()
+        self._add_bot_commands()  # TODO: fix bot slash commands not working in Discord
 
     async def on_ready(self) -> None:
         await self.wait_until_ready()
@@ -127,9 +128,7 @@ class FrameDataBot(discord.ext.commands.Bot):
             logger.warning("Feedback or Action channel ID is not set. Disabling feedback command.")
 
 
-def periodic_function(
-    scheduler: sched.scheduler, interval: float, function: sched._ActionCallback, args: Tuple[Any, ...]
-) -> None:
+def periodic_function(scheduler: sched.scheduler, interval: float, function: Callable, args: Tuple[Any, ...]) -> None:
     "Run a function periodically"
 
     while True:

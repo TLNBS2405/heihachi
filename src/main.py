@@ -19,7 +19,13 @@ from heihachi.bot import FrameDataBot, periodic_function
 UPDATE_INTERVAL_SEC = 3600
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)  # TODO: format logger output to include timestamps, line numbers and file names
+logger.setLevel(
+    logging.DEBUG
+)  # TODO: format logger output to include timestamps, line numbers and file names and print to stdout
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+logger.addHandler(stream_handler)
 
 
 def main() -> None:
