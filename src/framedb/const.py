@@ -136,23 +136,6 @@ REPLACE = {
     "fc.": "fc",
 }
 
-BLACKLIST = [
-    "ImVeryBad#5231",
-    "Nape Brasslers#1131",
-    "Sleepii#1337",
-    "iaa ibb beb ib#0000",
-    "ГЕНИЙ#5448",
-    "Beeno#6524",
-    "Gigass-7#6960",
-    "nickname#0000",
-    "Sleepii#6666",
-    "scrotum buster#6919",
-    "Woozle#6308",
-    "Iam#1001",
-    "ImVeryBad#5231",
-]
-ID_BLACKLIST = [1006234003893915679, 240521686531702784]
-
 EMOJI_LIST = [
     "1\ufe0f\u20e3",
     "2\ufe0f\u20e3",

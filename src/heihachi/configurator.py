@@ -1,7 +1,7 @@
 import json
 import logging
 from dataclasses import dataclass
-from typing import Any, Optional
+from typing import Any, Dict, List, Optional
 
 logger = logging.getLogger(__name__)
 
@@ -15,12 +15,18 @@ class Configurator:
     discord_token: str
     feedback_channel_id: int | None
     action_channel_id: int | None
+    blacklist: List[str] | None
+    id_blacklist: List[int] | None
+    new_author_age_limit: int = 120
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
         return {
             "DISCORD_TOKEN": self.discord_token,
             "FEEDBACK_CHANNEL_ID": self.feedback_channel_id,
             "ACTION_CHANNEL_ID": self.action_channel_id,
+            "BLACKLIST": self.blacklist,
+            "ID_BLACKLIST": self.id_blacklist,
+            "NEW_AUTHOR_AGE_LIMIT": self.new_author_age_limit,
         }
 
     @staticmethod
@@ -38,6 +44,9 @@ class Configurator:
                 discord_token=config_data["DISCORD_TOKEN"],
                 feedback_channel_id=config_data.get("FEEDBACK_CHANNEL_ID", None),
                 action_channel_id=config_data.get("ACTION_CHANNEL_ID", None),
+                blacklist=config_data.get("BLACKLIST", None),
+                id_blacklist=config_data.get("ID_BLACKLIST", None),
+                new_author_age_limit=config_data.get("NEW_AUTHOR_AGE_LIMIT", 120),
             )
         except FileNotFoundError:
             logger.error(f"Config file not found at {config_path}")

@@ -5,7 +5,7 @@ from heapq import nlargest as _nlargest
 from typing import Dict, List
 
 from .character import Character, Move
-from .const import MOVE_TYPE_ALIAS, REPLACE, CharacterName, MoveType
+from .const import CHARACTER_ALIAS, MOVE_TYPE_ALIAS, REPLACE, CharacterName, MoveType
 from .frame_service import FrameService
 
 logger = logging.getLogger(__name__)
@@ -25,13 +25,19 @@ class FrameDb:
 
         if not os.path.exists(export_dir_path):
             os.makedirs(export_dir_path)
-        pass  # TODO: implement this
+
+        match format:
+            case "json":
+                for character in self.frames.values():
+                    character.export_movelist(os.path.join(export_dir_path, f"{character.name}.{format}"), format=format)
+                    logger.info(f"Exported frame data for {character.name} to {export_dir_path}/{character.name}.{format}")
 
     def load(self, frame_service: FrameService) -> None:
         "Load the frame database using a frame service."
 
         for character in CharacterName:
             frames = frame_service.get_frame_data(character)
+            logger.info(f"Retrieved frame data for {character.value} from {frame_service.name}")
             if frames:
                 self.frames[character] = frames
             else:
@@ -61,6 +67,19 @@ class FrameDb:
             if FrameDb._simplify_input(command) == FrameDb._simplify_input(alias):
                 return True
         return False
+
+    @staticmethod
+    def _correct_character_name(char_name_query: str) -> str | None:
+        "Check if input in dictionary or in dictionary values"
+
+        if char_name_query in CHARACTER_ALIAS:
+            return char_name_query
+
+        for key, value in CHARACTER_ALIAS.items():
+            if char_name_query in value:
+                return key.value
+
+        return None
 
     @staticmethod
     def _correct_move_type(move_type_query: str) -> MoveType | None:
@@ -131,6 +150,21 @@ class FrameDb:
         result = [movelist[idx] for idx in similar_move_indices]
 
         return result
+
+    def get_character_by_name(self, name_query: str) -> Character | None:
+        """Given a character name query, return the corresponding character"""
+
+        for character_name, character in self.frames.items():
+            if character_name.value == name_query:
+                return character
+        return None
+
+    def get_move_type(self, move_type_query: str) -> MoveType | None:
+        """Given a move type query, return the corresponding move type"""
+
+        for move_type, aliases in MOVE_TYPE_ALIAS.items():
+            if move_type_query.lower() in aliases:
+                return move_type
 
 
 def _get_close_matches_indices(word: str, possibilities: List[str], n: int = 5, cutoff: float = 0.7) -> List[int]:
