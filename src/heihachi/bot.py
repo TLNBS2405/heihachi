@@ -4,6 +4,8 @@ from typing import Any, Callable, Coroutine, List
 
 import discord
 import discord.ext.commands
+from rapidfuzz import process
+from rapidfuzz.distance import JaroWinkler
 
 from framedb import CharacterName, FrameDb, FrameService
 from heihachi import button, embed
@@ -75,10 +77,29 @@ class FrameDataBot(discord.Client):
 
         return _character_command
 
+    async def _character_name_autocomplete(
+        self, interaction: discord.Interaction["FrameDataBot"], current: str
+    ) -> List[discord.app_commands.Choice[str]]:
+        """
+        Autocomplete function for character names
+
+        Ref.: https://stackoverflow.com/a/75912806/6753162
+        """
+        # TODO: honestly, just build a trie of all char names and aliases and use it here
+
+        char_choices = [char.pretty() for char in CharacterName]
+        trimmed_choices = process.extract(
+            current.lower(), char_choices, scorer=JaroWinkler.distance, limit=3, score_cutoff=0.9
+        )
+        return [discord.app_commands.Choice(name=char, value=char) for char, score, idx in trimmed_choices][
+            :25
+        ]  # Discord has a max choice number of 25 (https://github.com/Rapptz/discord.py/discussions/9241)
+
     def _add_bot_commands(self) -> None:
         "Add all frame commands to the bot"
 
         @self.tree.command(name="fd", description="Frame data from a character move")
+        @discord.app_commands.autocomplete(character=self._character_name_autocomplete)
         async def _frame_data_cmd(
             interaction: discord.Interaction["FrameDataBot"], character: str, move: str
         ) -> None:  # TODO: use command argument completion for char names

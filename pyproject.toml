@@ -23,7 +23,8 @@ dependencies = [
     "discord.py",
     "beautifulsoup4",
     "Requests",
-    "lxml"
+    "lxml",
+    "rapidfuzz"
 ]
 
 [project.urls]
