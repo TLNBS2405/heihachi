@@ -41,7 +41,7 @@ class FrameDataBot(discord.Client):
             self.synced = True
         logger.info(f"Logged on as {self.user}")
 
-    def is_user_blacklisted(self, user_id: str | int) -> bool:
+    def _is_user_blacklisted(self, user_id: str | int) -> bool:
         "Check if a user is blacklisted"
 
         blacklist: List[str] | List[int] | None
@@ -55,32 +55,12 @@ class FrameDataBot(discord.Client):
         else:
             return False
 
-    def is_author_newly_created(self, interaction: discord.Interaction["FrameDataBot"]) -> bool:
+    def _is_author_newly_created(self, interaction: discord.Interaction["FrameDataBot"]) -> bool:
         "Check if author of an interaction is newly created"
 
         today = datetime.datetime.strptime(datetime.datetime.now().isoformat(), "%Y-%m-%dT%H:%M:%S.%f")
         age = today - interaction.user.created_at.replace(tzinfo=None)
         return age.days < self.config.new_author_age_limit
-
-    async def on_message(self, message: discord.Message) -> None:
-        """
-        Handle message events.
-
-        The frame bot only supports messages of the form `<anything> <character> <move>`.
-        """  # TODO: fix this weird handling of messages, especially the first param
-        # probably want a help message sent in case of an unexpected message
-
-        if self.user:
-            if not self.is_user_blacklisted(message.author.id) and message.content and message.author.id != self.user.id:
-                user_command = message.content.split(" ", 1)[1]
-                parameters = user_command.strip().split(" ", 1)
-                character_name = parameters[0]
-                character_move = parameters[1]
-
-                embed = get_frame_data_embed(self.framedb, self.frame_service, character_name, character_move)
-                await message.channel.send(embed=embed)
-        else:
-            logger.warning(f"Received a {message=} when the bot is not logged in")
 
     def _character_command_factory(
         self, name: str
@@ -88,7 +68,8 @@ class FrameDataBot(discord.Client):
         "A factory function to create /character command functions"
 
         async def _character_command(interaction: discord.Interaction["FrameDataBot"], move: str) -> None:
-            if not (self.is_user_blacklisted(str(interaction.user.id)) or self.is_author_newly_created(interaction)):
+            logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /{name} {move}")
+            if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
                 embed = get_frame_data_embed(self.framedb, self.frame_service, name, move)
                 await interaction.response.send_message(embed=embed, ephemeral=False)
 
@@ -99,9 +80,10 @@ class FrameDataBot(discord.Client):
 
         @self.tree.command(name="fd", description="Frame data from a character move")
         async def _frame_data_cmd(interaction: discord.Interaction["FrameDataBot"], character: str, move: str) -> None:
+            logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /fd {character} {move}")
             character_name_query = character
             move_query = move
-            if not (self.is_user_blacklisted(str(interaction.user.id)) or self.is_author_newly_created(interaction)):
+            if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
                 embed = get_frame_data_embed(self.framedb, self.frame_service, character_name_query, move_query)
                 await interaction.response.send_message(embed=embed, ephemeral=False)
 
@@ -115,7 +97,8 @@ class FrameDataBot(discord.Client):
 
             @self.tree.command(name="feedback", description="Send feedback incase of wrong data")
             async def _feedback_cmd(interaction: discord.Interaction["FrameDataBot"], message: str) -> None:
-                if not (self.is_user_blacklisted(str(interaction.user.id)) or self.is_author_newly_created(interaction)):
+                if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
+                    logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /feedback {message}")
                     try:
                         feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(
                             str(interaction.user.name),
