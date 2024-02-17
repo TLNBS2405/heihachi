@@ -83,6 +83,8 @@ class FrameDb:
     def _correct_character_name(char_name_query: str) -> str | None:
         "Check if input in dictionary or in dictionary values"
 
+        char_name_query = char_name_query.lower().strip()
+        char_name_query = char_name_query.replace(" ", "_")
         try:
             return CharacterName(char_name_query).value
         except ValueError:
