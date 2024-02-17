@@ -103,7 +103,7 @@ class FrameDb:
             if move_type_query in aliases:
                 return move_type
 
-        logger.warning(f"Could not match move type {move_type_query} to a known move type.")
+        logger.debug(f"Could not match move type {move_type_query} to a known move type.")
         return None
 
     def get_move_by_input(self, character: CharacterName, input_query: str) -> Move | None:
@@ -177,7 +177,7 @@ class FrameDb:
 
         move_type_candidate = FrameDb._correct_move_type(move_type_query)
         if move_type_candidate is None:
-            logger.warning(f"Could not match move type {move_type_query} to a known move type. Checking aliases...")
+            logger.debug(f"Could not match move type {move_type_query} to a known move type. Checking aliases...")
             for move_type, aliases in MOVE_TYPE_ALIAS.items():
                 if move_type_query.lower() in aliases:
                     move_type_candidate = move_type
