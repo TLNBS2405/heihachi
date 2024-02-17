@@ -1,3 +1,5 @@
+"""Embeds for the Heihachi bot."""
+
 from typing import Any, List
 
 import discord
@@ -11,12 +13,12 @@ WARNING_COLOR = discord.Colour.from_rgb(253, 218, 13)
 ERROR_COLOR = discord.Colour.from_rgb(220, 20, 60)
 
 
-def get_similar_moves_embed(
+def get_similar_moves_embed(  # TODO: look into improving the similar moves flow where a user can select the move they want directly
     frame_service: FrameService, similar_moves: List[Move], character_name: CharacterName
 ) -> discord.Embed:
     """Returns the embed message for similar moves."""
 
-    command_list = [f"**{idx + 1}**. {move.input}" for idx, move in enumerate(similar_moves)]
+    command_list = [f"**{idx + 1}**. {move.input}" for idx, move in enumerate(similar_moves)]  # TODO: add move links?
 
     embed = discord.Embed(
         title=MOVE_NOT_FOUND_TITLE,
@@ -31,7 +33,7 @@ def get_move_list_embed(
 ) -> discord.Embed:
     """Returns the embed message for a list of moves matching a special move type."""
 
-    desc_string = "\n".join(sorted([move.input for move in moves]))
+    desc_string = "\n".join(sorted([move.input for move in moves]))  # TODO: add move links or more data?
 
     embed = discord.Embed(
         title=f"{character.name.pretty()} {move_type.value.lower()}:\n",
@@ -79,7 +81,14 @@ def get_move_embed(frame_service: FrameService, character: Character, move: Move
 
 
 def get_frame_data_embed(framedb: FrameDb, frame_service: FrameService, char_query: str, move_query: str) -> discord.Embed:
-    """Creates an embed for the frame data of a character and move."""
+    """
+    Creates an embed for the frame data of a character and move.
+
+    1. Check if the character can be matched to one that exists in the DB. If not, return error embed.
+    2. Check if the move query can be matched to a move type. If yes, return all moves matching that move type.
+    3. Check if the move query can be matched to a single move. If yes, return the move.
+    4. If no match is found, return a list of (possibly empty) similar moves.
+    """
 
     character = framedb.get_character_by_name(char_query)
     if character:
@@ -90,7 +99,7 @@ def get_frame_data_embed(framedb: FrameDb, frame_service: FrameService, char_que
             moves_embed = get_move_list_embed(frame_service, character, moves, move_type)
             embed = moves_embed
         else:
-            character_move = framedb.get_move_by_input(character.name, move_query)
+            character_move = framedb.get_move_by_input(character.name, move_query)  # TODO: also search against move name?
 
             if character_move:
                 move_embed = get_move_embed(frame_service, character, character_move)

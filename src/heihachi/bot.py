@@ -30,7 +30,7 @@ class FrameDataBot(discord.Client):
         self.synced = False
         self.tree = discord.app_commands.CommandTree(self)
 
-        self._add_bot_commands()
+        self._add_bot_commands()  # TODO: add a help command
         logger.debug(f"Bot command tree: {[command.name for command in self.tree.get_commands()]}")
 
     async def on_ready(self) -> None:
@@ -79,7 +79,9 @@ class FrameDataBot(discord.Client):
         "Add all frame commands to the bot"
 
         @self.tree.command(name="fd", description="Frame data from a character move")
-        async def _frame_data_cmd(interaction: discord.Interaction["FrameDataBot"], character: str, move: str) -> None:
+        async def _frame_data_cmd(
+            interaction: discord.Interaction["FrameDataBot"], character: str, move: str
+        ) -> None:  # TODO: use command argument completion for char names
             logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /fd {character} {move}")
             character_name_query = character
             move_query = move
@@ -95,10 +97,12 @@ class FrameDataBot(discord.Client):
 
         if self.config.feedback_channel_id and self.config.action_channel_id:
 
-            @self.tree.command(name="feedback", description="Send feedback incase of wrong data")
+            @self.tree.command(name="feedback", description="Send feedback in case of wrong data")
             async def _feedback_cmd(interaction: discord.Interaction["FrameDataBot"], message: str) -> None:
-                if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
-                    logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /feedback {message}")
+                logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /feedback {message}")
+                if not (
+                    self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)
+                ):  # TODO: possible way to refactor these checks using discord.py library?
                     try:
                         feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(
                             str(interaction.user.name),
