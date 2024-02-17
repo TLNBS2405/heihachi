@@ -80,7 +80,7 @@ class FrameDb:
         return False
 
     @staticmethod
-    def _correct_character_name(char_name_query: str) -> str | None:  # TODO: overlap with get_character_by_name?
+    def _correct_character_name(char_name_query: str) -> str | None:
         "Check if input in dictionary or in dictionary values"
 
         try:
@@ -196,10 +196,10 @@ def _get_close_matches_indices(word: str, possibilities: List[str], n: int = 5, 
     possibilities is a list of sequences against which to match word
     (typically a list of strings).
 
-    Optional arg n (default 3) is the maximum number of close matches to
+    Optional arg n (default 5) is the maximum number of close matches to
     return.  n must be > 0.
 
-    Optional arg cutoff (default 0.6) is a float in [0, 1].  Possibilities
+    Optional arg cutoff (default 0.7) is a float in [0, 1].  Possibilities
     that don't score at least that similar to word are ignored.
     """
 

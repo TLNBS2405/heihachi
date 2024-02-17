@@ -4,7 +4,7 @@ import os
 
 import requests
 
-from framedb import Character, CharacterName, FrameService, Move
+from framedb import Character, CharacterName, FrameService, Move, Url
 
 logger = logging.getLogger("main")
 
@@ -41,3 +41,6 @@ class JsonDirectory(FrameService):
             movelist = {move["id"]: Move(**move) for move in move_file_contents}
         char = Character(name, portrait, movelist, page)
         return char
+
+    def get_move_url(self, character: Character, move: Move) -> Url | None:
+        return None

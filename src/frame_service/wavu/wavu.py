@@ -3,7 +3,7 @@ import os
 
 import requests
 
-from framedb import Character, CharacterName, FrameService
+from framedb import Character, CharacterName, FrameService, Move, Url
 
 from . import utils
 
@@ -41,3 +41,6 @@ class Wavu(FrameService):
         movelist = utils._get_wavu_character_movelist(response, self._format)
         char = Character(name, portrait, movelist, page)
         return char
+
+    def get_move_url(self, character: Character, move: Move) -> Url | None:
+        return f"{character.page}_movelist#{move.id.replace(' ', '_')}"

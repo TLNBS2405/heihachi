@@ -12,7 +12,7 @@ STATIC_BASE = os.path.join(os.path.dirname(__file__), "static")
 def json_directory() -> JsonDirectory:
     return JsonDirectory(
         char_meta_dir=os.path.join(STATIC_BASE, "character_list.json"),
-        movelist_dir=os.path.join(STATIC_BASE, "json_movelist"),  # TODO: add static movelists to test dir
+        movelist_dir=os.path.join(STATIC_BASE, "json_movelist"),
     )
 
 

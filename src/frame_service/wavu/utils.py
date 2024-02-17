@@ -41,9 +41,7 @@ class WavuMove(Move):
     parent: str = ""
 
 
-def _get_wavu_response(
-    session: requests.Session, character_name: CharacterName, format: str = "json"
-) -> Any:  # TODO: take in session as a param to allow reusing a connection between calls for diff. chars.
+def _get_wavu_response(session: requests.Session, character_name: CharacterName, format: str = "json") -> Any:
     """
     Get the movelist for a character from the Wavu API
     """

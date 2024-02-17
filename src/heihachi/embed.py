@@ -29,7 +29,7 @@ def get_similar_moves_embed(
 def get_move_list_embed(
     frame_service: FrameService, character: Character, moves: List[Move], move_type: MoveType
 ) -> discord.Embed:
-    """Returns the embed message for a list of moves matching to a special move type."""
+    """Returns the embed message for a list of moves matching a special move type."""
 
     desc_string = "\n".join(sorted([move.input for move in moves]))
 
@@ -58,7 +58,7 @@ def get_move_embed(frame_service: FrameService, character: Character, move: Move
         title=f"**{move.input}**",
         colour=SUCCESS_COLOR,
         description=move.name,
-        url=f"{character.page}_movelist#{move.id.replace(' ', '_')}",  # TODO: this is specific to Wavu, change it to be more generic
+        url=frame_service.get_move_url(character, move),
     )
 
     embed.set_thumbnail(url=character.portrait)
