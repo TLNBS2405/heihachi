@@ -21,7 +21,7 @@ def get_similar_moves_embed(
     embed = discord.Embed(
         title=MOVE_NOT_FOUND_TITLE,
         colour=WARNING_COLOR,
-        description="Similar moves from {}\n{}".format(character_name.value, "\n".join(command_list)),
+        description="Similar moves from {}\n{}".format(character_name.pretty(), "\n".join(command_list)),
     )
     return embed
 
