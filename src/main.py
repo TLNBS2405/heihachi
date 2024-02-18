@@ -33,6 +33,8 @@ class Heihachi(discord.Client):
         if not self.synced:
             await tree.sync()
             self.synced = True
+        action_channel = self.get_channel(actioned_channel_id)
+        self.add_view(view=button.DoneButton(action_channel))
         print('Logged on as', self.user)
 
 
