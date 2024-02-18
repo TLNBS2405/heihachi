@@ -40,6 +40,10 @@ class FrameDataBot(discord.Client):
             await self.tree.sync()
             logger.debug("Bot command tree synced")
             self.synced = True
+        if self.config.action_channel_id:
+            action_channel = self.get_channel(self.config.action_channel_id)
+            assert isinstance(action_channel, discord.channel.TextChannel)
+            self.add_view(button.DoneButton(action_channel))
         logger.info(f"Logged on as {self.user}")
 
     def _is_user_blacklisted(self, user_id: str | int) -> bool:
