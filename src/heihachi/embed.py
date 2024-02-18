@@ -99,13 +99,15 @@ def get_frame_data_embed(framedb: FrameDb, frame_service: FrameService, char_que
             moves_embed = get_move_list_embed(frame_service, character, moves, move_type)
             embed = moves_embed
         else:
-            character_move = framedb.get_move_by_input(character.name, move_query)  # TODO: also search against move name?
+            character_move = framedb.get_move_by_input(character.name, move_query)
 
             if character_move:
                 move_embed = get_move_embed(frame_service, character, character_move)
                 embed = move_embed
             else:
-                similar_moves = framedb.get_similar_moves(character.name, move_query)
+                similar_moves = framedb.get_similar_moves(character.name, move_query) + framedb.get_moves_by_move_name(
+                    character.name, move_query
+                )
                 similar_moves_embed = get_similar_moves_embed(frame_service, similar_moves, character.name)
                 embed = similar_moves_embed
     else:

@@ -49,3 +49,9 @@ def test_get_similar_moves() -> None:
 @pytest.mark.skip(reason="Not implemented")
 def test_get_close_matches_indices() -> None:
     pass
+
+
+@pytest.mark.skip(reason="Not implemented")
+def test_all_autocomplete_words_match() -> None:
+    "Test that all words in the autocomplete list can be matched to a CharacterName"
+    pass

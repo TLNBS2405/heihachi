@@ -135,6 +135,17 @@ class FrameDb:
             else:
                 return None
 
+    def get_moves_by_move_name(self, character: CharacterName, move_name_query: str) -> List[Move]:
+        """
+        Gets a list of moves that match a move name query
+        returns a list of Move objects if finds match(es), else empty list
+        """
+
+        move_list = self.frames[character].movelist.values()
+        moves = list(filter(lambda x: (move_name_query.lower() in x.name.lower()), move_list))
+
+        return moves
+
     def get_moves_by_move_type(self, character: CharacterName, move_type_query: str) -> List[Move]:
         """
         Gets a list of moves that match a move_type query

@@ -90,6 +90,9 @@ class FrameDataBot(discord.Client):
         return [discord.app_commands.Choice(name=choice[0].title(), value=choice[0]) for choice in choices][
             :25
         ]  # Discord has a max choice number of 25 (https://github.com/Rapptz/discord.py/discussions/9241)
+        # TODO: why can't we leverage Discord subcommands/group commands for fd autocompletion? They're essentially
+        # the same as the /character commands, no? Less commands to worry about too, just groups everything under
+        # /fd
 
     def _add_bot_commands(self) -> None:
         "Add all frame commands to the bot"
@@ -117,7 +120,7 @@ class FrameDataBot(discord.Client):
                 logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /feedback {message}")
                 if not (
                     self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)
-                ):  # TODO: possible way to refactor these checks using discord.py library?
+                ):  # TODO: possible way to refactor these checks using discord.py library? discord.ext.commands.Bot.check()
                     try:
                         feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(
                             str(interaction.user.name),
