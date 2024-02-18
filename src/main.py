@@ -12,8 +12,7 @@ import traceback
 from typing import Any, Callable, Tuple
 
 import frame_service.wavu.wavu as wavu
-from frame_service import Wavu
-from frame_service.json_directory.json_directory import JsonDirectory
+from frame_service import JsonDirectory, Wavu
 from framedb import FrameDb
 from heihachi.bot import FrameDataBot
 from heihachi.configurator import Configurator
