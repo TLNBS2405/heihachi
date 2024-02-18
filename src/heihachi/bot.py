@@ -1,5 +1,6 @@
 import datetime
 import logging
+import traceback
 from typing import Any, Callable, Coroutine, List
 
 import discord
@@ -144,7 +145,7 @@ class FrameDataBot(discord.Client):
                         await feedback_channel.send(content=feedback_message, view=button.DoneButton(actioned_channel))
                         result = embed.get_success_embed("Feedback sent")
                     except Exception as e:
-                        result = embed.get_error_embed(f"Feedback couldn't be sent, caused by: {str(e)}")
+                        result = embed.get_error_embed(f"Feedback couldn't be sent, caused by: {traceback.format_exc()}")
 
                     await interaction.response.send_message(embed=result, ephemeral=False)
         else:
