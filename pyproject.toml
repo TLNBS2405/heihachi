@@ -24,7 +24,7 @@ dependencies = [
     "beautifulsoup4",
     "Requests",
     "lxml",
-    "rapidfuzz"
+    "fast-autocomplete[levenshtein]"
 ]
 
 [project.urls]

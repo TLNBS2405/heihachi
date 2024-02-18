@@ -4,8 +4,6 @@ from typing import Any, Callable, Coroutine, List
 
 import discord
 import discord.ext.commands
-from rapidfuzz import process
-from rapidfuzz.distance import JaroWinkler
 
 from framedb import CharacterName, FrameDb, FrameService
 from heihachi import button, embed
@@ -33,6 +31,7 @@ class FrameDataBot(discord.Client):
         self.tree = discord.app_commands.CommandTree(self)
 
         self._add_bot_commands()  # TODO: add a help command
+        # TODO: re-add on_message handling for tagged messages (e.g., @Heihachi reina df2)
         logger.debug(f"Bot command tree: {[command.name for command in self.tree.get_commands()]}")
 
     async def on_ready(self) -> None:
@@ -85,13 +84,10 @@ class FrameDataBot(discord.Client):
 
         Ref.: https://stackoverflow.com/a/75912806/6753162
         """
-        # TODO: honestly, just build a trie of all char names and aliases and use it here
 
-        char_choices = [char.pretty() for char in CharacterName]
-        trimmed_choices = process.extract(
-            current.lower(), char_choices, scorer=JaroWinkler.distance, limit=3, score_cutoff=0.9
-        )
-        return [discord.app_commands.Choice(name=char, value=char) for char, score, idx in trimmed_choices][
+        current = current.lower()  # autocomplete is case-sensitive
+        choices = self.framedb.autocomplete.search(word=current, max_cost=3, size=3)
+        return [discord.app_commands.Choice(name=choice[0].title(), value=choice[0]) for choice in choices][
             :25
         ]  # Discord has a max choice number of 25 (https://github.com/Rapptz/discord.py/discussions/9241)
 

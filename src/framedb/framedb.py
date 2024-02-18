@@ -5,6 +5,7 @@ from heapq import nlargest as _nlargest
 from typing import Dict, List
 
 import requests
+from fast_autocomplete import AutoComplete
 
 from .character import Character, Move
 from .const import CHARACTER_ALIAS, MOVE_TYPE_ALIAS, REPLACE, CharacterName, MoveType
@@ -47,12 +48,20 @@ class FrameDb:
                     self.frames[character] = frames
                 else:
                     logger.warning(f"Could not load frame data for {character}")
+        self._build_autocomplete()
 
     def refresh(self, frame_service: FrameService, export_dir_path: str, format: str = "json") -> None:
         "Refresh the frame database using a frame service."
 
         self.load(frame_service)
         self.export(export_dir_path, format=format)
+
+    def _build_autocomplete(self) -> None:
+        "Builds the autocomplete list for the characters in the frame database."
+
+        words: Dict[str, Dict[str, str]] = {character.pretty().lower(): {} for character in self.frames.keys()}
+        synonyms = {character.pretty().lower(): CHARACTER_ALIAS[character] for character in self.frames.keys()}
+        self.autocomplete = AutoComplete(words=words, synonyms=synonyms)
 
     @staticmethod
     def _simplify_input(input_query: str) -> str:
