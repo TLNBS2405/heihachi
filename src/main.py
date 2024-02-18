@@ -8,9 +8,12 @@ import os
 import sched
 import threading
 import time
+import traceback
 from typing import Any, Callable, Tuple
 
+import frame_service.wavu.wavu as wavu
 from frame_service import Wavu
+from frame_service.json_directory.json_directory import JsonDirectory
 from framedb import FrameDb
 from heihachi.bot import FrameDataBot
 from heihachi.configurator import Configurator
@@ -67,14 +70,26 @@ def main() -> None:
         logger.error(f"Config file not found at {config_file_path}. Exiting...")
         exit(1)
 
-    # initialize bot
+    # load frame data
     try:
         frame_service = Wavu()
+        backup_frame_service = JsonDirectory(wavu.WAVU_CHARACTER_META_PATH, export_dir_path)
         framedb = FrameDb()
         framedb.refresh(frame_service, export_dir_path, _format)
         logger.info(f"Frame data loaded from service {frame_service.name} and written to {export_dir_path} as {_format}")
-        hei = FrameDataBot(framedb, frame_service, config)
+    except Exception as e:
+        logger.warning(f"Error in loading frame data: \n{traceback.format_exc()}")
+        logger.warning(f"Attempting to load from backup frame service...")
+        try:
+            framedb.load(backup_frame_service)
+            logger.info(f"Frame data loaded from backup service {backup_frame_service.name}")
+        except Exception as e:
+            logger.error(f"Failed to load frame data from backup service: \n{traceback.format_exc()}")
+            exit(1)
 
+    # initialize bot
+    try:
+        hei = FrameDataBot(framedb, frame_service, config)
     except Exception as e:
         logger.error(f"Failed to initialize bot: {e}")
         exit(1)
@@ -91,14 +106,14 @@ def main() -> None:
         logger.info(f"Frame data refresh thread started with tid: {scheduler_thread.native_id}")
 
     except Exception as e:
-        logger.error(f"Error in scheduling the frame refresh thread: {e}")
+        logger.error(f"Error in scheduling the frame refresh thread: \n{traceback.format_exc()}")
 
     # start the bot
     try:
         logger.info("Starting bot...")
         hei.run(config.discord_token)
     except Exception as e:
-        logger.error(f"Error in running the bot: {e}")
+        logger.error(f"Error in running the bot: \n{traceback.format_exc()}")
     logger.info("Bot stopped")
 
 

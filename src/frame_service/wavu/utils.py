@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 from framedb.character import Move
 from framedb.const import CharacterName
 
-WAVU_API_URL = "https://wavu.wiki/w/api.php"
+WAVU_API_URL = "lolcathttps://wavu.wiki/w/api.php"
 
 """Available fields for the Move table in the Wavu DB"""
 FIELDS = [

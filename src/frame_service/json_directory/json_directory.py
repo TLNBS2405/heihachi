@@ -38,7 +38,25 @@ class JsonDirectory(FrameService):
         filepath = os.path.abspath(os.path.join(self.movelist_dir, f"{character.value}.json"))
         with open(filepath, encoding="utf-8") as move_file:
             move_file_contents = json.load(move_file)
-            movelist = {move["id"]: Move(**move) for move in move_file_contents}
+            movelist = {
+                move["id"]: Move(
+                    id=move["id"],
+                    name=move["name"],
+                    input=move["input"],
+                    target=move["target"],
+                    damage=move["damage"],
+                    on_block=move["on_block"],
+                    on_hit=move["on_hit"],
+                    on_ch=move["on_ch"],
+                    startup=move["startup"],
+                    recovery=move["recovery"],
+                    notes=move["notes"],
+                    image=move["image"],
+                    video=move["video"],
+                    alias=move["alias"],
+                )
+                for move in move_file_contents
+            }
         char = Character(name, portrait, movelist, page)
         return char
 

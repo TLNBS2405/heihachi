@@ -4,7 +4,7 @@ from typing import Any, List
 
 import discord
 
-from framedb import Character, CharacterName, FrameDb, FrameService, Move, MoveType
+from framedb import Character, FrameDb, FrameService, Move, MoveType
 
 MOVE_NOT_FOUND_TITLE = "Move not found"
 

@@ -53,6 +53,7 @@ class FrameDb:
     def refresh(self, frame_service: FrameService, export_dir_path: str, format: str = "json") -> None:
         "Refresh the frame database using a frame service."
 
+        logger.info(f"Refreshing frame data from {frame_service.name} and exporting to {export_dir_path}")
         self.load(frame_service)
         self.export(export_dir_path, format=format)
 
