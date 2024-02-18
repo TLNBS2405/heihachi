@@ -1,7 +1,7 @@
 import discord
 
 
-class DoneButton(discord.ui.View):  # TODO: investigate interaction failing sometimes
+class DoneButton(discord.ui.View):
     def __init__(self, actioned_channel: discord.channel.TextChannel) -> None:
         self.actioned_channel = actioned_channel
         super().__init__(timeout=None)
