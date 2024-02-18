@@ -14,17 +14,23 @@ ERROR_COLOR = discord.Colour.from_rgb(220, 20, 60)
 
 
 def get_similar_moves_embed(  # TODO: look into improving the similar moves flow where a user can select the move they want directly
-    frame_service: FrameService, similar_moves: List[Move], character_name: CharacterName
+    frame_service: FrameService,
+    character: Character,
+    similar_moves: List[Move],
 ) -> discord.Embed:
     """Returns the embed message for similar moves."""
-
-    command_list = [f"**{idx + 1}**. {move.input}" for idx, move in enumerate(similar_moves)]  # TODO: add move links?
 
     embed = discord.Embed(
         title=MOVE_NOT_FOUND_TITLE,
         colour=WARNING_COLOR,
-        description="Similar moves from {}\n{}".format(character_name.pretty(), "\n".join(command_list)),
+        description=f"Similar moves from {character.name.pretty()} -",
     )
+
+    embed.add_field(
+        name="Input", value="\n".join([move.input for move in similar_moves]).replace("*", "\\*")
+    )  # TODO: replacement should be done when storing in Move object
+    embed.set_thumbnail(url=character.portrait)
+    embed.set_footer(text=frame_service.name, icon_url=frame_service.icon)
     return embed
 
 
@@ -100,15 +106,21 @@ def get_frame_data_embed(framedb: FrameDb, frame_service: FrameService, char_que
             embed = moves_embed
         else:
             character_move = framedb.get_move_by_input(character.name, move_query)
+            similar_name_moves = framedb.get_moves_by_move_name(character.name, move_query)
+            similar_input_moves = framedb.get_moves_by_move_input(character.name, move_query)
 
             if character_move:
                 move_embed = get_move_embed(frame_service, character, character_move)
                 embed = move_embed
+            elif len(similar_name_moves) == 1:
+                move_embed = get_move_embed(frame_service, character, similar_name_moves[0])
+                embed = move_embed
+            elif len(similar_input_moves) == 1:
+                move_embed = get_move_embed(frame_service, character, similar_input_moves[0])
+                embed = move_embed
             else:
-                similar_moves = framedb.get_similar_moves(character.name, move_query) + framedb.get_moves_by_move_name(
-                    character.name, move_query
-                )
-                similar_moves_embed = get_similar_moves_embed(frame_service, similar_moves, character.name)
+                similar_moves = similar_name_moves + similar_input_moves
+                similar_moves_embed = get_similar_moves_embed(frame_service, character, similar_moves)
                 embed = similar_moves_embed
     else:
         embed = get_error_embed(f"Could not locate character {char_query}.")

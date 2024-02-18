@@ -42,7 +42,7 @@ def test_get_move_by_id() -> None:
 
 
 @pytest.mark.skip(reason="Not implemented")
-def test_get_similar_moves() -> None:
+def test_get_moves_by_move_input() -> None:
     pass
 
 

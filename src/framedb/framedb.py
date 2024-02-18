@@ -171,7 +171,7 @@ class FrameDb:
         else:
             return character_movelist[move_id]
 
-    def get_similar_moves(self, character: CharacterName, input_query: str) -> List[Move]:
+    def get_moves_by_move_input(self, character: CharacterName, input_query: str) -> List[Move]:
         """
         Given an input query for a known character, find all moves which are similar to the input query.
         """
