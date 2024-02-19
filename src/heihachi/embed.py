@@ -132,31 +132,35 @@ def get_help_embed(frame_service: FrameService) -> discord.Embed:
     """Returns the help embed message for the bot."""
 
     embed = discord.Embed(
-        title="Heihachi Frame Data Bot help",
+        title="Heihachi help",
         colour=SUCCESS_COLOR,
-        description="Heihachi is a bot that provides frame data for Tekken 8.",
+        description="Heihachi is a Discord bot that provides frame data for Tekken 8, primarily from Wavu Wiki.",
     )
     embed.set_thumbnail(url=frame_service.icon)
     embed.add_field(
-        name="Commands list",
-        value="Type `/` to view a list of slash commands.",
+        name="/fd `<character>` `<move>`",
+        value="Get frame data for a particular character's move.",
+        inline=False,
     )
     embed.add_field(
-        name="Frame data",
-        value="Use `/fd <character> <move>` to get frame data for a particular character's move.\n"
-        "For example, \n`* /fd kazuya 1,1,2`\n`* /fd azu engager`\n* `/fd bryan ff2`\n"
-        "The bot is somewhat forgiving with typos and will try to find the closest match.",
+        name="/feedback `message`",
+        value="Send feedback to the bot authors in case of incorrect frame data (or any other reason).",
+        inline=False,
     )
     embed.add_field(
-        name="Feedback",
-        value="use `/feedback <message>` to send feedback to the bot authors in case of incorrect frame data (or any other reason).",
+        name="/help",
+        value="Display this message.",
+        inline=False,
     )
     embed.add_field(
-        name="Help",
-        value="Use `/help` to display this message.",
+        name="Wavu Wiki",
+        value="[Homepage](https://wavu.wiki/t/Main_Page) - [Discord](http://discord.gg/86UFj8GEcC) - [Twitter](https://twitter.com/wavuwiki)",
+        inline=False,
     )
     embed.add_field(
-        name="More links", value="[Wavu Wiki](https://wavu.wiki/t/Main_Page) - [GitHub](https://github.com/TLNBS2405/heihachi)"
+        name="Contributing",
+        value="Heihachi is open source. Follow the project on [GitHub](https://github.com/TLNBS2405/heihachi).",
+        inline=False,
     )
     embed.set_footer(text=frame_service.name, icon_url=frame_service.icon)
     return embed

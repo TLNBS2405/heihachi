@@ -82,18 +82,18 @@ class FrameDataBot(discord.Client):
             else:
                 logger.debug(f"Message from {message.author.name} in {message.guild} does not mention the bot")
 
-    def _character_command_factory(
-        self, name: str
-    ) -> Callable[[discord.Interaction["FrameDataBot"], str], Coroutine[Any, Any, None]]:
-        "A factory function to create /character command functions"
+    # def _character_command_factory(
+    #     self, name: str
+    # ) -> Callable[[discord.Interaction["FrameDataBot"], str], Coroutine[Any, Any, None]]:
+    #     "A factory function to create /character command functions"
 
-        async def _character_command(interaction: discord.Interaction["FrameDataBot"], move: str) -> None:
-            logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /{name} {move}")
-            if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
-                embed = get_frame_data_embed(self.framedb, self.frame_service, name, move)
-                await interaction.response.send_message(embed=embed, ephemeral=False)
+    #     async def _character_command(interaction: discord.Interaction["FrameDataBot"], move: str) -> None:
+    #         logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /{name} {move}")
+    #         if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
+    #             embed = get_frame_data_embed(self.framedb, self.frame_service, name, move)
+    #             await interaction.response.send_message(embed=embed, ephemeral=False)
 
-        return _character_command
+    #     return _character_command
 
     async def _character_name_autocomplete(
         self, interaction: discord.Interaction["FrameDataBot"], current: str
@@ -126,11 +126,11 @@ class FrameDataBot(discord.Client):
                 embed = get_frame_data_embed(self.framedb, self.frame_service, character_name_query, move_query)
                 await interaction.response.send_message(embed=embed, ephemeral=False)
 
-        for character in CharacterName:
-            char_name = character.value
-            self.tree.command(name=char_name, description=f"Frame data from {char_name}")(
-                self._character_command_factory(char_name)
-            )
+        # for character in CharacterName:
+        #     char_name = character.value
+        #     self.tree.command(name=char_name, description=f"Frame data from {char_name}")(
+        #         self._character_command_factory(char_name)
+        #     )
 
         if self.config.feedback_channel_id and self.config.action_channel_id:
 
