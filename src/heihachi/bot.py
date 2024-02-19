@@ -31,7 +31,7 @@ class FrameDataBot(discord.Client):
         self.synced = False
         self.tree = discord.app_commands.CommandTree(self)
 
-        self._add_bot_commands()  # TODO: add a help command
+        self._add_bot_commands()
         logger.debug(f"Bot command tree: {[command.name for command in self.tree.get_commands()]}")
 
     async def on_ready(self) -> None:
