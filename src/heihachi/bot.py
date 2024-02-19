@@ -1,12 +1,12 @@
 import datetime
 import logging
 import traceback
-from typing import Any, Callable, Coroutine, List
+from typing import List
 
 import discord
 import discord.ext.commands
 
-from framedb import CharacterName, FrameDb, FrameService
+from framedb import FrameDb, FrameService
 from heihachi import button, embed
 from heihachi.configurator import Configurator
 from heihachi.embed import get_frame_data_embed
