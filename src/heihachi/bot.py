@@ -68,6 +68,21 @@ class FrameDataBot(discord.Client):
         age = today - interaction.user.created_at.replace(tzinfo=None)
         return age.days < self.config.new_author_age_limit
 
+    async def on_message(self, message: discord.Message) -> None:
+        logger.debug(f"Received message from {message.author.name} in {message.guild}: {message.content}")
+        if not self._is_user_blacklisted(message.author.id) and self.user and message.author.id != self.user.id:
+            if message.content and self.user.mentioned_in(message):
+                try:
+                    user_command, params = message.content.split(" ", 1)
+                    char_name_query, move_query = params.split(" ", 1)
+
+                    embed = get_frame_data_embed(self.framedb, self.frame_service, char_name_query, move_query)
+                    await message.channel.send(embed=embed, reference=message)
+                except ValueError:
+                    logger.debug(f"Message from {message.author.name} in {message.guild} is not a valid command")
+            else:
+                logger.debug(f"Message from {message.author.name} in {message.guild} does not mention the bot")
+
     def _character_command_factory(
         self, name: str
     ) -> Callable[[discord.Interaction["FrameDataBot"], str], Coroutine[Any, Any, None]]:
