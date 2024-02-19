@@ -7,9 +7,9 @@ A Discord bot to receive Tekken 8 frame data primarily from [Wavu Wiki](https://
 Clone this repository to a Linux server that has Python 3.10.0+ and install the dependencies with:
 
 ```bash
-git clone git@github.com:TLNBS2405/heihachi.git
+git clone git@github.com:AbhijeetKrishnan/heihachi.git
 cd heihachi
-python3 -m pip install -r requirements.txt
+python3 -m pip install .
 ```
 ### Config
 
@@ -25,8 +25,10 @@ The Heihachi bot is configured using a `config.json` file. A sample file is prov
 }
 ```
 You can obtain your own Discord token by creating a Discord bot ([instructions](https://discordpy.readthedocs.io/en/stable/discord.html)).
+The bot must have the "Message Content Intent" enabled on the Discord Developer Portal. The bot uses a permissions integer
+of 551903315968 (Send Messages, Embed Links, Use Slash Commands, Use Embedded Activities).
 
-The `FEEDBACK_CHANNEL_ID` is the channel where the bot will send feedback messages. The bot supports the slash command `/fd feedback <message>` to allow users to provide feedback on the bot's operation or frame data, and have the bot repost it in a dedicated channel for easier tracking.
+The `FEEDBACK_CHANNEL_ID` is the channel where the bot will send feedback messages. The bot supports the slash command `/feedback <message>` to allow users to provide feedback on the bot's operation or frame data, and have the bot repost it in a dedicated channel for easier tracking.
 
 ![Feedback](/assets/feedback_example.png)
 
@@ -54,6 +56,19 @@ The bot supports the following slash commands -
 
 | Command | Description |
 | --- | --- |
-| `/fd <character> <move>` | Get frame data of a move from a character |
-| `/<character> <move>` | Same as above |
+| `/fd <character> <move>` | Get frame data of a particular character's move |
 | `/feedback <message>` | Send feedback to the bot owner |
+
+## Testing
+
+To install the development dependencies, run -
+
+```bash
+python3 -m pip install -e .[dev]
+```
+
+The bot uses `pytest` for testing. To run the tests, execute the below command from the project's root directory -
+
+```bash
+python3 -m pytest
+```

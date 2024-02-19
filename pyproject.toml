@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "heihachi"
-version = "1.0.0"
+version = "2.0.0"
 description = "A Discord bot to receive Tekken 8 frame data primarily from Wavu Wiki"
 readme = "README.md"
 authors = [
