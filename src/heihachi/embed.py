@@ -11,6 +11,7 @@ MOVE_NOT_FOUND_TITLE = "Move not found"
 SUCCESS_COLOR = discord.Colour.from_rgb(50, 168, 82)
 WARNING_COLOR = discord.Colour.from_rgb(253, 218, 13)
 ERROR_COLOR = discord.Colour.from_rgb(220, 20, 60)
+HEIHACHI_COLOR = discord.Colour.from_rgb(149, 251, 255)
 
 
 def get_similar_moves_embed(  # TODO: look into improving the similar moves flow where a user can select the move they want directly
@@ -124,4 +125,38 @@ def get_frame_data_embed(framedb: FrameDb, frame_service: FrameService, char_que
                 embed = similar_moves_embed
     else:
         embed = get_error_embed(f"Could not locate character {char_query}.")
+    return embed
+
+
+def get_help_embed(frame_service: FrameService) -> discord.Embed:
+    """Returns the help embed message for the bot."""
+
+    embed = discord.Embed(
+        title="Heihachi Frame Data Bot help",
+        colour=SUCCESS_COLOR,
+        description="Heihachi is a bot that provides frame data for Tekken 8.",
+    )
+    embed.set_thumbnail(url=frame_service.icon)
+    embed.add_field(
+        name="Commands list",
+        value="Type `/` to view a list of slash commands.",
+    )
+    embed.add_field(
+        name="Frame data",
+        value="Use `/fd <character> <move>` to get frame data for a particular character's move.\n"
+        "For example, \n`* /fd kazuya 1,1,2`\n`* /fd azu engager`\n* `/fd bryan ff2`\n"
+        "The bot is somewhat forgiving with typos and will try to find the closest match.",
+    )
+    embed.add_field(
+        name="Feedback",
+        value="use `/feedback <message>` to send feedback to the bot authors in case of incorrect frame data (or any other reason).",
+    )
+    embed.add_field(
+        name="Help",
+        value="Use `/help` to display this message.",
+    )
+    embed.add_field(
+        name="More links", value="[Wavu Wiki](https://wavu.wiki/t/Main_Page) - [GitHub](https://github.com/TLNBS2405/heihachi)"
+    )
+    embed.set_footer(text=frame_service.name, icon_url=frame_service.icon)
     return embed
