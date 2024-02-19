@@ -90,7 +90,7 @@ def _convert_json_move(move_json: Any) -> WavuMove:
 
     name = html.unescape(_normalize_data(_process_links(move_json["name"])))
 
-    input = _normalize_data(move_json["input"])
+    input = html.unescape(html.unescape(_normalize_data(move_json["input"])))
 
     if "alias" in move_json:
         alias = tuple(_normalize_data(move_json["alias"]).split(","))
