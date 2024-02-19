@@ -32,7 +32,6 @@ class FrameDataBot(discord.Client):
         self.tree = discord.app_commands.CommandTree(self)
 
         self._add_bot_commands()  # TODO: add a help command
-        # TODO: re-add on_message handling for tagged messages (e.g., @Heihachi reina df2)
         logger.debug(f"Bot command tree: {[command.name for command in self.tree.get_commands()]}")
 
     async def on_ready(self) -> None:
