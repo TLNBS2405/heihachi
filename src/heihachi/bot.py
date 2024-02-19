@@ -165,9 +165,9 @@ class FrameDataBot(discord.Client):
         else:
             logger.warning("Feedback or Action channel ID is not set. Disabling feedback command.")
 
-            @self.tree.command(name="help", description="Show help")
-            async def _help_command(interaction: discord.Interaction["FrameDataBot"]) -> None:
-                logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /help")
-                if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
-                    help_embed = embed.get_help_embed(self.frame_service)
-                    await interaction.response.send_message(embed=help_embed, ephemeral=True)
+        @self.tree.command(name="help", description="Show help")
+        async def _help_command(interaction: discord.Interaction["FrameDataBot"]) -> None:
+            logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /help")
+            if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
+                help_embed = embed.get_help_embed(self.frame_service)
+                await interaction.response.send_message(embed=help_embed, ephemeral=True)
