@@ -29,9 +29,10 @@ FIELDS = [
     "hit",
     "ch",
     "notes",
-    # "alias",
-    # "image",
-    # "video",
+    "alias",
+    "image",
+    "video",
+    "alt",
     "_pageNamespace=ns",
 ]
 
@@ -92,11 +93,6 @@ def _convert_json_move(move_json: Any) -> WavuMove:
 
     input = html.unescape(html.unescape(_normalize_data(move_json["input"])))
 
-    if "alias" in move_json:
-        alias = tuple(_normalize_data(move_json["alias"]).split(","))
-    else:
-        alias = ()
-
     target = _normalize_data(move_json["target"])
 
     damage = _normalize_data(move_json["damage"])
@@ -113,12 +109,28 @@ def _convert_json_move(move_json: Any) -> WavuMove:
 
     recovery = _normalize_data(move_json["recv"])
 
+    if "alias" in move_json:
+        alias = tuple(_normalize_data(move_json["alias"]).split(","))  # TODO: process dotlist correctly
+    else:
+        alias = ()
+
+    if "alt" in move_json:
+        alt = tuple(_normalize_data(move_json["alt"]))  # TODO: process dotlist correctly
+    else:
+        alt = ()
+
+    if "image" in move_json:
+        image = _process_links(move_json["image"])
+
+    if "video" in move_json:
+        video = _process_links(move_json["video"])
+
     notes = _remove_html_tags(_process_links(move_json["notes"]))
 
     move = WavuMove(
         id,
-        name,
         input,
+        name,
         target,
         damage,
         on_block,
@@ -127,9 +139,10 @@ def _convert_json_move(move_json: Any) -> WavuMove:
         startup,
         recovery,
         notes,
-        "",  # image
-        "",  # video
+        image,
+        video,
         alias,
+        alt,
         parent,
     )
     return move

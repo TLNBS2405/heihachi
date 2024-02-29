@@ -14,8 +14,8 @@ Url = str
 @dataclass
 class Move:
     id: str
+    input: DiscordMd
     name: DiscordMd = ""
-    input: DiscordMd = ""
     target: DiscordMd = ""
     damage: DiscordMd = ""
     on_block: DiscordMd = ""
@@ -27,6 +27,7 @@ class Move:
     image: Url = ""
     video: Url = ""
     alias: Tuple[DiscordMd, ...] = ()
+    alt: Tuple[DiscordMd, ...] = ()
 
 
 @dataclass
