@@ -82,19 +82,6 @@ class FrameDataBot(discord.Client):
             else:
                 logger.debug(f"Message from {message.author.name} in {message.guild} does not mention the bot")
 
-    # def _character_command_factory(
-    #     self, name: str
-    # ) -> Callable[[discord.Interaction["FrameDataBot"], str], Coroutine[Any, Any, None]]:
-    #     "A factory function to create /character command functions"
-
-    #     async def _character_command(interaction: discord.Interaction["FrameDataBot"], move: str) -> None:
-    #         logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /{name} {move}")
-    #         if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
-    #             embed = get_frame_data_embed(self.framedb, self.frame_service, name, move)
-    #             await interaction.response.send_message(embed=embed, ephemeral=False)
-
-    #     return _character_command
-
     async def _character_name_autocomplete(
         self, interaction: discord.Interaction["FrameDataBot"], current: str
     ) -> List[discord.app_commands.Choice[str]]:
@@ -109,9 +96,6 @@ class FrameDataBot(discord.Client):
         return [discord.app_commands.Choice(name=choice[0].title(), value=choice[0]) for choice in choices][
             :25
         ]  # Discord has a max choice number of 25 (https://github.com/Rapptz/discord.py/discussions/9241)
-        # TODO: why can't we leverage Discord subcommands/group commands for fd autocompletion? They're essentially
-        # the same as the /character commands, no? Less commands to worry about too, just groups everything under
-        # /fd
 
     def _add_bot_commands(self) -> None:
         "Add all frame commands to the bot"
@@ -125,12 +109,6 @@ class FrameDataBot(discord.Client):
             if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
                 embed = get_frame_data_embed(self.framedb, self.frame_service, character_name_query, move_query)
                 await interaction.response.send_message(embed=embed, ephemeral=False)
-
-        # for character in CharacterName:
-        #     char_name = character.value
-        #     self.tree.command(name=char_name, description=f"Frame data from {char_name}")(
-        #         self._character_command_factory(char_name)
-        #     )
 
         if self.config.feedback_channel_id and self.config.action_channel_id:
 

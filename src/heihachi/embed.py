@@ -27,23 +27,24 @@ def get_similar_moves_embed(  # TODO: look into improving the similar moves flow
         description=f"Similar moves from {character.name.pretty()} -",
     )
 
-    embed.add_field(
-        name="Input", value="\n".join([move.input for move in similar_moves]).replace("*", "\\*")
-    )  # TODO: replacement should be done when storing in Move object
+    embed.add_field(name="Input", value="\n".join([move.input for move in similar_moves]))
     embed.set_thumbnail(url=character.portrait)
     embed.set_footer(text=frame_service.name, icon_url=frame_service.icon)
     return embed
 
 
-def get_move_list_embed(
-    frame_service: FrameService, character: Character, moves: List[Move], move_type: MoveType
+def get_success_movelist_embed(
+    frame_service: FrameService, character: Character, moves: List[Move], title: str
 ) -> discord.Embed:
-    """Returns the embed message for a list of moves matching a special move type."""
+    """Returns the embed message for a list of moves that was successfully matched.
+
+    For e.g., to a move type
+    """
 
     desc_string = "\n".join(sorted([move.input for move in moves]))  # TODO: add move links or more data?
 
     embed = discord.Embed(
-        title=f"{character.name.pretty()} {move_type.value.lower()}:\n",
+        title=f"{character.name.pretty()} {title}:\n",
         colour=SUCCESS_COLOR,
         description=desc_string,
     )
@@ -96,39 +97,21 @@ def get_move_embed(frame_service: FrameService, character: Character, move: Move
 def get_frame_data_embed(framedb: FrameDb, frame_service: FrameService, char_query: str, move_query: str) -> discord.Embed:
     """
     Creates an embed for the frame data of a character and move.
-
-    1. Check if the character can be matched to one that exists in the DB. If not, return error embed.
-    2. Check if the move query can be matched to a move type. If yes, return all moves matching that move type.
-    3. Check if the move query can be matched to a single move. If yes, return the move.
-    4. If no match is found, return a list of (possibly empty) similar moves.
     """
 
     character = framedb.get_character_by_name(char_query)
     if character:
         move_type = framedb.get_move_type(move_query)
-
         if move_type:
-            moves = framedb.get_moves_by_move_type(character.name, move_type.value)
-            moves_embed = get_move_list_embed(frame_service, character, moves, move_type)
-            embed = moves_embed
+            moves_by_move_type = framedb.get_moves_by_move_type(character.name, move_type.name)
+            embed = get_success_movelist_embed(frame_service, character, moves_by_move_type, move_type.value)
         else:
-            character_move = framedb.get_move_by_input(character.name, move_query)
-            similar_name_moves = framedb.get_moves_by_move_name(character.name, move_query)
-            similar_input_moves = framedb.get_moves_by_move_input(character.name, move_query)
+            moves = framedb.search_move(character, move_query)
 
-            if character_move:
-                move_embed = get_move_embed(frame_service, character, character_move)
-                embed = move_embed
-            elif len(similar_name_moves) == 1:
-                move_embed = get_move_embed(frame_service, character, similar_name_moves[0])
-                embed = move_embed
-            elif len(similar_input_moves) == 1:
-                move_embed = get_move_embed(frame_service, character, similar_input_moves[0])
-                embed = move_embed
-            else:
-                similar_moves = similar_name_moves + similar_input_moves
-                similar_moves_embed = get_similar_moves_embed(frame_service, character, similar_moves)
-                embed = similar_moves_embed
+            if isinstance(moves, Move):
+                embed = get_move_embed(frame_service, character, moves)
+            elif isinstance(moves, list):
+                embed = get_similar_moves_embed(frame_service, character, moves)
     else:
         embed = get_error_embed(f"Could not locate character {char_query}.")
     return embed

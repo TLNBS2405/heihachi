@@ -12,6 +12,11 @@ def test_framedb_load() -> None:
 
 
 @pytest.mark.skip(reason="Not implemented")
+def test_build_autocomplete() -> None:
+    pass
+
+
+@pytest.mark.skip(reason="Not implemented")
 def test_simplify_input() -> None:
     pass
 
@@ -22,12 +27,27 @@ def test_is_command_in_alias() -> None:
 
 
 @pytest.mark.skip(reason="Not implemented")
+def test_is_command_in_alt() -> None:
+    pass
+
+
+@pytest.mark.skip(reason="Not implemented")
+def test_correct_character_name() -> None:
+    pass
+
+
+@pytest.mark.skip(reason="Not implemented")
 def test_correct_move_type() -> None:
     pass
 
 
 @pytest.mark.skip(reason="Not implemented")
 def test_get_move_by_input() -> None:
+    pass
+
+
+@pytest.mark.skip(reason="Not implemented")
+def test_get_moves_by_move_name() -> None:
     pass
 
 
@@ -43,6 +63,11 @@ def test_get_move_by_id() -> None:
 
 @pytest.mark.skip(reason="Not implemented")
 def test_get_moves_by_move_input() -> None:
+    pass
+
+
+@pytest.mark.skip(reason="Not implemented")
+def test_search_move() -> None:
     pass
 
 

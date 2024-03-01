@@ -97,7 +97,7 @@ def _convert_json_move(move_json: Any) -> WavuMove:
 
     name = html.unescape(_normalize_data(_process_links(move_json["name"])))
 
-    input = html.unescape(html.unescape(_normalize_data(move_json["input"])))
+    input = html.unescape(html.unescape(_normalize_data(move_json["input"]))).replace("*", "\\*")
 
     target = _normalize_data(move_json["target"])
 

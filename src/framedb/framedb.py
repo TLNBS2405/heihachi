@@ -2,7 +2,7 @@ import logging
 import os
 from difflib import SequenceMatcher
 from heapq import nlargest as _nlargest
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 import requests
 from fast_autocomplete import AutoComplete
@@ -198,7 +198,7 @@ class FrameDb:
         """
 
         movelist = list(self.frames[character].movelist.values())
-        command_list = [entry.input for entry in movelist]
+        command_list = [entry.input for entry in movelist]  # TODO: include alts
         similar_move_indices = _get_close_matches_indices(
             FrameDb._simplify_input(input_query), list(map(FrameDb._simplify_input, command_list))
         )
@@ -226,6 +226,38 @@ class FrameDb:
                     move_type_candidate = move_type
                     break
         return move_type_candidate
+
+    def search_move(self, character: Character, move_query: str) -> Move | List[Move]:
+        """Given a move query for a character, search for the move
+
+        1. Check if the move query can be matched exactly by input (+ alts).
+        2. Check if the move query can be matched by name (+ aliases)
+        3. Check if the move query can be matched fuzzily by input (+ alts) or name (+ aliases)
+        4. If no match is found, return a list of (possibly empty) similar moves.
+        """
+
+        moves: Move | List[Move] = []
+
+        # check for exact input match
+        character_move = self.get_move_by_input(character.name, move_query)
+
+        # check for name match
+        similar_name_moves = self.get_moves_by_move_name(character.name, move_query)
+
+        # check for fuzzy input match
+        similar_input_moves = self.get_moves_by_move_input(character.name, move_query)
+
+        if character_move:
+            moves = character_move
+        elif len(similar_name_moves) == 1:
+            moves = similar_name_moves[0]
+        elif len(similar_input_moves) == 1:
+            moves = similar_input_moves[0]
+        else:
+            similar_moves = similar_name_moves + similar_input_moves
+            moves = similar_moves
+
+        return moves
 
 
 def _get_close_matches_indices(word: str, possibilities: List[str], n: int = 5, cutoff: float = 0.7) -> List[int]:
