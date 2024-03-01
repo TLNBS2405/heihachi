@@ -1,10 +1,13 @@
 """Embeds for the Heihachi bot."""
 
+import logging
 from typing import Any, List
 
 import discord
 
-from framedb import Character, FrameDb, FrameService, Move, MoveType
+from framedb import Character, FrameDb, FrameService, Move
+
+logger = logging.getLogger("main")
 
 MOVE_NOT_FOUND_TITLE = "Move not found"
 
@@ -24,12 +27,15 @@ def get_similar_moves_embed(  # TODO: look into improving the similar moves flow
     embed = discord.Embed(
         title=MOVE_NOT_FOUND_TITLE,
         colour=WARNING_COLOR,
-        description=f"Similar moves from {character.name.pretty()} -",
     )
 
-    embed.add_field(name="Input", value="\n".join([move.input for move in similar_moves]))
+    if len(similar_moves) > 0:
+        embed.add_field(name="Similar Moves", value="\n".join([move.input for move in similar_moves]))
+    else:
+        embed.add_field(name="No similar moves found", value="")
     embed.set_thumbnail(url=character.portrait)
     embed.set_footer(text=frame_service.name, icon_url=frame_service.icon)
+    embed.set_author(name=character.name.pretty(), url=character.page)
     return embed
 
 
@@ -41,13 +47,16 @@ def get_success_movelist_embed(
     For e.g., to a move type
     """
 
-    desc_string = "\n".join(sorted([move.input for move in moves]))  # TODO: add move links or more data?
+    desc_string = "\n".join(sorted([move.input for move in moves]))
 
     embed = discord.Embed(
-        title=f"{character.name.pretty()} {title}:\n",
+        title=f"{title}\n",
         colour=SUCCESS_COLOR,
         description=desc_string,
     )
+    embed.set_thumbnail(url=character.portrait)
+    embed.set_footer(text=frame_service.name, icon_url=frame_service.icon)
+    embed.set_author(name=character.name.pretty(), url=character.page)
     return embed
 
 
@@ -103,7 +112,8 @@ def get_frame_data_embed(framedb: FrameDb, frame_service: FrameService, char_que
     if character:
         move_type = framedb.get_move_type(move_query)
         if move_type:
-            moves_by_move_type = framedb.get_moves_by_move_type(character.name, move_type.name)
+            logger.info(f"Identified move query as move type {move_type}. Getting moves...")
+            moves_by_move_type = framedb.get_moves_by_move_type(character.name, move_type.value)
             embed = get_success_movelist_embed(frame_service, character, moves_by_move_type, move_type.value)
         else:
             moves = framedb.search_move(character, move_query)

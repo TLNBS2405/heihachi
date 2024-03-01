@@ -13,6 +13,8 @@ from .frame_service import FrameService
 
 logger = logging.getLogger("main")
 
+# TODO: refactor the query methods - simplify + handle alts and aliases correctly
+
 
 class FrameDb:
     """
