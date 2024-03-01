@@ -83,9 +83,20 @@ class FrameDb:
         return input_query
 
     @staticmethod
-    def _is_command_in_alias(command: str, move: Move) -> bool:
+    def _is_command_in_alias(move_query: str, move: Move) -> bool:
+        "Check if an input move query is in the alias of the given Move"
+
         for alias in move.alias:
-            if FrameDb._simplify_input(command) == FrameDb._simplify_input(alias):
+            if FrameDb._simplify_input(move_query) == FrameDb._simplify_input(alias):
+                return True
+        return False
+
+    @staticmethod
+    def _is_command_in_alt(move_query: str, move: Move) -> bool:
+        "Check if an input move query is in the alt of the given Move"
+
+        for alt in move.alt:
+            if FrameDb._simplify_input(move_query) == FrameDb._simplify_input(alt):
                 return True
         return False
 
@@ -122,6 +133,8 @@ class FrameDb:
         """Given an input move query for a known character, retrieve the move from the database."""
 
         character_movelist = self.frames[character].movelist.values()
+
+        # compare input directly
         result = [
             entry
             for entry in character_movelist
@@ -129,12 +142,19 @@ class FrameDb:
         ]
         if result:
             return result[0]
-        else:
-            result = list(filter(lambda x: (FrameDb._is_command_in_alias(input_query, x)), character_movelist))
-            if result:
-                return result[0]
-            else:
-                return None
+
+        # compare alt
+        result = list(filter(lambda x: (FrameDb._is_command_in_alt(input_query, x)), character_movelist))
+        if result:
+            return result[0]
+
+        # compare alias
+        result = list(filter(lambda x: (FrameDb._is_command_in_alias(input_query, x)), character_movelist))
+        if result:
+            return result[0]
+
+        # couldn't match anything :-(
+        return None
 
     def get_moves_by_move_name(self, character: CharacterName, move_name_query: str) -> List[Move]:
         """

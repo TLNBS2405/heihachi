@@ -41,7 +41,7 @@ class TestGetWavuCharacterMovelist:
     def test_get_wavu_character_movelist_aliases(self, wavu_response: Any) -> None:
         char_name, response = wavu_response
         movelist = utils._get_wavu_character_movelist(response)
-        assert movelist["Asuka-Destabilizer.1"].alias == ()  # TODO: what should this be?
+        assert movelist["Asuka-Destabilizer.1"].alias == ("f+2+4,1",)
         assert movelist["Asuka-f+1+3"].alias == ("f+2+4",)
 
     @pytest.mark.parametrize("wavu_response", [CharacterName.BRYAN], indirect=True)

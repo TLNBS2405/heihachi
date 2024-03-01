@@ -80,6 +80,12 @@ def _get_wavu_character_movelist(
     return movelist
 
 
+def _process_dotlist(dotlist: str) -> List[str]:
+    "Split normalized string derived from a dotlist into its component parts"
+
+    return dotlist.replace("* ", "").split("\n")
+
+
 def _convert_json_move(move_json: Any) -> WavuMove:
     """
     Convert a JSON response object into a WavuMove object
@@ -110,22 +116,26 @@ def _convert_json_move(move_json: Any) -> WavuMove:
     recovery = _normalize_data(move_json["recv"])
 
     if "alias" in move_json:
-        alias = tuple(_normalize_data(move_json["alias"]).split(","))  # TODO: process dotlist correctly
+        alias = tuple(_process_dotlist(_remove_html_tags(_normalize_data(move_json["alias"]))))
     else:
         alias = ()
 
     if "alt" in move_json:
-        alt = tuple(_normalize_data(move_json["alt"]))  # TODO: process dotlist correctly
+        alt = tuple(_process_dotlist(_remove_html_tags(_normalize_data(move_json["alt"]))))
     else:
         alt = ()
 
     if "image" in move_json:
         image = _process_links(move_json["image"])
+    else:
+        image = ""
 
     if "video" in move_json:
         video = _process_links(move_json["video"])
+    else:
+        video = ""
 
-    notes = _remove_html_tags(_process_links(move_json["notes"]))
+    notes = _remove_html_tags(_process_links(move_json["notes"])).strip()
 
     move = WavuMove(
         id,
@@ -240,6 +250,7 @@ def _remove_html_tags(data: str) -> str:
     result = re.sub(r"(\n)+", "\n", result)
     result = result.replace("'''", "")
     result = result.replace("**", " *")  # hack/fix for nested Plainlists
+    result = result.strip()
     return result
 
 
@@ -280,4 +291,4 @@ if __name__ == "__main__":
             movelist = _get_wavu_character_movelist(response)
             print(f"Got {len(movelist)} moves for {char.value.title()}")
             with open(os.path.join(os.path.dirname(__file__), "tests", "static", f"{char.value}.json"), "w") as f:
-                json.dump(movelist, f, indent=4)
+                json.dump(response, f, indent=4)

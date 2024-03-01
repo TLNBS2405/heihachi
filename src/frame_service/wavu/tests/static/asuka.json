@@ -16,6 +16,10 @@
                 "hit": "+9",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -35,6 +39,10 @@
                 "hit": "+4",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st CH\n* Links to f+1&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -54,6 +62,10 @@
                 "hit": "[[Asuka_combos#Minicombos|KND]]",
                 "ch": "[[Asuka_combos#Minicombos|KND]]",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -73,6 +85,10 @@
                 "hit": "+6",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n*Combo from 1st CH&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -91,7 +107,11 @@
                 "block": "-2",
                 "hit": "KND",
                 "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip on block\n* Link to f+4\n* Can interrupt with up to i15 if previous hit is blocked&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip on block\n* Link to f+4\n* Can interrupt with up to i15 if previous hit is blocked\n* Cancel with input 1,2,3,B\n* Last input can be held to power up&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -111,6 +131,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Cannot block for 5 seconds\n* CH state for 5 seconds&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -130,6 +154,10 @@
                 "hit": "LNC",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Break: 1+2\n* Opp. Position on break: Reverse Pos.\n* Opp. Position on hit: Foot sd. FU\n* Left slap is auto-attack\n* Throw breaks 16f later (1f)&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -149,25 +177,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Break: none\n* Opp. Position on break:\n* Opp. Position on hit: Foot sd. FU&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-1,2,3,B",
-                "name": "Jab Uppercut &gt; Spinning Heel Drop to Cancel",
-                "input": ",B",
-                "parent": "Asuka-1,2,3",
-                "target": ",sp",
-                "damage": ",0",
-                "startup": null,
-                "recv": null,
-                "tot": null,
-                "crush": null,
-                "block": "-18",
-                "hit": "-7",
-                "ch": null,
-                "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -187,6 +200,10 @@
                 "hit": "KND",
                 "ch": null,
                 "notes": "Combo from 2nd hit",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -206,6 +223,10 @@
                 "hit": "+0d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Throw break 1 or 2\n* Opp. Position on break: CCW\n* Opp. Position on hit: Reverse Pos., F Sd. FU&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -225,13 +246,17 @@
                 "hit": "+0",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-1+4",
-                "name": "White Heron",
+                "name": null,
                 "input": "1+4",
                 "parent": null,
                 "target": "sl,h",
@@ -244,32 +269,17 @@
                 "hit": "-8",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st CH\n* 2nd hit when blocked is -3, on hit is +9\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-1,4",
-                "name": "Jab Leg Cutter",
-                "input": ",4",
-                "parent": "Asuka-1",
-                "target": ",l",
-                "damage": "14",
-                "startup": null,
-                "recv": null,
-                "tot": null,
-                "crush": "cs?",
-                "block": "-11",
-                "hit": "+0",
-                "ch": "+3",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st CH\n* Link to attack from Leg Cutter (db+4)&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-1+4,2",
-                "name": "Blizzard Combo",
+                "name": null,
                 "input": ",2",
                 "parent": "Asuka-1+4",
                 "target": ",h",
@@ -282,6 +292,10 @@
                 "hit": "+9",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd CH\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -301,6 +315,10 @@
                 "hit": "+4",
                 "ch": "KND",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 3rd CH\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -320,6 +338,10 @@
                 "hit": "KND",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 3rd CH\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -338,52 +360,18 @@
                 "block": "-2",
                 "hit": "KND",
                 "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip on block\n* Link to attack from Spinning Heel Drop (f+3)\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-1+4,3,B",
-                "name": "White Heron Spinning Heel Drop to Cancel",
-                "input": ",B",
-                "parent": "Asuka-1+4,3",
-                "target": ",sp",
-                "damage": ",0",
-                "startup": null,
-                "recv": null,
-                "tot": null,
-                "crush": null,
-                "block": "-37",
-                "hit": "-26",
-                "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* If 2nd attack is blocked, -20f\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-1,4,D",
-                "name": "Jab Leg Cutter to Crouching",
-                "input": ",D",
-                "parent": "Asuka-1,4",
-                "target": ",sp",
-                "damage": "0",
-                "startup": null,
-                "recv": "r? FC",
-                "tot": null,
-                "crush": "cs?",
-                "block": "-11",
-                "hit": "+0",
-                "ch": "+3",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st CH&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip on block\n* Link to attack from Spinning Heel Drop (f+3)\n* Can be cancelled with input B\n* Last input can be held to power up\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-2",
-                "name": "Basho&#039;s Dance (1)",
+                "name": null,
                 "input": "2",
                 "parent": null,
                 "target": "h",
@@ -396,13 +384,17 @@
                 "hit": "+0",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-2,1",
-                "name": "Basho&#039;s Dance (2)",
+                "name": null,
                 "input": ",1",
                 "parent": "Asuka-2",
                 "target": ",h",
@@ -415,6 +407,10 @@
                 "hit": "+8",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -434,6 +430,10 @@
                 "hit": "KND",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -452,45 +452,11 @@
                 "block": "-9",
                 "hit": "+3c",
                 "ch": "JG",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd CH&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-2,1,d+1+2,B",
-                "name": "Basho Oroshi to Cancel",
-                "input": ",B",
-                "parent": "Asuka-2,1,d+1+2",
-                "target": ",sp",
-                "damage": ",0",
-                "startup": null,
-                "recv": null,
-                "tot": null,
-                "crush": null,
-                "block": null,
-                "hit": null,
-                "ch": null,
-                "notes": null,
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-2,1,d+1+2,D",
-                "name": "Basho Oroshi to Crouching",
-                "input": ",D",
-                "parent": "Asuka-2,1,d+1+2",
-                "target": ",sp",
-                "damage": ",0",
-                "startup": null,
-                "recv": null,
-                "tot": null,
-                "crush": null,
-                "block": null,
-                "hit": null,
-                "ch": null,
-                "notes": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd CH\n* Cancel to standing with input 2,1,d+1+2,B\n* Cancel to FC with input 2,1,d+1+2,D&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -510,6 +476,10 @@
                 "hit": "+2",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Burst&lt;/div&gt;&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -529,6 +499,10 @@
                 "hit": "KND",
                 "ch": null,
                 "notes": "Combo from 1st hit",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -548,13 +522,17 @@
                 "hit": "+0d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Throw break 1 or 2\n* Opp. Position on break: CCW\n* Opp. Position on hit: Head Sd. FD&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-3",
-                "name": "Hyakujitsuko (1)",
+                "name": null,
                 "input": "3",
                 "parent": null,
                 "target": "m",
@@ -567,6 +545,10 @@
                 "hit": "+9",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -586,6 +568,10 @@
                 "hit": "+8",
                 "ch": "[[Asuka_combos#Minicombos|KND]]",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed 14f\n* Combo can be delayed 14f from hit\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -604,26 +590,11 @@
                 "block": "-6",
                 "hit": "KND",
                 "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Special effect when hitting grounded opponents\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-3+4,D",
-                "name": "Ryuuntsui to Crouching",
-                "input": ",D",
-                "parent": "Asuka-3+4",
-                "target": ",sp",
-                "damage": ",0",
-                "startup": null,
-                "recv": "r? FC",
-                "tot": null,
-                "crush": "js5~",
-                "block": "-6",
-                "hit": "KND",
-                "ch": "KND",
-                "notes": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Special effect when hitting grounded opponents\n* Cancel to FC with input 3+4,D\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -643,6 +614,10 @@
                 "hit": "+7",
                 "ch": "[[Asuka_combos#Staples|JG]]",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -661,7 +636,11 @@
                 "block": "-10",
                 "hit": "+6",
                 "ch": "Th",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Connect to Sumiregari upon CH\n* Damage () is Throw bonus\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Connect to Sumiregari upon CH\n* Damage () is Throw bonus\n* Can be cancelled into FC with input D\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -681,6 +660,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Does 25 + 50% of reversed attack as damage\n* Opp. Position on hit: Reverse Pos Foot-sd. Face-up\n* Reverses limb-based h/m attacks&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -700,13 +683,17 @@
                 "hit": null,
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Does 25 + 50% of reversed attack as damage\n* Opp. Position on hit: Reverse Pos Foot-sd. Face-up\n* Reverses limb-based h/m attacks&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-b+1+4",
-                "name": "Narcissus (2)",
+                "name": null,
                 "input": "b+1+4",
                 "parent": null,
                 "target": "h,l",
@@ -719,6 +706,10 @@
                 "hit": "+5",
                 "ch": "+7",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -738,6 +729,10 @@
                 "hit": "-2",
                 "ch": "KND",
                 "notes": "Combo from 2nd CH",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -757,25 +752,10 @@
                 "hit": "+5b",
                 "ch": "+5b",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd CH\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-b+1,D",
-                "name": "Violet to Cancel",
-                "input": ",D",
-                "parent": "Asuka-b+1",
-                "target": ",sp",
-                "damage": ",",
-                "startup": null,
-                "recv": "39 FC",
-                "tot": null,
-                "crush": "cs6~",
-                "block": null,
-                "hit": null,
-                "ch": null,
-                "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -795,6 +775,10 @@
                 "hit": "+1c",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -814,13 +798,17 @@
                 "hit": "+4",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st CH\n* Link to attack from Lunging Mist Thrust ()\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-b+2,1+2",
-                "name": "Swallow Mallet Elbow",
+                "name": null,
                 "input": ",1+2",
                 "parent": "Asuka-b+2",
                 "target": ",h",
@@ -832,7 +820,11 @@
                 "block": "-9",
                 "hit": "+2",
                 "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed 12F\n* Combo can be delayed 9F from CH\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed 12F\n* Combo can be delayed 9F from CH\n* Can be cancelled with input D\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -852,25 +844,10 @@
                 "hit": "KND",
                 "ch": "KND",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd CH\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-b+2,1+2,D",
-                "name": "Swallow Mallet Elbow to Cancel",
-                "input": ",D",
-                "parent": "Asuka-b+2,1+2",
-                "target": ",sp",
-                "damage": null,
-                "startup": null,
-                "recv": "? FC",
-                "tot": null,
-                "crush": null,
-                "block": "-6c",
-                "hit": "-1c",
-                "ch": "-1c",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -890,6 +867,10 @@
                 "hit": "+6",
                 "ch": null,
                 "notes": "Sabaki absorbs kicks",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -908,26 +889,11 @@
                 "block": "-11",
                 "hit": "+0",
                 "ch": "+3",
-                "notes": "Link to attack from Leg Cutter ()",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-b+2,4,D",
-                "name": "Swallow Mallet Leg Cutter to Crouching",
-                "input": ",D",
-                "parent": "Asuka-b+2,4",
-                "target": ",sp",
-                "damage": ",",
-                "startup": null,
-                "recv": "? FC",
-                "tot": null,
-                "crush": "cs",
-                "block": "-11",
-                "hit": "+0",
-                "ch": "+3",
-                "notes": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Link to attack from Leg Cutter ()\n* Can be cancelled with input D\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -947,6 +913,10 @@
                 "hit": "LNC",
                 "ch": "LNC",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -965,45 +935,11 @@
                 "block": "-20",
                 "hit": "LNC",
                 "ch": "LNC",
-                "notes": "Interruption 23F after 1st block",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-b+3,2,D",
-                "name": "Dragon Wheel Kick Demon Slayer to Cancel",
-                "input": ",D",
-                "parent": "Asuka-b+3,2",
-                "target": "m",
-                "damage": "15",
-                "startup": null,
-                "recv": "? FC",
-                "tot": null,
-                "crush": "js10~",
-                "block": "-33",
-                "hit": "LNC",
-                "ch": "LNC",
-                "notes": null,
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-b+3,2,(must hit) 1",
-                "name": "Dragon Wheel Kick Demon Slayer \uff1e Naniwa Gusto",
-                "input": ",(must hit) 1",
-                "parent": "Asuka-b+3,2",
-                "target": ",sp",
-                "damage": null,
-                "startup": null,
-                "recv": "? NWG",
-                "tot": null,
-                "crush": null,
-                "block": null,
-                "hit": "LNC",
-                "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Gain Naniwa Gusto\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Interruption 23F after 1st block\n* Can be cancelled with input D\n* on hit, gain NWG with input 1\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1022,33 +958,18 @@
                 "block": "-11",
                 "hit": "+0",
                 "ch": "+3",
-                "notes": "Link to attack from Leg Cutter ()",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-b+3,4,D",
-                "name": "Dragon Wheel Leg Cutter to Crouching",
-                "input": ",D",
-                "parent": "Asuka-b+3,4",
-                "target": ",sp",
-                "damage": null,
-                "startup": null,
-                "recv": "? FC",
-                "tot": null,
-                "crush": "cs",
-                "block": "-11",
-                "hit": "+0",
-                "ch": "+3",
-                "notes": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Link to attack from Leg Cutter ()\n* Can be cancelled into FC with input D\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-b+4",
-                "name": "Heart Stopper",
+                "name": null,
                 "input": "b+4",
                 "parent": null,
                 "target": "m",
@@ -1061,13 +982,17 @@
                 "hit": "+8",
                 "ch": "KND",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-b+4,2",
-                "name": "Tsuwabuki",
+                "name": null,
                 "input": ",2",
                 "parent": "Asuka-b+4",
                 "target": ",m",
@@ -1080,6 +1005,10 @@
                 "hit": "+4c",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Can be delayed 15F\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1098,26 +1027,11 @@
                 "block": "-16",
                 "hit": "KND",
                 "ch": "KND",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd hit\n* Can be delayed 10F\n* Combo can be delayed 10F from hit\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-b+4,2,3,(must hit) 1",
-                "name": "Tsuyababuki &gt; Naniwa Gusto",
-                "input": ",(must hit) 1",
-                "parent": "Asuka-b+4,2,3",
-                "target": ",sp",
-                "damage": null,
-                "startup": null,
-                "recv": "? NWG",
-                "tot": null,
-                "crush": null,
-                "block": null,
-                "hit": "KND",
-                "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd hit\n* Can be delayed 10F\n* Combo can be delayed 10F from hit\n* on hit, can gain NWG with input 1\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1137,6 +1051,10 @@
                 "hit": "+0d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Throw break: none\n* Opp. Position on break: -\n* Opp. Position on hit: Head Sd. Face D&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1156,25 +1074,10 @@
                 "hit": "KND",
                 "ch": null,
                 "notes": null,
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-d+1",
-                "name": "Crouch Jab",
-                "input": "d+1",
-                "parent": null,
-                "target": "sm",
-                "damage": "5",
-                "startup": "i10",
-                "recv": "? FC",
-                "tot": null,
-                "crush": "cs4~",
-                "block": "-5",
-                "hit": "+6",
-                "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Returns to standing when input F\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1194,6 +1097,10 @@
                 "hit": "KND",
                 "ch": "KND",
                 "notes": "Same move as FC.1+2",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1213,25 +1120,10 @@
                 "hit": "+9c",
                 "ch": "KND",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* Gain Naniwa Gusto on Heat activation\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-d+3",
-                "name": "Crouch Spin Kick",
-                "input": "d+3",
-                "parent": null,
-                "target": "l",
-                "damage": "12",
-                "startup": "i16",
-                "recv": "? FC",
-                "tot": null,
-                "crush": "cs4~",
-                "block": "-17",
-                "hit": "-3",
-                "ch": null,
-                "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1251,25 +1143,10 @@
                 "hit": "LNC",
                 "ch": "LNC",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Block frame is blocked 1st attack\n* -6F upon 2nd block\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-d+4",
-                "name": "Crouch Chin Kick",
-                "input": "d+4",
-                "parent": null,
-                "target": "l",
-                "damage": "7",
-                "startup": "i12",
-                "recv": "? FC",
-                "tot": null,
-                "crush": "cs4~",
-                "block": "-13",
-                "hit": "-2",
-                "ch": null,
-                "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1289,6 +1166,10 @@
                 "hit": "+7",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1307,17 +1188,21 @@
                 "block": null,
                 "hit": "KND",
                 "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Parries lows\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Parries lows\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-db+1,2",
-                "name": "Swallow Vortex to Naniwa Gusto (Heat Engage)",
+                "name": "Swallow Vortex",
                 "input": ",2",
                 "parent": "Asuka-db+1",
-                "target": ",h,sp",
+                "target": ",h",
                 "damage": ",20",
                 "startup": null,
                 "recv": null,
@@ -1326,7 +1211,11 @@
                 "block": "-9",
                 "hit": "KND",
                 "ch": "KND*",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;&#039;&#039;&#039;Heat Dash {{{1}}}&#039;&#039;&#039;\n&lt;/div&gt;\n\n* Gain Naniwa Gusto on Heat activation\n* Combo from 1st hit\n* Can be delayed 9F\n* Combo can be delayed 9F from hit\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Gain Naniwa Gusto on Heat activation\n* Combo from 1st hit\n* Can be delayed 9F\n* Combo can be delayed 9F from hit\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1346,6 +1235,10 @@
                 "hit": "KND",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1365,6 +1258,10 @@
                 "hit": "LNC",
                 "ch": "LNC",
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1384,14 +1281,18 @@
                 "hit": "+4c",
                 "ch": "+14g",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-db+4",
-                "name": "Leg Cutter",
-                "input": "db,4",
+                "name": null,
+                "input": "db+4",
                 "parent": null,
                 "target": "l",
                 "damage": "14",
@@ -1402,14 +1303,18 @@
                 "block": "-11",
                 "hit": "+0",
                 "ch": "+3",
-                "notes": null,
+                "notes": "Cancel to FC with input D",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-db+4,4",
-                "name": "Leg Cutter (2)",
+                "name": null,
                 "input": ",4",
                 "parent": "Asuka-db+4",
                 "target": ",l",
@@ -1421,14 +1326,18 @@
                 "block": "-7",
                 "hit": "+4",
                 "ch": "KND",
-                "notes": null,
+                "notes": "Cancel to FC with input D",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-db+4,4,4",
-                "name": "Leg Cutter (3)",
+                "name": "Leg Cutter",
                 "input": ",4",
                 "parent": "Asuka-db+4,4",
                 "target": ",l",
@@ -1440,64 +1349,11 @@
                 "block": "-7",
                 "hit": "+4",
                 "ch": "KND",
-                "notes": null,
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-db+4,4,4,D",
-                "name": "Leg Cutter (3) to Crouching",
-                "input": ",D",
-                "parent": "Asuka-db+4,4,4",
-                "target": ",sp",
-                "damage": ",0",
-                "startup": null,
-                "recv": "? FC",
-                "tot": null,
-                "crush": "cs",
-                "block": "-11",
-                "hit": "+0",
-                "ch": "KND",
-                "notes": null,
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-db+4,4,D",
-                "name": "Leg Cutter (2) to Crouching",
-                "input": ",D",
-                "parent": "Asuka-db+4,4",
-                "target": ",sp",
-                "damage": ",",
-                "startup": null,
-                "recv": "? FC",
-                "tot": null,
-                "crush": "cs",
-                "block": "-11",
-                "hit": "+0",
-                "ch": "KND",
-                "notes": null,
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-db+4,D",
-                "name": "Leg Cutter to Crouching",
-                "input": ",D",
-                "parent": "Asuka-db+4",
-                "target": ",sp",
-                "damage": null,
-                "startup": null,
-                "recv": "? FC",
-                "tot": null,
-                "crush": "cs6~",
-                "block": "-11",
-                "hit": "+0",
-                "ch": "+3",
-                "notes": null,
+                "notes": "Cancel to FC with input D",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1507,8 +1363,8 @@
                 "name": "Compulsory Reform",
                 "input": ",1",
                 "parent": "Asuka-f+1+3",
-                "target": "m",
-                "damage": "20",
+                "target": ",m",
+                "damage": ",20",
                 "startup": null,
                 "recv": null,
                 "tot": null,
@@ -1517,6 +1373,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* Gain Naniwa Gusto on Heat Activation&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1524,10 +1384,10 @@
             "title": {
                 "id": "Asuka-Destabilizer.4",
                 "name": "Inescapable Tirade",
-                "input": "Destabilizer.4",
+                "input": ",4",
                 "parent": "Asuka-f+1+3",
-                "target": "l",
-                "damage": "19",
+                "target": ",l",
+                "damage": ",19",
                 "startup": null,
                 "recv": null,
                 "tot": null,
@@ -1536,13 +1396,17 @@
                 "hit": null,
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-df+1",
-                "name": "Falling Tower (1)",
+                "name": null,
                 "input": "df+1",
                 "parent": null,
                 "target": "m",
@@ -1555,6 +1419,10 @@
                 "hit": "+8",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1573,7 +1441,11 @@
                 "block": "-1",
                 "hit": "Th",
                 "ch": "Th",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st CH\n* Can be delayed 7F\n* Damage () is Throw bonus\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Combo from 1st CH\n* Can be delayed 7F\n* Damage () is Throw bonus\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1581,7 +1453,7 @@
             "title": {
                 "id": "Asuka-df+1,4",
                 "name": "Kyara Boku",
-                "input": "df+1,4",
+                "input": ",4",
                 "parent": "Asuka-df+1",
                 "target": ",m",
                 "damage": ",22",
@@ -1592,7 +1464,11 @@
                 "block": "-12",
                 "hit": "KND",
                 "ch": "KND*",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st CH\n* Can be delayed 7F\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Combo from 1st CH\n* Can be delayed 7F\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1612,6 +1488,10 @@
                 "hit": "LNC",
                 "ch": "LNC",
                 "notes": "+5 upon crouch hit",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1631,6 +1511,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Break: 2\n* Opp. Position on break:\n* Opp. Position on hit: CCW. Head sd. FU&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1649,7 +1533,11 @@
                 "block": "-8",
                 "hit": "KND",
                 "ch": "KND",
-                "notes": null,
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1668,26 +1556,11 @@
                 "block": "-26",
                 "hit": "KND",
                 "ch": "KND*",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* Alternate input: df+3~4\n* Start-up 27F in actuality\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-df+3+4,DB",
-                "name": "Sacred Blade to Cancel",
-                "input": ",DB",
-                "parent": "Asuka-df+3+4",
-                "target": ",sp",
-                "damage": null,
-                "startup": null,
-                "recv": "39",
-                "tot": null,
-                "crush": null,
-                "block": null,
-                "hit": null,
-                "ch": null,
-                "notes": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* Alternate input: 3~4\n* Cancel to FC with input df+3+4,DB\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1707,6 +1580,10 @@
                 "hit": "+2",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1726,6 +1603,10 @@
                 "hit": "+9",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Link to attack to White Heron ()\n* Block frame is blocked 1st attack\n* -3F upon 2nd block\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1745,13 +1626,17 @@
                 "hit": "LNC",
                 "ch": "LNC",
                 "notes": "CH combo from Leg Cutter",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-f+1",
-                "name": "Lunging Mist Thrust",
+                "name": "Whiplash",
                 "input": "f+1",
                 "parent": null,
                 "target": "m",
@@ -1764,6 +1649,10 @@
                 "hit": "+4",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1773,7 +1662,7 @@
                 "name": "Exorcisor",
                 "input": "f+1+2",
                 "parent": null,
-                "target": "h,sp",
+                "target": "h",
                 "damage": "26",
                 "startup": "i15",
                 "recv": null,
@@ -1782,7 +1671,11 @@
                 "block": null,
                 "hit": null,
                 "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* Absorb an attack to power up\n* Gain Naniwa Gusto on Heat activation\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Absorb an attack to power up\n* chip damage on block\n* Gain Naniwa Gusto on Heat activation\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1802,63 +1695,56 @@
                 "hit": "+8",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Break: none\n* Opp. Position on break: \n* Opp. Position on hit: &lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Asuka-f+1,3",
+                "name": "Whiplash &gt; Toe Kick",
+                "input": ",3",
+                "parent": "Asuka-f+1",
+                "target": ",m",
+                "damage": ",17",
+                "startup": ",i21~22",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "+6",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-f+1,4",
-                "name": "Whiplash Double Lift Upper",
-                "input": ",4",
-                "parent": "Asuka-f+1",
-                "target": ",lh",
-                "damage": ",5,20",
-                "startup": null,
-                "recv": null,
-                "tot": null,
-                "crush": "js",
-                "block": "-25",
-                "hit": "LNC",
-                "ch": "LNC",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st CH\n* Can be delayed 15F\n* Combo can be delayed 12F from CH\n* Block frame is blocked 2nd attack\n* -6F upon 3rd block\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-f+1,d+4",
                 "name": "Whiplash Sacred Blade",
                 "input": ",d+4",
                 "parent": "Asuka-f+1",
                 "target": ",l",
                 "damage": ",26",
-                "startup": null,
-                "recv": "? FC",
+                "startup": "i25~27",
+                "recv": null,
                 "tot": null,
                 "crush": "cs",
                 "block": "-26",
-                "hit": "KND",
-                "ch": "KND",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* Combo from 1st CH\n* Can be delayed 15F\n* Combo can be delayed 5F from CH\n* Interruption 11F after 1st block\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-f+1,d+4,DB",
-                "name": "Whiplash Sacred Blade to Cancel",
-                "input": ",DB",
-                "parent": "Asuka-f+1,d+4",
-                "target": ",sp",
-                "damage": null,
-                "startup": null,
-                "recv": "? FC",
-                "tot": null,
-                "crush": "cs",
-                "block": "-26",
-                "hit": "-15",
+                "hit": "+24",
                 "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo can be delayed 28F from CH\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* Combo from 1st CH\n* Can be delayed 15F\n* Combo can be delayed 5F from CH\n* Interruption 11F after 1st block\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1877,26 +1763,11 @@
                 "block": "-18",
                 "hit": "[[Asuka_combos#Staples|JG]]",
                 "ch": null,
-                "notes": null,
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-f+2,1",
-                "name": "Demon Slayer &gt; Naniwa Gusto",
-                "input": ",(must hit) 1",
-                "parent": "Asuka-f+2",
-                "target": ",sp",
-                "damage": ",0",
-                "startup": null,
-                "recv": "r? NWG",
-                "tot": null,
-                "crush": null,
-                "block": null,
-                "hit": null,
-                "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Gain Naniwa Gusto on hit&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Can be cancelled with input f+2,D\n* Gain NWG on hit with input f+2,1\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1915,26 +1786,11 @@
                 "block": "+0",
                 "hit": "KND",
                 "ch": "KND",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Absorbs Punch (H/M) during 4 to 15F\n* Stun on success punch parry\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-f+2,D",
-                "name": "Demon Slayer to Cancel",
-                "input": ",D",
-                "parent": "Asuka-f+2",
-                "target": ",sp",
-                "damage": ",0",
-                "startup": ",",
-                "recv": null,
-                "tot": "26",
-                "crush": "cs16~",
-                "block": null,
-                "hit": null,
-                "ch": null,
-                "notes": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Absorbs Punch (H/M) during 4 to 15F\n* Stun on success punch parry\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1953,72 +1809,19 @@
                 "block": "-2",
                 "hit": "KND",
                 "ch": "KND",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* \n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Can be cancelled with input B\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-f+3*",
-                "name": "Spinning Heel Drop (Hold)",
+                "name": "Spinning Heel Drop",
                 "input": "f+3*",
-                "parent": null,
-                "target": "m",
-                "damage": "26",
-                "startup": "52f",
-                "recv": null,
-                "tot": null,
-                "crush": null,
-                "block": "+6",
-                "hit": "KND",
-                "ch": "KND",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Input to cancel\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-f+3+4",
-                "name": "Spinning Heel Chop \uff1e Naniwa Gusto",
-                "input": "f+3+4",
-                "parent": null,
-                "target": "m,sp",
-                "damage": "27",
-                "startup": "29f",
-                "recv": null,
-                "tot": null,
-                "crush": null,
-                "block": null,
-                "hit": "KND",
-                "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* On hit gain Naniwa Gusto\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-f+3,B",
-                "name": "Spinning Heel Drop to Cancel",
-                "input": ",B",
-                "parent": "Asuka-f+3",
-                "target": ",sp",
-                "damage": null,
-                "startup": null,
-                "recv": null,
-                "tot": null,
-                "crush": null,
-                "block": null,
-                "hit": null,
-                "ch": null,
-                "notes": null,
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-f+3* (max)",
-                "name": "Spinning Heel Drop (Hold-Max)",
-                "input": "f+3* (max)",
                 "parent": null,
                 "target": "ub(m)",
                 "damage": "28",
@@ -2029,7 +1832,34 @@
                 "block": "KND",
                 "hit": "KND",
                 "ch": "KND",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Input  to cancel\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Can be cancelled with input B\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Asuka-f+3+4",
+                "name": "Spinning Heel Chop &gt; Naniwa Gusto",
+                "input": "f+3+4",
+                "parent": null,
+                "target": "m",
+                "damage": "27",
+                "startup": "i29",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": null,
+                "hit": "-2 (-11)",
+                "ch": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Chip damage when guarded\n* On hit, gain Naniwa Gusto\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2046,35 +1876,20 @@
                 "tot": "44",
                 "crush": null,
                 "block": "+3",
-                "hit": "KND",
+                "hit": "+28",
                 "ch": "KND",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-FC.1",
-                "name": "Crouch Jab",
-                "input": "FC.1",
-                "parent": null,
-                "target": "sm",
-                "damage": "5",
-                "startup": "i10",
-                "recv": "? FC",
-                "tot": null,
-                "crush": "cs",
-                "block": "-5",
-                "hit": "+6",
-                "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Returns to standing when input F\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-FC.3+4",
-                "name": "Twin Cloud Kicks (2)",
+                "name": null,
                 "input": "FC.3+4",
                 "parent": null,
                 "target": "mm",
@@ -2087,6 +1902,10 @@
                 "hit": "+5c",
                 "ch": "+5c",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2105,102 +1924,11 @@
                 "block": "+0c",
                 "hit": "KND",
                 "ch": "KND",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Interruption 11F after 2nd block\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-FC.3+4,3,D",
-                "name": "Twin Cloud Kicks to Crouching",
-                "input": ",D",
-                "parent": "Asuka-FC.3+4,3",
-                "target": ",sp",
-                "damage": null,
-                "startup": null,
-                "recv": "? FC",
-                "tot": null,
-                "crush": "js",
-                "block": "+0c",
-                "hit": "KND",
-                "ch": "KND",
-                "notes": null,
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-FC.3+4,D",
-                "name": "Twin Cloud Kicks (2) to Crouching",
-                "input": ",D",
-                "parent": "Asuka-FC.3+4",
-                "target": ",sp",
-                "damage": ",",
-                "startup": null,
-                "recv": "? FC",
-                "tot": null,
-                "crush": "js13~",
-                "block": "-6",
-                "hit": "+5c",
-                "ch": "+5c",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Forces an opponent to crouching on hit\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-FC.4",
-                "name": "Crouch Chin Kick",
-                "input": "FC.4",
-                "parent": null,
-                "target": "l",
-                "damage": "10",
-                "startup": "i12",
-                "recv": "? FC",
-                "tot": null,
-                "crush": "cs",
-                "block": "-15",
-                "hit": "-4",
-                "ch": null,
-                "notes": null,
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-FC.d+2",
-                "name": "Crouch Straight",
-                "input": "FC.d+2",
-                "parent": null,
-                "target": "sm",
-                "damage": "8",
-                "startup": "i11",
-                "recv": "? FC",
-                "tot": null,
-                "crush": "cs",
-                "block": "-4",
-                "hit": "+7",
-                "ch": null,
-                "notes": "Alternate input: FC.db+2",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-FC.d+3",
-                "name": "Crouch Spin Kick",
-                "input": "FC.d+3",
-                "parent": null,
-                "target": "l",
-                "damage": "12",
-                "startup": "i16",
-                "recv": "? FC",
-                "tot": null,
-                "crush": "cs",
-                "block": "-17",
-                "hit": "-3",
-                "ch": null,
-                "notes": "Alternate input: FC.db+3",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Interruption 11F after 2nd block\n* Cancel into FC with input D\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2220,6 +1948,10 @@
                 "hit": "LNC",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Break: 1+2\n* Opp. Position on break: Reverse Pos.\n* Opp. Position on hit: Reverse Pos. Foot sd. FD\n* 2nd dmg is on landing\n* 3rd dmg is non-ukemi bonus&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2239,6 +1971,10 @@
                 "hit": "+0",
                 "ch": "+25g",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Crumple State 17F upon CH\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2257,7 +1993,11 @@
                 "block": "-9",
                 "hit": "KND",
                 "ch": "KND*",
-                "notes": null,
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2277,6 +2017,10 @@
                 "hit": "+14",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2296,13 +2040,17 @@
                 "hit": "KND",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-f,F+2",
-                "name": "Hiboko no Kagami (1)",
+                "name": null,
                 "input": "f,F+2",
                 "parent": null,
                 "target": "m",
@@ -2315,6 +2063,10 @@
                 "hit": "-3",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2334,6 +2086,10 @@
                 "hit": "KND",
                 "ch": "KND",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed 13F\n* Combo can be delayed 8F from hit\n* Combo can be delayed 11F from CH\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2352,7 +2108,11 @@
                 "block": "-13",
                 "hit": "KND",
                 "ch": null,
-                "notes": "Gain Naniwa Gusto on hit",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Gain Naniwa Gusto on hit\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2372,6 +2132,10 @@
                 "hit": "KND",
                 "ch": "KND",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st CH\n* Can be delayed 13F\n* Combo can be delayed 5F from CH\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2390,7 +2154,11 @@
                 "block": "-9",
                 "hit": "+11g",
                 "ch": "KND",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2409,7 +2177,11 @@
                 "block": "-3",
                 "hit": "KND",
                 "ch": "KND*",
-                "notes": null,
+                "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2425,10 +2197,14 @@
                 "recv": null,
                 "tot": null,
                 "crush": null,
-                "block": null,
+                "block": "+4",
                 "hit": "KND",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2444,10 +2220,14 @@
                 "recv": null,
                 "tot": null,
                 "crush": "js3~",
-                "block": "+0",
+                "block": "+3",
                 "hit": "KND",
                 "ch": "KND*",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Alternate input: ub,b+3\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2467,6 +2247,79 @@
                 "hit": null,
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Smash&lt;/div&gt;\n* Throw on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Asuka-hFC.2",
+                "name": "Crouch Straight",
+                "input": "hFC.2",
+                "parent": null,
+                "target": "sl",
+                "damage": "8",
+                "startup": "i11",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-4",
+                "hit": "+7",
+                "ch": null,
+                "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Asuka-hFC.3",
+                "name": "Crouch Spin Kick",
+                "input": "hFC.3",
+                "parent": null,
+                "target": "l",
+                "damage": "10",
+                "startup": "i16",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-17",
+                "hit": "-6",
+                "ch": null,
+                "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Asuka-hFC.4",
+                "name": "Crouch Shin Kick",
+                "input": "hFC.4",
+                "parent": null,
+                "target": "l",
+                "damage": "6",
+                "startup": "i12",
+                "recv": null,
+                "tot": null,
+                "crush": null,
+                "block": "-15",
+                "hit": "-4",
+                "ch": null,
+                "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2486,6 +2339,10 @@
                 "hit": "-3d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Throw break 1\n* Opp. Position on break: CCW\n* Opp. Position on hit: F Sd. FD&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2505,6 +2362,10 @@
                 "hit": "KND",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Consumes Naniwa Gusto\n* During Heat, remaining Heat is consumed\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2520,10 +2381,14 @@
                 "recv": null,
                 "tot": null,
                 "crush": null,
-                "block": null,
+                "block": "+6",
                 "hit": "KND",
                 "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Consumes Naniwa Gusto\n* During Heat, remaining Heat is consumed\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Chip damage when guarded\n* Consumes Naniwa Gusto\n* During Heat, remaining Heat is consumed\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2543,6 +2408,10 @@
                 "hit": "KDN",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Consumes Naniwa Gusto\n* During Heat, remaining Heat is consumed\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2561,26 +2430,11 @@
                 "block": "-15",
                 "hit": "KND",
                 "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Rage Art\n* Damage increases with lower health\n* Removes recoverable health on hit&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-R.df+1+2*",
-                "name": "Naniwa Peacemaker Knuckle (Hold)",
-                "input": "R.df+1+2*",
-                "parent": null,
-                "target": "m,th",
-                "damage": null,
-                "startup": "i56",
-                "recv": null,
-                "tot": null,
-                "crush": "pc8~",
-                "block": "+3",
-                "hit": "KND",
-                "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Rage Art\n* Damage increases with lower health\n* Removes recoverable health on hit&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Rage Art\n* Damage increases with lower health\n* Removes recoverable health on hit\n* Input can be held&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2600,6 +2454,10 @@
                 "hit": "+0d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Throw break 2\n* Opp. Position on break: \n* Opp. Position on hit: FD F Sd.&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2615,10 +2473,14 @@
                 "recv": null,
                 "tot": null,
                 "crush": null,
-                "block": "-9",
+                "block": "-13",
                 "hit": "KND",
                 "ch": "KND*",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* Gain Naniwa Gusto on Heat activation\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2638,25 +2500,10 @@
                 "hit": "+7",
                 "ch": "KND",
                 "notes": "Meaty 2F",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-u+1",
-                "name": "Jumping Knuckle",
-                "input": "u+1",
-                "parent": null,
-                "target": "m",
-                "damage": "12",
-                "startup": "i18",
-                "recv": null,
-                "tot": null,
-                "crush": "js9~",
-                "block": "-12",
-                "hit": "-1",
-                "ch": "-1",
-                "notes": "Same move as ub+1 and uf+1",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2676,120 +2523,10 @@
                 "hit": "KND",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage when guarded\n* Alternate input: ub+1+2\n&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-u+2",
-                "name": "Hook",
-                "input": "u+2",
-                "parent": null,
-                "target": "h",
-                "damage": "17",
-                "startup": "i15",
-                "recv": null,
-                "tot": null,
-                "crush": null,
-                "block": "-12",
-                "hit": "+9",
-                "ch": null,
-                "notes": "Same move as ub+2",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-u+3",
-                "name": "Iwato",
-                "input": "u+3",
-                "parent": null,
-                "target": "m",
-                "damage": "17",
-                "startup": "i20~21",
-                "recv": "22",
-                "tot": "42",
-                "crush": "js11~",
-                "block": "-3",
-                "hit": "+8",
-                "ch": "KND",
-                "notes": "Same move as ub+3 and uf+3",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-u+4",
-                "name": "Night Sky",
-                "input": "u+4",
-                "parent": null,
-                "target": "m",
-                "damage": "25",
-                "startup": "i20",
-                "recv": null,
-                "tot": null,
-                "crush": "js9~",
-                "block": "-13",
-                "hit": "LNC",
-                "ch": "LNC",
-                "notes": "Same move as uf+4",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-ub+4",
-                "name": "Night Sky",
-                "input": "ub+4",
-                "parent": null,
-                "target": "m",
-                "damage": "25",
-                "startup": "i20",
-                "recv": null,
-                "tot": null,
-                "crush": "js9~",
-                "block": "-15",
-                "hit": "LNC",
-                "ch": "LNC",
-                "notes": null,
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-ub,b",
-                "name": "Backflip",
-                "input": "ub,b",
-                "parent": null,
-                "target": "sp",
-                "damage": "-",
-                "startup": null,
-                "recv": null,
-                "tot": null,
-                "crush": "js9~",
-                "block": null,
-                "hit": null,
-                "ch": null,
-                "notes": null,
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-ub,b+3",
-                "name": "Spinning Jump Kick",
-                "input": "ub,b+3",
-                "parent": null,
-                "target": "m",
-                "damage": "32",
-                "startup": "i68",
-                "recv": null,
-                "tot": null,
-                "crush": "js",
-                "block": "\u00b10",
-                "hit": "KND",
-                "ch": "KND*",
-                "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2809,6 +2546,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Break: 1+2\n* Opp. Position on break: Reverse Pos.\n* Opp. Position on hit: Head sd. FU&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2828,13 +2569,63 @@
                 "hit": "Th",
                 "ch": "Th",
                 "notes": "Damage () is Throw bonus",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Asuka-uf+3",
+                "name": "Iwato",
+                "input": "uf+3",
+                "parent": null,
+                "target": "m",
+                "damage": "17",
+                "startup": "i20~21",
+                "recv": "22",
+                "tot": "42",
+                "crush": "js11~",
+                "block": "-3",
+                "hit": "+8",
+                "ch": "KND",
+                "notes": "Alternate input: ub+3 or u+3",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Asuka-uf+4",
+                "name": "Night Sky",
+                "input": "uf+4",
+                "parent": null,
+                "target": "m",
+                "damage": "25",
+                "startup": "i20",
+                "recv": null,
+                "tot": null,
+                "crush": "js9~",
+                "block": "-13",
+                "hit": "LNC",
+                "ch": "LNC",
+                "notes": "Alternate input: ub+4 or u+4",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-ws1",
-                "name": "Shikei",
+                "name": null,
                 "input": "ws1",
                 "parent": null,
                 "target": "m",
@@ -2847,6 +2638,10 @@
                 "hit": "+4",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2865,26 +2660,11 @@
                 "block": "-2",
                 "hit": "+13g",
                 "ch": "KND",
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow wall-crush&quot;\n&gt;Wall Crush  +25g on hit\n&lt;/div&gt;\n\n* Crumple state 17F upon CH&lt;/div&gt;",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Asuka-ws1+2,D",
-                "name": "Sudare Nagashi to Cancel",
-                "input": ",D",
-                "parent": "Asuka-ws1+2",
-                "target": ",sp",
-                "damage": null,
-                "startup": null,
-                "recv": "38 FC",
-                "tot": null,
-                "crush": null,
-                "block": null,
-                "hit": null,
-                "ch": null,
-                "notes": null,
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow wall-crush&quot;\n&gt;Wall Crush  +25g on hit\n&lt;/div&gt;\n\n* Crumple state 17F upon CH\n* Cancel into FC with input D&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2904,13 +2684,17 @@
                 "hit": "KND",
                 "ch": "KND",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can be delayed 7F\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-ws2",
-                "name": "Rising Elbow",
+                "name": null,
                 "input": "ws2",
                 "parent": null,
                 "target": "m",
@@ -2923,17 +2707,21 @@
                 "hit": "+8",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-ws2,1",
-                "name": "10 Hit Combo (2)",
+                "name": null,
                 "input": ",1",
                 "parent": "Asuka-ws2",
-                "target": "m,h",
-                "damage": "18,10",
+                "target": "h",
+                "damage": ",10",
                 "startup": null,
                 "recv": null,
                 "tot": null,
@@ -2941,14 +2729,18 @@
                 "block": "-2",
                 "hit": "+9",
                 "ch": null,
-                "notes": "Combo from 1st hit",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Continuation into ten string\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
         {
             "title": {
                 "id": "Asuka-ws2,1+2",
-                "name": "Kohaku to Destabilizer",
+                "name": "Kohaku",
                 "input": ",1+2",
                 "parent": "Asuka-ws2",
                 "target": "h,th",
@@ -2960,7 +2752,11 @@
                 "block": null,
                 "hit": "Th",
                 "ch": null,
-                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Link to attack from Destablilizer (f+1+3 or f+2+4)\n&lt;/div&gt;",
+                "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Link to attack from Destablilizer (f+1+3 or f+2+4)\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2980,6 +2776,10 @@
                 "hit": "LNC",
                 "ch": "LNC",
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2999,6 +2799,10 @@
                 "hit": "+8",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         }

@@ -81,8 +81,14 @@ def get_move_embed(frame_service: FrameService, character: Character, move: Move
     embed.add_field(name="Block", value=move.on_block)
     embed.add_field(name="Hit", value=move.on_hit)
     embed.add_field(name="CH", value=move.on_ch)
+
     if move.notes:
         embed.add_field(name="Notes", value=move.notes)
+
+    if move.image:
+        embed.set_image(url=move.image)
+
+    # TODO: include move.video in a nice way
 
     return embed
 

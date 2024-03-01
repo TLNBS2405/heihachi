@@ -16,6 +16,10 @@
                 "hit": "+8",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -35,6 +39,10 @@
                 "hit": "+15a",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -54,6 +62,10 @@
                 "hit": "+7",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Jail from 1st attack with 2f delay&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -73,6 +85,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* CH state for 5 seconds\n* Can&#039;t block for 5 seconds&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -92,6 +108,10 @@
                 "hit": "+6",
                 "ch": null,
                 "notes": "Alternate input: 1,2~D",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -111,6 +131,10 @@
                 "hit": "+21a (+11)",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -130,6 +154,10 @@
                 "hit": "+15a (-2)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Combo from 1st CH&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -149,6 +177,10 @@
                 "hit": "+0d",
                 "ch": null,
                 "notes": "Throw break 1 or 2",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -168,6 +200,10 @@
                 "hit": "+8",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -187,6 +223,10 @@
                 "hit": "+2c",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Burst&lt;/div&gt;\n* Cancel to r45 with b,b&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -206,6 +246,10 @@
                 "hit": "-2",
                 "ch": null,
                 "notes": "Combo from 1st hit",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -225,6 +269,10 @@
                 "hit": "+0d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Throw break 1 or 2\n* Side switch&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -244,6 +292,10 @@
                 "hit": "+8~+9",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Cancel to r31 with B&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -263,6 +315,10 @@
                 "hit": "+3~+4",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -282,6 +338,10 @@
                 "hit": "+5~+6",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Jail from 1st attack&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -301,6 +361,10 @@
                 "hit": "+39a (-19)",
                 "ch": "+66a (+50)",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Combo from 2nd CH&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -320,6 +384,10 @@
                 "hit": "-3~-2",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -339,6 +407,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "Alternate input: d+3+4 or FC.3+4",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -358,6 +430,10 @@
                 "hit": "+19a",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -377,6 +453,10 @@
                 "hit": "-8",
                 "ch": null,
                 "notes": "Will phase through opponent up-close",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -396,6 +476,10 @@
                 "hit": "+3~+4",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -415,6 +499,10 @@
                 "hit": "+7~+8",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Jail from 1st attack&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -434,6 +522,10 @@
                 "hit": "+31a (+21)",
                 "ch": null,
                 "notes": "Recovery listed is for the second hit",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -453,6 +545,10 @@
                 "hit": "+4~+5",
                 "ch": null,
                 "notes": "Can be delayed",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -472,6 +568,10 @@
                 "hit": "+14a",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Can be delayed&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -491,6 +591,10 @@
                 "hit": "+15a",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Can be delayed&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -510,6 +614,10 @@
                 "hit": "+10c~+11c",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-teal tip&quot;\n&gt;Elbow&lt;/div&gt;\n* Deals chip damage on block\n* Transitions to r26 SZN on hit or block only&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -529,6 +637,10 @@
                 "hit": "+20a (+10)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Backswing blow&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -548,6 +660,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Parries all attacks\n* Alternate input: b+2+4&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -567,6 +683,10 @@
                 "hit": "-31",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Deals recoverable self-damage on a successful parry\n* Raven will teleport back a safe distance\n* Alternate input: BT.b+1+3 or BT.b+2+4&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -586,6 +706,10 @@
                 "hit": "-3~-1",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -605,6 +729,10 @@
                 "hit": "+6",
                 "ch": "+8",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-teal tip&quot;\n&gt;Elbow&lt;/div&gt;\n* Combo from 1st hit\n* Input can be delayed 13f&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -624,6 +752,10 @@
                 "hit": "+3d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd CH&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -643,6 +775,10 @@
                 "hit": "+12a (-5)",
                 "ch": "+26a (+16)",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Combo from 2nd CH\n* Grounded hit can be inconsistent&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -662,6 +798,10 @@
                 "hit": "+4~+5",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit with 4f delay\n* Input can be delayed 13f&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -681,6 +821,10 @@
                 "hit": "+24a (+9)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Combo from 2nd CH\n* Available only on hit or block&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -700,6 +844,10 @@
                 "hit": "+15a",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Chip damage on block&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -719,6 +867,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -738,6 +890,10 @@
                 "hit": "-1~+0",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-teal tip&quot;\n&gt;Knee&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -757,6 +913,10 @@
                 "hit": "+6c~+8c",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Combo from 1st hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -776,6 +936,10 @@
                 "hit": "+2c~+7c",
                 "ch": "+12a",
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -795,6 +959,10 @@
                 "hit": "+0",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -814,6 +982,10 @@
                 "hit": "+6a",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 2nd hit with 4f delay\n* Input can be delayed 7f&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -833,6 +1005,10 @@
                 "hit": "-4d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow floor-break&quot;\n&gt;Floor Break&lt;/div&gt;\n* Unbreakable&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -852,6 +1028,10 @@
                 "hit": "+28a (+19)",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -871,6 +1051,10 @@
                 "hit": "+5~+6",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Jail from 1st attack\n* Parries high or low punches or kicks&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -890,6 +1074,10 @@
                 "hit": "+0d",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -909,6 +1097,10 @@
                 "hit": "+5~+6",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -928,6 +1120,10 @@
                 "hit": "+30a (+22)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Frame advantage is -7 if an attack is absorbed\n* Chip damage on block if an attack is absorbed&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -947,6 +1143,10 @@
                 "hit": "+40a (-18)",
                 "ch": "+67a (+51)",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Combo from 1st hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -966,6 +1166,10 @@
                 "hit": "+7",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -985,6 +1189,10 @@
                 "hit": "+3",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit\n* Can transition to r36 BT with B&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1004,6 +1212,10 @@
                 "hit": "+7",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1023,6 +1235,10 @@
                 "hit": "+2~+3",
                 "ch": null,
                 "notes": "Combo from 1st CH",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1042,6 +1258,10 @@
                 "hit": "+2a (-7)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Combo from 2nd hit\n* Combo from 1st CH\n* Power up during Heat&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1061,6 +1281,10 @@
                 "hit": "+8~+9",
                 "ch": null,
                 "notes": "Alternate input: BT.2,2~D",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1080,6 +1304,10 @@
                 "hit": "+0",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1099,6 +1327,10 @@
                 "hit": "+43a (+39)",
                 "ch": null,
                 "notes": "Second kick&#039;s frame advantage on hit: +34a (+24)",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1118,6 +1350,10 @@
                 "hit": "+1~+3",
                 "ch": "+11g~+13g",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit with 2f delay\n* Input can be delayed 6f\n* Move can be delayed 5f\n* Forces crouch on CH&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1137,6 +1373,10 @@
                 "hit": "+18a",
                 "ch": null,
                 "notes": "Same move as df+(4,4),3",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1156,6 +1396,10 @@
                 "hit": "+5a",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Combo from 2nd CH&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1175,6 +1419,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "Will phase through opponent up-close",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1194,6 +1442,10 @@
                 "hit": "+44a (-14)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1213,6 +1465,10 @@
                 "hit": "+6~+7",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1232,6 +1488,10 @@
                 "hit": "+42a (+38)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st CH\n* Second kick&#039;s frame advantage on hit: +34a (+24)&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1251,6 +1511,10 @@
                 "hit": "+2~+3",
                 "ch": null,
                 "notes": "Jail from 1st attack with 3f delay",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1270,6 +1534,10 @@
                 "hit": "+41a",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Chip damage on block&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1289,6 +1557,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "Can block mid or high attacks after 6f",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1308,25 +1580,10 @@
                 "hit": "+6",
                 "ch": null,
                 "notes": "Alternate input: BT.d+2",
-                "ns": "0"
-            }
-        },
-        {
-            "title": {
-                "id": "Raven-BT.d+3",
-                "name": "Shinobi Cyclone (clean)",
-                "input": "BT.d+3",
-                "parent": null,
-                "target": "l",
-                "damage": "21",
-                "startup": "25f(2)",
-                "recv": "r",
-                "tot": null,
-                "crush": "TC,5F",
-                "block": "-26",
-                "hit": "KDN",
-                "ch": "KDN",
-                "notes": "TC from 4F to 5F",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1346,6 +1603,33 @@
                 "hit": "+0~+2",
                 "ch": null,
                 "notes": "Clean hit +74a (+58), 20 damage",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
+                "ns": "0"
+            }
+        },
+        {
+            "title": {
+                "id": "Raven-BT.d+3",
+                "name": "Shinobi Cyclone (clean)",
+                "input": "BT.d+3",
+                "parent": null,
+                "target": "l",
+                "damage": "21",
+                "startup": "25f(2)",
+                "recv": "r",
+                "tot": null,
+                "crush": "TC,5F",
+                "block": "-26",
+                "hit": "KDN",
+                "ch": "KDN",
+                "notes": "TC from 4F to 5F",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1365,6 +1649,10 @@
                 "hit": "-4",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1384,6 +1672,10 @@
                 "hit": "+6",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Transitions to throw on hit only\n* Opponent recovers BT on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1403,6 +1695,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "Parries mid or high punches or kicks",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1422,6 +1718,10 @@
                 "hit": "+5d",
                 "ch": null,
                 "notes": "Opponent recovers FUFA",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1441,6 +1741,10 @@
                 "hit": "+6~+7",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1460,6 +1764,10 @@
                 "hit": "+14~+15",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Combo from 1st CH with 5f delay\n* Input can be delayed 12f\n* Forces crouch on CH&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1479,6 +1787,10 @@
                 "hit": "+4~+5",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit with 1f delay\n* Input can be delayed 12f\n* Power up during Heat&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1498,6 +1810,10 @@
                 "hit": "+24a (+9)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Combo from 2nd CH\n* Available only on hit or block&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1517,6 +1833,10 @@
                 "hit": "+3~+4",
                 "ch": "+38a (+30)",
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-teal tip&quot;\n&gt;Knee&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1536,6 +1856,10 @@
                 "hit": "+5a",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1555,6 +1879,10 @@
                 "hit": "-22",
                 "ch": null,
                 "notes": "Will phase through opponent up-close",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1574,6 +1902,10 @@
                 "hit": "+0",
                 "ch": "+35a (+27)",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1593,6 +1925,10 @@
                 "hit": "+2",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1612,6 +1948,10 @@
                 "hit": "+5~+6",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Combo from 1st hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1631,6 +1971,10 @@
                 "hit": "+8~+9",
                 "ch": null,
                 "notes": "Alternate input: BT.f+4,1~D",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1650,6 +1994,10 @@
                 "hit": "+8a",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1669,6 +2017,10 @@
                 "hit": "+24a",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1688,6 +2040,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "Will phase through opponent up-close",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1707,6 +2063,10 @@
                 "hit": "+6",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Can recover standing with f&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1726,6 +2086,10 @@
                 "hit": "+7",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1745,6 +2109,10 @@
                 "hit": "+0",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1764,6 +2132,10 @@
                 "hit": "-2",
                 "ch": "+13g",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1783,6 +2155,10 @@
                 "hit": "+5~+6",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1802,6 +2178,10 @@
                 "hit": "+8~+9",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Combo from 1st hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1821,6 +2201,10 @@
                 "hit": "+2a (-7)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Combo from 2nd CH\n* Available only on hit or block&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1840,6 +2224,10 @@
                 "hit": "+5",
                 "ch": null,
                 "notes": "Alternate input: db+2,1~D",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1859,6 +2247,10 @@
                 "hit": "+5~+6",
                 "ch": "+39d",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1878,6 +2270,10 @@
                 "hit": "+4c~+5c",
                 "ch": "+37a",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1897,6 +2293,10 @@
                 "hit": "+8~+9",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1916,6 +2316,10 @@
                 "hit": "+0d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow floor-break&quot;\n&gt;Floor Break&lt;/div&gt;\n* Throw break 1\n* Alternate input: qcf,df+1+4&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1935,6 +2339,10 @@
                 "hit": "+32a (-26)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Combo from 1st hit\n* Available only on hit or block&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1954,6 +2362,10 @@
                 "hit": "+30a (+20)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Launches crouching opponent&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1973,6 +2385,10 @@
                 "hit": "+28a (+19)",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -1992,6 +2408,10 @@
                 "hit": "+11a (+2)",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2011,6 +2431,10 @@
                 "hit": "+12a",
                 "ch": "+46a (+36)",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2030,6 +2454,10 @@
                 "hit": "+2~+3",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2049,6 +2477,10 @@
                 "hit": "+6a",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Combo from 1st hit with 7f delay\n* Input can be delayed 9f\n* Move can be delayed 8f&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2068,6 +2500,10 @@
                 "hit": "+18a",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2087,6 +2523,10 @@
                 "hit": "+30a (+4)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Frame advantage is -9 if an attack is absorbed&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2106,6 +2546,10 @@
                 "hit": "-1~+0",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2125,6 +2569,10 @@
                 "hit": "+6c~+7c",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Combo from 1st hit\n* Can be delayed&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2144,6 +2592,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Alternate input: f+2,3~D&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2163,6 +2615,10 @@
                 "hit": "+3",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2182,6 +2638,10 @@
                 "hit": "+10a (+1)",
                 "ch": "+30a (+22)",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Combo from 1st hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2201,6 +2661,10 @@
                 "hit": "+6",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2220,6 +2684,10 @@
                 "hit": "+31a (+23)",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2239,6 +2707,10 @@
                 "hit": "+6",
                 "ch": null,
                 "notes": "Can recover standing with f",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2258,6 +2730,10 @@
                 "hit": "+7",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2277,6 +2753,10 @@
                 "hit": "-6",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2296,6 +2776,10 @@
                 "hit": "-4",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2315,6 +2799,10 @@
                 "hit": "+2~+4",
                 "ch": "+30d",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2334,6 +2822,10 @@
                 "hit": "-5a",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Transition to r20 SZN on hit only\n* Second hit available on hit only\n* Power up during Heat&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2353,6 +2845,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2372,6 +2868,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2391,6 +2891,10 @@
                 "hit": "+15a (+5)",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2410,6 +2914,10 @@
                 "hit": "+43a (+29)",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2429,6 +2937,10 @@
                 "hit": "+21a (+4)",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2448,6 +2960,10 @@
                 "hit": "+6a",
                 "ch": null,
                 "notes": "Chip damage on block",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2467,6 +2983,10 @@
                 "hit": "+45a (+35)",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2486,6 +3006,10 @@
                 "hit": "+3a",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Smash&lt;/div&gt;\n* Transition to r20 SZN on block&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2505,6 +3029,10 @@
                 "hit": "+24a (+9)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Combo from 2nd CH\n* Available only on hit or block\n* Recover Heat on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2524,6 +3052,10 @@
                 "hit": "+2a (-7)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Combo from 1st hit\n* Available only on hit or block\n* Recover Heat on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2543,6 +3075,10 @@
                 "hit": "+36a (+26)",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2562,6 +3098,10 @@
                 "hit": "+24a (+9)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Combo from 2nd CH\n* Available only on hit or block\n* Recover Heat on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2581,6 +3121,10 @@
                 "hit": "+2a (-7)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Combo from 2nd CH\n* Available only on hit or block\n* Recover Heat on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2600,6 +3144,10 @@
                 "hit": "+32a (-26)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Combo from 1st hit\n* Available only on hit or block\n* Recover Heat on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2619,6 +3167,10 @@
                 "hit": "+34a",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2638,6 +3190,10 @@
                 "hit": "-5",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Transition to r20 SZN on hit only\n* Second hit available on hit only\n* Recover Heat on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2657,6 +3213,10 @@
                 "hit": "+72a (+56)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Partially uses remaining Heat time\n* Available only on hit or block&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2676,6 +3236,10 @@
                 "hit": "+24a (+9)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Combo from 1st hit\n* Available only on hit or block\n* Recover Heat on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2695,6 +3259,10 @@
                 "hit": "-4d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Transitions to attack throw on front hit only, otherwise launch +33a (+23)\n&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2714,6 +3282,10 @@
                 "hit": "+32a (-26)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Combo from 1st hit\n* Available only on hit or block\n* Recover Heat on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2733,6 +3305,10 @@
                 "hit": "+36a (+26)",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2752,6 +3328,10 @@
                 "hit": "+24a (+9)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Combo from 1st hit\n* Available only on hit or block\n* Recover Heat on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2771,6 +3351,10 @@
                 "hit": "+65a (+49)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Combo from 1st hit\n* Available only on hit or block\n* Recover Heat on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2790,6 +3374,10 @@
                 "hit": "+62a (+42)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* Alternate input: H.qcf+3+4,F&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2809,6 +3397,10 @@
                 "hit": "-3d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow floor-break&quot;\n&gt;Floor Break&lt;/div&gt;\n* Throw break 1\n* Side switch on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2828,6 +3420,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2847,6 +3443,10 @@
                 "hit": "+4",
                 "ch": "+15a",
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-teal tip&quot;\n&gt;Elbow&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2866,6 +3466,10 @@
                 "hit": "+11a (+2)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Attack reversal\n* Parries high or mid punches or kicks&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2885,6 +3489,10 @@
                 "hit": "+24a (+9)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Combo from 1st hit\n* Available only on hit or block&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2904,6 +3512,10 @@
                 "hit": "+0d",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2923,6 +3535,10 @@
                 "hit": "+13",
                 "ch": "+24a",
                 "notes": "Alternate input: qcf+1~D",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2942,6 +3558,10 @@
                 "hit": "+5~+6",
                 "ch": "+14~+15",
                 "notes": "Cancel to r45 BT with B",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2961,6 +3581,10 @@
                 "hit": "+24a (+14)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Chip damage on block\n* Actual startup is i40~41&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2980,6 +3604,10 @@
                 "hit": "-4d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Transitions to attack throw on front hit only, otherwise launch +33a (+23)\n* Power up during Heat&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -2999,6 +3627,10 @@
                 "hit": "+32a (+22)",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3018,6 +3650,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3037,6 +3673,10 @@
                 "hit": "+0",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Rage Art\n* Damage increases with lower health\n* Erases opponent&#039;s recoverable health on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3056,6 +3696,10 @@
                 "hit": "-4d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow floor-break&quot;\n&gt;Floor Break&lt;/div&gt;\n* Throw break 2&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3075,6 +3719,10 @@
                 "hit": "+8~+9",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3094,6 +3742,10 @@
                 "hit": "+23a",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Chip damage on block&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3113,6 +3765,10 @@
                 "hit": "+32a (-26)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Combo from 1st hit\n* Available only on hit or block&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3132,6 +3788,10 @@
                 "hit": "+12~+13",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3151,6 +3811,10 @@
                 "hit": "+7a (-2)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Power up during Heat&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3170,6 +3834,10 @@
                 "hit": "+5~+6",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3189,6 +3857,10 @@
                 "hit": "+24a (+9)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Combo from 1st hit\n* Available only on hit or block\n* Power up during Heat&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3208,6 +3880,10 @@
                 "hit": "+2~+9",
                 "ch": "+26a",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3227,6 +3903,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3246,6 +3926,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3265,6 +3949,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3284,6 +3972,10 @@
                 "hit": "+6~+7",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Chip damage on block\n* Alternate input: ub+3&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3303,6 +3995,10 @@
                 "hit": "+16a",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Transitions to r76 Ki Charge on hit only\n* Alternate input: ub+3,3&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3322,6 +4018,10 @@
                 "hit": "+18a",
                 "ch": null,
                 "notes": "Alternate input: ub+3,3,3",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3341,6 +4041,10 @@
                 "hit": "+22a (+12)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Alternate input: ub+4&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3360,6 +4064,10 @@
                 "hit": "+5",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3379,6 +4087,10 @@
                 "hit": "-2c~-1c",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;\n* Combo from 1st hit with 7f delay&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3398,6 +4110,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3417,6 +4133,10 @@
                 "hit": "-19a",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3436,6 +4156,10 @@
                 "hit": "+0d",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* Throw break 1+2\n* Can side switch on hit&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3455,6 +4179,10 @@
                 "hit": "+20a",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3474,6 +4202,10 @@
                 "hit": "+14a",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-yellow spike&quot;\n&gt;Spike&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3493,6 +4225,10 @@
                 "hit": "+6a",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3512,6 +4248,10 @@
                 "hit": "+0~+1",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3531,6 +4271,10 @@
                 "hit": "+10a",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3550,6 +4294,10 @@
                 "hit": "+22a (+12)",
                 "ch": null,
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3569,6 +4317,10 @@
                 "hit": "+9g~12g",
                 "ch": "+21a",
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Alternate input: ub+4,4 or u+4,4&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3588,6 +4340,10 @@
                 "hit": "+15a (+5)",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3607,6 +4363,10 @@
                 "hit": "+32a (+22)",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3626,6 +4386,10 @@
                 "hit": "+35a (+25)",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3645,6 +4409,10 @@
                 "hit": "+8~+9",
                 "ch": "+37a (+27)",
                 "notes": "&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-teal tip&quot;\n&gt;Elbow&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3664,6 +4432,10 @@
                 "hit": "+0s",
                 "ch": null,
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3683,6 +4455,10 @@
                 "hit": "+65a (+49)",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-orange tornado&quot;\n&gt;Tornado&lt;/div&gt;\n* Combo from 1st hit\n* Available only on hit or block&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3702,6 +4478,10 @@
                 "hit": "+7~+9",
                 "ch": null,
                 "notes": "&lt;div class=&quot;plainlist&quot;&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-purple heat&quot;\n&gt;Heat Engager\n&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-blue homing&quot;\n&gt;Homing&lt;/div&gt;\n* \n&lt;div\n  style=&quot;display: block; border-width: 0 0 0 0.5em; padding-left: 0.2em; border-style: solid;&quot;\n  class=&quot;movedata-icon border-green balcony-break&quot;\n&gt;Balcony Break&lt;/div&gt;\n* Alternate input: qcf+3+4&lt;/div&gt;",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3721,6 +4501,10 @@
                 "hit": null,
                 "ch": null,
                 "notes": "Alternate input: qcf+3+4~B",
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         },
@@ -3740,6 +4524,10 @@
                 "hit": "+7~+8",
                 "ch": "+4",
                 "notes": null,
+                "alias": null,
+                "image": null,
+                "video": null,
+                "alt": null,
                 "ns": "0"
             }
         }
