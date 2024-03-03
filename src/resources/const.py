@@ -71,6 +71,7 @@ REPLACE = {
     '.': "",
     'ws.': 'ws',
     'fc.': 'fc',
+    '~': ''
 }
 
 BLACKLIST = ['ImVeryBad#5231', 'Nape Brasslers#1131', 'Sleepii#1337', 'iaa ibb beb ib#0000', 'ГЕНИЙ#5448', 'Beeno#6524',
