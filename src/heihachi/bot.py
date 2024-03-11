@@ -85,10 +85,10 @@ class FrameDataBot(discord.Client):
     async def on_message(self, message: discord.Message) -> None:
         if not self._is_user_blacklisted(message.author.id) and self.user and message.author.id != self.user.id:
             if self.user.mentioned_in(message):
+                logger.info(f"Received message from {message.author.name} in {message.guild}: @Heihachi {message.content}")
                 try:
                     user_command, params = message.content.split(" ", 1)
                     char_name_query, move_query = params.split(" ", 1)
-
                     embed = get_frame_data_embed(self.framedb, self.frame_service, char_name_query, move_query)
                     await message.channel.send(embed=embed, reference=message)
                 except ValueError:
@@ -127,10 +127,9 @@ class FrameDataBot(discord.Client):
             async def _feedback_cmd(interaction: discord.Interaction, message: str) -> None:
                 logger.info(
                     f"Received command from {interaction.user.name} in {interaction.guild}: /feedback {message}")
-                if not (
-                        self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(
-                    interaction)
-                ):  # TODO: possible way to refactor these checks using discord.py library? discord.ext.commands.Bot.check()
+                if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
+                    # TODO: possible way to refactor these checks using discord.py library?
+                    #  discord.ext.commands.Bot.check()
                     try:
                         feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(
                             str(interaction.user.name),
