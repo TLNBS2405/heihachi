@@ -24,7 +24,7 @@ class FrameDataBot(discord.Client):
             config: Configurator,
     ) -> None:
         intents = discord.Intents.default()
-        intents.message_content = True
+        intents.message_content = False
 
         super().__init__(intents=intents)
         self.framedb = framedb
