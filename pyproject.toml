@@ -29,8 +29,8 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/AbhijeetKrishnan/heihachi"
-"Bug Tracker" = "https://github.com/AbhijeetKrishnan/heihachi/issues"
+Repository = "https://github.com/TLNBS2405/heihachi"
+"Bug Tracker" = "https://github.com/TLNBS2405/heihachi/issues"
 
 [project.optional-dependencies]
 dev = [
