@@ -1,0 +1,75 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "heihachi"
+version = "2.1.0"
+description = "A Discord bot to receive Tekken 8 frame data primarily from Wavu Wiki"
+readme = "README.md"
+authors = [
+    { name = "TLNBS2405", email = "lnguyen2405@gmail.com" },
+    { name = "Abhijeet Krishnan", email = "abhijeet.krishnan@gmail.com" },
+]
+license = {file = "LICENSE"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">= 3.10"
+dependencies = [
+    "discord.py",
+    "beautifulsoup4",
+    "Requests",
+    "lxml",
+    "fast-autocomplete[levenshtein]"
+]
+
+[project.urls]
+Repository = "https://github.com/AbhijeetKrishnan/heihachi"
+"Bug Tracker" = "https://github.com/AbhijeetKrishnan/heihachi/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "mypy",
+    "pytest",
+    "types-requests"
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 127
+src = ["src"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unreachable = true
+pretty = true
+exclude = [
+    "build",
+    "dist",
+    "venv",
+    "tests",
+]
+files = [
+    "src/**/*.py",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = [
+    "-ra -q",
+    "--import-mode=importlib"
+]
+testpaths = [
+    "src/**/tests"
+]
+console_output_style = "progress"
