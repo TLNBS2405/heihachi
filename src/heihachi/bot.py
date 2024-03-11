@@ -1,25 +1,27 @@
 import datetime
 import logging
 import traceback
-from typing import List
+from typing import List, Callable, Any, Coroutine
 
 import discord
 import discord.ext.commands
+from discord import Interaction
 
 from framedb import FrameDb, FrameService
 from heihachi import button, embed
 from heihachi.configurator import Configurator
 from heihachi.embed import get_frame_data_embed
+from framedb.const import CharacterName
 
 logger = logging.getLogger("main")
 
 
 class FrameDataBot(discord.Client):
     def __init__(
-        self,
-        framedb: FrameDb,
-        frame_service: FrameService,
-        config: Configurator,
+            self,
+            framedb: FrameDb,
+            frame_service: FrameService,
+            config: Configurator,
     ) -> None:
         intents = discord.Intents.default()
         intents.message_content = True
@@ -35,6 +37,7 @@ class FrameDataBot(discord.Client):
         logger.debug(f"Bot command tree: {[command.name for command in self.tree.get_commands()]}")
 
     async def on_ready(self) -> None:
+
         await self.wait_until_ready()
         if not self.synced:
             await self.tree.sync()
@@ -45,6 +48,14 @@ class FrameDataBot(discord.Client):
             assert isinstance(action_channel, discord.channel.TextChannel)
             self.add_view(button.DoneButton(action_channel))
         logger.info(f"Logged on as {self.user}")
+
+    def _character_command_factory(self, name: str) -> Callable[[Interaction, str], Coroutine[Any, Any, None]]:
+        async def command(interaction: discord.Interaction, move: str) -> None:
+            if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
+                embed = get_frame_data_embed(self.framedb, self.frame_service, name, move)
+                await interaction.response.send_message(embed=embed, ephemeral=False)
+
+        return command
 
     def _is_user_blacklisted(self, user_id: str | int) -> bool:
         "Check if a user is blacklisted"
@@ -83,7 +94,7 @@ class FrameDataBot(discord.Client):
                 logger.debug(f"Message from {message.author.name} in {message.guild} does not mention the bot")
 
     async def _character_name_autocomplete(
-        self, interaction: discord.Interaction["FrameDataBot"], current: str
+            self, interaction: discord.Interaction["FrameDataBot"], current: str
     ) -> List[discord.app_commands.Choice[str]]:
         """
         Autocomplete function for character names
@@ -94,11 +105,13 @@ class FrameDataBot(discord.Client):
         current = current.lower()  # autocomplete is case-sensitive
         choices = self.framedb.autocomplete.search(word=current, max_cost=3, size=3)
         return [discord.app_commands.Choice(name=choice[0].title(), value=choice[0]) for choice in choices][
-            :25
-        ]  # Discord has a max choice number of 25 (https://github.com/Rapptz/discord.py/discussions/9241)
+               :25
+               ]  # Discord has a max choice number of 25 (https://github.com/Rapptz/discord.py/discussions/9241)
 
     def _add_bot_commands(self) -> None:
         "Add all frame commands to the bot"
+        for char in CharacterName:
+            self.tree.command(name=char.value, description=f"Frame data from {char.value}")(self._character_command_factory(char.value))
 
         @self.tree.command(name="fd", description="Frame data from a character move")
         @discord.app_commands.autocomplete(character=self._character_name_autocomplete)
@@ -114,9 +127,11 @@ class FrameDataBot(discord.Client):
 
             @self.tree.command(name="feedback", description="Send feedback to the authors in case of incorrect data")
             async def _feedback_cmd(interaction: discord.Interaction["FrameDataBot"], message: str) -> None:
-                logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /feedback {message}")
+                logger.info(
+                    f"Received command from {interaction.user.name} in {interaction.guild}: /feedback {message}")
                 if not (
-                    self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)
+                        self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(
+                    interaction)
                 ):  # TODO: possible way to refactor these checks using discord.py library? discord.ext.commands.Bot.check()
                     try:
                         feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(
@@ -137,7 +152,8 @@ class FrameDataBot(discord.Client):
                         await feedback_channel.send(content=feedback_message, view=button.DoneButton(actioned_channel))
                         result = embed.get_success_embed("Feedback sent")
                     except Exception as e:
-                        result = embed.get_error_embed(f"Feedback couldn't be sent, caused by: {traceback.format_exc()}")
+                        result = embed.get_error_embed(
+                            f"Feedback couldn't be sent, caused by: {traceback.format_exc()}")
 
                     await interaction.response.send_message(embed=result, ephemeral=False)
         else:
