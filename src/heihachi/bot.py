@@ -34,6 +34,9 @@ class FrameDataBot(discord.Client):
         self.tree = discord.app_commands.CommandTree(self)
 
         self._add_bot_commands()
+        for char in CharacterName:
+            self.tree.command(name=char.value, description=f"Frame data from {char.value}")(self._character_command_factory(char.value))
+
         logger.debug(f"Bot command tree: {[command.name for command in self.tree.get_commands()]}")
 
     async def on_ready(self) -> None:
@@ -107,8 +110,8 @@ class FrameDataBot(discord.Client):
 
     def _add_bot_commands(self) -> None:
         "Add all frame commands to the bot"
-        for char in CharacterName:
-            self.tree.command(name=char.value, description=f"Frame data from {char.value}")(self._character_command_factory(char.value))
+
+
 
         @self.tree.command(name="fd", description="Frame data from a character move")
         @discord.app_commands.autocomplete(character=self._character_name_autocomplete)
