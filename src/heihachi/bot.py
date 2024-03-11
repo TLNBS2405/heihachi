@@ -55,6 +55,7 @@ class FrameDataBot(discord.Client):
     def _character_command_factory(self, name: str) -> Callable[[Interaction, str], Coroutine[Any, Any, None]]:
         async def command(interaction: discord.Interaction, move: str) -> None:
             if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
+                logger.info(f"Received character command from {interaction.user.name} in {interaction.guild}: /fd {name} {move}")
                 embed = get_frame_data_embed(self.framedb, self.frame_service, name, move)
                 await interaction.response.send_message(embed=embed, ephemeral=False)
 
@@ -110,9 +111,6 @@ class FrameDataBot(discord.Client):
 
     def _add_bot_commands(self) -> None:
         "Add all frame commands to the bot"
-
-
-
         @self.tree.command(name="fd", description="Frame data from a character move")
         @discord.app_commands.autocomplete(character=self._character_name_autocomplete)
         async def _frame_data_cmd(interaction: discord.Interaction["FrameDataBot"], character: str, move: str) -> None:
