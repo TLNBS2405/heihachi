@@ -79,7 +79,6 @@ class FrameDataBot(discord.Client):
         return age.days < self.config.new_author_age_limit
 
     async def on_message(self, message: discord.Message) -> None:
-        logger.debug(f"Received message from {message.author.name} in {message.guild}: {message.content}")
         if not self._is_user_blacklisted(message.author.id) and self.user and message.author.id != self.user.id:
             if self.user.mentioned_in(message):
                 try:
