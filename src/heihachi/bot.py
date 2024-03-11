@@ -81,7 +81,7 @@ class FrameDataBot(discord.Client):
     async def on_message(self, message: discord.Message) -> None:
         logger.debug(f"Received message from {message.author.name} in {message.guild}: {message.content}")
         if not self._is_user_blacklisted(message.author.id) and self.user and message.author.id != self.user.id:
-            if message.content and self.user.mentioned_in(message):
+            if self.user.mentioned_in(message):
                 try:
                     user_command, params = message.content.split(" ", 1)
                     char_name_query, move_query = params.split(" ", 1)
@@ -90,8 +90,6 @@ class FrameDataBot(discord.Client):
                     await message.channel.send(embed=embed, reference=message)
                 except ValueError:
                     logger.debug(f"Message from {message.author.name} in {message.guild} is not a valid command")
-            else:
-                logger.debug(f"Message from {message.author.name} in {message.guild} does not mention the bot")
 
     async def _character_name_autocomplete(
             self, interaction: discord.Interaction["FrameDataBot"], current: str
