@@ -53,12 +53,10 @@ class FrameDataBot(discord.Client):
             self.add_view(button.DoneButton(action_channel))
         logger.info(f"Logged on as {self.user}")
 
-    def _character_command_factory(self, name: str) -> Callable[[Interaction, str], Coroutine[Any, Any, None]]:
+    def _character_command_factory(self, name: str):
         async def command(interaction: discord.Interaction, move: str) -> None:
             if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
-                logger.info(
-                    f"Received character command from {interaction.user.name} in {interaction.guild}: /fd {name} {move}"
-                )
+                logger.info(f"Received character command from {interaction.user.name} in {interaction.guild}: /fd {name} {move}")
                 embed = get_frame_data_embed(self.framedb, self.frame_service, name, move)
                 await interaction.response.send_message(embed=embed, ephemeral=False)
 
