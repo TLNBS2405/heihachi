@@ -56,13 +56,14 @@ class FrameDataBot(discord.Client):
 
     def _character_command_factory(self, name: str) -> Callable[[Interaction, str], Coroutine[Any, Any, None]]:
         async def command(interaction: discord.Interaction, move: str) -> None:
+            await interaction.response.defer()
             if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
                 logger.info(
                     f"Received character command from {interaction.user.name} in {interaction.guild}: /fd {name} {move}"
                 )
                 embed = get_frame_data_embed(self.framedb, self.frame_service, name, move)
 
-                await interaction.response.defer()
+
                 await asyncio.sleep(0)
                 await interaction.followup.send(embed=embed, ephemeral=False)
 
@@ -122,13 +123,14 @@ class FrameDataBot(discord.Client):
         @self.tree.command(name="fd", description="Frame data from a character move")
         @discord.app_commands.autocomplete(character=self._character_name_autocomplete)
         async def _frame_data_cmd(interaction: discord.Interaction, character: str, move: str) -> None:
+            await interaction.response.defer()
             logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /fd {character} {move}")
             character_name_query = character
             move_query = move
             if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
                 embed = get_frame_data_embed(self.framedb, self.frame_service, character_name_query, move_query)
 
-                await interaction.response.defer()
+
                 await asyncio.sleep(0)
                 await interaction.followup.send(embed=embed, ephemeral=False)
 
@@ -136,11 +138,13 @@ class FrameDataBot(discord.Client):
 
             @self.tree.command(name="feedback", description="Send feedback to the authors in case of incorrect data")
             async def _feedback_cmd(interaction: discord.Interaction, message: str) -> None:
+                await interaction.response.defer()
                 logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /feedback {message}")
                 if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
                     # TODO: possible way to refactor these checks using discord.py library?
                     #  discord.ext.commands.Bot.check()
                     try:
+
                         feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(
                             str(interaction.user.name),
                             interaction.user.id,
@@ -161,7 +165,7 @@ class FrameDataBot(discord.Client):
                     except Exception as e:
                         result = embed.get_error_embed(f"Feedback couldn't be sent, caused by: {traceback.format_exc()}")
 
-                await interaction.response.defer()
+
                 await asyncio.sleep(0)
                 await interaction.followup.send(embed=result, ephemeral=False)
         else:
@@ -169,9 +173,11 @@ class FrameDataBot(discord.Client):
 
         @self.tree.command(name="help", description="Show help")
         async def _help_command(interaction: discord.Interaction) -> None:
+            await interaction.response.defer()
             logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /help")
             if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
+
                 help_embed = embed.get_help_embed(self.frame_service)
-                await interaction.response.defer()
+
                 await asyncio.sleep(0)
                 await interaction.followup.send(embed=help_embed, ephemeral=False)
