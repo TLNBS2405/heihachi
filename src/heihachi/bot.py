@@ -135,7 +135,6 @@ class FrameDataBot(discord.Client):
                     # TODO: possible way to refactor these checks using discord.py library?
                     #  discord.ext.commands.Bot.check()
                     try:
-
                         feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(
                             str(interaction.user.name),
                             interaction.user.id,
@@ -156,7 +155,6 @@ class FrameDataBot(discord.Client):
                     except Exception as e:
                         result = embed.get_error_embed(f"Feedback couldn't be sent, caused by: {traceback.format_exc()}")
 
-
                 await interaction.response.send_message(embed=result, ephemeral=False)
         else:
             logger.warning("Feedback or Action channel ID is not set. Disabling feedback command.")
@@ -165,7 +163,6 @@ class FrameDataBot(discord.Client):
         async def _help_command(interaction: discord.Interaction) -> None:
             logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /help")
             if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
-
                 help_embed = embed.get_help_embed(self.frame_service)
 
                 await interaction.response.send_message(embed=help_embed, ephemeral=False)
