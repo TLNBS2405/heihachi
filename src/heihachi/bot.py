@@ -1,3 +1,4 @@
+import asyncio
 import datetime
 import logging
 import traceback
@@ -157,7 +158,7 @@ class FrameDataBot(discord.Client):
                     except Exception as e:
                         result = embed.get_error_embed(f"Feedback couldn't be sent, caused by: {traceback.format_exc()}")
 
-                    await interaction.followup.send(embed=result, ephemeral=False)
+                await interaction.response.send_message(embed=result, ephemeral=False)
         else:
             logger.warning("Feedback or Action channel ID is not set. Disabling feedback command.")
 
@@ -167,4 +168,4 @@ class FrameDataBot(discord.Client):
             await interaction.response.defer()
             if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
                 help_embed = embed.get_help_embed(self.frame_service)
-                await interaction.followup.send(embed=help_embed, ephemeral=True)
+                await interaction.response.send_message(embed=help_embed, ephemeral=True)
