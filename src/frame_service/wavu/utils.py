@@ -198,6 +198,13 @@ def _convert_wavu_movelist(movelist: List[WavuMove]) -> Dict[str, Move]:
             curr_id = stack.pop()
             curr_move = wavu_movelist[curr_id]
 
+            if len(curr_move.input) > 0 and curr_move.input[0] != ",":
+                curr_move.input = "," + curr_move.input
+            if len(curr_move.target) > 0 and curr_move.target[0] != ",":
+                curr_move.target = "," + curr_move.target
+            if len(curr_move.damage) > 0 and curr_move.damage[0] != ",":
+                curr_move.damage = "," + curr_move.damage
+
             curr_move.input = parent_input + curr_move.input
             curr_move.target = parent_target + curr_move.target
             curr_move.damage = parent_damage + curr_move.damage
