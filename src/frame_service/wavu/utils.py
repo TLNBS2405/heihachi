@@ -134,7 +134,7 @@ def _convert_json_move(move_json: Any) -> WavuMove:
     if "video" in move_json and move_json["video"]:
         video = _process_links(move_json["video"])
         video_name = video.split(":")[-1]
-        video_name=video_name.replace(" ","_")
+        video_name = video_name.replace(" ", "_")
         video = WAVU_VIDEO_LINK + video_name
     else:
         video = ""
