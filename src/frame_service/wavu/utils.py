@@ -12,6 +12,7 @@ from framedb.character import Move
 from framedb.const import CharacterName
 
 WAVU_API_URL = "https://wavu.wiki/w/api.php"
+WAVU_VIDEO_LINK = "https://wavu.wiki/t/"
 
 """Available fields for the Move table in the Wavu DB"""
 FIELDS = [
@@ -130,8 +131,9 @@ def _convert_json_move(move_json: Any) -> WavuMove:
     else:
         image = ""
 
-    if "video" in move_json:
+    if "video" in move_json and move_json["video"]:
         video = _process_links(move_json["video"])
+        video = WAVU_VIDEO_LINK + video
     else:
         video = ""
 
