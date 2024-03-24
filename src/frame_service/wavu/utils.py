@@ -117,12 +117,14 @@ def _convert_json_move(move_json: Any) -> WavuMove:
     recovery = _normalize_data(move_json["recv"])
 
     if "alias" in move_json:
-        alias = tuple(_process_dotlist(_remove_html_tags(_normalize_data(move_json["alias"]))))
+        tmp_alias = _process_dotlist(_remove_html_tags(_normalize_data(move_json["alias"])))
+        alias = tuple(x for x in tmp_alias if x != "")
     else:
         alias = ()
 
     if "alt" in move_json:
-        alt = tuple(_process_dotlist(_remove_html_tags(_normalize_data(move_json["alt"]))))
+        tmp_alt = _process_dotlist(_remove_html_tags(_normalize_data(move_json["alt"])))
+        alt = tuple(x for x in tmp_alt if x != "")
     else:
         alt = ()
 
@@ -196,18 +198,27 @@ def _convert_wavu_movelist(movelist: List[WavuMove]) -> Dict[str, Move]:
         parent_target = curr_move.target
         parent_damage = curr_move.damage
         root_startup = curr_move.startup  # child move startups are equal to oldest parent move startup
+        root_alt = curr_move.alt
         seen[curr_move.id] = True
 
         while stack:
             curr_id = stack.pop()
             curr_move = wavu_movelist[curr_id]
 
+            # prepend commas to input, target, and damage fields if they don't already exist
             if len(curr_move.input) > 0 and curr_move.input[0] != ",":
                 curr_move.input = "," + curr_move.input
             if len(curr_move.target) > 0 and curr_move.target[0] != ",":
                 curr_move.target = "," + curr_move.target
             if len(curr_move.damage) > 0 and curr_move.damage[0] != ",":
                 curr_move.damage = "," + curr_move.damage
+
+            # if the root parent has alts, append them to the current move's alts
+            if len(root_alt) > 0:
+                tmp_curr_alt = list(curr_move.alt)
+                for alt in root_alt:
+                    tmp_curr_alt.append(alt + curr_move.input)
+                curr_move.alt = tuple(tmp_curr_alt)
 
             curr_move.input = parent_input + curr_move.input
             curr_move.target = parent_target + curr_move.target
