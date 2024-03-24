@@ -89,15 +89,15 @@ class FrameDataBot(discord.Client):
 
     async def on_message(self, message: discord.Message) -> None:
         if not self._is_user_blacklisted(message.author.id) and self.user and message.author.id != self.user.id:
-            if self.user.mentioned_in(message):
-                logger.info(f"Received message from {message.author.name} in {message.guild}: @Heihachi {message.content}")
-                try:
-                    user_command, params = message.content.split(" ", 1)
-                    char_name_query, move_query = params.split(" ", 1)
+            try:
+                user_command, params = message.content.split(" ", 1)
+                char_name_query, move_query = params.split(" ", 1)
+                if user_command == f"<@{self.user.id}>":
+                    logger.info(f"Received message from {message.author.name} in {message.guild}: {message.content}")
                     embed = get_frame_data_embed(self.framedb, self.frame_service, char_name_query, move_query)
                     await message.channel.send(embed=embed, reference=message)
-                except ValueError:
-                    logger.debug(f"Message from {message.author.name} in {message.guild} is not a valid command")
+            except ValueError:
+                logger.debug(f"Invalid command from {message.author.name} in {message.guild}: {message.content}")
 
     async def _character_name_autocomplete(
         self, interaction: discord.Interaction["FrameDataBot"], current: str
