@@ -178,7 +178,9 @@ class FrameDb:
         move_list = self.frames[character].movelist.values()
         move_type = FrameDb._correct_move_type(move_type_query)
         if move_type:
-            moves = list(filter(lambda x: (move_type.value.lower() in x.notes.lower()), move_list))
+            moves = list(
+                filter(lambda x: (move_type.value.lower() in x.notes.lower()), move_list)
+            )  # TODO: revisit this logic for throws (and perhaps others)
         else:
             moves = []
 
