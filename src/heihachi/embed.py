@@ -95,9 +95,6 @@ def get_move_embed(frame_service: FrameService, character: Character, move: Move
     if move.notes:
         embed.add_field(name="Notes", value=move.notes)
 
-    if move.image:
-        embed.set_image(url=move.image)
-
     if move.video:
         embed.add_field(name="Video", value=f"[Link]({move.video})", inline=False)
 
