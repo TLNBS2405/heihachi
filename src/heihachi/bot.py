@@ -53,8 +53,8 @@ class FrameDataBot(discord.Client):
             self.add_view(button.DoneButton(action_channel))
         logger.info(f"Logged on as {self.user}")
 
-    def _character_command_factory(self, name: str) -> Callable[[Interaction, str], Coroutine[Any, Any, None]]:
-        async def command(interaction: discord.Interaction, move: str) -> None:
+    def _character_command_factory(self, name: str) -> Callable[[Interaction["FrameDataBot"], str], Coroutine[Any, Any, None]]:
+        async def command(interaction: discord.Interaction["FrameDataBot"], move: str) -> None:
             if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
                 logger.info(
                     f"Received character command from {interaction.user.name} in {interaction.guild}: /fd {name} {move}"
@@ -78,7 +78,7 @@ class FrameDataBot(discord.Client):
         else:
             return False
 
-    def _is_author_newly_created(self, interaction: discord.Interaction) -> bool:
+    def _is_author_newly_created(self, interaction: discord.Interaction["FrameDataBot"]) -> bool:
         "Check if author of an interaction is newly created"
 
         today = datetime.datetime.strptime(datetime.datetime.now().isoformat(), "%Y-%m-%dT%H:%M:%S.%f")
@@ -98,7 +98,7 @@ class FrameDataBot(discord.Client):
                     logger.debug(f"Message from {message.author.name} in {message.guild} is not a valid command")
 
     async def _character_name_autocomplete(
-        self, interaction: discord.Interaction, current: str
+        self, interaction: discord.Interaction["FrameDataBot"], current: str
     ) -> List[discord.app_commands.Choice[str]]:
         """
         Autocomplete function for character names
@@ -117,7 +117,7 @@ class FrameDataBot(discord.Client):
 
         @self.tree.command(name="fd", description="Frame data from a character move")
         @discord.app_commands.autocomplete(character=self._character_name_autocomplete)
-        async def _frame_data_cmd(interaction: discord.Interaction, character: str, move: str) -> None:
+        async def _frame_data_cmd(interaction: discord.Interaction["FrameDataBot"], character: str, move: str) -> None:
             logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /fd {character} {move}")
             character_name_query = character
             move_query = move
@@ -128,7 +128,7 @@ class FrameDataBot(discord.Client):
         if self.config.feedback_channel_id and self.config.action_channel_id:
 
             @self.tree.command(name="feedback", description="Send feedback to the authors in case of incorrect data")
-            async def _feedback_cmd(interaction: discord.Interaction, message: str) -> None:
+            async def _feedback_cmd(interaction: discord.Interaction["FrameDataBot"], message: str) -> None:
                 logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /feedback {message}")
                 if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
                     # TODO: possible way to refactor these checks using discord.py library?
@@ -159,7 +159,7 @@ class FrameDataBot(discord.Client):
             logger.warning("Feedback or Action channel ID is not set. Disabling feedback command.")
 
         @self.tree.command(name="help", description="Show help")
-        async def _help_command(interaction: discord.Interaction) -> None:
+        async def _help_command(interaction: discord.Interaction["FrameDataBot"]) -> None:
             logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /help")
             if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
                 help_embed = embed.get_help_embed(self.frame_service)
