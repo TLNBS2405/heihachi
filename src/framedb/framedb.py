@@ -255,8 +255,6 @@ class FrameDb:
             moves = character_move
         elif len(similar_name_moves) == 1:
             moves = similar_name_moves[0]
-        elif len(similar_input_moves) == 1:
-            moves = similar_input_moves[0]
         else:
             similar_moves = similar_name_moves + similar_input_moves
             moves = similar_moves
