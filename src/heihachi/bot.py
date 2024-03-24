@@ -18,10 +18,10 @@ logger = logging.getLogger("main")
 
 class FrameDataBot(discord.Client):
     def __init__(
-            self,
-            framedb: FrameDb,
-            frame_service: FrameService,
-            config: Configurator,
+        self,
+        framedb: FrameDb,
+        frame_service: FrameService,
+        config: Configurator,
     ) -> None:
         intents = discord.Intents.default()
         intents.message_content = False
@@ -98,7 +98,7 @@ class FrameDataBot(discord.Client):
                     logger.debug(f"Message from {message.author.name} in {message.guild} is not a valid command")
 
     async def _character_name_autocomplete(
-            self, interaction: discord.Interaction, current: str
+        self, interaction: discord.Interaction, current: str
     ) -> List[discord.app_commands.Choice[str]]:
         """
         Autocomplete function for character names
@@ -109,8 +109,8 @@ class FrameDataBot(discord.Client):
         current = current.lower()  # autocomplete is case-sensitive
         choices = self.framedb.autocomplete.search(word=current, max_cost=3, size=3)
         return [discord.app_commands.Choice(name=choice[0].title(), value=choice[0]) for choice in choices][
-               :25
-               ]  # Discord has a max choice number of 25 (https://github.com/Rapptz/discord.py/discussions/9241)
+            :25
+        ]  # Discord has a max choice number of 25 (https://github.com/Rapptz/discord.py/discussions/9241)
 
     def _add_bot_commands(self) -> None:
         "Add all frame commands to the bot"
