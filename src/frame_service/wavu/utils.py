@@ -65,8 +65,8 @@ def _get_wavu_response(session: requests.Session, character_name: CharacterName,
 
 
 def _get_wavu_character_movelist(
-    content: Any,
-    format: str = "json",
+        content: Any,
+        format: str = "json",
 ) -> Dict[str, Move]:
     """
     Get the movelist for a character from a Wavu API response
@@ -142,6 +142,13 @@ def _convert_json_move(move_json: Any) -> WavuMove:
         video = ""
 
     notes = _remove_html_tags(_process_links(move_json["notes"])).strip()
+    crush = _normalize_data(move_json["crush"])
+    if "pc" in crush:
+        notes += "\n* Power Crush"
+    if "js" in crush:
+        notes += "\n"
+    if "cs" in crush:
+        notes += "\n" + crush
 
     move = WavuMove(
         id,
