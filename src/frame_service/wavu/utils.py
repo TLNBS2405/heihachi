@@ -65,8 +65,8 @@ def _get_wavu_response(session: requests.Session, character_name: CharacterName,
 
 
 def _get_wavu_character_movelist(
-        content: Any,
-        format: str = "json",
+    content: Any,
+    format: str = "json",
 ) -> Dict[str, Move]:
     """
     Get the movelist for a character from a Wavu API response
