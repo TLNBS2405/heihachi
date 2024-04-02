@@ -37,6 +37,7 @@ class CharacterName(enum.Enum):
     ZAFINA = "zafina"
     LEROY = "leroy"
     VICTOR = "victor"
+    EDDY = "eddy"
 
     def pretty(self) -> str:
         return self.value.replace("_", " ").title()
@@ -78,6 +79,7 @@ CHARACTER_ALIAS: Dict[CharacterName, List[str]] = {
     CharacterName.ZAFINA: ["zaffy", "zaf"],
     CharacterName.LEROY: ["ler"],
     CharacterName.VICTOR: ["vic"],
+    CharacterName.EDDY: ["ed"],
 }
 
 
