@@ -153,8 +153,7 @@ class FrameDataBot(discord.Client):
                         result = embed.get_success_embed("Feedback sent")
                     except Exception as e:
                         result = embed.get_error_embed(f"Feedback couldn't be sent, caused by: {traceback.format_exc()}")
-
-                await interaction.response.send_message(embed=result, ephemeral=False)
+                    await interaction.response.send_message(embed=result, ephemeral=False)
         else:
             logger.warning("Feedback or Action channel ID is not set. Disabling feedback command.")
 
