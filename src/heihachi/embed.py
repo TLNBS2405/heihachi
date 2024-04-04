@@ -98,6 +98,9 @@ def get_move_embed(frame_service: FrameService, character: Character, move: Move
     if move.video:
         embed.add_field(name="Video", value=f"[Link]({move.video})", inline=False)
 
+    if move.image:
+        embed.set_image(url=move.image)
+
     return embed
 
 

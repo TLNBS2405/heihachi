@@ -12,6 +12,7 @@ class CharacterName(enum.Enum):
     CLAUDIO = "claudio"
     DEVIL_JIN = "devil_jin"
     DRAGUNOV = "dragunov"
+    EDDY = "eddy"
     FENG = "feng"
     HWOARANG = "hwoarang"
     JACK_8 = "jack-8"
@@ -37,7 +38,6 @@ class CharacterName(enum.Enum):
     ZAFINA = "zafina"
     LEROY = "leroy"
     VICTOR = "victor"
-    EDDY = "eddy"
 
     def pretty(self) -> str:
         return self.value.replace("_", " ").title()
@@ -54,6 +54,7 @@ CHARACTER_ALIAS: Dict[CharacterName, List[str]] = {
     CharacterName.CLAUDIO: ["cld", "cla"],
     CharacterName.DEVIL_JIN: ["dj", "deviljin", "dvj", "djin"],
     CharacterName.DRAGUNOV: ["drag", "sergei", "dragu"],
+    CharacterName.EDDY: ["ed"],
     CharacterName.FENG: ["fen"],
     CharacterName.HWOARANG: ["hwo"],
     CharacterName.JACK_8: ["j8", "jack8", "jack"],
@@ -79,7 +80,6 @@ CHARACTER_ALIAS: Dict[CharacterName, List[str]] = {
     CharacterName.ZAFINA: ["zaffy", "zaf"],
     CharacterName.LEROY: ["ler"],
     CharacterName.VICTOR: ["vic"],
-    CharacterName.EDDY: ["ed"],
 }
 
 
