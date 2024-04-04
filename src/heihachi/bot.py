@@ -130,30 +130,29 @@ class FrameDataBot(discord.Client):
             @self.tree.command(name="feedback", description="Send feedback to the authors in case of incorrect data")
             async def _feedback_cmd(interaction: discord.Interaction["FrameDataBot"], message: str) -> None:
                 logger.info(f"Received command from {interaction.user.name} in {interaction.guild}: /feedback {message}")
-                if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
-                    # TODO: possible way to refactor these checks using discord.py library?
-                    #  discord.ext.commands.Bot.check()
+                # TODO: possible way to refactor these checks using discord.py library?
+                #  discord.ext.commands.Bot.check()
+                try:
+                    feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(
+                        str(interaction.user.name),
+                        interaction.user.id,
+                        interaction.guild,
+                        message,
+                    )
                     try:
-                        feedback_message = "Feedback from **{}** with ID **{}** in **{}** \n- {}\n".format(
-                            str(interaction.user.name),
-                            interaction.user.id,
-                            interaction.guild,
-                            message,
-                        )
-                        try:
-                            assert self.config.feedback_channel_id and self.config.action_channel_id
-                            feedback_channel = self.get_channel(self.config.feedback_channel_id)
-                            actioned_channel = self.get_channel(self.config.action_channel_id)
-                        except Exception as e:
-                            logger.error(f"Error getting channel: {e}")
-                        assert feedback_channel and actioned_channel
-                        assert isinstance(feedback_channel, discord.channel.TextChannel)
-                        assert isinstance(actioned_channel, discord.channel.TextChannel)
-                        await feedback_channel.send(content=feedback_message, view=button.DoneButton(actioned_channel))
-                        result = embed.get_success_embed("Feedback sent")
+                        assert self.config.feedback_channel_id and self.config.action_channel_id
+                        feedback_channel = self.get_channel(self.config.feedback_channel_id)
+                        actioned_channel = self.get_channel(self.config.action_channel_id)
                     except Exception as e:
-                        result = embed.get_error_embed(f"Feedback couldn't be sent, caused by: {traceback.format_exc()}")
-                    await interaction.response.send_message(embed=result, ephemeral=False)
+                        logger.error(f"Error getting channel: {e}")
+                    assert feedback_channel and actioned_channel
+                    assert isinstance(feedback_channel, discord.channel.TextChannel)
+                    assert isinstance(actioned_channel, discord.channel.TextChannel)
+                    await feedback_channel.send(content=feedback_message, view=button.DoneButton(actioned_channel))
+                    result = embed.get_success_embed("Feedback sent")
+                except Exception as e:
+                    result = embed.get_error_embed(f"Feedback couldn't be sent, caused by: {traceback.format_exc()}")
+                await interaction.response.send_message(embed=result, ephemeral=False)
         else:
             logger.warning("Feedback or Action channel ID is not set. Disabling feedback command.")
 
