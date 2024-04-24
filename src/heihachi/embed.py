@@ -30,7 +30,7 @@ def get_similar_moves_embed(  # TODO: look into improving the similar moves flow
     )
 
     if len(similar_moves) > 0:
-        embed.add_field(name="Similar Moves", value="\n".join([move.input for move in similar_moves]))
+        embed.add_field(name="Similar Moves", value="\n".join([move.input.replace("*", "\\*") for move in similar_moves]))
     else:
         embed.add_field(name="No similar moves found", value="")
     embed.set_thumbnail(url=character.portrait)
@@ -47,7 +47,7 @@ def get_success_movelist_embed(
     For e.g., to a move type
     """
 
-    desc_string = "\n".join(sorted([move.input for move in moves]))
+    desc_string = "\n".join(sorted([move.input.replace("*", "\\*") for move in moves]))
 
     embed = discord.Embed(
         title=f"{title}\n",
@@ -73,8 +73,9 @@ def get_success_embed(message: Any | None) -> discord.Embed:
 def get_move_embed(frame_service: FrameService, character: Character, move: Move) -> discord.Embed:
     """Returns the embed message for character and move."""
 
+    escaped_input = move.input.replace("*", "\\*")
     embed = discord.Embed(
-        title=f"**{move.input}**",
+        title=f"**{escaped_input}**",
         colour=SUCCESS_COLOR,
         description=move.name,
         url=frame_service.get_move_url(character, move),
