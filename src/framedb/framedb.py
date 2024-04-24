@@ -142,6 +142,9 @@ class FrameDb:
             for entry in character_movelist
             if FrameDb._simplify_input(entry.input) == FrameDb._simplify_input(input_query)
         ]
+        # simple_inputs = [FrameDb._simplify_input(entry.input) for entry in character_movelist]
+        # simplified_input_query = FrameDb._simplify_input(input_query)
+        # import code; code.interact(local=locals())
         if result:
             return result[0]
 
