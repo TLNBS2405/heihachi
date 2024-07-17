@@ -1,7 +1,7 @@
 import enum
 from typing import Dict, List
 
-NUM_CHARACTERS = 33
+NUM_CHARACTERS = 34
 
 
 class CharacterName(enum.Enum):
@@ -25,19 +25,20 @@ class CharacterName(enum.Enum):
     LAW = "law"
     LEE = "lee"
     LEO = "leo"
+    LEROY = "leroy"
+    LIDIA = "lidia"
     LILI = "lili"
-    RAVEN = "raven"
-    REINA = "reina"
     NINA = "nina"
     PANDA = "panda"
     PAUL = "paul"
+    RAVEN = "raven"
+    REINA = "reina"
     SHAHEEN = "shaheen"
     STEVE = "steve"
+    VICTOR = "victor"
     YOSHIMITSU = "yoshimitsu"
     XIAOYU = "xiaoyu"
     ZAFINA = "zafina"
-    LEROY = "leroy"
-    VICTOR = "victor"
 
     def pretty(self) -> str:
         return self.value.replace("_", " ").title()
@@ -54,7 +55,7 @@ CHARACTER_ALIAS: Dict[CharacterName, List[str]] = {
     CharacterName.CLAUDIO: ["cld", "cla"],
     CharacterName.DEVIL_JIN: ["dj", "deviljin", "dvj", "djin"],
     CharacterName.DRAGUNOV: ["drag", "sergei", "dragu"],
-    CharacterName.EDDY: ["ed"],
+    CharacterName.EDDY: ["ed", "capo"],
     CharacterName.FENG: ["fen"],
     CharacterName.HWOARANG: ["hwo"],
     CharacterName.JACK_8: ["j8", "jack8", "jack"],
@@ -67,19 +68,20 @@ CHARACTER_ALIAS: Dict[CharacterName, List[str]] = {
     CharacterName.LAW: ["marshall"],
     CharacterName.LEE: ["violet"],
     CharacterName.LEO: [],
+    CharacterName.LEROY: ["ler"],
+    CharacterName.LIDIA: ["lid", "pm"],
     CharacterName.LILI: ["lil"],
-    CharacterName.RAVEN: ["masterraven", "mraven", "maven", "mrv", "raven", "rav"],
-    CharacterName.REINA: ["rei"],
     CharacterName.NINA: ["nin"],
     CharacterName.PANDA: ["pan"],
     CharacterName.PAUL: [],
+    CharacterName.RAVEN: ["masterraven", "mraven", "maven", "mrv", "raven", "rav"],
+    CharacterName.REINA: ["rei"],
     CharacterName.SHAHEEN: ["sha"],
     CharacterName.STEVE: ["stv", "ste", "fox"],
+    CharacterName.VICTOR: ["vic"],
     CharacterName.YOSHIMITSU: ["yoshi", "manji", "yos"],
     CharacterName.XIAOYU: ["xiao", "ling"],
     CharacterName.ZAFINA: ["zaffy", "zaf"],
-    CharacterName.LEROY: ["ler"],
-    CharacterName.VICTOR: ["vic"],
 }
 
 
