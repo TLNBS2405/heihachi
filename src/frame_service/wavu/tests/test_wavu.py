@@ -20,7 +20,7 @@ def test_get_frame_data() -> None:
     with requests.session() as session:
         char = wavu.get_frame_data(CharacterName.AZUCENA, session)
     assert char.name.value.title() == "Azucena"
-    assert char.portrait == "https://wavu.wiki/w/images/6/65/AzucenaT8.png"
+    assert char.portrait == "https://wavu.wiki/t/Special:Redirect/file/AzucenaT8.png"
 
 
 def test_all_char_meta() -> None:
