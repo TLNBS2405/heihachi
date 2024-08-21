@@ -101,3 +101,7 @@ def test_process_links() -> None:
         utils._process_links("[[Azucena combos#Mini-combos|+27a]]")
         == "[+27a](https://wavu.wiki/t/Azucena_combos#Mini-combos 'Mini-combo')"
     )
+    assert (
+        utils._process_links("[[Devil Jin combos#Mini-combos|+10]]")
+        == "[+10](https://wavu.wiki/t/Devil_Jin_combos#Mini-combos 'Mini-combo')"
+    )

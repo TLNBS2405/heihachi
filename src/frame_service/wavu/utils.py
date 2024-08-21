@@ -104,7 +104,7 @@ def _convert_json_move(move_json: Any) -> WavuMove:
 
     damage = _normalize_data(move_json["damage"])
 
-    on_block = _remove_html_tags(_normalize_data(move_json["block"]))
+    on_block = _remove_html_tags(_normalize_data(_process_links(move_json["block"])))
 
     on_hit = _remove_html_tags(_normalize_data(_process_links(move_json["hit"])))
 
