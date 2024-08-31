@@ -111,13 +111,18 @@ def get_frame_data_embed(framedb: FrameDb, frame_service: FrameService, char_que
     """
 
     character = framedb.get_character_by_name(char_query)
+    logger.debug(f"Character: {character}")
     if character:
         move_type = framedb.get_move_type(move_query)
         if move_type:
             logger.info(f"Identified move query as move type {move_type}. Getting moves...")
-            moves_by_move_type = framedb.get_moves_by_move_type(character.name, move_type.value)
-            embed = get_success_movelist_embed(frame_service, character, moves_by_move_type, move_type.value)
+            moves_by_move_type = framedb.get_moves_by_move_type(character.name, move_type)
+            if len(moves_by_move_type) > 1:
+                embed = get_success_movelist_embed(frame_service, character, moves_by_move_type, move_type.value)
+            else:
+                embed = get_move_embed(frame_service, character, moves_by_move_type[0])
         else:
+            logger.info(f"Could not identify move query as move type. Searching for move...")
             moves = framedb.search_move(character, move_query)
 
             if isinstance(moves, Move):

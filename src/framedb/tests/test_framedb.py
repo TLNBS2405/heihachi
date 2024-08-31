@@ -1,7 +1,15 @@
 import pytest
 
-from framedb import FrameDb
-from framedb.const import MoveType
+from frame_service.json_directory.tests.test_json_directory import json_directory
+from framedb import FrameDb, FrameService
+from framedb.const import CharacterName, MoveType
+
+
+@pytest.fixture
+def frameDb(json_directory: FrameService) -> FrameDb:
+    frameDb = FrameDb()
+    frameDb.load(json_directory)
+    return frameDb
 
 
 @pytest.mark.skip(reason="Not implemented")
@@ -11,6 +19,11 @@ def test_framedb_export() -> None:
 
 @pytest.mark.skip(reason="Not implemented")
 def test_framedb_load() -> None:
+    pass
+
+
+@pytest.mark.skip(reason="Not implemented")
+def test_framedb_refresh() -> None:
     pass
 
 
@@ -35,15 +48,6 @@ def test_is_command_in_alt() -> None:
 
 
 @pytest.mark.skip(reason="Not implemented")
-def test_correct_character_name() -> None:
-    pass
-
-
-def test_correct_move_type() -> None:
-    assert FrameDb._correct_move_type("heat engagers") == MoveType.HE
-
-
-@pytest.mark.skip(reason="Not implemented")
 def test_get_move_by_input() -> None:
     pass
 
@@ -59,22 +63,21 @@ def test_get_moves_by_move_type() -> None:
 
 
 @pytest.mark.skip(reason="Not implemented")
-def test_get_move_by_id() -> None:
-    pass
-
-
-@pytest.mark.skip(reason="Not implemented")
 def test_get_moves_by_move_input() -> None:
     pass
 
 
 @pytest.mark.skip(reason="Not implemented")
-def test_search_move() -> None:
-    pass
+def test_get_character_by_name(frameDb: FrameDb) -> None:
+    assert frameDb.get_character_by_name("reina") == frameDb.frames[CharacterName.REINA]
+
+
+def test_get_move_type(frameDb: FrameDb) -> None:
+    assert frameDb.get_move_type("heat engagers") == MoveType.HE
 
 
 @pytest.mark.skip(reason="Not implemented")
-def test_get_close_matches_indices() -> None:
+def test_search_move() -> None:
     pass
 
 

@@ -42,6 +42,9 @@ FIELDS = [
 class WavuMove(Move):
     parent: str = ""
 
+    def __hash__(self) -> int:
+        return hash(self.id)
+
 
 def _get_wavu_response(session: requests.Session, character_name: CharacterName, format: str = "json") -> Any:
     """

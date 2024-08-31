@@ -1,16 +1,17 @@
 import logging
 import os
-from difflib import SequenceMatcher
-from heapq import nlargest as _nlargest
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
 import requests
+import thefuzz.fuzz
+import thefuzz.process
 from fast_autocomplete import AutoComplete
 
 from .character import Character, Move
 from .const import CHARACTER_ALIAS, MOVE_TYPE_ALIAS, REPLACE, CharacterName, MoveType
 from .frame_service import FrameService
 
+MATCH_SCORE_CUTOFF = 95
 logger = logging.getLogger("main")
 
 # TODO: refactor the query methods - simplify + handle alts and aliases correctly
@@ -89,7 +90,7 @@ class FrameDb:
         "Check if an input move query is in the alias of the given Move"
 
         for alias in move.alias:
-            if FrameDb._simplify_input(move_query) == FrameDb._simplify_input(alias):
+            if thefuzz.fuzz.ratio(move_query, alias) > MATCH_SCORE_CUTOFF:  # an alias is an alternate name for a move
                 return True
         return False
 
@@ -98,38 +99,9 @@ class FrameDb:
         "Check if an input move query is in the alt of the given Move"
 
         for alt in move.alt:
-            if FrameDb._simplify_input(move_query) == FrameDb._simplify_input(alt):
+            if FrameDb._simplify_input(move_query) == FrameDb._simplify_input(alt):  # an alt is an alternate input for a move
                 return True
         return False
-
-    @staticmethod
-    def _correct_character_name(char_name_query: str) -> str | None:
-        "Check if input in dictionary or in dictionary values"
-
-        char_name_query = char_name_query.lower().strip()
-        char_name_query = char_name_query.replace(" ", "_")
-        try:
-            return CharacterName(char_name_query).value
-        except ValueError:
-            pass
-
-        for key, value in CHARACTER_ALIAS.items():
-            if char_name_query in value:
-                return key.value
-
-        return None
-
-    @staticmethod
-    def _correct_move_type(move_type_query: str) -> MoveType | None:
-        """Given a move type query, correct it to a known move type."""
-
-        move_type_query = move_type_query.lower()
-        for move_type, aliases in MOVE_TYPE_ALIAS.items():
-            if move_type_query in aliases:
-                return move_type
-
-        logger.debug(f"Could not match move type {move_type_query} to a known move type.")
-        return None
 
     def get_move_by_input(self, character: CharacterName, input_query: str) -> Move | None:
         """Given an input move query for a known character, retrieve the move from the database."""
@@ -142,9 +114,6 @@ class FrameDb:
             for entry in character_movelist
             if FrameDb._simplify_input(entry.input) == FrameDb._simplify_input(input_query)
         ]
-        # simple_inputs = [FrameDb._simplify_input(entry.input) for entry in character_movelist]
-        # simplified_input_query = FrameDb._simplify_input(input_query)
-        # import code; code.interact(local=locals())
         if result:
             return result[0]
 
@@ -163,76 +132,81 @@ class FrameDb:
 
     def get_moves_by_move_name(self, character: CharacterName, move_name_query: str) -> List[Move]:
         """
-        Gets a list of moves that match a move name query
-        returns a list of Move objects if finds match(es), else empty list
+        Gets a list of moves that match a move name query, by comparing the move name and its aliases
+        returns a list of Move objects if it finds match(es), else empty list
         """
 
-        move_list = self.frames[character].movelist.values()
-        moves = list(filter(lambda x: (move_name_query.lower() in x.name.lower()), move_list))
-
-        return moves
-
-    def get_moves_by_move_type(self, character: CharacterName, move_type_query: str) -> List[Move]:
-        """
-        Gets a list of moves that match a move_type query
-        returns a list of Move objects if finds match(es), else empty list
-        """
-
-        move_list = self.frames[character].movelist.values()
-        move_type = FrameDb._correct_move_type(move_type_query)
-        if move_type:
-            moves = list(
-                filter(lambda x: (move_type.value.lower() in x.notes.lower()), move_list)
-            )  # TODO: revisit this logic for throws (and perhaps others)
-        else:
-            moves = []
-
-        return moves
-
-    def get_move_by_id(self, character: CharacterName, move_id: str) -> Move | None:
-        """Given a move id for a known character, retrieve the move from the database."""
-
-        character_movelist = self.frames[character].movelist
-        if move_id not in character_movelist:
-            logger.warning(f"Move {move_id} not found for {character}")
-            return None
-        else:
-            return character_movelist[move_id]
-
-    def get_moves_by_move_input(self, character: CharacterName, input_query: str) -> List[Move]:
-        """
-        Given an input query for a known character, find all moves which are similar to the input query.
-        """
-
-        movelist = list(self.frames[character].movelist.values())
-        command_list = [entry.input for entry in movelist]  # TODO: include alts
-        similar_move_indices = _get_close_matches_indices(
-            FrameDb._simplify_input(input_query), list(map(FrameDb._simplify_input, command_list))
-        )
-
-        result = [movelist[idx] for idx in similar_move_indices]
+        result: List[Move] = []
+        inverted_movelist = {}
+        for move in self.frames[character].movelist.values():
+            inverted_movelist[move] = [move.name] + list(move.alias)
+        for move, choices in inverted_movelist.items():
+            match = thefuzz.process.extractOne(move_name_query, choices, score_cutoff=MATCH_SCORE_CUTOFF)
+            if match:
+                result.append(move)
 
         return result
 
-    def get_character_by_name(self, name_query: str) -> Character | None:
-        """Given a character name query, return the corresponding character"""
+    def get_moves_by_move_type(self, character: CharacterName, move_type: MoveType) -> List[Move]:
+        """
+        Gets a list of moves that match a move_type query by checking for the existence of the move type in the notes
+        returns a list of Move objects if it finds match(es), else empty list
+        """
 
-        for character_name, character in self.frames.items():
-            if character_name.value == FrameDb._correct_character_name(name_query):
-                return character
+        move_list = self.frames[character].movelist.values()
+        moves = list(
+            filter(lambda x: (move_type.value.lower() in x.notes.lower()), move_list)
+        )  # TODO: revisit this logic for throws (and perhaps others)
+        return moves
+
+    def get_moves_by_move_input(self, character: CharacterName, input_query: str) -> List[Move]:
+        """
+        Given an input query for a known character, find all moves whose inputs are similar to the input query.
+        """
+
+        results = []
+        inverted_movelist = {}
+        for key, value in self.frames[character].movelist.items():
+            inverted_movelist[value] = [FrameDb._simplify_input(key)] + list(map(FrameDb._simplify_input, value.alt))
+        for move, choices in inverted_movelist.items():
+            match = thefuzz.process.extractOne(FrameDb._simplify_input(input_query), choices, score_cutoff=MATCH_SCORE_CUTOFF)
+            if match:
+                results.append(move)
+
+        return results
+
+    def get_character_by_name(self, name_query: str) -> Character | None:
+        """Given a character name query, return the corresponding character if a close match is found, else return None"""
+
+        choices_dict = {}
+        for character_name, aliases in CHARACTER_ALIAS.items():
+            choices_dict[character_name] = aliases
+            choices_dict[character_name].append(character_name.value)
+        for character_name, choices in choices_dict.items():
+            match = thefuzz.process.extractOne(name_query, choices, score_cutoff=MATCH_SCORE_CUTOFF)
+            logger.debug(f"Match: {match}")
+            if match:
+                logger.debug(f"Matched name query {name_query} to character {character_name} with score {match[1]}.")
+                return self.frames[character_name]
+        logger.debug(f"Could not match character {name_query} to a known character.")
         return None
 
     def get_move_type(self, move_type_query: str) -> MoveType | None:
-        """Given a move type query, return the corresponding move type"""
+        """Given a move type query, return the corresponding move type if a close match is found, else return None"""
 
-        move_type_candidate = FrameDb._correct_move_type(move_type_query)
-        if move_type_candidate is None:
-            logger.debug(f"Could not match move type {move_type_query} to a known move type. Checking aliases...")
-            for move_type, aliases in MOVE_TYPE_ALIAS.items():
-                if move_type_query.lower() in aliases:
-                    move_type_candidate = move_type
-                    break
-        return move_type_candidate
+        move_type_query = move_type_query.lower()
+        choices_dict = {}
+        for move_type, aliases in MOVE_TYPE_ALIAS.items():
+            choices_dict[move_type] = aliases
+            choices_dict[move_type].append(move_type.value)
+        for move_type, choices in choices_dict.items():
+            match = thefuzz.process.extractOne(move_type_query, choices, score_cutoff=MATCH_SCORE_CUTOFF)
+            logger.debug(f"Match: {match}")
+            if match:
+                logger.debug(f"Matched move type query {move_type_query} to move type {move_type} with score {match[1]}.")
+                return move_type
+        logger.debug(f"Could not match move type {move_type_query} to a known move type.")
+        return None
 
     def search_move(self, character: Character, move_query: str) -> Move | List[Move]:
         """Given a move query for a character, search for the move
@@ -263,40 +237,3 @@ class FrameDb:
             moves = similar_moves
 
         return moves
-
-
-def _get_close_matches_indices(word: str, possibilities: List[str], n: int = 5, cutoff: float = 0.7) -> List[int]:
-    """
-    Use SequenceMatcher to return a list of the indexes of the best
-    "good enough" matches.
-
-    word is a sequence for which close matches
-    are desired (typically a string).
-
-    possibilities is a list of sequences against which to match word
-    (typically a list of strings).
-
-    Optional arg n (default 5) is the maximum number of close matches to
-    return.  n must be > 0.
-
-    Optional arg cutoff (default 0.7) is a float in [0, 1].  Possibilities
-    that don't score at least that similar to word are ignored.
-    """
-
-    if not n > 0:
-        raise ValueError("n must be > 0: %r" % (n,))
-    if not 0.0 <= cutoff <= 1.0:
-        raise ValueError("cutoff must be in [0.0, 1.0]: %r" % (cutoff,))
-    result = []
-    s = SequenceMatcher()
-    s.set_seq2(word)
-    for idx, x in enumerate(possibilities):
-        s.set_seq1(x)
-        if s.real_quick_ratio() >= cutoff and s.quick_ratio() >= cutoff and s.ratio() >= cutoff:
-            result.append((s.ratio(), idx))
-
-    # Move the best scorers to head of list
-    result = _nlargest(n, result)
-
-    # Strip scores for the best n matches
-    return [x for score, x in result]
