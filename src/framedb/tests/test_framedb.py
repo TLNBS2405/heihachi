@@ -1,5 +1,8 @@
 import pytest
 
+from framedb import FrameDb
+from framedb.const import MoveType
+
 
 @pytest.mark.skip(reason="Not implemented")
 def test_framedb_export() -> None:
@@ -36,9 +39,8 @@ def test_correct_character_name() -> None:
     pass
 
 
-@pytest.mark.skip(reason="Not implemented")
 def test_correct_move_type() -> None:
-    pass
+    assert FrameDb._correct_move_type("heat engagers") == MoveType.HE
 
 
 @pytest.mark.skip(reason="Not implemented")
