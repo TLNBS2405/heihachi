@@ -1,9 +1,7 @@
 import os
-from typing import Callable
 
 import pytest
 
-from frame_service.wavu.tests.test_wavu import STATIC_BASE
 from heihachi.configurator import Configurator
 
 STATIC_BASE = os.path.join(os.path.dirname(__file__), "static")

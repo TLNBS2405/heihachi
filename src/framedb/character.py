@@ -29,6 +29,9 @@ class Move:
     alias: Tuple[DiscordMd, ...] = ()
     alt: Tuple[DiscordMd, ...] = ()
 
+    def __hash__(self) -> int:
+        return hash(self.id)
+
 
 @dataclass
 class Character:

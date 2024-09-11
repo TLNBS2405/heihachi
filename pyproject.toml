@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "heihachi"
-version = "2.1.0"
+version = "2.2.0"
 description = "A Discord bot to receive Tekken 8 frame data primarily from Wavu Wiki"
 readme = "README.md"
 authors = [
@@ -20,13 +20,12 @@ classifiers = [
 ]
 requires-python = ">= 3.10"
 dependencies = [
-    "pre-commit",
-    "mypy",
     "discord.py",
     "beautifulsoup4",
     "Requests",
     "lxml",
-    "fast-autocomplete[levenshtein]"
+    "fast-autocomplete[levenshtein]",
+    "thefuzz"
 ]
 
 [project.urls]
