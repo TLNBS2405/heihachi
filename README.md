@@ -57,6 +57,7 @@ The bot supports the following slash commands -
 | Command | Description |
 | --- | --- |
 | `/fd <character> <move>` | Get frame data of a particular character's move |
+| `/ms <character> <condition> <frames> <situation>` | Find a character's moves that match a particular frame scenario |
 | `/<character>` | Get frame data for a particular character's move |
 | `/feedback <message>` | Send feedback to the bot owner |
 | `/help` | Get help on the bot's usage |

@@ -6,6 +6,7 @@ from typing import Any, List
 import discord
 
 from framedb import Character, FrameDb, FrameService, Move
+from framedb.const import FrameSituation
 
 logger = logging.getLogger("main")
 
@@ -134,6 +135,49 @@ def get_frame_data_embed(framedb: FrameDb, frame_service: FrameService, char_que
     return embed
 
 
+def get_move_search_embed(
+    framedb: FrameDb, frame_service: FrameService, char_query: str, condition: str, frame_query: str, situation: str
+) -> discord.Embed:
+    """
+    Creates an embed for the move(s) that match the frame data provided
+    """
+    character = framedb.get_character_by_name(char_query)
+    logger.debug(f"Character: {character}")
+    frame_situation = get_frame_situation_by_value(situation)
+    frames = int(frame_query)
+    matching_moves: Move | List[Move] = []
+
+    if character:
+        if frame_situation:
+            matching_moves = framedb.get_move_by_frame(character.name, condition, frames, frame_situation)
+            if not matching_moves:
+                embed = get_error_embed(f"Could not locate move that is {condition} {frame_query} on {situation}.")
+
+            elif len(matching_moves) == 1:
+                embed = get_move_embed(frame_service, character, matching_moves[0])
+            else:
+                if condition == ">":
+                    condition = "\\>"  # Escapes the '>' sign since Discord interprets it as the beginning of a quote
+                if frame_situation == FrameSituation.STARTUP:
+                    embed = get_success_movelist_embed(
+                        frame_service, character, matching_moves, f"Moves {condition} i{frame_query} on {situation}"
+                    )
+                else:
+                    embed = get_success_movelist_embed(
+                        frame_service, character, matching_moves, f"Moves {condition} {frame_query} frames on {situation}"
+                    )
+    else:
+        embed = get_error_embed(f"Could not locate character {char_query}.")
+    return embed
+
+
+def get_frame_situation_by_value(value: str) -> FrameSituation:
+    try:
+        return FrameSituation(value)
+    except ValueError:
+        raise ValueError(f"Invalid value: {value}")
+
+
 def get_help_embed(frame_service: FrameService) -> discord.Embed:
     """Returns the help embed message for the bot."""
 
@@ -146,6 +190,11 @@ def get_help_embed(frame_service: FrameService) -> discord.Embed:
     embed.add_field(
         name="/fd `<character>` `<move>`",
         value="Get frame data for a particular character's move.",
+        inline=False,
+    )
+    embed.add_field(
+        name="/ms `<character>` `<condition>` `<frame>` `<situation>` ",
+        value="Find character's move based on the frame data ex. /ms Jin >= -5 block",
         inline=False,
     )
     embed.add_field(
