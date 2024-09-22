@@ -8,10 +8,10 @@ import discord.ext.commands
 from discord import Interaction
 
 from framedb import FrameDb, FrameService
-from framedb.const import CharacterName
+from framedb.const import CHARACTER_ALIAS, CharacterName
 from heihachi import button, embed
 from heihachi.configurator import Configurator
-from heihachi.embed import get_frame_data_embed
+from heihachi.embed import get_frame_data_embed, get_move_search_embed
 
 logger = logging.getLogger("main")
 
@@ -34,10 +34,11 @@ class FrameDataBot(discord.Client):
         self.tree = discord.app_commands.CommandTree(self)
 
         self._add_bot_commands()
-        for char in CharacterName:
-            self.tree.command(name=char.value, description=f"Frame data from {char.value}")(
-                self._character_command_factory(char.value)
-            )
+        char_names = [char.value for char in CharacterName]
+        flattened_aliases = [alias for sublist in CHARACTER_ALIAS.values() for alias in sublist]
+        char_names_and_alias = set(char_names + flattened_aliases)
+        for char in char_names_and_alias:
+            self.tree.command(name=char, description=f"Frame data from {char}")(self._character_command_factory(char))
 
         logger.debug(f"Bot command tree: {[command.name for command in self.tree.get_commands()]}")
 
@@ -112,9 +113,30 @@ class FrameDataBot(discord.Client):
             :25
         ]  # Discord has a max choice number of 25 (https://github.com/Rapptz/discord.py/discussions/9241)
 
+    async def _condition_autocomplete(
+        self, interaction: discord.Interaction["FrameDataBot"], current: str
+    ) -> List[discord.app_commands.Choice[str]]:
+        """Autocomplete function for the condition argument"""
+        conditions = [">", "<", ">=", "<=", "=="]
+
+        # Return matching conditions that start with the current input
+        return [discord.app_commands.Choice(name=cond, value=cond) for cond in conditions]
+
+    async def _situation_autocomplete(
+        self, interaction: discord.Interaction["FrameDataBot"], current: str
+    ) -> List[discord.app_commands.Choice[str]]:
+        """Autocomplete function for the situation argument"""
+        # List of valid frame situations
+        current = current.lower()
+        situations = ["startup", "block", "hit"]
+
+        # Return matching situations that start with the current input
+        return [discord.app_commands.Choice(name=situation, value=situation) for situation in situations]
+
     def _add_bot_commands(self) -> None:
         "Add all frame commands to the bot"
 
+        # Frame Data Command
         @self.tree.command(name="fd", description="Frame data from a character move")
         @discord.app_commands.autocomplete(character=self._character_name_autocomplete)
         async def _frame_data_cmd(interaction: discord.Interaction["FrameDataBot"], character: str, move: str) -> None:
@@ -125,6 +147,26 @@ class FrameDataBot(discord.Client):
                 embed = get_frame_data_embed(self.framedb, self.frame_service, character_name_query, move_query)
                 await interaction.response.send_message(embed=embed, ephemeral=False)
 
+        # Move Search Command
+        @self.tree.command(name="ms", description="Search for a character's move based on its frame data")
+        @discord.app_commands.autocomplete(character=self._character_name_autocomplete)
+        @discord.app_commands.autocomplete(condition=self._condition_autocomplete)
+        @discord.app_commands.autocomplete(situation=self._situation_autocomplete)
+        async def _move_search_cmd(
+            interaction: discord.Interaction["FrameDataBot"], character: str, condition: str, frames: str, situation: str
+        ) -> None:
+            logger.info(
+                f"Received command from {interaction.user.name} in {interaction.guild}: /ms {character} {condition} {frames} {situation}"
+            )
+            character_name_query = character
+            frame_query = frames
+            if not (self._is_user_blacklisted(str(interaction.user.id)) or self._is_author_newly_created(interaction)):
+                embed = get_move_search_embed(
+                    self.framedb, self.frame_service, character_name_query, condition, frame_query, situation
+                )
+                await interaction.response.send_message(embed=embed, ephemeral=False)
+
+        # Feedback Command
         if self.config.feedback_channel_id and self.config.action_channel_id:
 
             @self.tree.command(name="feedback", description="Send feedback to the authors in case of incorrect data")

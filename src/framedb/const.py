@@ -1,5 +1,5 @@
 import enum
-from typing import Dict, List
+from typing import Callable, Dict, List
 
 NUM_CHARACTERS = 34
 
@@ -95,6 +95,12 @@ class MoveType(enum.Enum):
     HS = "Heat Smash"
 
 
+class FrameSituation(enum.Enum):
+    STARTUP = "startup"
+    BLOCK = "block"
+    HIT = "hit"
+
+
 MOVE_TYPE_ALIAS: Dict[MoveType, List[str]] = {
     MoveType.RA: ["ra", "rage_art", "rageart", "rage art"],
     MoveType.T: ["screw", "t!", "t", "screws", "tor", "tornado"],
@@ -154,3 +160,11 @@ EMOJI_LIST: List[str] = [
     "4\ufe0f\u20e3",
     "5\ufe0f\u20e3",
 ]
+
+CONDITION_MAP: Dict[str, Callable[[int, int], bool]] = {
+    ">": lambda x, y: x > y,
+    ">=": lambda x, y: x >= y,
+    "<": lambda x, y: x < y,
+    "<=": lambda x, y: x <= y,
+    "==": lambda x, y: x == y,
+}
