@@ -26,3 +26,25 @@ def test_get_frame_data() -> None:
 def test_all_char_meta() -> None:
     wavu = Wavu()
     assert len(wavu.character_meta) == NUM_CHARACTERS
+
+
+def test_crush_states_dotlist() -> None:
+    wavu = Wavu()
+    with requests.session() as session:
+        char = wavu.get_frame_data(CharacterName.ZAFINA, session)
+    assert "&lt" not in char.movelist["Zafina-MNT.uf+3"].notes
+    assert "div" not in char.movelist["Zafina-MNT.uf+3"].notes
+
+
+def test_name_dotlist() -> None:
+    wavu = Wavu()
+    with requests.session() as session:
+        char = wavu.get_frame_data(CharacterName.YOSHIMITSU, session)
+    assert "div" not in char.movelist["Yoshimitsu-b+1+2"].name
+
+
+def test_startup_dotlist() -> None:
+    wavu = Wavu()
+    with requests.session() as session:
+        char = wavu.get_frame_data(CharacterName.YOSHIMITSU, session)
+    assert "div" not in char.movelist["Yoshimitsu-KIN.f+1"].startup
