@@ -1,5 +1,6 @@
 import logging
 import os
+import re
 from typing import Dict, List
 
 import requests
@@ -8,7 +9,7 @@ import thefuzz.process
 from fast_autocomplete import AutoComplete
 
 from .character import Character, Move
-from .const import CHARACTER_ALIAS, MOVE_TYPE_ALIAS, REPLACE, CharacterName, MoveType
+from .const import CHARACTER_ALIAS, CONDITION_MAP, MOVE_TYPE_ALIAS, REPLACE, CharacterName, FrameSituation, MoveType
 from .frame_service import FrameService
 
 MATCH_SCORE_CUTOFF = 95
@@ -103,6 +104,21 @@ class FrameDb:
                 return True
         return False
 
+    @staticmethod
+    def _sanitize_frame_data(frame_data: str) -> int | None:
+        """Removes bells and whistles from a move's frame data result'"""
+
+        # Step 1: Remove any leading non-numeric characters (like 'i' or ',')
+        frame_data = re.sub(r"^[^-\d]+", "", frame_data)
+
+        # Step 2: Match the first number or range (e.g., "-5", "5", "5~10")
+        match = re.match(r"([-+]?\d+)", frame_data)
+
+        # Step 3: If a match is found, return the first number (and remove any '+' sign)
+        if match:
+            return int(match.group(1))
+        return None
+
     def get_move_by_input(self, character: CharacterName, input_query: str) -> Move | None:
         """Given an input move query for a known character, retrieve the move from the database."""
 
@@ -129,6 +145,46 @@ class FrameDb:
 
         # couldn't match anything :-(
         return None
+
+    def get_move_by_frame(
+        self, character: CharacterName, condition: str, frame_value: int, situation: FrameSituation
+    ) -> List[Move]:
+        """Given a frame value query for a known character, retrieve the moves from the database that matches that frame value."""
+
+        character_movelist = self.frames[character].movelist.values()
+        result = []
+
+        # Get the comparison function based on the condition
+        compare_func = CONDITION_MAP.get(condition.strip())
+        if compare_func is None:
+            raise ValueError(f"Unsupported condition: {condition}")
+
+        match situation:
+            case FrameSituation.STARTUP:
+                result = [
+                    entry
+                    for entry in character_movelist
+                    if entry.startup.strip() != ""  # Ignore moves with no frame data
+                    if (sanitized_value := FrameDb._sanitize_frame_data(entry.startup)) is not None
+                    if compare_func(sanitized_value, frame_value)
+                ]
+            case FrameSituation.BLOCK:
+                result = [
+                    entry
+                    for entry in character_movelist
+                    if entry.on_block.strip() != ""  # Ignores moves with no frame data
+                    if (sanitized_value := FrameDb._sanitize_frame_data(entry.on_block)) is not None
+                    if compare_func(sanitized_value, frame_value)
+                ]
+            case FrameSituation.HIT:
+                result = [
+                    entry
+                    for entry in character_movelist
+                    if entry.on_hit.strip() != ""  # Ignores moves with no frame data
+                    if (sanitized_value := FrameDb._sanitize_frame_data(entry.on_hit)) is not None
+                    if compare_func(sanitized_value, frame_value)
+                ]
+        return result
 
     def get_moves_by_move_name(self, character: CharacterName, move_name_query: str) -> List[Move]:
         """
