@@ -58,7 +58,7 @@ CHARACTER_ALIAS: Dict[CharacterName, List[str]] = {
     CharacterName.DRAGUNOV: ["drag", "sergei", "dragu"],
     CharacterName.EDDY: ["ed", "capo"],
     CharacterName.FENG: ["fen"],
-    CharacterName.HEIHACHI: ["hei","hachi"],
+    CharacterName.HEIHACHI: ["hei", "hachi"],
     CharacterName.HWOARANG: ["hwo"],
     CharacterName.JACK_8: ["j8", "jack8", "jack"],
     CharacterName.JIN: ["jim"],
