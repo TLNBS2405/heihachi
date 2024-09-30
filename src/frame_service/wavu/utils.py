@@ -8,7 +8,7 @@ from typing import Any, Dict, List, Tuple
 import requests
 from bs4 import BeautifulSoup
 
-from framedb.character import Move
+from framedb.character import DiscordMd, Move
 from framedb.const import CharacterName
 
 WAVU_API_URL = "https://wavu.wiki/w/api.php"
@@ -90,6 +90,15 @@ def _process_dotlist(dotlist: str) -> List[str]:
     return dotlist.replace("* ", "").split("\n")
 
 
+def _stringify_dotlist(dotlist: List[str]) -> DiscordMd:
+    "Join a list of strings into a dotlist string"
+
+    if len(dotlist) == 1:
+        return dotlist[0]
+    else:
+        return "* " + "\n* ".join(dotlist)
+
+
 def _convert_json_move(move_json: Any) -> WavuMove:
     """
     Convert a JSON response object into a WavuMove object
@@ -99,7 +108,7 @@ def _convert_json_move(move_json: Any) -> WavuMove:
     id = _normalize_data(move_json["id"])
     parent = _normalize_data(move_json["parent"])
 
-    name = html.unescape(_process_links(move_json["name"]))
+    name = _stringify_dotlist(_process_dotlist(_remove_html_tags(html.unescape(_process_links(move_json["name"])))))
 
     input = html.unescape(html.unescape(_normalize_data(move_json["input"])))
 
@@ -115,7 +124,7 @@ def _convert_json_move(move_json: Any) -> WavuMove:
     if not on_ch or on_ch == "":
         on_ch = on_hit
 
-    startup = _normalize_data(move_json["startup"])
+    startup = _stringify_dotlist(_process_dotlist(_normalize_data(move_json["startup"])))
 
     recovery = _normalize_data(move_json["recv"])
 
@@ -148,13 +157,16 @@ def _convert_json_move(move_json: Any) -> WavuMove:
         video = ""
 
     notes = _remove_html_tags(_process_links(move_json["notes"])).strip()
-    crush = _normalize_data(move_json["crush"])
-    if "pc" in crush:
-        notes += "\n* Power Crush"
-    if "js" in crush:
-        notes += "\n"
-    if "cs" in crush:
-        notes += "\n" + crush
+    crush = _process_dotlist(_remove_html_tags(html.unescape(_normalize_data(move_json["crush"]))))
+    for state in crush:
+        if "pc" in state:
+            notes += "\n* Power Crush"
+        elif "js" in state:
+            notes += "\n" + state
+        elif "cs" in state:
+            notes += "\n" + state
+        else:
+            notes += "\n" + state
 
     move = WavuMove(
         id,
