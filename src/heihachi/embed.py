@@ -112,7 +112,7 @@ def get_frame_data_embed(framedb: FrameDb, frame_service: FrameService, char_que
     """
 
     character = framedb.get_character_by_name(char_query)
-    logger.debug(f"Character: {character}")
+    #logger.debug(f"Character: {character}")
     if character:
         move_type = framedb.get_move_type(move_query)
         if move_type:
