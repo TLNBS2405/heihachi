@@ -1,7 +1,7 @@
 import enum
 from typing import Callable, Dict, List
 
-NUM_CHARACTERS = 35
+NUM_CHARACTERS = 36
 
 
 class CharacterName(enum.Enum):
@@ -10,6 +10,7 @@ class CharacterName(enum.Enum):
     AZUCENA = "azucena"
     BRYAN = "bryan"
     CLAUDIO = "claudio"
+    Clive = "clive"
     DEVIL_JIN = "devil_jin"
     DRAGUNOV = "dragunov"
     EDDY = "eddy"
@@ -54,6 +55,7 @@ CHARACTER_ALIAS: Dict[CharacterName, List[str]] = {
     CharacterName.AZUCENA: ["azu", "cafe"],
     CharacterName.BRYAN: ["bry", "byron"],
     CharacterName.CLAUDIO: ["cld", "cla"],
+    CharacterName.Clive: ["cli", "clv"],
     CharacterName.DEVIL_JIN: ["dj", "deviljin", "dvj", "djin"],
     CharacterName.DRAGUNOV: ["drag", "sergei", "dragu"],
     CharacterName.EDDY: ["ed", "capo"],

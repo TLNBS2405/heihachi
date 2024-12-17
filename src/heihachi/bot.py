@@ -35,9 +35,10 @@ class FrameDataBot(discord.Client):
 
         self._add_bot_commands()
         char_names = [char.value for char in CharacterName]
-        flattened_aliases = [alias for sublist in CHARACTER_ALIAS.values() for alias in sublist]
-        char_names_and_alias = set(char_names + flattened_aliases)
-        for char in char_names_and_alias:
+        # flattened_aliases = [alias for sublist in CHARACTER_ALIAS.values() for alias in sublist]
+        # char_names_and_alias = set(char_names + flattened_aliases)
+
+        for char in char_names:
             self.tree.command(name=char, description=f"Frame data from {char}")(self._character_command_factory(char))
 
         logger.debug(f"Bot command tree: {[command.name for command in self.tree.get_commands()]}")
