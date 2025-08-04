@@ -40,6 +40,11 @@
         "page": "https://wavu.wiki/t/Dragunov"
     },
     {
+        "name": "fahkumram",
+        "portrait": "https://wavu.wiki/t/Special:Redirect/file/FahkumramT8.png",
+        "page": "https://wavu.wiki/t/Fahkumram"
+    },
+    {
         "name": "feng",
         "portrait": "https://wavu.wiki/t/Special:Redirect/file/FengT8.png",
         "page": "https://wavu.wiki/t/Feng"
@@ -181,7 +186,7 @@
     },
     {
         "name": "anna",
-        "portrait": "https://wavu.wiki/t/Special:Redirect/file/EddyT8.png",
-        "page": "https://wavu.wiki/t/Eddy"
+        "portrait": "https://wavu.wiki/t/Special:Redirect/file/AnnaT8.png",
+        "page": "https://wavu.wiki/t/Anna"
     }
 ]
